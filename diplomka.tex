@@ -1,0 +1,197 @@
+
+\begin{comment}
+> Zdravím, tak jsem to proletěl.
+>
+> - co citování zdrojů? Např. v části o učňovství atd,. to určitě není z Vaší hlavy
+> - moc se mi nezdá vyvážení textu, moc stránek věnujete existujícím nástrojům
+> - používejte méně osobní formy zápisu, jako udělám, mám, chci atd. kspíše obecně a neosobně, co je v práci obsaženo. Když napíšte, chci navrhnout rozhraní, tak to vypadá blbě, protože pro úspěšné zvládnutí diplomky jste ho snad už navrhnul a realizoval
+> - v kapitole 5 není moc jasné vazba mezi prezentovanými informacemi ani to jestli je to Vaše práce nebo ne. Zdůrazněte, co je výstupem diplomky a proč
+> - více referencí
+> - druhá část mi příjde zmatená a bez nosných informací, ale možná, že to ještě nemáte hotovo.
+\end{comment}
+
+
+% Nejprve uvedeme tridu dokumentu s volbami
+\documentclass[bc,female,java,dept456]{diploma}						% jednostranny dokument
+\usepackage[czech]{babel}
+%\usepackage[cp1250]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{url}
+%\usepackage{dialogue}
+
+\setcounter{secnumdepth}{2}
+
+
+
+
+
+% Zadame pozadovane vstupy pro generovani titulnich stran.
+\Author{Michal Hantl}
+
+\Title{Nástroj pro monitorování chování uživatelů webových aplikací}
+
+\EnglishTitle{A tool for monitoring web application user behaviour}
+
+\SubmissionDate{20. dubna 2011}
+
+\PrintPublicationAgreement{true}
+
+
+
+
+\Thanks{Rád bych na tomto místě poděkoval svým rodičům za podporu během celého studia, panu Ing. Michalovi Radeckému, za vedení během vypracování diplomové práce a své přítelkyni Míše.}
+
+
+
+
+
+\CzechAbstract{
+Cílem práce je vytvoření nástroje, jakožto podpory pro aplikaci a navržení metody získávání informací o chování uživatele webové aplikace. Nebude se jednat o klasický přístup založený na sběru statistických dat anonymních návštěvníků, ale o využití znalosti o konkrétním uživateli, jeho chování, využívání funkcí a služeb webové aplikace.
+
+Výsledkem praktické části je webová aplikace ...
+}
+
+\CzechKeywords{webová analytika, chovábí uživatelů, webová aplikace, diplomová práce}
+
+\EnglishAbstract{
+The goal of this thesis is to create a tool to aid web application development and to create a method for gaining knowledge of the web application users' behaviour. It is not the case of usual anonymized data gathering, but make us of the knowledge of concrete user, his behaviour and his usage of web app's functions and services. 
+}
+
+\EnglishKeywords{web analytics, user behaviour, web application, master thesis}
+
+
+
+
+
+% Pridame pouzivane zkratky (pokud nejake pouzivame).
+\AddAcronym{GUI}{Grafické uživatelské rozhraní (Graphical User Interface)}
+\AddAcronym{HTML}{Jazyk pro vytváření webových stránek (HyperText Markup Language)}
+
+
+
+
+
+% Zacatek dokumentu
+\begin{document}
+
+% Nechame vysazet titulni strany.
+\MakeTitlePages
+
+% Asi urcite budeme potrebovat obsah prace.
+\tableofcontents
+\cleardoublepage	% odstrankujeme, u jednostranneho dokumentu o jednu stranku, u oboustrenneho o dve
+
+% Jsou v praci tabulky? Pokud ano vysazime jejich seznam.
+% Pokud ne smazeme nasledujici makro.
+%\listoftables
+%\cleardoublepage	% odstrankujeme, u jednostranneho dokumentu o jednu stranku, u oboustrenneho o dve
+
+% Jsou v praci obrazky? Pokud ano vysazime jejich seznam.
+\listoffigures
+\cleardoublepage	% odstrankujeme, u jednostranneho dokumentu o jednu stranku, u oboustrenneho o dve
+
+
+% Jsou v praci vypisy programu? Pokud ano vysazime jejich seznam.
+\lstlistoflistings
+\cleardoublepage	% odstrankujeme, u jednostranneho dokumentu o jednu stranku, u oboustrenneho o dve
+
+
+
+% Zacneme uvodem
+\section{Úvod}
+\label{sec:Uvod}
+
+
+Tato diplomová práce se zabývá webovou analytikou. Úvodem popisuje jaký problém webová analytika řeší, nastiňuje historii měření na webu a současné nejčastější využití nástrojů pro webovou analytiku.
+
+V první kapitole popisuje nejčastěji používané techniky měření a vizualizace dat, vysvětluje motivace za jednotlivými technikami a případy užití.
+
+Druhá kapitola se zabývá návrhem nové techniky měření, která se zajímá o to, které funkce webové aplikace uživatelé používají. Popisuje jakým způsobem budou data získána a celý systém jako celek.
+
+Třetí kapitola "Implementace" je zaměřena na použité tehcnologie a konkrétní procesy sběru a analýzy dat.
+
+Čtvrtá kapitola následuje aplikací vzniklého nástroje na existující webovou aplikaci. Cílem je ověřit, že vyvinutý nástroj přináší očekávané výsledky.
+
+V poslední kapitole dochází ke zhodnocení zda metoda měření i nástroj plní očekávání, jaký je jejich přínos pro jejich uživatele v praxi a porovnání s podobnými nástroji.
+
+
+
+
+
+
+
+
+\subsection{Hostorie webové analytiky}
+
+\subsubsection{1990 - Zrození WWW stránek}
+Na začátku devadesátých let došlo ke zrození WWW stránek[reference]. Uživatelé tehdy prohlíželi statické stránky a pokaždé, když si nějakou prohlédli, vznikl záznam v logovacím souboru, takzvaný "hit". Počet hitů se stal ukazatelem úspěšnosti webový stránek.
+
+\subsubsection{1994 - První masově úspěšný grafický prohlížeč}
+V roce devadesát čtyři vznikl grafický webový prohlížeč s názvem Mosaic[reference]. Díky jeho snadné instalaci a srozumitelnému uživatelskému rozhraní se web otevřel široké veřejnosti. Tento prohlížeč byl později přejmenován na Netscape a v roce 1995 ho používalo 80\% uživatelů internetu.
+
+\subsubsection{1995 - Analog}
+V roce devadesát pět znikl Analog - nástroj pro analýzu logovacích souborů. Jeho autor Stephen Turner ho poskytoval zdarma jako freeware pro několik platform. Jednalo se o první sofistikovaný nástroj pro analýzu a zobrazení návštěvnosti webových stránek.
+
+
+
+
+\begin{itemize}
+	\item{umí sestavovat algoritmy}
+\end{itemize}
+
+A všechny tyto základní schopnosti si student osvojuje v rámci výuky programování. 
+
+\begin{itemize}
+	\item nemusí tupě opisovat příklady z knihy do počítače
+	\item příklady na počítači jsou interaktivní
+	\item webová aplikace je zdarma a je dostupnější než kniha
+\end{itemize}
+
+
+
+
+\section{Závěr}
+\label{sec:Conclusion}
+
+Tolik chuti a tak málo času :)
+
+\bigskip
+\begin{flushright}
+Michal Hantl
+\end{flushright}
+
+
+
+
+
+
+\begin{thebibliography}{99}
+
+
+\bibitem{peci2005} Pecinovský, Rudolf,
+\textit{Jak efektivně učit OOP. Tvorba softwaru 2005 – sborník přednášek}, ISBN 80-86840-14-X.
+
+\bibitem{peci_trendy} Pecinovský, Rudolf,
+\textit{Současné trendy v metodice výuky programování}, dostupné z url \url{http://gynome.nmnm.cz/konference/files/2006/sbornik/pecinovsky.pdf}.
+
+\bibitem{plaminek} Plamínek, Jiří,
+\textit{Tajemství motivace – Jak zařídit, aby pro vás lidé rádi pracovali}, ISBN 80-247-1991-6.
+
+\bibitem{kamarati} Gašparovičová Ľuba, Hvorecký, Josef,
+\textit{Kamaráti Robota Karla}, ISBN 80-06-00421-8.
+
+\end{thebibliography}
+
+
+%\appendix
+%\section{Grafy a měření}
+%Tohle je příloha k práci. Většinou se sem dávají grafy, tabulky, které by vzhledem
+%ke svému počtu překážely v textu diplomky.
+%\clearpage
+
+
+
+
+\end{document}
