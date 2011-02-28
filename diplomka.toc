@@ -1,5 +1,12 @@
 \select@language {czech}
 \contentsline {section}{\numberline {1}\IeC {\'U}vod}{4}
-\contentsline {subsection}{\numberline {1.1}V\IeC {\'y}uka programov\IeC {\'a}n\IeC {\'\i }}{4}
-\contentsline {section}{\numberline {2}Z\IeC {\'a}v\IeC {\v e}r}{5}
-\contentsline {section}{\numberline {3}Reference}{6}
+\contentsline {subsection}{\numberline {1.1}Hostorie webov\IeC {\'e} analytiky}{4}
+\contentsline {subsubsection}{1990 - Zrozen\IeC {\'\i } WWW str\IeC {\'a}nek}{4}
+\contentsline {subsubsection}{1994 - Mosaic: Prvn\IeC {\'\i } masov\IeC {\v e} \IeC {\'u}sp\IeC {\v e}\IeC {\v s}n\IeC {\'y} grafick\IeC {\'y} prohl\IeC {\'\i }\IeC {\v z}e\IeC {\v c}}{4}
+\contentsline {subsubsection}{1995 - Analog: Anal\IeC {\'y}za logovac\IeC {\'\i }ch soubor\IeC {\r u}}{4}
+\contentsline {subsubsection}{1996 - M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } pomoc\IeC {\'\i } k\IeC {\'o}du na str\IeC {\'a}nce}{5}
+\contentsline {subsubsection}{2005 - Modern\IeC {\'\i } webov\IeC {\'a} analytika pro ka\IeC {\v z}d\IeC {\'e}ho}{5}
+\contentsline {subsection}{\numberline {1.2}2011 - Soci\IeC {\'a}ln\IeC {\'\i } m\IeC {\'e}dia a za\IeC {\v r}\IeC {\'\i }zen\IeC {\'\i }}{6}
+\contentsline {section}{\numberline {2}Modern\IeC {\'\i } m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } a vizualizace}{7}
+\contentsline {section}{\numberline {3}Z\IeC {\'a}v\IeC {\v e}r}{8}
+\contentsline {section}{\numberline {4}Reference}{9}

@@ -1,16 +1,3 @@
-
-\begin{comment}
-> Zdravím, tak jsem to proletěl.
->
-> - co citování zdrojů? Např. v části o učňovství atd,. to určitě není z Vaší hlavy
-> - moc se mi nezdá vyvážení textu, moc stránek věnujete existujícím nástrojům
-> - používejte méně osobní formy zápisu, jako udělám, mám, chci atd. kspíše obecně a neosobně, co je v práci obsaženo. Když napíšte, chci navrhnout rozhraní, tak to vypadá blbě, protože pro úspěšné zvládnutí diplomky jste ho snad už navrhnul a realizoval
-> - v kapitole 5 není moc jasné vazba mezi prezentovanými informacemi ani to jestli je to Vaše práce nebo ne. Zdůrazněte, co je výstupem diplomky a proč
-> - více referencí
-> - druhá část mi příjde zmatená a bez nosných informací, ale možná, že to ještě nemáte hotovo.
-\end{comment}
-
-
 % Nejprve uvedeme tridu dokumentu s volbami
 \documentclass[bc,female,java,dept456]{diploma}						% jednostranny dokument
 \usepackage[czech]{babel}
@@ -24,6 +11,16 @@
 \setcounter{secnumdepth}{2}
 
 
+\begin{comment}
+> Zdravím, tak jsem to proletěl.
+>
+> - co citování zdrojů? Např. v části o učňovství atd,. to určitě není z Vaší hlavy
+> - moc se mi nezdá vyvážení textu, moc stránek věnujete existujícím nástrojům
+> - používejte méně osobní formy zápisu, jako udělám, mám, chci atd. kspíše obecně a neosobně, co je v práci obsaženo. Když napíšte, chci navrhnout rozhraní, tak to vypadá blbě, protože pro úspěšné zvládnutí diplomky jste ho snad už navrhnul a realizoval
+> - v kapitole 5 není moc jasné vazba mezi prezentovanými informacemi ani to jestli je to Vaše práce nebo ne. Zdůrazněte, co je výstupem diplomky a proč
+> - více referencí
+> - druhá část mi příjde zmatená a bez nosných informací, ale možná, že to ještě nemáte hotovo.
+\end{comment}
 
 
 
@@ -117,24 +114,77 @@ Třetí kapitola "Implementace" je zaměřena na použité tehcnologie a konkré
 V poslední kapitole dochází ke zhodnocení zda metoda měření i nástroj plní očekávání, jaký je jejich přínos pro jejich uživatele v praxi a porovnání s podobnými nástroji.
 
 
-
-
-
-
-
-
 \subsection{Hostorie webové analytiky}
 
 \subsubsection{1990 - Zrození WWW stránek}
 Na začátku devadesátých let došlo ke zrození WWW stránek[reference]. Uživatelé tehdy prohlíželi statické stránky a pokaždé, když si nějakou prohlédli, vznikl záznam v logovacím souboru, takzvaný "hit". Počet hitů se stal ukazatelem úspěšnosti webový stránek.
 
-\subsubsection{1994 - První masově úspěšný grafický prohlížeč}
+\subsubsection{1994 - Mosaic: První masově úspěšný grafický prohlížeč}
 V roce devadesát čtyři vznikl grafický webový prohlížeč s názvem Mosaic[reference]. Díky jeho snadné instalaci a srozumitelnému uživatelskému rozhraní se web otevřel široké veřejnosti. Tento prohlížeč byl později přejmenován na Netscape a v roce 1995 ho používalo 80\% uživatelů internetu.
 
-\subsubsection{1995 - Analog}
+\subsubsection{1995 - Analog: Analýza logovacích souborů}
 V roce devadesát pět znikl Analog - nástroj pro analýzu logovacích souborů. Jeho autor Stephen Turner ho poskytoval zdarma jako freeware pro několik platform. Jednalo se o první sofistikovaný nástroj pro analýzu a zobrazení návštěvnosti webových stránek.
 
+\begin{lstlisting}[label=src:Plain,caption=Ukázka záznamu z logovacího souboru ve formátu RFC931]
+10.20.30.40 - - [26/Apr/2000:00:23:48 -0400] "GET /index.html HTTP/1.0" 200 6248 "http://www.jafsoft.com/asctortf/" "Mozilla/4.05 (Macintosh; I; PPC)"
+10.20.30.40 - - [26/Apr/2000:00:23:48 -0400] "GET /background.gif HTTP/1.0" 200 4005 "http://www.example.org/" "Mozilla/4.05 (Macintosh; I; PPC)"
+\end{lstlisting}
 
+Logovací soubor obsahuje jden řádek pro každou návštěvu stránky, nebo souboru na serveru. Nástroj pro analýzu logovacích souborů z toho pak dokáže zjistit kolik měl server návštěv každý den, z kolika unikátních IP adres, které stránky jsou nejnavštěvovanější a kolik bylo přenesených dat.
+
+The data collection became unusable with the advent of search engines and their robots, proxies servers to surf anonymously, allocation of dynamic IP addresses by ISPs and cached content techniques. All these developments have rendered the use of log files inappropriate to analyze user behavior. The data contained in log files were indeed biased and unique visitor identification almost impossible. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img/analog_daily.pdf}
+	\caption{Analog - denní návštěvnost}
+	\label{analog_daily}
+\end{figure}
+
+
+\subsubsection{1996 - Měření pomocí kódu na stránce}
+
+V roce 1996 byl v obou nejpoužívanějších prohlížečích\footnote{V roce 1996 měl Netscape Navigator zhruba 80\% podíl a Internet Explorer 14\%} k dispozici JavaScript. 
+
+Tvůrce webových stránek na každou stránku umístil kód, který mu vygeneroval poskytovatel měřícího nástroje. 
+
+
+Tento postup se zásadně liší od analýzy logových souborů. Místo statické analýzy zaznamenaných dat na straně serveru tento přístup data dynamicky sbírá na straně klienta.
+
+Tento průlom umožnil použtití třetích stran pro sběr i vyhodnocení dat a tak dal vzniknout prvním online nástrojům pro webovou analytiku. V různých obměnách se tato technika používá dodnes.
+
+
+\subsubsection{2005 - Moderní webová analytika pro každého}
+
+V roce 2005 koupila společnost Google analytický systém Urchin on Demand a ještě v témž roce ho poskytla zdarma široké veřejnosti jako webovou aplikaci pod názvem Google Aanlytics.
+
+Pro obrovský zájem byl tento produkt zpřístupněn pouze omezenému počtu uživatelů. Od října roku 2006 byly znovu otevřeny volné registrace a dodnes se jedná o nejpoužívanější systém pro webovou analytiku.
+
+
+\subsection{2011 - Sociální média a zařízení}
+
+S nástupem sociálních médií a chytrých mobilních zařízení došlo k nárůstu času, který uživatelé tráví na internetu. Poměrně k tomuto nárůstu se zvyšují investice do internetových stránek a webových aplikací. 
+
+Na jedné straně je snaha dostat nové uživatele na svou stránku, to se dociluje například pomocí optimalizace pro vyhledávače, reklamních bannerů, nebo PPC reklamy\footnote{PPC - Pay per click, platba se za proklik (cena prokliku je určena pomocí aukce).}. V tomto případě slouží webová analytika k měření efektivity jednotlivých kampaní a k jejich následné optimalizaci.
+
+Na druhé je snaha pracovat s uživateli, které už webová stránka, nebo aplikace má. Zde je snaha identifikovat problémy a optimalizavat uživatelskou zkušenost. V obou případech je to webová analytika, která nám umožňuje získat přehled, optimalzovat a vyhodnotit návratnost investic.
+
+
+
+
+\section{Moderní měření a vizualizace}
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
 
 
 \begin{itemize}
@@ -149,8 +199,7 @@ A všechny tyto základní schopnosti si student osvojuje v rámci výuky progra
 	\item webová aplikace je zdarma a je dostupnější než kniha
 \end{itemize}
 
-
-
+\end{comment}
 
 \section{Závěr}
 \label{sec:Conclusion}
