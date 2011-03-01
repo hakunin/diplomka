@@ -50,7 +50,7 @@ Cílem práce je vytvoření nástroje, jakožto podpory pro aplikaci a navržen
 Výsledkem praktické části je webová aplikace ...
 }
 
-\CzechKeywords{webová analytika, chovábí uživatelů, webová aplikace, diplomová práce}
+\CzechKeywords{webová analytika, chování uživatelů, webová aplikace, diplomová práce}
 
 \EnglishAbstract{
 The goal of this thesis is to create a tool to aid web application development and to create a method for gaining knowledge of the web application users' behaviour. It is not the case of usual anonymized data gathering, but make us of the knowledge of concrete user, his behaviour and his usage of web app's functions and services. 
@@ -96,8 +96,10 @@ The goal of this thesis is to create a tool to aid web application development a
 
 
 
-% Zacneme uvodem
-\section{Úvod}
+
+
+
+\section{Úvod (3 stránky)}
 \label{sec:Uvod}
 
 
@@ -161,9 +163,9 @@ V roce 2005 koupila společnost Google analytický systém Urchin on Demand a je
 Pro obrovský zájem byl tento produkt zpřístupněn pouze omezenému počtu uživatelů. Od října roku 2006 byly znovu otevřeny volné registrace a dodnes se jedná o nejpoužívanější systém pro webovou analytiku.
 
 
-\subsection{2011 - Sociální média a zařízení}
+\subsubsection{2011 - Sociální média a zařízení}
 
-S nástupem sociálních médií a chytrých mobilních zařízení došlo k nárůstu času, který uživatelé tráví na internetu. Poměrně k tomuto nárůstu se zvyšují investice do internetových stránek a webových aplikací. 
+S nástupem sociálních médií a chytrých mobilních zařízení dochází k nárůstu času, který uživatelé tráví na internetu. Poměrně k tomuto nárůstu se zvyšují investice do internetových stránek a webových aplikací. 
 
 Na jedné straně je snaha dostat nové uživatele na svou stránku, to se dociluje například pomocí optimalizace pro vyhledávače, reklamních bannerů, nebo PPC reklamy\footnote{PPC - Pay per click, platba se za proklik (cena prokliku je určena pomocí aukce).}. V tomto případě slouží webová analytika k měření efektivity jednotlivých kampaní a k jejich následné optimalizaci.
 
@@ -172,44 +174,184 @@ Na druhé je snaha pracovat s uživateli, které už webová stránka, nebo apli
 
 
 
-\section{Moderní měření a vizualizace}
+\section{Sběr a interpretace dat (15 stránek)}
+
+Podstatou webové analytiky je sběr a interpretace dat. Jak již bylo řečeno, sběr dat se za dobu existence webu vyvinul z pasivní formy analýzy logových souborů na serveru do dnešní - aktivního sběru dat na straně uživatele třetí stranou.
+
+Tato kapitola popisuje jak sběr dat, tak jejich interpretaci.
+
+\subsection{Analýza dat z logovacích souborů}
+
+\subsection{Události v prohlížeči}
+
+\subsubsection{Pohyb myši}
+\subsubsection{Klikání}
+\subsubsection{Používání kláves}
+\subsubsection{Odchod ze stránky}
+\subsubsection{Skrolování stránky}
+  
+\subsection{Informace získané pomocí HTTP protokolu}
+\subsubsection{Prohlížeč a verze}
+\subsubsection{Geolokace}
+\subsubsection{referrer}
+\subsubsection{stránka}
+\subsubsection{query string}
+
+\subsection{Informace získané pomocí JavaScriptu}
+\subsubsection{Rozlišení obrazovky}
+\subsubsection{Velikost viewportu}
+(zobrazení stránek, jako analýza logů)
+ 
+
+\subsection{Derivované informace}
+\subsubsection{Doba strávená na stránce}
+\subsubsection{Loajalita = opakování návštěv}
+\subsubsection{Častost návštěv}
+\subsubsection{Počet návštěv}
+\subsubsection{Počet unikátních uživatelů}
+  
+  
+
+\subsection{Interpretace a Vizualizace dat}
+
+\subsubsection{Heatmapy}
+\subsubsection{Heatmapy}
+\subsubsection{Světová mapa}
+\subsubsection{Segmentace}
+
+
+Aplikace v praxi
+ - optimalizace kampaní
+ - A/B / split testing
+
+
+
+
+\subsection{Clickstream analýza}
+
+\subsection{Měření konverze}
 
 
 
 
 
 
+\section{Návrh (15 stránek s diagramy)}
+
+O čem je tahle kampitola?
+
+\subsection{Hypotéza}
+
+Popis problému.
+
+Demonstrovat na příkladu.
+
+Popis řešení.
+
+Co se bude měřit a proč.
+
+Co nástroj dělá a proč.
+
+Co nástroj nedělá a proč ne.
+
+Pro koho je nástroj určen.
+
+Existuje nějaký podobný nástroj?
+
+Proč takový nástroj ještě neexistuje?
+(implementujou si in house řešení tohoto problému)
+
+\subsection{Sběr dat}
+
+Jaké data nás zajímají a proč
+
+Jaké data nás nezajímají a proč
+
+Jaké jsou omezení sběru dat.
+
+
+\subsection{Interpretace dat}
+
+Jaké možnosti interpretace dat jsou?
+
+Jaké možnosti se hodí?
+
+Jaké možnosti intepretace dat jsme zvolili a proč?
+
+Jaké jsou možnosi segmentace. 
+Jaké jsou možnosti do budoucna.
+
+Možnosti aproximace?
+
+
+\subsection{Etická stránka sběru dat}
+
+Problém etiky sběru dat.
+Právní problémy.
+Anonymní vs. neanonymní data.
+Webaplikace vs. webová stránka.
+Zákazník vs. náhodný návštěvník.
+Analogie z fyzického byznysu.
 
 
 
 
 
-\begin{comment}
+\section{Implementace (20 stránek i s grafy)}
+
+O čem je tato kapitola?
 
 
-\begin{itemize}
-	\item{umí sestavovat algoritmy}
-\end{itemize}
+\subsection{Popis technického řešení (10 Stran)}
 
-A všechny tyto základní schopnosti si student osvojuje v rámci výuky programování. 
+1) diagram celého systému
 
-\begin{itemize}
-	\item nemusí tupě opisovat příklady z knihy do počítače
-	\item příklady na počítači jsou interaktivní
-	\item webová aplikace je zdarma a je dostupnější než kniha
-\end{itemize}
+2) detail sběru dat
 
-\end{comment}
+3) detail interpretace dat
 
-\section{Závěr}
+4) zobrazení dat
+
+
+vizualizační technologie, appengine
+proč jsem vybral tyto technologie
+detaily funkce měřícího skriptu (AES)
+detaily sběru dat
+detaily analýzy dat
+
+
+
+\subsection{Aplikace v reálném provozu (10 stran i s grafy)}
+
+oběcně kolik dat tam lítalo denně, kolik uživatelů
+analýza dat (na co jsem se zaměřil)
+zajímavé grafy, co z nich vyplývá
+závěry (navhrnout změny)
+
+\subsection{Navrhnuté změny na základě získaných dat (2 stránky)}
+
+
+\section{Zhodnocení (2 stránky)}
+co splnilo očekávání
+co nesplnilo / předčilo očekávání
+přínos pro uživatele v praxi
+porovnání s podobnými nástroji
+
+
+
+
+\section{Závěr (1 stránka)}
 \label{sec:Conclusion}
 
-Tolik chuti a tak málo času :)
+Byla to bomba :)
 
 \bigskip
 \begin{flushright}
 Michal Hantl
 \end{flushright}
+
+
+
 
 
 

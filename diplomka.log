@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  28 FEB 2011 13:51
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  1 MAR 2011 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -574,23 +574,23 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 
 
 ]
-Overfull \hbox (8.1813pt too wide) in paragraph at lines 108--109
+Overfull \hbox (8.1813pt too wide) in paragraph at lines 110--111
 \OT1/ppl/m/n/10.95 funkce we-bov[]e ap-likace u[]zivatel[]e pou[]z[]^^Pvaj[]^^P
 . Popisuje jak[]ym zp[]usobem bu-dou data z[]^^Psk[]ana
  []
 
 
-Overfull \hbox (5.07736pt too wide) in paragraph at lines 114--115
+Overfull \hbox (5.07736pt too wide) in paragraph at lines 116--117
 []\OT1/ppl/m/n/10.95 V posledn[]^^P kapi-tole doch[]az[]^^P ke zhod-no-cen[]^^P
  zda metoda m[]e[]ren[]^^P i n[]astroj pln[]^^P o[]cek[]av[]an[]^^P,
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 129.
+(Font)              <9> on input line 131.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 129.
+(Font)              <5> on input line 131.
 
-Overfull \hbox (15.71426pt too wide) in paragraph at lines 133--134
+Overfull \hbox (15.71426pt too wide) in paragraph at lines 135--136
 \OT1/ppl/m/n/10.95 server n[]av[]st[]ev ka[]zd[]y den, z ko-lika unik[]atn[]^^P
 ch IP adres, kter[]e str[]anky jsou ne-j-nav[]st[]evovan[]ej[]s[]^^P
  []
@@ -602,52 +602,70 @@ ch IP adres, kter[]e str[]anky jsou ne-j-nav[]st[]evovan[]ej[]s[]^^P
 File: img/analog_daily.pdf Graphic file (type pdf)
 
 <use img/analog_daily.pdf>
-Overfull \hbox (5.16449pt too wide) in paragraph at lines 161--162
+Overfull \hbox (5.16449pt too wide) in paragraph at lines 163--164
 []\OT1/ppl/m/n/10.95 Pro obrovsk[]y z[]ajem byl tento pro-dukt zp[]r[]^^Pstupn[
 ]en pouze omezen[]emu po[]ctu u[]zivatel[]u.
  []
 
 
-Overfull \hbox (11.88295pt too wide) in paragraph at lines 161--162
+Overfull \hbox (11.88295pt too wide) in paragraph at lines 163--164
 \OT1/ppl/m/n/10.95 Od []r[]^^Pjna roku 2006 byly znovu otev[]reny voln[]e reg-i
 s-trace a dodnes se jedn[]a o ne-jpou[]z[]^^Pvan[]ej[]s[]^^P
  []
 
 [5 <./img/analog_daily.pdf>]
-Overfull \hbox (3.84006pt too wide) in paragraph at lines 168--169
+Overfull \hbox (3.84006pt too wide) in paragraph at lines 170--171
 []\OT1/ppl/m/n/10.95 Na jedn[]e stran[]e je snaha do-stat nov[]e u[]zivatele na
  svou str[]anku, to se dociluje nap[]r[]^^Pklad
  []
 
 [6] [7
 
-] [8
+] [8]
+Overfull \hbox (11.09898pt too wide) in paragraph at lines 261--263
+[]\OT1/ppl/m/n/10.95 Pro[]c takov[]y n[]astroj je[]st[]e ne-ex-is-tuje? (im-ple
+-men-tu-jou si in house []re[]sen[]^^P to-hoto probl[]emu) 
+ []
+
+[9
+
+] [10
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 226.
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 335--339
+\OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
+ o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
+ []
+
+[11
+
+] [12
+
+]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 368.
 
  (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 1953) in paragraph at lines 225--227
+Underfull \hbox (badness 1953) in paragraph at lines 367--369
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--227
+Underfull \hbox (badness 10000) in paragraph at lines 367--369
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
 
-[9
+[13
 
 ] (./diplomka.aux) ) 
 Here is how much of TeX's memory you used:
  4501 strings out of 495061
  57503 string characters out of 1182620
- 181566 words of memory out of 3000000
+ 181567 words of memory out of 3000000
  7594 multiletter control sequences out of 15000+50000
  26138 words of font info for 55 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -659,9 +677,9 @@ e1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/u
 hvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a.pfb></usr/s
 hare/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-texliv
 e/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (14 pages, 133218 bytes).
+Output written on diplomka.pdf (18 pages, 144158 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
