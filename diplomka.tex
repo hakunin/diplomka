@@ -6,6 +6,7 @@
 \usepackage{comment}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage{longtable}
 %\usepackage{dialogue}
 
 \setcounter{secnumdepth}{2}
@@ -178,24 +179,102 @@ Na druhé je snaha pracovat s uživateli, které už webová stránka, nebo apli
 
 Podstatou webové analytiky je sběr a interpretace dat. Jak již bylo řečeno, sběr dat se za dobu existence webu vyvinul z pasivní formy analýzy logových souborů na serveru do dnešní - aktivního sběru dat na straně uživatele třetí stranou.
 
-Tato kapitola popisuje jak sběr dat, tak jejich interpretaci.
+Tato kapitola popisuje popisuje používané způsoby sběru dat s důrazem na to, jaké informace z nich získáváme, jaké další informace z nich můžeme vyčíst a jaké způsoby vizualizace se běžně vyskytují.
 
 \subsection{Analýza dat z logovacích souborů}
 
-\subsection{Události v prohlížeči}
+Wbové servery zaznamenávají zobrazení stránek do takzvaných logovacích souborů. Jedná se o soubory, ve kterých každý řádek představuje záznam o jednom zobrazení stránky, nebo například obrázku.
 
-\subsubsection{Pohyb myši}
-\subsubsection{Klikání}
-\subsubsection{Používání kláves}
-\subsubsection{Odchod ze stránky}
-\subsubsection{Skrolování stránky}
+Když na začátku devadesátých let vznikl web, provozovatelé serverů si uvědomili, že tyto soubory umožňují získat informace o popularitě jejich stránek a tak začali měřit počet zobrazení, takzvaných "hitů". V té době se vyskytovaly většinou pouze dlouhé stránky bez obrázků nebo odkazů, takže počet zobrazení postačoval potřebám provozovatelů.
+
+\bigskip
+
+\begin{lstlisting}[label=src:Plain,caption=Formát logovacího souboru dle RFC931]
+127.0.0.1 - frank [10/Oct/2000:13:55:36 -0700] "GET /apache_pb.gif HTTP/1.0" 200 2326
+\end{lstlisting}
+
+\bigskip
+
+\begin{longtable}{ lp{9cm} }
+  \verb!127.0.0.1! & IP adresa návštěvníka. Počet unikátních IP adres byl původně používán jako hrubý odhad počtu uživatelů. \\ \bigskip
+  \verb!-! & pomlčka \\ \bigskip
+  \verb!frank! & Uživatelské jméno. Tento údaj je přítomen v případě se stránka používá HTTP autentifikaci. To platí pro stránky s omezením přístupu pro uzavřenou skupinu lidí a tudíž u náhodného návštěvníka stránky tento údaj nenajdeme. V takovém případě se místo uživatelského jména zaznamená pomlčka. \\ \bigskip
+  \verb!10/Oct/2000! & Datum návštěvy. \\ \bigskip
+  \verb!13:55:36! & Čas návštěvy, vztahuje se k časové zóně na serveru. \\ \bigskip  
+  
+  \verb!-0700! & Časová zóna. \\ \bigskip
+  \verb!GET /apache_pb.gif! & Požadavek a verze HTTP protokolu \\ \bigskip
+  \verb!HTTP/1.0! & Požadavek HTTP protokolu. GET je základním požadavkem, který signalizuje, že uživatel požaduje nějaký obsah. Další používaný požadavek je například POST, který se používá pro odeslání formuláře na server.  \\ \bigskip
+  
+  \verb!200! & Kód odpovědi. Kód 200 znamená vše v pořádku. Obvyklé a pro webovou analytiku také zajímavé jsou 404 - stránka nenalezena, 500 - problém na serveru, nebo 303 - přesměrování stránky. \\ \bigskip
+  \verb!2326! & Délka odpovědi v bajtech. Sledování této veličiny spolu s počtem návštěv umožňuje identifikovat, který obsah nejvíce zatěžuje internetové připojení daného serveru.
+\end{longtable}
+
+
+\begin{comment}
+This is the IP address of the client (remote host) which made the request to the server. If HostnameLookups is set to On, then the server will try to determine the hostname and log it in place of the IP address. However, this configuration is not recommended since it can significantly slow the server. Instead, it is best to use a log post-processor such as logresolve to determine the hostnames. The IP address reported here is not necessarily the address of the machine at which the user is sitting. If a proxy server exists between the user and the server, this address will be the address of the proxy, rather than the originating machine.
+- (%l)
+The "hyphen" in the output indicates that the requested piece of information is not available. In this case, the information that is not available is the RFC 1413 identity of the client determined by identd on the clients machine. This information is highly unreliable and should almost never be used except on tightly controlled internal networks. Apache httpd will not even attempt to determine this information unless IdentityCheck is set to On.
+frank (%u)
+This is the userid of the person requesting the document as determined by HTTP authentication. The same value is typically provided to CGI scripts in the REMOTE_USER environment variable. If the status code for the request (see below) is 401, then this value should not be trusted because the user is not yet authenticated. If the document is not password protected, this entry will be "-" just like the previous one.
+
+[10/Oct/2000:13:55:36 -0700] (%t)
+The time that the server finished processing the request. The format is:
+[day/month/year:hour:minute:second zone]
+day = 2*digit
+month = 3*letter
+year = 4*digit
+hour = 2*digit
+minute = 2*digit
+second = 2*digit
+zone = (`+' | `-') 4*digit
+It is possible to have the time displayed in another format by specifying %{format}t in the log format string, where format is as in strftime(3) from the C standard library.
+"GET /apache_pb.gif HTTP/1.0" (\"%r\")
+The request line from the client is given in double quotes. The request line contains a great deal of useful information. First, the method used by the client is GET. Second, the client requested the resource /apache_pb.gif, and third, the client used the protocol HTTP/1.0. It is also possible to log one or more parts of the request line independently. For example, the format string "%m %U%q %H" will log the method, path, query-string, and protocol, resulting in exactly the same output as "%r".
+200 (%>s)
+This is the status code that the server sends back to the client. This information is very valuable, because it reveals whether the request resulted in a successful response (codes beginning in 2), a redirection (codes beginning in 3), an error caused by the client (codes beginning in 4), or an error in the server (codes beginning in 5). The full list of possible status codes can be found in the HTTP specification (RFC2616 section 10).
+2326 (%b)
+The last entry indicates the size of the object returned to the client, not including the response headers. If no content was returned to the client, this value will be "-". To log "0" for no content, use %B instead.
+\end{comment}
+
+Jak web rostl, tak i jeho složitost a z jednoduchých stránek bez obrázků se staly různě provázené stránky s odkazy a obrázky. S vzůrstající složitostí internetových stránek se i nástroje pro analýzu logovacích souborů stávaly sofistikovanější a začaly na sebe nabalovat další možnosti.
+
+Pole zaznamenávaných dat sbíraných v logovacích souborech byl rozšířen o další informace HTTP protokolu, kterými se zabývá další část kapitoly. Samotný formát je z hlediska anlaytiky vedlejší a není není již nutno ho rozebírat.
+
   
 \subsection{Informace získané pomocí HTTP protokolu}
+
+Prohlížení webových stránek na internetu je zajišťěno pomocí HTTP protokolu. HTTP je zkratka pro Hyper Text Tranfer Protokol, neboli protokol pro výměnu hypertextů (hypertextových stránek). Je to způsob jak webový prohlížeč komunikuje s webovým serverem.
+
+Pomocí HTTP protokolu poskytuje prohlížeč informace o uživateli tak, aby webový server mohl co nejlépe vyhovět požadavku.
+
+\bigskip
+
+\begin{lstlisting}[label=src:Plain,caption=Ukázka HTTP požadavku]
+GET /dumprequest HTTP/1.1
+Host: djce.org.uk
+Connection: keep-alive
+Accept: application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.634.0 Safari/534.16
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: cs-CZ,cs;q=0.8
+Accept-Charset: windows-1250,utf-8;q=0.7,*;q=0.3
+\end{lstlisting}
+
+
 \subsubsection{Prohlížeč a verze}
 \subsubsection{Geolokace}
 \subsubsection{referrer}
 \subsubsection{stránka}
 \subsubsection{query string}
+
+\subsection{Události v prohlížeči}
+\subsubsection{Pohyb myši}
+\subsubsection{Klikání}
+\subsubsection{Používání kláves}
+\subsubsection{Odchod ze stránky}
+\subsubsection{Skrolování stránky}
+
 
 \subsection{Informace získané pomocí JavaScriptu}
 \subsubsection{Rozlišení obrazovky}
