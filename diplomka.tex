@@ -280,11 +280,11 @@ Tato informace má různý význam v různých kontextech. Uvažujme informačn�
 
 \begin{verbatim}
 --+ Hlavní stránka informačního serveru		
-  |-- 1. Nejnovější článek		(počet zobrazení = dnešní popularita článku)
+  |-- 1. Nejnovější článek
   |-- 2. Nejnovější článek		
   |-- 3. Nejnovější článek	
   ...
-  |-- Kategorie článků A	(počet zobrazení = popularita kategorie)
+  |-- Kategorie článků A
   \-- Kategorie článků B  
 \end{verbatim}
 
@@ -299,10 +299,10 @@ Pro stránku, která představuje článek je počet zobrazení ukazatelem toho,
 \end{itemize}
 
 
-V kontextu webové aplikace se může jednat o údaj, který udává nejpoužívanější sadu funkcí.
+V kontextu webové aplikace se může jednat o údaj, který udává nejpoužívanější sadu funkcí. Následující příklad toto demonstruje na zjednodušené administraci E-shopu.
 
 \begin{verbatim}
---+ Hlavní stránka webové aplikace - administrace e-shopu
+--+ Administrace E-shopu
   |-+ Objednávky
   | |-- nevyřízené objednávky
   | |-- vyřízené objednávky
@@ -311,13 +311,29 @@ V kontextu webové aplikace se může jednat o údaj, který udává nejpoužív
   \-- Nastavení  
 \end{verbatim}
 
+V této fiktivní administraci E-shopu jsou tři hlavní podstránky - Objednávky, Zboží a Nastavení. V tomto případě počet zobrazení jednotlivých kategorií umožňuje zjistit (zhruba), jak často je pracováno s objednávkami v poměru se zbožím a nastavením.
 
+V každém případu počet zobrazených stránek představuje trochu jinou informaci a je třeba je interpretovat v podle typu měřené stránky (případně aplikace) a toho jak ji uživatelé používají.
+
+\subsubsection{Referrer}
+
+Údaj refferer je stránka, ze které uživatel přišel. Dá se tedy zjistit, odkud uživatelé na stránku přicházejí a spočítat nejčastější zdroje návštěv.
+
+Ještě zajímavější využití této informace je v případě, že uživatel přišel z vyhledávače. Pak se dá z referreru zjistit, jakou frázi uživatel vyhledával a jaké vyhledávače dominují v počtu přivedených zákazníků.
+
+\subsubsection{Query string}
+
+V query string části adresy se nacházejí údaje, které modifikují obsah stránky. Například pokud listuje uživatel produkty, v této části bude informace o tom, na které stránce se nachází.
+
+Tato 
+
+Dá se z něj poznat, jestli uživatel použil vyhledávání na stránce a jakou frázi hledal.
 
 \subsubsection{Akceptovaný jazyk}
 
-\subsubsection{query string}
+Pokud má uživatel v operačním systému nastavený jazyk češtinu, HTTP požadavek říká serveru, že preferuje českou verzi obsahu. Tato informace je zajímavá především pro servery s velkou návštěvností, které plánují přidat jazykovou mutaci.
 
-\subsubsection{referrer}
+
 
 \subsubsection{Geolokace}
 

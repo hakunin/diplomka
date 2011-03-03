@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  3 MAR 2011 11:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  3 MAR 2011 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -707,18 +707,6 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <9> not available
 LaTeX Font Info:    Font shape `OMS/phv/m/sl' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 259.
  [8]
-Overfull \hbox (39.67809pt too wide) in paragraph at lines 289--289
-[]  \OT1/pcr/m/n/10.95 |-- 1. Nejnov[]ej[]s[]^^P []cl[]anek (po[]cet zobrazen[]
-^^P = dne[]sn[]^^P popularita []cl[]anku)[] 
- []
-
-
-Overfull \hbox (0.25813pt too wide) in paragraph at lines 289--289
-[]  \OT1/pcr/m/n/10.95 |-- Kategorie []cl[]ank[]u A (po[]cet zobrazen[]^^P = po
-pularita kategorie)[] 
- []
-
-
 Overfull \hbox (0.18259pt too wide) in paragraph at lines 293--294
 []\OT1/ppl/m/n/10.95 Pro str[]anku, kter[]a p[]redstavuje []cl[]anek je po[]cet
  zo-brazen[]^^P ukaza-telem toho, jak je []cl[]anek
@@ -732,7 +720,7 @@ File: omsppl.fd
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 295.
  [9] [10] [11]
-Overfull \hbox (11.09898pt too wide) in paragraph at lines 405--407
+Overfull \hbox (11.09898pt too wide) in paragraph at lines 415--417
 []\OT1/ppl/m/n/10.95 Pro[]c takov[]y n[]astroj je[]st[]e ne-ex-is-tuje? (im-ple
 -men-tu-jou si in house []re[]sen[]^^P to-hoto probl[]emu) 
  []
@@ -742,7 +730,7 @@ Overfull \hbox (11.09898pt too wide) in paragraph at lines 405--407
 ] [13
 
 ]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 479--483
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 489--493
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
@@ -752,14 +740,14 @@ Overfull \hbox (17.68532pt too wide) in paragraph at lines 479--483
 ] [15
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 511--513
+Underfull \hbox (badness 1953) in paragraph at lines 521--523
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 511--513
+Underfull \hbox (badness 10000) in paragraph at lines 521--523
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
@@ -787,7 +775,7 @@ usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-t
 exlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/typ
 e1/urw/palatino/uplb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (21 pages, 179080 bytes).
+Output written on diplomka.pdf (21 pages, 180494 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
