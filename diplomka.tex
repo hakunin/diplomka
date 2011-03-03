@@ -248,6 +248,8 @@ Prohlížení webových stránek na internetu je zajišťěno pomocí HTTP proto
 
 Pomocí HTTP protokolu poskytuje prohlížeč informace o uživateli tak, aby webový server mohl co nejlépe vyhovět požadavku.
 
+Formátem HTTP protokolu se na tomto místě není třeba zabývat. Stačí vědět, že obsahuje podstatné jsou informace, které se používají ve webové analytice. Pro názornost je uveden příklad HTTP požadavku a některých základních informací, které obsahuje.
+
 \bigskip
 
 \begin{lstlisting}[label=src:Plain,caption=Ukázka HTTP požadavku]
@@ -261,12 +263,74 @@ Accept-Language: cs-CZ,cs;q=0.8
 Accept-Charset: windows-1250,utf-8;q=0.7,*;q=0.3
 \end{lstlisting}
 
+Nyní je třeba si říct, jaké informace můžeme získat a k čemu se dají využít. Jsou to:
 
-\subsubsection{Prohlížeč a verze}
-\subsubsection{Geolokace}
-\subsubsection{referrer}
-\subsubsection{stránka}
+\subsubsection{Požadovaná stránka}
+
+Udává o kterou stránku je zájem. Tento údaj se v nejjednodušším příkladě používá k určení popularity jednotlivých stránek na webovém serveru. Z hlediska toho, jak jsou dnešní webové stránky strukturovány, dá se předpokládat, že čím hlouběji je stránka zanořená ve stromové struktuře webu, tím toto číslo bude menší. Například:
+
+\begin{verbatim}
+--+ Hlavní stránka 			(150 návštěv)
+  |--+ Podstránka 1			( 50 návštěv)
+  |  \-- Pod-pod stránka	( 10 návštěv)
+  \--- Podstránka 2			( 50 návštěv)
+\end{verbatim}
+
+Tato informace má různý význam v různých kontextech. Uvažujme informační server na kterém každý den vyjde několik článků v různých kategoriích. Hlavní stránka klade největší důraz na nejnovější články a v postranním panelu obsahuje odkazy na jednotlivé kategorie článků.
+
+\begin{verbatim}
+--+ Hlavní stránka informačního serveru		
+  |-- 1. Nejnovější článek		(počet zobrazení = dnešní popularita článku)
+  |-- 2. Nejnovější článek		
+  |-- 3. Nejnovější článek	
+  ...
+  |-- Kategorie článků A	(počet zobrazení = popularita kategorie)
+  \-- Kategorie článků B  
+\end{verbatim}
+
+Pro kategorie znamená počet zobrazení popularitu jednotlivých kategorií. Tento údaj by měl být odpovídat počtu zobrazení článků v jednotlivých kategoriích a měl by se porovnávat k počtu zobrazení dalších kategorií. Například v případě že poměr návštěv kategorie vaření je velký ale poměr přečtení článků o vaření je malý, může to například znamenat, že kategorie je zajímavá ale neobsahuje tak zajímavé články.
+
+Pro stránku, která představuje článek je počet zobrazení ukazatelem toho, jak je článek populární. S touto informaci je se dále pracuje a interpretuje se. Je třeba dát do kotextu:
+\begin{itemize}
+  \item{které webové stránky na daný článek odkázaly}
+  \item{kolik vzniklo ke článku komentářů}
+  \item{kolik lidí kliklo na článek z hlavní stránky}
+  \item{jaký je u článku titulek a obrázek, jestli článek}
+\end{itemize}
+
+
+V kontextu webové aplikace se může jednat o údaj, který udává nejpoužívanější sadu funkcí.
+
+\begin{verbatim}
+--+ Hlavní stránka webové aplikace - administrace e-shopu
+  |-+ Objednávky
+  | |-- nevyřízené objednávky
+  | |-- vyřízené objednávky
+  | \-- hledat objednávky
+  |-- Zboží
+  \-- Nastavení  
+\end{verbatim}
+
+
+
+\subsubsection{Akceptovaný jazyk}
+
 \subsubsection{query string}
+
+\subsubsection{referrer}
+
+\subsubsection{Geolokace}
+
+\subsubsection{Prohlížeče a jejich verze}
+
+
+
+
+---- Porovnání co se dá zjistit z HTTP protokolu a co JavaScriptem. ----
+
+
+
+---- JS only informace: ----
 
 \subsection{Události v prohlížeči}
 \subsubsection{Pohyb myši}
@@ -274,7 +338,6 @@ Accept-Charset: windows-1250,utf-8;q=0.7,*;q=0.3
 \subsubsection{Používání kláves}
 \subsubsection{Odchod ze stránky}
 \subsubsection{Skrolování stránky}
-
 
 \subsection{Informace získané pomocí JavaScriptu}
 \subsubsection{Rozlišení obrazovky}
@@ -289,6 +352,8 @@ Accept-Charset: windows-1250,utf-8;q=0.7,*;q=0.3
 \subsubsection{Počet návštěv}
 \subsubsection{Počet unikátních uživatelů}
   
+  
+---- Tabulka jednoduchého srovnání logfile analýzy a page taggingu ----
   
 
 \subsection{Interpretace a Vizualizace dat}

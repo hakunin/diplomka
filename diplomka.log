@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  2 MAR 2011 11:51
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  3 MAR 2011 11:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -697,49 +697,74 @@ Underfull \hbox (badness 2409) in paragraph at lines 210--211
 [7
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 257.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 259.
 
  (/usr/share/texmf-texlive/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 257.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 259.
 LaTeX Font Info:    Font shape `OMS/phv/m/sl' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 257.
- [8] [9] [10]
-Overfull \hbox (11.09898pt too wide) in paragraph at lines 340--342
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 259.
+ [8]
+Overfull \hbox (39.67809pt too wide) in paragraph at lines 289--289
+[]  \OT1/pcr/m/n/10.95 |-- 1. Nejnov[]ej[]s[]^^P []cl[]anek (po[]cet zobrazen[]
+^^P = dne[]sn[]^^P popularita []cl[]anku)[] 
+ []
+
+
+Overfull \hbox (0.25813pt too wide) in paragraph at lines 289--289
+[]  \OT1/pcr/m/n/10.95 |-- Kategorie []cl[]ank[]u A (po[]cet zobrazen[]^^P = po
+pularita kategorie)[] 
+ []
+
+
+Overfull \hbox (0.18259pt too wide) in paragraph at lines 293--294
+[]\OT1/ppl/m/n/10.95 Pro str[]anku, kter[]a p[]redstavuje []cl[]anek je po[]cet
+ zo-brazen[]^^P ukaza-telem toho, jak je []cl[]anek
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 295.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 295.
+ [9] [10] [11]
+Overfull \hbox (11.09898pt too wide) in paragraph at lines 405--407
 []\OT1/ppl/m/n/10.95 Pro[]c takov[]y n[]astroj je[]st[]e ne-ex-is-tuje? (im-ple
 -men-tu-jou si in house []re[]sen[]^^P to-hoto probl[]emu) 
  []
 
-[11
+[12
 
-] [12
+] [13
 
 ]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 414--418
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 479--483
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
 
-[13
+[14
 
-] [14
+] [15
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 446--448
+Underfull \hbox (badness 1953) in paragraph at lines 511--513
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--448
+Underfull \hbox (badness 10000) in paragraph at lines 511--513
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
 
-[15
+[16
 
 ] (./diplomka.aux)
 
@@ -747,24 +772,24 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4634 strings out of 495061
- 59068 string characters out of 1182620
+ 4649 strings out of 495061
+ 59321 string characters out of 1182620
  189327 words of memory out of 3000000
- 7719 multiletter control sequences out of 15000+50000
+ 7731 multiletter control sequences out of 15000+50000
  28024 words of font info for 57 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  33i,12n,45p,674b,1326s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/typ
-e1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uh
-vb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sh
-are/texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texliv
-e/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw
-/palatino/uplr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplri8a
-.pfb>
-Output written on diplomka.pdf (20 pages, 164300 bytes).
+ve/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/urw/cour
+ier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></
+usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-t
+exlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/typ
+e1/urw/palatino/uplb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/u
+plr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on diplomka.pdf (21 pages, 179080 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
+ 112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
