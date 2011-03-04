@@ -323,37 +323,93 @@ Ještě zajímavější využití této informace je v případě, že uživatel
 
 \subsubsection{Query string}
 
-V query string části adresy se nacházejí údaje, které modifikují obsah stránky. Například pokud listuje uživatel produkty, v této části bude informace o tom, na které stránce se nachází.
+V query string části adresy se nacházejí údaje, které modifikují obsah stránky. Je to část adresy stránky za otazníkem a není povinná. Například, pokud zadáte "web analytics" do hledání v Google, bude adresa stránky vypadat následovně:
 
-Tato 
+\begin{verbatim}
+www.google.com/search?sourceid=chrome&ie=UTF-8&q=web+analytics
+\end{verbatim}
 
-Dá se z něj poznat, jestli uživatel použil vyhledávání na stránce a jakou frázi hledal.
+\begin{tabular}{ll}
+	Část adresy & Význam \\	\hline \smallskip
+	znak "?" & začátek query string \\ \smallskip
+	znak "\&" & odděluje dvojice klíče a hodnoty \\ \smallskip
+	sourceid=chrome & prohlížeč je Google Chrome \\ \smallskip
+	ie=UTF-8 & požadujeme výslednou stránku v UTF-8 \\ \smallskip
+	q=web+analytics & vyhledávaný dotaz je "web analytics"
+\end{tabular}
+
+\bigskip
+
+Stejný princip se používá například když uživatel listuje produkty v elektronickém obchodě. V část adresy bude obsahovat informaci o tom, na které stránce se nachází.
+
+Významné využití je například ve zjišťování, co zákazníci v elektronickém obchodě hledají a jaké fráze při tom používají. Zajímavé je také kolik zákazníků vyhledávání používá a jak často.
 
 \subsubsection{Akceptovaný jazyk}
 
 Pokud má uživatel v operačním systému nastavený jazyk češtinu, HTTP požadavek říká serveru, že preferuje českou verzi obsahu. Tato informace je zajímavá především pro servery s velkou návštěvností, které plánují přidat jazykovou mutaci.
 
 
-
-\subsubsection{Geolokace}
-
 \subsubsection{Prohlížeče a jejich verze}
 
+Podíly jednotlivých prohlížečů se mění podle zaměření stránek a zeměpisných podmínek. Na stránkách o technologiích Microsoftu se dá očekávat vyšší podíl Internet Exploreru\footnote{Internetový prohlížeč od Miscrosoftu}, na stránkách o vaření se zase mohou objevovat vyšší podíly starých prohlížečů. Každý web by měl fungovat pod většinou prohlížečů, pokud se však jedná o stránku o nových technologiích, kde převažují moderní prohlížeče, může se majitel rozhodnout o využití moderních vlatností těhto prohlížečů.
 
+Na druhou stranu na stránkách s vysokým podílem starých prohlížečů se dá očekávat, že uživatelé stránky zobrazují na starých počítačích a tak je třeba tomu přizpůsobit obsah stránky, aby bylo prohlížení bezproblémové a plynulé.
 
+\subsubsection{Možnosti HTTP a JavaScripu}
 
----- Porovnání co se dá zjistit z HTTP protokolu a co JavaScriptem. ----
+Většina těhto informací se dá zjistit jak pomocí JavaScriptu na straně klienta, tak pomocí HTTP protokolu na straně serveru.
 
+V sekci ~\ref{sec:moznosti} je tabulka porovnání toho, co je možno měřit oběma metodami. Všechny následující informace vznikají přímo v prohlížeči a jediný způsob, jak se dají měřit je JavaScriptem.
 
-
----- JS only informace: ----
 
 \subsection{Události v prohlížeči}
+
+Událostí je myšlen klik na tlačítko, psaní do textového pole, skrolování na stránce, dokonce i pohyb myší a změna velikosti prohlížeče. Jedná se o interakci uživatele se stránkou - ta probíhá v rámci prohlížeče na straně uživatele a tudíž není ji možno měřit jinak, než na straně uživatele.
+
+K sběru dat na straně uživatele se používá JavaScript, který v určitých intervalech posílá tyto informace na server třetí strany, která je vyhodnocuje a smysluplně zobrazuje.
+
+Tato čás popisuje jednotlivé události a jaké mají využití ve webové analytice.
+
+\subsubsection{Klik myší}
+
+Klikání myší je na stránce způsobuje přechod na jinou stránku, spuštění nějaké funkce, nebo nic, pokud uživatel klikl v místě, kterému není přiřazená žádná funkce.
+
+Událost kliku na stránce poskytuje tyto informace:
+
+\begin{itemize}
+	\item pozici myši na stránce v okamžiku kliku
+	\item objeckt, na který bylo kliknuto
+	\item stav kláves ctrl, shift a alt v okamžiku kliku
+	\item tlačítko kliknutí (levé, pravé, prostřední a kombinace)
+\end{itemize}
+
+{\bf Interakce s aktiviními prvky} na stránce. V dnešní době obsahují stránky aktivní prvky, například fotoalba umožňují větší náhled obrázku bez nutnostni přejít na novou stránku. Protože tento náhled nezpůsobí zobrazení nové stránky, nevznikne ani nový záznam návštěvy stránky a většina nástrojů pro webovou analytiku tuto skutečnost nezaznamenávají.
+
+{\bf Odchozí odkazy}. Odkaz, který vede na stránku na jiném serveru, říkáme takovému odkazu odchozí. Provozovatele serveru může zajímat, kam z jeho stránky návštěvníci odcházejí. Autora článku zajímá, které odkazy z jeho článku jsou nejzajímavější pro jeho čtenáře.
+
+Sledování {\bf odkazů na soubory} umožňuje získat podobný přehled jako odchozí odkazy. Zatímco analýza logových souborů sleduje stahování souborů na serveru, sběr dat na straně klienta tuto informaci získá, když uživatel klikne na odkaz.
+
+Ze všech kliků na stránce se navíc sestavují takzvané heatmapy\footnote{Heatmapy zobrazují TODO, viz sekce TODO}
+
 \subsubsection{Pohyb myši}
-\subsubsection{Klikání}
+
+Pohyb myši na stránce není kritický faktor, který je třeba sledovat na všech webech jako například kliky myší. Samy o sobě nemají velkou vypovídají hodnotu, existují však nástroje, které je těhto informací dokážou využít.
+
+Agregace pohybů myší se využívá ke konstrukci heatmap. Účel heatmap je graficky znázornit, kterým částem webové stránky se dostává nejvíce pozornosti, ty se zobrazují teplými barvami (žlutá, červená), místa kterým se nedostává pozornost jsou naopak laděny do studeých barev (zelená, modrá). Více o heatmapách v sekci ...
+
+Druhým zcela pdlišným způsobem využití znalosti o pohybu myši je mouse-tracking. Tato technika kombinuje sledování kliků a pohybů myši a tak pořizuje záznam o uživatelově činnosti na stránce. Jedná se o velmi specifickou techniku, která se používá k testování stránek ještě dřív, než se uvolní na veřejnost, nebo k optimalizaci těch částí stránky, kde dochází ke sledované konverzi\footnote{Konverze TODO}. Příklad apliakce mouse-trackingu ke sledování konverze je například v proces dokončení objednávky elektronickém obchodě.
+
 \subsubsection{Používání kláves}
+
+Události používání kláves se používá nejčastěji ve spojení s mouse-trackingem (viz Pohyb myši) k testování uživatelské zkušenosti, nebo k optimalizalizaci objednávkových formulářů v podobných situacích.
+
+Některé webové stránky kladou velký důraz na přístupnost a umožňují uživateli se navigovat pomocí klávesových zkratek. V takovém případě by měli měřit i používání těchto zkratek a případně je upravit tak, aby byla navigace na jejich webu co nejjednodušší.
+
+
+
 \subsubsection{Odchod ze stránky}
 \subsubsection{Skrolování stránky}
+\subsubsection{Změna velikosti okna}
 
 \subsection{Informace získané pomocí JavaScriptu}
 \subsubsection{Rozlišení obrazovky}
@@ -367,9 +423,32 @@ Pokud má uživatel v operačním systému nastavený jazyk češtinu, HTTP pož
 \subsubsection{Častost návštěv}
 \subsubsection{Počet návštěv}
 \subsubsection{Počet unikátních uživatelů}
+\subsubsection{Geolokace}
+
   
   
----- Tabulka jednoduchého srovnání logfile analýzy a page taggingu ----
+\subsection{Možnosti logfile analýzy a page-taggingu}
+\label{sec:moznosti}
+
+
+\begin{tabular}{ l c c }
+informace 				& logfile analýza & page-tagging \\ 
+\hline
+objem přenesených dat	& $\bullet$ & $\circ$ \\
+stránka 				& $\bullet$	& $\bullet$ \\
+referrer				& $\bullet$	& $\bullet$ \\
+query string			& $\bullet$	& $\bullet$ \\
+jazyk					& $\bullet$	& $\bullet$ \\
+prohlížeč				& $\bullet$	& $\bullet$ \\
+odchozí odkazy			& $\circ$	& $\bullet$ \\
+doba na stránce			& $\circ$	& $\bullet$ \\
+opuštění stránky		& $\circ$	& $\bullet$ \\
+rozlišení obrazovky		& $\circ$	& $\bullet$ \\
+velikost viewportu		& $\circ$	& $\bullet$ \\
+zobrazená část stránky	& $\circ$	& $\bullet$ \\
+
+\end{tabular}
+\bigskip
   
 
 \subsection{Interpretace a Vizualizace dat}

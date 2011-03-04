@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  3 MAR 2011 15:34
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  4 MAR 2011 13:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -719,40 +719,76 @@ File: omsppl.fd
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 295.
- [9] [10] [11]
-Overfull \hbox (11.09898pt too wide) in paragraph at lines 415--417
+ [9] [10]
+Overfull \hbox (1.97293pt too wide) in paragraph at lines 354--355
+\OT1/ppl/m/n/10.95 Pod[]^^Ply jed-notliv[]ych prohl[]^^P[]ze[]c[]u se m[]en[]^^
+P po-dle zam[]e[]ren[]^^P str[]anek a zem[]episn[]ych podm[]^^Pnek.
+ []
+
+
+Overfull \hbox (0.7089pt too wide) in paragraph at lines 356--357
+[]\OT1/ppl/m/n/10.95 Na druhou stranu na str[]ank[]ach s vysok[]ym pod[]^^Plem 
+star[]ych prohl[]^^P[]ze[]c[]u se d[]a o[]cek[]avat,
+ []
+
+
+Overfull \hbox (5.35617pt too wide) in paragraph at lines 367--368
+\OT1/ppl/m/n/10.95 Ud[]alost[]^^P je my[]slen klik na tla[]c[]^^Ptko, psan[]^^P
+ do tex-tov[]eho pole, skrolov[]an[]^^P na str[]ance, dokonce
+ []
+
+[11]
+Overfull \hbox (7.50244pt too wide) in paragraph at lines 398--399
+\OT1/ppl/m/n/10.95 tepl[]ymi bar-vami ([]zlut[]a, []cerven[]a), m[]^^Psta kter[
+]ym se ne-dost[]av[]a po-zornost jsou naopak lad[]eny
+ []
+
+
+Overfull \hbox (13.54652pt too wide) in paragraph at lines 400--401
+\OT1/ppl/m/n/10.95 Tato tech-nika kom-bin-uje sle-dov[]an[]^^P klik[]u a po-hyb
+[]u my[]si a tak po[]rizuje z[]aznam o u[]zivatelov[]e
+ []
+
+
+Overfull \hbox (5.00568pt too wide) in paragraph at lines 406--407
+\OT1/ppl/m/n/10.95 t[]echto zkratek a p[]r[]^^Ppadn[]e je up-ravit tak, aby byl
+a nav-i-gace na je-jich webu co ne-j-jednodu[]s[]s[]^^P. 
+ []
+
+[12] [13] [14]
+Overfull \hbox (11.09898pt too wide) in paragraph at lines 500--502
 []\OT1/ppl/m/n/10.95 Pro[]c takov[]y n[]astroj je[]st[]e ne-ex-is-tuje? (im-ple
 -men-tu-jou si in house []re[]sen[]^^P to-hoto probl[]emu) 
  []
 
-[12
+[15
 
-] [13
+] [16
 
 ]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 489--493
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 574--578
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
 
-[14
+[17
 
-] [15
+] [18
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 521--523
+Underfull \hbox (badness 1953) in paragraph at lines 606--608
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--523
+Underfull \hbox (badness 10000) in paragraph at lines 606--608
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
 
-[16
+[19
 
 ] (./diplomka.aux)
 
@@ -760,10 +796,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4649 strings out of 495061
- 59321 string characters out of 1182620
- 189327 words of memory out of 3000000
- 7731 multiletter control sequences out of 15000+50000
+ 4656 strings out of 495061
+ 59423 string characters out of 1182620
+ 189338 words of memory out of 3000000
+ 7738 multiletter control sequences out of 15000+50000
  28024 words of font info for 57 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  33i,12n,45p,674b,1326s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -775,9 +811,9 @@ usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-t
 exlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/typ
 e1/urw/palatino/uplb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (21 pages, 180494 bytes).
+Output written on diplomka.pdf (24 pages, 194792 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
