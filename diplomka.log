@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  4 MAR 2011 13:57
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  5 MAR 2011 13:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -755,8 +755,14 @@ Overfull \hbox (5.00568pt too wide) in paragraph at lines 406--407
 a nav-i-gace na je-jich webu co ne-j-jednodu[]s[]s[]^^P. 
  []
 
-[12] [13] [14]
-Overfull \hbox (11.09898pt too wide) in paragraph at lines 500--502
+[12]
+Overfull \hbox (11.00667pt too wide) in paragraph at lines 411--412
+\OT1/ppl/m/n/10.95 Ud[]alost skrolov[]an[]^^P str[]anky nast[]av[]a kdy[]z u[]z
+ivatel posouv[]a str[]anku na-horu a dol[]u, p[]r[]^^Ppadn[]e
+ []
+
+[13] [14]
+Overfull \hbox (11.09898pt too wide) in paragraph at lines 509--511
 []\OT1/ppl/m/n/10.95 Pro[]c takov[]y n[]astroj je[]st[]e ne-ex-is-tuje? (im-ple
 -men-tu-jou si in house []re[]sen[]^^P to-hoto probl[]emu) 
  []
@@ -766,7 +772,7 @@ Overfull \hbox (11.09898pt too wide) in paragraph at lines 500--502
 ] [16
 
 ]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 574--578
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 583--587
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
@@ -776,14 +782,14 @@ Overfull \hbox (17.68532pt too wide) in paragraph at lines 574--578
 ] [18
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 606--608
+Underfull \hbox (badness 1953) in paragraph at lines 615--617
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 606--608
+Underfull \hbox (badness 10000) in paragraph at lines 615--617
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
@@ -811,7 +817,7 @@ usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-t
 exlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/typ
 e1/urw/palatino/uplb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (24 pages, 194792 bytes).
+Output written on diplomka.pdf (24 pages, 195823 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
