@@ -12,17 +12,6 @@
 \setcounter{secnumdepth}{2}
 
 
-\begin{comment}
-> Zdravím, tak jsem to proletěl.
->
-> - co citování zdrojů? Např. v části o učňovství atd,. to určitě není z Vaší hlavy
-> - moc se mi nezdá vyvážení textu, moc stránek věnujete existujícím nástrojům
-> - používejte méně osobní formy zápisu, jako udělám, mám, chci atd. kspíše obecně a neosobně, co je v práci obsaženo. Když napíšte, chci navrhnout rozhraní, tak to vypadá blbě, protože pro úspěšné zvládnutí diplomky jste ho snad už navrhnul a realizoval
-> - v kapitole 5 není moc jasné vazba mezi prezentovanými informacemi ani to jestli je to Vaše práce nebo ne. Zdůrazněte, co je výstupem diplomky a proč
-> - více referencí
-> - druhá část mi příjde zmatená a bez nosných informací, ale možná, že to ještě nemáte hotovo.
-\end{comment}
-
 
 
 % Zadame pozadovane vstupy pro generovani titulnich stran.
@@ -71,6 +60,8 @@ The goal of this thesis is to create a tool to aid web application development a
 
 
 
+
+
 % Zacatek dokumentu
 \begin{document}
 
@@ -100,12 +91,42 @@ The goal of this thesis is to create a tool to aid web application development a
 
 
 
-\section{Úvod (3 stránky)}
+
+
+
+
+\section{Úvod (2 stránky)}
 \label{sec:Uvod}
 
 
-Tato diplomová práce se zabývá webovou analytikou. Úvodem popisuje jaký problém webová analytika řeší, nastiňuje historii měření na webu a současné nejčastější využití nástrojů pro webovou analytiku.
+Tato diplomová práce se zabývá webovou analytikou a novým nástrojem pro analytiku webových aplikací. 
 
+Od vzniku webových stránek se web rozvíjel až do dnešní podoby a webová analytika ho provázela. Čím sofistikovanějšími se webové stránky stávaly, tím důmyslnější způsoby byly nalézány k analýze uživatelského chování.
+
+Z počátku byly používány nástroje na straně serveru, které pasivně analyzovaly data o návštěvách stránek až v polovině dvadesátkých let masivní vývoj webových prohlížečů přesunul sběr dat na stranu klienta, kde umožnil aktivní sběr dat o uživatelském chování přímo na stránce.
+
+Sběr dat na straně klienta umožnil rozvoj jednoduše použitelných nástrojů pro webovou analytiku, které svým způsobem stále kopírují konvenční přístup k analýze návštěvníků.
+
+Současné metody měření a interpretace dat dobře vyhovují jednorázovým účelům jako je měření konverze reklamní kampaně, nebo poskytují průměrné statistiky, jako je top 10 nejnavštěvovanějších stránek na serveru v daném období.
+
+Kromě webových stránek jsou na internetu také webové aplikace. Moderní technologie jako HTML5 se snaží smazat rozdíl mezi desktopovou aplikací a tou webovou. Tento trend potvrzuje i to, že Google připravuje svůj vlastní operační systém, který je výhradně založen na webovém prohlížeči a všechny aplikace poběží v něm.
+
+Možnosti webových aplikací jsou již nyní rozšířeny o podporu audia, videa (včetně manipulace) a zobrazení trojrozměrných objektů pomocí technologie WebGl. 
+
+Někteří i tak budou tvrdit, že webové aplikace se nikdy nebudou moci měřit s desktopovými. To by možná byla pravda, pokud by jistá posvátná hranice mezi internetovým prohlížečem a nativní aplikací nebyla překročena technologií NaCl\footnote{NaCl není jediná technologie, která rozšiřuje možnosti prohlížeče o funkce a ryhlost nativního kódu. V současnosti se k těmto účelům používá Adobe Flash, nebo Microsoft Silverlight. Jde však o první implementaci, která si klade za cíl spouštět nativní kód, nepodléhající proprietární technologii.} - nativním kódem pro webové aplikace. Ano, v budoucnu budeme moci spouštět nativní kód v prohlížeči. Tím končí exkluzivní postavení desktopových aplikací.
+
+\bigskip
+
+S nástupem webových aplikací se mění i požadavky na nástroje webové analytiky. Webová aplikace se od webové stránky liší v několika věcech. Obecně rozdíl mezi stránkou a aplikací je interakce. Do webových aplikací vstupují uživatelská data ať už ve tradiční formě hodnot z formuláře, nebo data, které vznikají samotnou interakcí (například  malování). 
+
+Když tedy uživatel vkládá, nebo vytváří v aplikaci data, je třeba je nějak uložit k tomu, aby mohly být později vyvolána a dalo se s nimi pracovat. Pro tento účel webové aplikace vyžadují způsob, jak unikátně identifikovat uživatele. V praxi to znamená, že se uživatel musí zaregistrovat a potvrdit svou identitu e-mailem\footnote{Stále častější alternativou se stávají identifikační autority jako Facebook, Twitter, nebo OpenId. To umožňuje, že uživatel nemusí vyplňovat email, ani heslo a je přihlášen pomocí jediného kliknutí.}.
+
+Právě to, že je uživatel přihlášen dává nové možnosti vývoje nástrojů pro webobou analytiku. Narozdíl od webových stránek, kde nemůžeme s jistotou určit, zda se jedná o stejného uživatele můžeme podle přihlášení s jistotou tvrdit, že se o jedná o stejného uživatele a víme přesně kterého.
+
+
+
+
+\begin{comment}
 V první kapitole popisuje nejčastěji používané techniky měření a vizualizace dat, vysvětluje motivace za jednotlivými technikami a případy užití.
 
 Druhá kapitola se zabývá návrhem nové techniky měření, která se zajímá o to, které funkce webové aplikace uživatelé používají. Popisuje jakým způsobem budou data získána a celý systém jako celek.
@@ -115,17 +136,18 @@ Třetí kapitola "Implementace" je zaměřena na použité tehcnologie a konkré
 Čtvrtá kapitola následuje aplikací vzniklého nástroje na existující webovou aplikaci. Cílem je ověřit, že vyvinutý nástroj přináší očekávané výsledky.
 
 V poslední kapitole dochází ke zhodnocení zda metoda měření i nástroj plní očekávání, jaký je jejich přínos pro jejich uživatele v praxi a porovnání s podobnými nástroji.
+\end{comment}
 
 
-\subsection{Hostorie webové analytiky}
+\section{Webová analytika}
 
-\subsubsection{1990 - Zrození WWW stránek}
+\subsection{Historie}
+
+
 Na začátku devadesátých let došlo ke zrození WWW stránek[reference]. Uživatelé tehdy prohlíželi statické stránky a pokaždé, když si nějakou prohlédli, vznikl záznam v logovacím souboru, takzvaný "hit". Počet hitů se stal ukazatelem úspěšnosti webový stránek.
 
-\subsubsection{1994 - Mosaic: První masově úspěšný grafický prohlížeč}
 V roce devadesát čtyři vznikl grafický webový prohlížeč s názvem Mosaic[reference]. Díky jeho snadné instalaci a srozumitelnému uživatelskému rozhraní se web otevřel široké veřejnosti. Tento prohlížeč byl později přejmenován na Netscape a v roce 1995 ho používalo 80\% uživatelů internetu.
 
-\subsubsection{1995 - Analog: Analýza logovacích souborů}
 V roce devadesát pět znikl Analog - nástroj pro analýzu logovacích souborů. Jeho autor Stephen Turner ho poskytoval zdarma jako freeware pro několik platform. Jednalo se o první sofistikovaný nástroj pro analýzu a zobrazení návštěvnosti webových stránek.
 
 \begin{lstlisting}[label=src:Plain,caption=Ukázka záznamu z logovacího souboru ve formátu RFC931]
@@ -145,8 +167,6 @@ The data collection became unusable with the advent of search engines and their 
 \end{figure}
 
 
-\subsubsection{1996 - Měření pomocí kódu na stránce}
-
 V roce 1996 byl v obou nejpoužívanějších prohlížečích\footnote{V roce 1996 měl Netscape Navigator zhruba 80\% podíl a Internet Explorer 14\%} k dispozici JavaScript. 
 
 Tvůrce webových stránek na každou stránku umístil kód, který mu vygeneroval poskytovatel měřícího nástroje. 
@@ -156,15 +176,9 @@ Tento postup se zásadně liší od analýzy logových souborů. Místo statick�
 
 Tento průlom umožnil použtití třetích stran pro sběr i vyhodnocení dat a tak dal vzniknout prvním online nástrojům pro webovou analytiku. V různých obměnách se tato technika používá dodnes.
 
-
-\subsubsection{2005 - Moderní webová analytika pro každého}
-
 V roce 2005 koupila společnost Google analytický systém Urchin on Demand a ještě v témž roce ho poskytla zdarma široké veřejnosti jako webovou aplikaci pod názvem Google Aanlytics.
 
 Pro obrovský zájem byl tento produkt zpřístupněn pouze omezenému počtu uživatelů. Od října roku 2006 byly znovu otevřeny volné registrace a dodnes se jedná o nejpoužívanější systém pro webovou analytiku.
-
-
-\subsubsection{2011 - Sociální média a zařízení}
 
 S nástupem sociálních médií a chytrých mobilních zařízení dochází k nárůstu času, který uživatelé tráví na internetu. Poměrně k tomuto nárůstu se zvyšují investice do internetových stránek a webových aplikací. 
 
@@ -175,7 +189,7 @@ Na druhé je snaha pracovat s uživateli, které už webová stránka, nebo apli
 
 
 
-\section{Sběr a interpretace dat (15 stránek)}
+\subsection{Sběr a interpretace dat (15 stránek)}
 
 Podstatou webové analytiky je sběr a interpretace dat. Jak již bylo řečeno, sběr dat se za dobu existence webu vyvinul z pasivní formy analýzy logových souborů na serveru do dnešní - aktivního sběru dat na straně uživatele třetí stranou.
 
@@ -370,10 +384,14 @@ K sběru dat na straně uživatele se používá JavaScript, který v určitých
 
 Tato čás popisuje jednotlivé události a jaké mají využití ve webové analytice.
 
-\subsubsection{Klik myší}
+
+
+
+
 
 Klikání myší je na stránce způsobuje přechod na jinou stránku, spuštění nějaké funkce, nebo nic, pokud uživatel klikl v místě, kterému není přiřazená žádná funkce.
 
+\begin{comment}
 Událost kliku na stránce poskytuje tyto informace:
 
 \begin{itemize}
@@ -382,6 +400,7 @@ Událost kliku na stránce poskytuje tyto informace:
 	\item stav kláves ctrl, shift a alt v okamžiku kliku
 	\item tlačítko kliknutí (levé, pravé, prostřední a kombinace)
 \end{itemize}
+\end{comment}
 
 {\bf Interakce s aktiviními prvky} na stránce. V dnešní době obsahují stránky aktivní prvky, například fotoalba umožňují větší náhled obrázku bez nutnostni přejít na novou stránku. Protože tento náhled nezpůsobí zobrazení nové stránky, nevznikne ani nový záznam návštěvy stránky a většina nástrojů pro webovou analytiku tuto skutečnost nezaznamenávají.
 
@@ -391,7 +410,9 @@ Sledování {\bf odkazů na soubory} umožňuje získat podobný přehled jako o
 
 Ze všech kliků na stránce se navíc sestavují takzvané heatmapy\footnote{Heatmapy zobrazují TODO, viz sekce TODO}
 
-\subsubsection{Pohyb myši}
+
+
+
 
 Pohyb myši na stránce není kritický faktor, který je třeba sledovat na všech webech jako například kliky myší. Samy o sobě nemají velkou vypovídají hodnotu, existují však nástroje, které je těhto informací dokážou využít.
 
@@ -399,30 +420,36 @@ Agregace pohybů myší se využívá ke konstrukci heatmap. Účel heatmap je g
 
 Druhým zcela pdlišným způsobem využití znalosti o pohybu myši je mouse-tracking. Tato technika kombinuje sledování kliků a pohybů myši a tak pořizuje záznam o uživatelově činnosti na stránce. Jedná se o velmi specifickou techniku, která se používá k testování stránek ještě dřív, než se uvolní na veřejnost, nebo k optimalizaci těch částí stránky, kde dochází ke sledované konverzi\footnote{Konverze TODO}. Příklad apliakce mouse-trackingu ke sledování konverze je například v proces dokončení objednávky elektronickém obchodě.
 
-\subsubsection{Používání kláves}
+
+
+
 
 Události používání kláves se používá nejčastěji ve spojení s mouse-trackingem (viz Pohyb myši) k testování uživatelské zkušenosti, nebo k optimalizalizaci objednávkových formulářů v podobných situacích.
 
 Některé webové stránky kladou velký důraz na přístupnost a umožňují uživateli se navigovat pomocí klávesových zkratek. V takovém případě by měli měřit i používání těchto zkratek a případně je upravit tak, aby byla navigace na jejich webu co nejjednodušší.
 
 
-\subsubsection{Skrolování stránky}
+
 
 Událost skrolování stránky nastává když uživatel posouvá stránku nahoru a dolů, případně doprava nebo doleva. Podle  posuvu stránky v určitých intervalech se dá usuzovat, že uživatel stránky čte, nebo pouze prohlíží. Podle délky čtení a toho, jestli se uživatel dostal až na konec článku se dá určit, jestli článek dočetl.
 
 V kombinací s velikostí vnítřní části okna prohlížeče se dá přesně uričit, na kterou část stránky se uživatel dívá. Toho se například využívá k vykreslení heatmapy, která kolik času uživatelé věnují jednotlivým částem stránky. 
 
 
-\subsubsection{Odchod ze stránky}
+
+{\bf Odchod ze stránky} je událost, která je spuštěna když uživatel přechází na jinou stránku, nebo zavírá okno se stránkou. 
+
+Tato událost se používá k vypočtení tzv "bounce rate". Bounce rate je procento uživatelů, kteří na stránku přijdou a hned zase odejdou. Takové chování se dá očekávat například, když uživatel něco hledá ve vyhledávači, prohlédne si a vzápětí odchází, protože na první pohled stránka neobsahuje informace, které hledal.
+
+Bounce rate je třeba chápat v kontextu s tím, odkud uživatel přichází. Měl by se odlišovat podle zdroje, odkud návštěvník přišel. Například návštěvníci z vyhledávače budou mít odlišný bounce rate, než návštěvníci z odkazujících článků, reklamy, nebo ti, kteří přímo napíší adresu stránky do adresního řádku.
 
 
+Rozlišení obrazovky, stejně jako používaný prohlížeč je informace která vypovídá o návštěvníkovi a zařízení, které používá. Starší monitory mají například poměr stran 4:3, novější zase 16:9 a 16:10. Stejně tak se dá usuzovat, že u nízkých rozlišení moderních úhlopříček se bude jednat o netbooky a notebooky. Nejvyšší rozlišení mají nejmodernější dvaceti sedmi palcové monitory, a ještě větší rozlišení jako je 3200x1200 znamená, že má uživatel dva monitory, konkrétně s rozlišením 1920x1200 a 1280x1024.
 
 
-\subsubsection{Změna velikosti okna}
+Velikost viewportu TODO
 
-\subsection{Informace získané pomocí JavaScriptu}
-\subsubsection{Rozlišení obrazovky}
-\subsubsection{Velikost viewportu}
+
 (zobrazení stránek, jako analýza logů)
  
 
