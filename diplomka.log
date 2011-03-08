@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  8 MAR 2011 15:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  8 MAR 2011 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -761,6 +761,10 @@ chod na ji-nou str[]anku, spu[]st[]en[]^^P n[]ejak[]e funkce,
  []
 
 
+LaTeX Warning: Reference `sec:Heatmaps' on page 12 undefined on input line 460.
+
+
+
 Overfull \hbox (7.50244pt too wide) in paragraph at lines 460--461
 \OT1/ppl/m/n/10.95 tepl[]ymi bar-vami ([]zlut[]a, []cerven[]a), m[]^^Psta kter[
 ]ym se ne-dost[]av[]a po-zornost jsou naopak lad[]eny
@@ -785,6 +789,24 @@ ounce rate". Bounce rate je pro-cento u[]zivatel[]u,
  []
 
 [13]
+Overfull \hbox (14.76732pt too wide) in paragraph at lines 529--530
+[]\OT1/ppl/m/n/10.95 D[]^^Pky cook-ies[] je mo[]zn[]e sle-dovat n[]av[]st[]evnk
+a str[]anky. P[]ri prvn[]^^P n[]av[]st[]ev[]e se n[]av[]st[]evn[]^^Pkovi
+ []
+
+
+Overfull \hbox (3.35773pt too wide) in paragraph at lines 539--540
+[]\OT1/ppl/m/n/10.95 Podle IP adresy n[]av[]st[]evn[]^^Pk[]u se zji[]st[]uje je
+-jich poloha a zo-brazuje se po-moc[]^^P jednoduch[]e
+ []
+
+
+Overfull \hbox (3.65965pt too wide) in paragraph at lines 539--540
+\OT1/ppl/m/n/10.95 Jend[]a se o statiskiku pro roz[]s[]^^P[]ren[]^^P do prohl[]
+^^P[]ze[]ce Google Chrome. Je-liko[]z se jdn[]a o roz[]s[]^^P[]ren[]^^P
+ []
+
+
 
 pdfTeX warning: pdflatex (file ./img/map-analytics.pdf): PDF inclusion: found P
 DF version <1.5>, but at most version <1.4> allowed
@@ -792,23 +814,29 @@ DF version <1.5>, but at most version <1.4> allowed
 File: img/map-analytics.pdf Graphic file (type pdf)
 
 <use img/map-analytics.pdf>
-Overfull \hbox (9.94414pt too wide) in paragraph at lines 554--555
+Overfull \hbox (9.94414pt too wide) in paragraph at lines 550--551
 \OT1/ppl/m/n/10.95 po-moc[]^^P sle-dov[]an[]^^P o[]cn[]^^Pch po-hyb[]u n[]av[]s
 t[]evn[]^^Pk[]u po-moc[]^^P speci[]aln[]^^P kamery. Takov[]eto testov[]an[]^^P
  []
 
-
-Overfull \hbox (28.20358pt too wide) in paragraph at lines 556--557
+[14]
+Overfull \hbox (28.20358pt too wide) in paragraph at lines 552--553
 []\OT1/ppl/m/n/10.95 Mimo lab-o-rato[]r je mo[]zno takov[]e obr[]azky vy-gen-er
 ovat z po-hyb[]u my[]s[]^^P a klik[]an[]^^P n[]av[]st[]evn[]^^Pk[]u
  []
 
-<img/google-bing-heatmap.pdf, id=73, 376.3671pt x 254.42453pt>
+
+Overfull \hbox (21.4033pt too wide) in paragraph at lines 554--555
+[]\OT1/ppl/m/n/10.95 Testovan[]e ro-zlo[]zen[]^^P str[]anky vyh-led[]ava[]ce Go
+ogle []z[]adn[]y lev[]y sloupe[]cek nem[]elo a u[]zivatel[]e
+ []
+
+<img/google-bing-heatmap.pdf, id=77, 376.3671pt x 254.42453pt>
 File: img/google-bing-heatmap.pdf Graphic file (type pdf)
 
-<use img/google-bing-heatmap.pdf> [14] [15 <./img/map-analytics.pdf> <./img/goo
-gle-bing-heatmap.pdf>] [16]
-Overfull \hbox (11.09898pt too wide) in paragraph at lines 620--622
+<use img/google-bing-heatmap.pdf> [15] [16 <./img/map-analytics.pdf> <./img/goo
+gle-bing-heatmap.pdf>]
+Overfull \hbox (11.09898pt too wide) in paragraph at lines 618--620
 []\OT1/ppl/m/n/10.95 Pro[]c takov[]y n[]astroj je[]st[]e ne-ex-is-tuje? (im-ple
 -men-tu-jou si in house []re[]sen[]^^P to-hoto probl[]emu) 
  []
@@ -818,7 +846,7 @@ Overfull \hbox (11.09898pt too wide) in paragraph at lines 620--622
 ] [18] [19
 
 ]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 694--698
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 692--696
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
@@ -828,14 +856,14 @@ Overfull \hbox (17.68532pt too wide) in paragraph at lines 694--698
 ] [21
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 728--730
+Underfull \hbox (badness 1953) in paragraph at lines 726--728
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 728--730
+Underfull \hbox (badness 10000) in paragraph at lines 726--728
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
@@ -844,14 +872,17 @@ nference / files / 2006 / sbornik /
 
 ] (./diplomka.aux)
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4670 strings out of 495061
- 59763 string characters out of 1182620
- 189378 words of memory out of 3000000
- 7750 multiletter control sequences out of 15000+50000
+ 4669 strings out of 495061
+ 59746 string characters out of 1182620
+ 189356 words of memory out of 3000000
+ 7749 multiletter control sequences out of 15000+50000
  28024 words of font info for 57 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  33i,12n,45p,797b,1326s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -863,7 +894,7 @@ usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-t
 exlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/typ
 e1/urw/palatino/uplb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (27 pages, 408511 bytes).
+Output written on diplomka.pdf (27 pages, 410723 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

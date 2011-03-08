@@ -10,9 +10,9 @@
 \contentsline {subsubsection}{Query string}{11}
 \contentsline {subsubsection}{Mo\IeC {\v z}nosti logfile anal\IeC {\'y}zy a page-taggingu}{14}
 \contentsline {subsection}{\numberline {2.3}Interpretace dat}{14}
-\contentsline {subsubsection}{Aplikace v praxi}{14}
-\contentsline {subsubsection}{Clickstream anal\IeC {\'y}za}{16}
-\contentsline {subsubsection}{M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } konverze}{16}
+\contentsline {subsubsection}{Aplikace v praxi}{15}
+\contentsline {subsubsection}{Clickstream anal\IeC {\'y}za}{15}
+\contentsline {subsubsection}{M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } konverze}{15}
 \contentsline {section}{\numberline {3}Nov\IeC {\'y} n\IeC {\'a}stroj}{17}
 \contentsline {subsection}{\numberline {3.1}Sb\IeC {\v e}r dat}{17}
 \contentsline {subsection}{\numberline {3.2}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{17}

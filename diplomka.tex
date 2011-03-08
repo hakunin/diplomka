@@ -524,21 +524,19 @@ zobrazená část stránky	& $\circ$	& $\bullet$ \\
 
 \subsection{Interpretace dat}
 
-Přidaná hodnota analytických nástrojů spočívá ve velké míře v interpretaci nasbíraných dat. Většina údajů, podle kterých se orientujeme vzniká kombinací několika událostí, nebo informací.
+Přidaná hodnota analytických nástrojů spočívá v interpretaci nasbíraných dat. Většina údajů, podle kterých se orientujeme vzniká kombinací několika událostí, nebo informací.
 
-{\bf Počet unikátních uživatelů} 
+Díky cookies\footnote{Do tzv. Cookie je možno uložit uživateli zhruba 4096 znaků a internetový prohlížeč se o tuto hodnotu stará.} je možné sledovat návštěvnka stránky. Při první návštěvě se návštěvníkovi uloží do cookies jeho unikátní identifikátor a lze tak při příští návštěvě identifikovat, že se jedná o stejného návštěvníka. Označování návštěvníků umožňuje zjistit například počet unikátních návštěvníků. Přesto, že někteří uživatelé si Cookie ručně mažou, většina to nedělá a počet unikátních návštěvníků se dá pokládat za relativně přesný.
 
-{\bf Počet návštěv}
+Označování uživatelů umožňuje také sledovat počet návštěv. Pokud uživatel stráví pět minut prohlížením stránek, zavře stránku a pak se za dvě hodiny vrátí, vyhodnocuje se to jako dvě návštěvy.
 
-{\bf Opakování návštěv}
+Dlouhodobé opakování návštěv označujeme jako loajalitu návštěvníků. Stránky, které mají tuto hodnotu vysokou mají stabilní bázi návštěvníků, kteří si tam zvykli pravidelně chodit. Tato hodnota je důležitá pro informační servery, elektronické obchody, blogy, fóra a komunitní stránky.
 
 {\bf Doba strávená na stránce}
 
+\bigskip
 
-
-{\bf Geolokace}
-\label{sec:Geolocation}
-Poloha návštěvníků stránky se dá přibližně zjistit pomocí jejich IP adresy a zobrazuje se pomocí jednoduché mapy. Na obrázku \ref{img:analytics-map} je ukázka takové mapy, která znázorňuje počet návštěv pro Ameriku. Jendá se o statiskiku pro rozšíření do prohlížeče Google Chrome. Jelikož se jdná o rozšíření pro technické typy, lze usuzovat, že takoví se vyskytují v Kalifornii (tmavě zelená vlevo) a New Yorku.
+Podle IP adresy návštěvníků se zjišťuje jejich poloha a zobrazuje se pomocí jednoduché mapy. Na obrázku \ref{img:analytics-map} je ukázka takové mapy, která znázorňuje počet návštěv pro Ameriku. Jendá se o statiskiku pro rozšíření do prohlížeče Google Chrome. Jelikož se jdná o rozšíření pro technické typy, lze usuzovat, že takoví se vyskytují v Kalifornii (tmavě zelená vlevo) a New Yorku.
 
 \begin{figure}[hp]
 	\centering
@@ -547,13 +545,13 @@ Poloha návštěvníků stránky se dá přibližně zjistit pomocí jejich IP a
 	\label{img:analytics-map}
 \end{figure}
 
-
-{\bf Heatmapy}
-\label{sec:Heatmaps}
+\bigskip
 
 Na obrázku \ref{img:heatmap-bing-google} je ukázka heatmapy pro stránky výsledků vyhledávačů Google a Bing. Vstupními daty pro vytvoření takových interpretací jsou v ideálním případě data získaná pomocí sledování očních pohybů návštěvníků pomocí speciální kamery. Takovéto testování je možnos provádět pouze v laboratoři a s potřebným vybavením.
 
-Mimo laboratoř je možno takové obrázky vygenerovat z pohybů myší a klikání návštěvníků stránky.
+Mimo laboratoř je možno takové obrázky vygenerovat z pohybů myší a klikání návštěvníků stránky. Cílem heatmap je odhalit, kterým částem stránky se dostává více pozornosti. Na obrázku \ref{img:heatmap-bing-google} je vidět, že uživatelé vyhledávače Bing věnují pozornost levému sloupečku. 
+
+Testované rozložení stránky vyhledávače Google žádný levý sloupeček nemělo a uživatelé nevěnovali pozornost odkazům pro hledání obrázků a další alternativám. Možná proto má dnes vyhledávač google tyto odkazy nalevo, hned vedle výsledků vyhledávání.
 
 \begin{figure}[hp]
 	\centering
