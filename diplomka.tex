@@ -95,7 +95,7 @@ The goal of this thesis is to create a tool to aid web application development a
 
 
 
-\section{Úvod (2 stránky)}
+\section{Úvod}
 \label{sec:Uvod}
 
 
@@ -152,8 +152,13 @@ Tato situace mě motivovala k vývoji nástroje, který je výhradně zaměřen 
 
 \section{Webová analytika}
 
+Tato kapitola popisuje vznik webové analytiky a způsoby sběru a intepretace dat v obecné rovině. 
+
+
+
 \subsection{Historie}
 
+Jak již bylo řečeno v úvodu, dnešní nástoje v podstatě kopírují způsob interpretace dat a proto je vhodné nastínit historii webové analytiky. Je proto vhodné se chvíli pozastavit nad tím, jak to všechno začalo.
 
 Na začátku devadesátých let došlo ke zrození WWW stránek[reference]. Uživatelé tehdy prohlíželi statické stránky a pokaždé, když si nějakou prohlédli, vznikl záznam v logovacím souboru, takzvaný "hit". Počet hitů se stal ukazatelem úspěšnosti webový stránek.
 
@@ -161,14 +166,20 @@ V roce devadesát čtyři vznikl grafický webový prohlížeč s názvem Mosaic
 
 V roce devadesát pět znikl Analog - nástroj pro analýzu logovacích souborů. Jeho autor Stephen Turner ho poskytoval zdarma jako freeware pro několik platform. Jednalo se o první sofistikovaný nástroj pro analýzu a zobrazení návštěvnosti webových stránek.
 
+\bigskip
+
 \begin{lstlisting}[label=src:Plain,caption=Ukázka záznamu z logovacího souboru ve formátu RFC931]
 10.20.30.40 - - [26/Apr/2000:00:23:48 -0400] "GET /index.html HTTP/1.0" 200 6248 "http://www.jafsoft.com/asctortf/" "Mozilla/4.05 (Macintosh; I; PPC)"
 10.20.30.40 - - [26/Apr/2000:00:23:48 -0400] "GET /background.gif HTTP/1.0" 200 4005 "http://www.example.org/" "Mozilla/4.05 (Macintosh; I; PPC)"
 \end{lstlisting}
 
+\bigskip
+
 Logovací soubor obsahuje jden řádek pro každou návštěvu stránky, nebo souboru na serveru. Nástroj pro analýzu logovacích souborů z toho pak dokáže zjistit kolik měl server návštěv každý den, z kolika unikátních IP adres, které stránky jsou nejnavštěvovanější a kolik bylo přenesených dat.
 
+\begin{comment}
 The data collection became unusable with the advent of search engines and their robots, proxies servers to surf anonymously, allocation of dynamic IP addresses by ISPs and cached content techniques. All these developments have rendered the use of log files inappropriate to analyze user behavior. The data contained in log files were indeed biased and unique visitor identification almost impossible. 
+\end{comment}
 
 \begin{figure}[h]
 	\centering
@@ -187,28 +198,39 @@ Tento postup se zásadně liší od analýzy logových souborů. Místo statick�
 
 Tento průlom umožnil použtití třetích stran pro sběr i vyhodnocení dat a tak dal vzniknout prvním online nástrojům pro webovou analytiku. V různých obměnách se tato technika používá dodnes.
 
-V roce 2005 koupila společnost Google analytický systém Urchin on Demand a ještě v témž roce ho poskytla zdarma široké veřejnosti jako webovou aplikaci pod názvem Google Aanlytics.
+V roce 2005 koupila společnost Google analytický systém Urchin on Demand a ještě v témž roce ho poskytla zdarma široké veřejnosti jako webovou aplikaci pod názvem Google Aanlytics. Pro obrovský zájem byl tento produkt zpřístupněn pouze omezenému počtu uživatelů. Od října roku 2006 byly znovu otevřeny volné registrace a dodnes se jedná o nejpoužívanější systém pro webovou analytiku.
 
-Pro obrovský zájem byl tento produkt zpřístupněn pouze omezenému počtu uživatelů. Od října roku 2006 byly znovu otevřeny volné registrace a dodnes se jedná o nejpoužívanější systém pro webovou analytiku.
+\bigskip
 
 S nástupem sociálních médií a chytrých mobilních zařízení dochází k nárůstu času, který uživatelé tráví na internetu. Poměrně k tomuto nárůstu se zvyšují investice do internetových stránek a webových aplikací. 
 
-Na jedné straně je snaha dostat nové uživatele na svou stránku, to se dociluje například pomocí optimalizace pro vyhledávače, reklamních bannerů, nebo PPC reklamy\footnote{PPC - Pay per click, platba se za proklik (cena prokliku je určena pomocí aukce).}. V tomto případě slouží webová analytika k měření efektivity jednotlivých kampaní a k jejich následné optimalizaci.
+Na jedné straně je snaha dostat nové uživatele na svou stránku, to se dociluje například pomocí optimalizace pro vyhledávače, reklamních bannerů, nebo PPC reklamy\footnote{PPC - Pay per click, platba za proklik (cena prokliku je určena pomocí aukce).}. V tomto případě slouží webová analytika k měření efektivity jednotlivých kampaní a k jejich následné optimalizaci.
 
 Na druhé je snaha pracovat s uživateli, které už webová stránka, nebo aplikace má. Zde je snaha identifikovat problémy a optimalizavat uživatelskou zkušenost. V obou případech je to webová analytika, která nám umožňuje získat přehled, optimalzovat a vyhodnotit návratnost investic.
 
+{\bf Nástroj, kterým se tato práce zabývá je primárně zaměřen na práci s uživateli}.
 
 
 
-\subsection{Sběr a interpretace dat (15 stránek)}
+
+
+
+
+
+
+\subsection{Sběr dat}
 
 Podstatou webové analytiky je sběr a interpretace dat. Jak již bylo řečeno, sběr dat se za dobu existence webu vyvinul z pasivní formy analýzy logových souborů na serveru do dnešní - aktivního sběru dat na straně uživatele třetí stranou.
 
 Tato kapitola popisuje popisuje používané způsoby sběru dat s důrazem na to, jaké informace z nich získáváme, jaké další informace z nich můžeme vyčíst a jaké způsoby vizualizace se běžně vyskytují.
 
-\subsection{Analýza dat z logovacích souborů}
 
-Wbové servery zaznamenávají zobrazení stránek do takzvaných logovacích souborů. Jedná se o soubory, ve kterých každý řádek představuje záznam o jednom zobrazení stránky, nebo například obrázku.
+
+
+
+\subsubsection{Analýza dat z logovacích souborů}
+
+Webové servery zaznamenávají zobrazení stránek do takzvaných logovacích souborů. Jedná se o soubory, ve kterých každý řádek představuje záznam o jednom zobrazení stránky, nebo například obrázku.
 
 Když na začátku devadesátých let vznikl web, provozovatelé serverů si uvědomili, že tyto soubory umožňují získat informace o popularitě jejich stránek a tak začali měřit počet zobrazení, takzvaných "hitů". V té době se vyskytovaly většinou pouze dlouhé stránky bez obrázků nebo odkazů, takže počet zobrazení postačoval potřebám provozovatelů.
 
@@ -234,6 +256,10 @@ Když na začátku devadesátých let vznikl web, provozovatelé serverů si uv�
   \verb!200! & Kód odpovědi. Kód 200 znamená vše v pořádku. Obvyklé a pro webovou analytiku také zajímavé jsou 404 - stránka nenalezena, 500 - problém na serveru, nebo 303 - přesměrování stránky. \\ \bigskip
   \verb!2326! & Délka odpovědi v bajtech. Sledování této veličiny spolu s počtem návštěv umožňuje identifikovat, který obsah nejvíce zatěžuje internetové připojení daného serveru.
 \end{longtable}
+
+
+
+
 
 
 \begin{comment}
@@ -266,8 +292,12 @@ Jak web rostl, tak i jeho složitost a z jednoduchých stránek bez obrázků se
 
 Pole zaznamenávaných dat sbíraných v logovacích souborech byl rozšířen o další informace HTTP protokolu, kterými se zabývá další část kapitoly. Samotný formát je z hlediska anlaytiky vedlejší a není není již nutno ho rozebírat.
 
+
+
+
+
   
-\subsection{Informace získané pomocí HTTP protokolu}
+\subsubsection{Informace získané pomocí HTTP protokolu}
 
 Prohlížení webových stránek na internetu je zajišťěno pomocí HTTP protokolu. HTTP je zkratka pro Hyper Text Tranfer Protokol, neboli protokol pro výměnu hypertextů (hypertextových stránek). Je to způsob jak webový prohlížeč komunikuje s webovým serverem.
 
@@ -369,25 +399,25 @@ Stejný princip se používá například když uživatel listuje produkty v ele
 
 Významné využití je například ve zjišťování, co zákazníci v elektronickém obchodě hledají a jaké fráze při tom používají. Zajímavé je také kolik zákazníků vyhledávání používá a jak často.
 
-\subsubsection{Akceptovaný jazyk}
+%%\subsubsection{Akceptovaný jazyk}
 
 Pokud má uživatel v operačním systému nastavený jazyk češtinu, HTTP požadavek říká serveru, že preferuje českou verzi obsahu. Tato informace je zajímavá především pro servery s velkou návštěvností, které plánují přidat jazykovou mutaci.
 
 
-\subsubsection{Prohlížeče a jejich verze}
+%\subsubsection{Prohlížeče a jejich verze}
 
 Podíly jednotlivých prohlížečů se mění podle zaměření stránek a zeměpisných podmínek. Na stránkách o technologiích Microsoftu se dá očekávat vyšší podíl Internet Exploreru\footnote{Internetový prohlížeč od Miscrosoftu}, na stránkách o vaření se zase mohou objevovat vyšší podíly starých prohlížečů. Každý web by měl fungovat pod většinou prohlížečů, pokud se však jedná o stránku o nových technologiích, kde převažují moderní prohlížeče, může se majitel rozhodnout o využití moderních vlatností těhto prohlížečů.
 
 Na druhou stranu na stránkách s vysokým podílem starých prohlížečů se dá očekávat, že uživatelé stránky zobrazují na starých počítačích a tak je třeba tomu přizpůsobit obsah stránky, aby bylo prohlížení bezproblémové a plynulé.
 
-\subsubsection{Možnosti HTTP a JavaScripu}
+%%\subsubsection{Možnosti HTTP a JavaScripu}
 
 Většina těhto informací se dá zjistit jak pomocí JavaScriptu na straně klienta, tak pomocí HTTP protokolu na straně serveru.
 
 V sekci ~\ref{sec:moznosti} je tabulka porovnání toho, co je možno měřit oběma metodami. Všechny následující informace vznikají přímo v prohlížeči a jediný způsob, jak se dají měřit je JavaScriptem.
 
 
-\subsection{Události v prohlížeči}
+%\subsubsection{Události v prohlížeči}
 
 Událostí je myšlen klik na tlačítko, psaní do textového pole, skrolování na stránce, dokonce i pohyb myší a změna velikosti prohlížeče. Jedná se o interakci uživatele se stránkou - ta probíhá v rámci prohlížeče na straně uživatele a tudíž není ji možno měřit jinak, než na straně uživatele.
 
@@ -427,7 +457,8 @@ Ze všech kliků na stránce se navíc sestavují takzvané heatmapy\footnote{He
 
 Pohyb myši na stránce není kritický faktor, který je třeba sledovat na všech webech jako například kliky myší. Samy o sobě nemají velkou vypovídají hodnotu, existují však nástroje, které je těhto informací dokážou využít.
 
-Agregace pohybů myší se využívá ke konstrukci heatmap. Účel heatmap je graficky znázornit, kterým částem webové stránky se dostává nejvíce pozornosti, ty se zobrazují teplými barvami (žlutá, červená), místa kterým se nedostává pozornost jsou naopak laděny do studeých barev (zelená, modrá). Více o heatmapách v sekci ...
+Agregace pohybů myší se využívá ke konstrukci heatmap. Účel heatmap je graficky znázornit, kterým částem webové stránky se dostává nejvíce pozornosti, ty se zobrazují teplými barvami (žlutá, červená), místa kterým se nedostává pozornost jsou naopak laděny do studeých barev (zelená, modrá). Více o heatmapách v sekci\ref{sec:Heatmaps}
+
 
 Druhým zcela pdlišným způsobem využití znalosti o pohybu myši je mouse-tracking. Tato technika kombinuje sledování kliků a pohybů myši a tak pořizuje záznam o uživatelově činnosti na stránce. Jedná se o velmi specifickou techniku, která se používá k testování stránek ještě dřív, než se uvolní na veřejnost, nebo k optimalizaci těch částí stránky, kde dochází ke sledované konverzi\footnote{Konverze TODO}. Příklad apliakce mouse-trackingu ke sledování konverze je například v proces dokončení objednávky elektronickém obchodě.
 
@@ -464,17 +495,10 @@ Velikost viewportu TODO
 (zobrazení stránek, jako analýza logů)
  
 
-\subsection{Derivované informace}
-\subsubsection{Doba strávená na stránce}
-\subsubsection{Loajalita = opakování návštěv}
-\subsubsection{Častost návštěv}
-\subsubsection{Počet návštěv}
-\subsubsection{Počet unikátních uživatelů}
-\subsubsection{Geolokace}
 
   
   
-\subsection{Možnosti logfile analýzy a page-taggingu}
+\subsubsection{Možnosti logfile analýzy a page-taggingu}
 \label{sec:moznosti}
 
 
@@ -498,35 +522,84 @@ zobrazená část stránky	& $\circ$	& $\bullet$ \\
 \bigskip
   
 
-\subsection{Interpretace a Vizualizace dat}
+\subsection{Interpretace dat}
 
-\subsubsection{Heatmapy}
-\subsubsection{Heatmapy}
-\subsubsection{Světová mapa}
-\subsubsection{Segmentace}
+Přidaná hodnota analytických nástrojů spočívá ve velké míře v interpretaci nasbíraných dat. Většina údajů, podle kterých se orientujeme vzniká kombinací několika událostí, nebo informací.
 
+{\bf Počet unikátních uživatelů} 
 
-Aplikace v praxi
- - optimalizace kampaní
- - A/B / split testing
+{\bf Počet návštěv}
 
+{\bf Opakování návštěv}
 
-
-
-\subsection{Clickstream analýza}
-
-\subsection{Měření konverze}
+{\bf Doba strávená na stránce}
 
 
 
+{\bf Geolokace}
+\label{sec:Geolocation}
+Poloha návštěvníků stránky se dá přibližně zjistit pomocí jejich IP adresy a zobrazuje se pomocí jednoduché mapy. Na obrázku \ref{img:analytics-map} je ukázka takové mapy, která znázorňuje počet návštěv pro Ameriku. Jendá se o statiskiku pro rozšíření do prohlížeče Google Chrome. Jelikož se jdná o rozšíření pro technické typy, lze usuzovat, že takoví se vyskytují v Kalifornii (tmavě zelená vlevo) a New Yorku.
+
+\begin{figure}[hp]
+	\centering
+	\includegraphics[width=14.25cm]{img/map-analytics.pdf}
+	\caption{Google Analytics - návštěvy podle zemí}
+	\label{img:analytics-map}
+\end{figure}
+
+
+{\bf Heatmapy}
+\label{sec:Heatmaps}
+
+Na obrázku \ref{img:heatmap-bing-google} je ukázka heatmapy pro stránky výsledků vyhledávačů Google a Bing. Vstupními daty pro vytvoření takových interpretací jsou v ideálním případě data získaná pomocí sledování očních pohybů návštěvníků pomocí speciální kamery. Takovéto testování je možnos provádět pouze v laboratoři a s potřebným vybavením.
+
+Mimo laboratoř je možno takové obrázky vygenerovat z pohybů myší a klikání návštěvníků stránky.
+
+\begin{figure}[hp]
+	\centering
+	\includegraphics[width=14cm]{img/google-bing-heatmap.pdf}
+	\caption{Heatmapy - vlevo Bing, vpravo Google}
+	\label{img:heatmap-bing-google}
+\end{figure}
 
 
 
-\section{Návrh (15 stránek s diagramy)}
+
+%\subsubsection{Heatmapy}
+%\subsubsection{Světová mapa}
+%\subsubsection{Segmentace}
+
+
+\subsubsection{Aplikace v praxi}
+
+{\bf Optimalizace kampaní}
+
+{\bf Optimalizace konverze}
+
+{\bf Split testing}
+
+
+
+
+\subsubsection{Clickstream analýza}
+
+\subsubsection{Měření konverze}
+
+
+
+
+
+
+\section{Nový nástroj}
 
 O čem je tahle kampitola?
 
-\subsection{Hypotéza}
+\subsection{Sběr dat}
+\subsection{Zpracování dat}
+\subsection{Interpretace dat}
+
+
+\subsubsection{Hypotéza}
 
 Popis problému.
 
@@ -547,7 +620,7 @@ Existuje nějaký podobný nástroj?
 Proč takový nástroj ještě neexistuje?
 (implementujou si in house řešení tohoto problému)
 
-\subsection{Sběr dat}
+\subsubsection{Sběr dat}
 
 Jaké data nás zajímají a proč
 
@@ -556,7 +629,7 @@ Jaké data nás nezajímají a proč
 Jaké jsou omezení sběru dat.
 
 
-\subsection{Interpretace dat}
+\subsubsection{Interpretace dat}
 
 Jaké možnosti interpretace dat jsou?
 
@@ -570,7 +643,7 @@ Jaké jsou možnosti do budoucna.
 Možnosti aproximace?
 
 
-\subsection{Etická stránka sběru dat}
+\subsubsection{Etická stránka sběru dat}
 
 Problém etiky sběru dat.
 Právní problémy.
@@ -583,12 +656,12 @@ Analogie z fyzického byznysu.
 
 
 
-\section{Implementace (20 stránek i s grafy)}
+%\section{Implementace (20 stránek i s grafy)}
 
 O čem je tato kapitola?
 
 
-\subsection{Popis technického řešení (10 Stran)}
+\subsubsection{Popis technického řešení (10 Stran)}
 
 1) diagram celého systému
 
@@ -605,19 +678,19 @@ detaily funkce měřícího skriptu (AES)
 detaily sběru dat
 detaily analýzy dat
 
+\section{Případová studie}
 
-
-\subsection{Aplikace v reálném provozu (10 stran i s grafy)}
+\subsubsection{Aplikace v reálném provozu (10 stran i s grafy)}
 
 oběcně kolik dat tam lítalo denně, kolik uživatelů
 analýza dat (na co jsem se zaměřil)
 zajímavé grafy, co z nich vyplývá
 závěry (navhrnout změny)
 
-\subsection{Navrhnuté změny na základě získaných dat (2 stránky)}
+\subsubsection{Navrhnuté změny na základě získaných dat (2 stránky)}
 
 
-\section{Zhodnocení (2 stránky)}
+\section{Zhodnocení}
 co splnilo očekávání
 co nesplnilo / předčilo očekávání
 přínos pro uživatele v praxi
@@ -626,8 +699,10 @@ porovnání s podobnými nástroji
 
 
 
-\section{Závěr (1 stránka)}
+\section{Závěr}
 \label{sec:Conclusion}
+
+Nástroj splnil předpoklady..
 
 Byla to bomba :)
 

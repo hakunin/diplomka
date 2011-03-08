@@ -1,41 +1,30 @@
 \select@language {czech}
-\contentsline {section}{\numberline {1}\IeC {\'U}vod (2 str\IeC {\'a}nky)}{4}
+\contentsline {section}{\numberline {1}\IeC {\'U}vod}{4}
 \contentsline {section}{\numberline {2}Webov\IeC {\'a} analytika}{6}
 \contentsline {subsection}{\numberline {2.1}Historie}{6}
-\contentsline {subsection}{\numberline {2.2}Sb\IeC {\v e}r a interpretace dat (15 str\IeC {\'a}nek)}{7}
-\contentsline {subsection}{\numberline {2.3}Anal\IeC {\'y}za dat z logovac\IeC {\'\i }ch soubor\IeC {\r u}}{7}
-\contentsline {subsection}{\numberline {2.4}Informace z\IeC {\'\i }skan\IeC {\'e} pomoc\IeC {\'\i } HTTP protokolu}{9}
+\contentsline {subsection}{\numberline {2.2}Sb\IeC {\v e}r dat}{7}
+\contentsline {subsubsection}{Anal\IeC {\'y}za dat z logovac\IeC {\'\i }ch soubor\IeC {\r u}}{8}
+\contentsline {subsubsection}{Informace z\IeC {\'\i }skan\IeC {\'e} pomoc\IeC {\'\i } HTTP protokolu}{9}
 \contentsline {subsubsection}{Po\IeC {\v z}adovan\IeC {\'a} str\IeC {\'a}nka}{9}
 \contentsline {subsubsection}{Referrer}{11}
 \contentsline {subsubsection}{Query string}{11}
-\contentsline {subsubsection}{Akceptovan\IeC {\'y} jazyk}{11}
-\contentsline {subsubsection}{Prohl\IeC {\'\i }\IeC {\v z}e\IeC {\v c}e a jejich verze}{11}
-\contentsline {subsubsection}{Mo\IeC {\v z}nosti HTTP a JavaScripu}{12}
-\contentsline {subsection}{\numberline {2.5}Ud\IeC {\'a}losti v prohl\IeC {\'\i }\IeC {\v z}e\IeC {\v c}i}{12}
-\contentsline {subsection}{\numberline {2.6}Derivovan\IeC {\'e} informace}{14}
-\contentsline {subsubsection}{Doba str\IeC {\'a}ven\IeC {\'a} na str\IeC {\'a}nce}{14}
-\contentsline {subsubsection}{Loajalita = opakov\IeC {\'a}n\IeC {\'\i } n\IeC {\'a}v\IeC {\v s}t\IeC {\v e}v}{14}
-\contentsline {subsubsection}{\IeC {\v C}astost n\IeC {\'a}v\IeC {\v s}t\IeC {\v e}v}{14}
-\contentsline {subsubsection}{Po\IeC {\v c}et n\IeC {\'a}v\IeC {\v s}t\IeC {\v e}v}{14}
-\contentsline {subsubsection}{Po\IeC {\v c}et unik\IeC {\'a}tn\IeC {\'\i }ch u\IeC {\v z}ivatel\IeC {\r u}}{14}
-\contentsline {subsubsection}{Geolokace}{14}
-\contentsline {subsection}{\numberline {2.7}Mo\IeC {\v z}nosti logfile anal\IeC {\'y}zy a page-taggingu}{14}
-\contentsline {subsection}{\numberline {2.8}Interpretace a Vizualizace dat}{14}
-\contentsline {subsubsection}{Heatmapy}{14}
-\contentsline {subsubsection}{Heatmapy}{14}
-\contentsline {subsubsection}{Sv\IeC {\v e}tov\IeC {\'a} mapa}{14}
-\contentsline {subsubsection}{Segmentace}{14}
-\contentsline {subsection}{\numberline {2.9}Clickstream anal\IeC {\'y}za}{14}
-\contentsline {subsection}{\numberline {2.10}M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } konverze}{14}
-\contentsline {section}{\numberline {3}N\IeC {\'a}vrh (15 str\IeC {\'a}nek s diagramy)}{15}
-\contentsline {subsection}{\numberline {3.1}Hypot\IeC {\'e}za}{15}
-\contentsline {subsection}{\numberline {3.2}Sb\IeC {\v e}r dat}{15}
-\contentsline {subsection}{\numberline {3.3}Interpretace dat}{15}
-\contentsline {subsection}{\numberline {3.4}Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{15}
-\contentsline {section}{\numberline {4}Implementace (20 str\IeC {\'a}nek i s grafy)}{16}
-\contentsline {subsection}{\numberline {4.1}Popis technick\IeC {\'e}ho \IeC {\v r}e\IeC {\v s}en\IeC {\'\i } (10 Stran)}{16}
-\contentsline {subsection}{\numberline {4.2}Aplikace v re\IeC {\'a}ln\IeC {\'e}m provozu (10 stran i s grafy)}{16}
-\contentsline {subsection}{\numberline {4.3}Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{16}
-\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i } (2 str\IeC {\'a}nky)}{17}
-\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r (1 str\IeC {\'a}nka)}{18}
-\contentsline {section}{\numberline {7}Reference}{19}
+\contentsline {subsubsection}{Mo\IeC {\v z}nosti logfile anal\IeC {\'y}zy a page-taggingu}{14}
+\contentsline {subsection}{\numberline {2.3}Interpretace dat}{14}
+\contentsline {subsubsection}{Aplikace v praxi}{14}
+\contentsline {subsubsection}{Clickstream anal\IeC {\'y}za}{16}
+\contentsline {subsubsection}{M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } konverze}{16}
+\contentsline {section}{\numberline {3}Nov\IeC {\'y} n\IeC {\'a}stroj}{17}
+\contentsline {subsection}{\numberline {3.1}Sb\IeC {\v e}r dat}{17}
+\contentsline {subsection}{\numberline {3.2}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{17}
+\contentsline {subsection}{\numberline {3.3}Interpretace dat}{17}
+\contentsline {subsubsection}{Hypot\IeC {\'e}za}{17}
+\contentsline {subsubsection}{Sb\IeC {\v e}r dat}{17}
+\contentsline {subsubsection}{Interpretace dat}{17}
+\contentsline {subsubsection}{Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{17}
+\contentsline {subsubsection}{Popis technick\IeC {\'e}ho \IeC {\v r}e\IeC {\v s}en\IeC {\'\i } (10 Stran)}{18}
+\contentsline {section}{\numberline {4}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{19}
+\contentsline {subsubsection}{Aplikace v re\IeC {\'a}ln\IeC {\'e}m provozu (10 stran i s grafy)}{19}
+\contentsline {subsubsection}{Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{19}
+\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i }}{20}
+\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{21}
+\contentsline {section}{\numberline {7}Reference}{22}
