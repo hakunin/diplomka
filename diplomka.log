@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  7 MAR 2011 19:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  8 MAR 2011 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -598,9 +598,9 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 
 
 ]
-Overfull \hbox (29.53313pt too wide) in paragraph at lines 108--109
-\OT1/ppl/m/n/10.95 bovou an-a-lytiku, kter[]e sv[]ym zp[]usobem st[]ale kop[]^^
-Pruj[]^^P kon-ven[]cn[]^^P p[]r[]^^Pstup k anal[]yze n[]av[]st[]evn[]^^Pk[]u. 
+Overfull \hbox (4.37047pt too wide) in paragraph at lines 106--107
+\OT1/ppl/m/n/10.95 o n[]av[]st[]ev[]ach str[]anek. A[]z v polovin[]e dvades[]at
+k[]ych let ma-sivn[]^^P v[]yvoj we-bov[]ych prohl[]^^P[]ze[]c[]u
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -622,8 +622,26 @@ Overfull \hbox (20.55498pt too wide) in paragraph at lines 120--121
 [4
 
 
-] [5]
-Overfull \hbox (15.71426pt too wide) in paragraph at lines 158--159
+]
+Overfull \hbox (8.05592pt too wide) in paragraph at lines 128--129
+[]\OT1/ppl/m/n/10.95 Na druh[]e stran[]e jsou ap-likace, kter[]e maj[]^^P u[]zi
+vatele a tak d[]av[]a smysl sle-dovat pou[]z[]^^Pv[]an[]^^P.
+ []
+
+
+Overfull \hbox (21.87485pt too wide) in paragraph at lines 132--133
+[][]\OT1/ppl/m/n/10.95 Rekn[]eme, []ze mo-biln[]^^P za[]r[]^^Pzen[]^^P tvo[]r[]
+^^P 3% v[]sech n[]av[]st[]ev. To nen[]^^P jako mnoho, pravd[]epodobn[]e
+ []
+
+
+Overfull \hbox (6.71439pt too wide) in paragraph at lines 132--133
+\OT1/ppl/m/n/10.95 nez-na-men[]a, []ze budeme ur-pavo-vat na[]si ap-likaci spec
+i[]aln[]e pro mo-biln[]^^P za[]r[]azen[]^^P. Na druhou
+ []
+
+[5]
+Overfull \hbox (15.71426pt too wide) in paragraph at lines 169--170
 \OT1/ppl/m/n/10.95 server n[]av[]st[]ev ka[]zd[]y den, z ko-lika unik[]atn[]^^P
 ch IP adres, kter[]e str[]anky jsou ne-j-nav[]st[]evovan[]ej[]s[]^^P
  []
@@ -636,13 +654,13 @@ File: img/analog_daily.pdf Graphic file (type pdf)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (5.16449pt too wide) in paragraph at lines 181--182
+Overfull \hbox (5.16449pt too wide) in paragraph at lines 192--193
 []\OT1/ppl/m/n/10.95 Pro obrovsk[]y z[]ajem byl tento pro-dukt zp[]r[]^^Pstupn[
 ]en pouze omezen[]emu po[]ctu u[]zivatel[]u.
  []
 
 
-Overfull \hbox (11.88295pt too wide) in paragraph at lines 181--182
+Overfull \hbox (11.88295pt too wide) in paragraph at lines 192--193
 \OT1/ppl/m/n/10.95 Od []r[]^^Pjna roku 2006 byly znovu otev[]reny voln[]e reg-i
 s-trace a dodnes se jedn[]a o ne-jpou[]z[]^^Pvan[]ej[]s[]^^P
  []
@@ -650,136 +668,136 @@ s-trace a dodnes se jedn[]a o ne-jpou[]z[]^^Pvan[]ej[]s[]^^P
 [6
 
 ]
-Overfull \hbox (3.84006pt too wide) in paragraph at lines 185--186
+Overfull \hbox (3.84006pt too wide) in paragraph at lines 196--197
 []\OT1/ppl/m/n/10.95 Na jedn[]e stran[]e je snaha do-stat nov[]e u[]zivatele na
  svou str[]anku, to se dociluje nap[]r[]^^Pklad
  []
 
 [7 <./img/analog_daily.pdf>]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 213.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 224.
 
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 1024) in paragraph at lines 213--213
+Underfull \hbox (badness 1024) in paragraph at lines 224--224
 []|\OT1/ppl/m/n/10.95 IP adresa n[]av[]st[]evn[]^^Pka. Po[]cet unik[]atn[]^^Pch
  IP adres
  []
 
 
-Underfull \hbox (badness 1960) in paragraph at lines 213--213
+Underfull \hbox (badness 1960) in paragraph at lines 224--224
 \OT1/ppl/m/n/10.95 byl p[]uvodn[]e pou[]z[]^^Pv[]an jako hrub[]y odhad po[]ctu
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 215--215
+Underfull \hbox (badness 2435) in paragraph at lines 226--226
 \OT1/ppl/m/n/10.95 se str[]anka pou[]z[]^^Pv[]a HTTP au-t-en-tifikaci. To plat[
 ]^^P
  []
 
 
-Underfull \hbox (badness 3482) in paragraph at lines 215--215
+Underfull \hbox (badness 3482) in paragraph at lines 226--226
 \OT1/ppl/m/n/10.95 skupinu lid[]^^P a tud[]^^P[]z u n[]ahodn[]eho n[]av[]st[]ev
 n[]^^Pka
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 221--221
+Underfull \hbox (badness 3977) in paragraph at lines 232--232
 []|\OT1/ppl/m/n/10.95 Po[]zadavek HTTP pro-tokolu. GET je z[]akladn[]^^Pm
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--221
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 \OT1/ppl/m/n/10.95 n[]ejak[]y ob-sah. Dal[]s[]^^P pou[]z[]^^Pvan[]y po[]zadavek
  je
  []
 
 
-Underfull \hbox (badness 3000) in paragraph at lines 221--221
+Underfull \hbox (badness 3000) in paragraph at lines 232--232
 \OT1/ppl/m/n/10.95 nap[]r[]^^Pklad POST, kter[]y se pou[]z[]^^Pv[]a pro odesl[]
 an[]^^P
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 224--225
+Underfull \hbox (badness 2409) in paragraph at lines 235--236
 \OT1/ppl/m/n/10.95 spolu s po[]ctem n[]av[]st[]ev umo[]z[]nuje iden-ti-fiko-vat
 ,
  []
 
 [8]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 273.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 284.
 
  (/usr/share/texmf-texlive/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 273.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 284.
 LaTeX Font Info:    Font shape `OMS/phv/m/sl' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 273.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 284.
  [9]
-Overfull \hbox (0.18259pt too wide) in paragraph at lines 307--308
+Overfull \hbox (0.18259pt too wide) in paragraph at lines 318--319
 []\OT1/ppl/m/n/10.95 Pro str[]anku, kter[]a p[]redstavuje []cl[]anek je po[]cet
  zo-brazen[]^^P ukaza-telem toho, jak je []cl[]anek
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 309.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 320.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 309.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 320.
  [10]
-Overfull \hbox (1.97293pt too wide) in paragraph at lines 368--369
+Overfull \hbox (1.97293pt too wide) in paragraph at lines 379--380
 \OT1/ppl/m/n/10.95 Pod[]^^Ply jed-notliv[]ych prohl[]^^P[]ze[]c[]u se m[]en[]^^
 P po-dle zam[]e[]ren[]^^P str[]anek a zem[]episn[]ych podm[]^^Pnek.
  []
 
 
-Overfull \hbox (0.7089pt too wide) in paragraph at lines 370--371
+Overfull \hbox (0.7089pt too wide) in paragraph at lines 381--382
 []\OT1/ppl/m/n/10.95 Na druhou stranu na str[]ank[]ach s vysok[]ym pod[]^^Plem 
 star[]ych prohl[]^^P[]ze[]c[]u se d[]a o[]cek[]avat,
  []
 
 [11]
-Overfull \hbox (5.35617pt too wide) in paragraph at lines 381--382
+Overfull \hbox (5.35617pt too wide) in paragraph at lines 392--393
 \OT1/ppl/m/n/10.95 Ud[]alost[]^^P je my[]slen klik na tla[]c[]^^Ptko, psan[]^^P
  do tex-tov[]eho pole, skrolov[]an[]^^P na str[]ance, dokonce
  []
 
 
-Overfull \hbox (1.77045pt too wide) in paragraph at lines 392--393
+Overfull \hbox (1.77045pt too wide) in paragraph at lines 403--404
 []\OT1/ppl/m/n/10.95 Klik[]an[]^^P my[]s[]^^P je na str[]ance zp[]usobuje p[]re
 chod na ji-nou str[]anku, spu[]st[]en[]^^P n[]ejak[]e funkce,
  []
 
 
-Overfull \hbox (7.50244pt too wide) in paragraph at lines 419--420
+Overfull \hbox (7.50244pt too wide) in paragraph at lines 430--431
 \OT1/ppl/m/n/10.95 tepl[]ymi bar-vami ([]zlut[]a, []cerven[]a), m[]^^Psta kter[
 ]ym se ne-dost[]av[]a po-zornost jsou naopak lad[]eny
  []
 
 
-Overfull \hbox (13.54652pt too wide) in paragraph at lines 421--422
+Overfull \hbox (13.54652pt too wide) in paragraph at lines 432--433
 \OT1/ppl/m/n/10.95 Tato tech-nika kom-bin-uje sle-dov[]an[]^^P klik[]u a po-hyb
 []u my[]si a tak po[]rizuje z[]aznam o u[]zivatelov[]e
  []
 
 [12]
-Overfull \hbox (5.00568pt too wide) in paragraph at lines 429--430
+Overfull \hbox (5.00568pt too wide) in paragraph at lines 440--441
 \OT1/ppl/m/n/10.95 t[]echto zkratek a p[]r[]^^Ppadn[]e je up-ravit tak, aby byl
 a nav-i-gace na je-jich webu co ne-j-jednodu[]s[]s[]^^P. 
  []
 
 
-Overfull \hbox (13.37689pt too wide) in paragraph at lines 442--443
+Overfull \hbox (13.37689pt too wide) in paragraph at lines 453--454
 []\OT1/ppl/m/n/10.95 Tato ud[]alost se pou[]z[]^^Pv[]a k vypo[]cten[]^^P tzv "b
 ounce rate". Bounce rate je pro-cento u[]zivatel[]u,
  []
 
 [13] [14]
-Overfull \hbox (11.09898pt too wide) in paragraph at lines 536--538
+Overfull \hbox (11.09898pt too wide) in paragraph at lines 547--549
 []\OT1/ppl/m/n/10.95 Pro[]c takov[]y n[]astroj je[]st[]e ne-ex-is-tuje? (im-ple
 -men-tu-jou si in house []re[]sen[]^^P to-hoto probl[]emu) 
  []
@@ -789,7 +807,7 @@ Overfull \hbox (11.09898pt too wide) in paragraph at lines 536--538
 ] [16
 
 ]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 610--614
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 621--625
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
@@ -799,14 +817,14 @@ Overfull \hbox (17.68532pt too wide) in paragraph at lines 610--614
 ] [18
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 642--644
+Underfull \hbox (badness 1953) in paragraph at lines 653--655
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 642--644
+Underfull \hbox (badness 10000) in paragraph at lines 653--655
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
@@ -819,10 +837,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4655 strings out of 495061
- 59410 string characters out of 1182620
+ 4656 strings out of 495061
+ 59418 string characters out of 1182620
  189338 words of memory out of 3000000
- 7737 multiletter control sequences out of 15000+50000
+ 7738 multiletter control sequences out of 15000+50000
  28024 words of font info for 57 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  33i,12n,45p,797b,1326s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -834,7 +852,7 @@ usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-t
 exlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/typ
 e1/urw/palatino/uplb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (24 pages, 199868 bytes).
+Output written on diplomka.pdf (24 pages, 203983 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
