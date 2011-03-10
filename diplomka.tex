@@ -621,11 +621,58 @@ Příští kapitola se věnuje vlastnostem nového nástroje a jejich využití.
 
 \section{Nový nástroj}
 
-O čem je tahle kampitola?
+Tato kapitola popisuje problém, který známé analytické nástroje zatím neřeší, a konkrétní způsob jeho řešení. Jak již bylo zmíněno v předchozím textu, nástroje pro webovou analytiku nepracují s konkrétními zákazníky a některé dokonce zakazují jakkoli identifikovat uživatele webů.
 
-\subsection{Sběr dat}
-\subsection{Zpracování dat}
-\subsection{Interpretace dat}
+
+
+
+
+
+\subsubsection{Motivace a etická stránka sběru dat}
+
+Problém etiky sběru dat.
+Právní problémy.
+Anonymní vs. neanonymní data.
+Webaplikace vs. webová stránka.
+Zákazník vs. náhodný návštěvník.
+Analogie z fyzického byznysu.
+
+
+Záměrné zahalování identity uživatele je argumentováno zachováním soukromí uživatele. Například Google Analytics obsahuje ve smluvním ujednání služeb Google Analytics následující text:
+
+\begin{quote}
+7.1 Nebudete slučovat (nebo nedovolíte jakékoliv třetí osobě slučování) jakákoli data shromážděná z vaší Website (vašich stránek Website) (nebo website takovéto třetí strany) s jakýmikoliv informacemi identifikujícími osoby, které pocházejí z jakéhokoli zdroje jsoucího částí vašeho užívání (nebo užívání takovéto třetí strany) Služby. Budete splňovat všechny zákony na ochranu dat a soukromí ve spojitosti s vašim používáním Služby a shromažďováním informací od návštěvníků na vašich stránkách website. Na své stránce na viditelném místě zpřístupníte (a budete i dodržovat) vhodnou směrnici o ochraně soukromí.
+\ldots
+\end{quote}
+
+Na jedné straně je snaha ochránit uživatelovo soukromí, na druhé poskytnout co nejlepší službu a relevantní obsah. Etickou stránku věci se spíše zabývají velké firmy, které mají uloženo mnoho uživatelských dat a nezávislí profesionálové, kteří poukazují na přestupky a nedostatky.
+
+Problém soukromí na webu je možno přirovnat k nakupování v obchodu. Pokud jsem v obchodním řetězci a nakupuji, budou mě sledovat kamery, které mě dokáží identifikovat a sbírají data o tom, kudy chodím. Z hlediska soukromí nechci, aby bez mého souhlasu o mě sbíral obchodní řetězec informace o tom, co nakupuji, jak často do obchodu chodím, nebo co mám na sobě. Toto je filosofie Google Analytics.
+
+Když se svým nákupem přistoupím k pokladně, první na co se mě prodavačka zeptá je, zda mám jejich "kartu". Pokud ano, vezme si ji k zařízení napojeném na pokladnu a v tom okamžiku se můj zatím anonymní nákup stává mým nákupem a je svázán s mou kartou. Tímto způsobem obchodní řetězec dokáže sledovat jak často nakupuji a co nakupuji.
+
+Aby měl zákazník důvod k pořízení karty, která umožňuje jeho sledování je motivován sbíráním bodů, nebo jinými výhodami\footnote{Například IKEA svým členům "IKEA Family" věnuje nápoje k jídlu zdarma.}. Při registraci pro kartu IKEA Family se do formuláře vyplňuje jméno, příjmení, bydliště, email a den narození. O ochraně osobních údajů říká IKEA, že jde o "vztah založený na důvěře". V následujícím výňatku z textu "Ochrany osobních údajů" spolešnost polopatě vysvětluje, že údaje bude poskytovat třetím stranám:
+
+\begin{quote}
+{\bf Informace, které nám sdělíte, u nás také zůstanou}\\
+Kdybyste nemohli IKEA věřit, nemohli byste v ní ani nakupovat. Z toho důvodu je pro nás ochrana vašich osobních důvodů navýsost důležitá. IKEA nesděluje vaše osobní údaje jiným firmám mimo IKEA. Informace, které nám poskytnete, využívá jen a jen IKEA. Někdy sice nastanou případy, kdy Vaše osobní údaje poskytneme některé z našich divizí v jiné zemi, ale v takových případech používáme všechny dostupné administrativní, technické i fyzické způsoby ochrany dat, abychom zabránili jejich možnému prozrazení, použití, změně či zničení. Stručně řečeno se všemi dostupnými prostředky snažíme chránit vaše osobní údaje před předvídatelným nebezpečím. V některých případech však opravdu musíme některé vaše údaje sdělit jiným společnostem, které pověříme jejich zpracováním, protože od nich chceme, aby vám poskytly určité služby. Zpracování osobních údajů probíhá v těchto případech podle našich pokynů. 
+\end{quote}
+
+Velké společnosti tedy respektují naše soukromí, ale v rámci vlasntí optimalizace se nás snaží získat do svých klubů, které jim umožňují sbírat libovolná data a vyhodnocovat je.
+
+Pro úplnost metafory o internetovém soukromí je třeba zmínit jak se k soukromí staví ti menší. Zákazník nakupuje v lahůdkářství víno a všelijaké dobroty. Lahůdkář dobře rozumí zboží a dokáže poradit a zákazník si rád nechá poradit,  protože sám není odborník a dobrou radu bere jako součást služby lahůdkářství. V této situaci nemá prodejce sepsaný dokument o ochraně osobních dat, nicméně ví, jaké zboží zákazník preferuje, jak často chodí, za kolik průměrně nakoupí a mnohdy i pro jaké příležitosti nakupuje.
+
+To, co má lahůdkář v hlavě se ve větším měřítků nazývá Customer Relationship Management. CRM je nástroj ke shromažďování, zpracování a využití informací o zákaznících. Je to vlastně takový drobnohled, kterým se pohlíží na zákazníka jako jednotlivce. Toto kontrastuje s tím,jak data využívá firma s mnoha zákazníky, která je sohrnně analyzuje.
+
+\bigskip
+
+Nástroj, kterým se tato diplomová zabývá představuje řešení pro webové aplikace, které mají stovky až tisíce zákazníků, které fungují typicky na základě měsíčního předplatného. V tomto případě je potřeba kombinovat způsoby analýzy dat velkých objemů a pohledu na konkrétní zákazníky. 
+
+Nástroj si klade za cíl podporovat webovou aplikaci od jejích začátků až k dospělosti. Zabývá se celým životním cyklem zákazníků od jejich prvního vstupu na web, přes registraci trial verze, změnu plánu na placený a používání aplikace.
+
+V metafoře výše se je produkt na půl cesty mezi lahůdkářem, který osobně zná všechy své zákazníky a tato znalost je přidanou hodnotou služby zákazníkovi a obchodním řetězcem, který potřebuje analyzovat chování velkého množsví zákazníků.
+
+
 
 
 \subsubsection{Hypotéza}
@@ -649,7 +696,7 @@ Existuje nějaký podobný nástroj?
 Proč takový nástroj ještě neexistuje?
 (implementujou si in house řešení tohoto problému)
 
-\subsubsection{Sběr dat}
+\subsection{Sběr dat}
 
 Jaké data nás zajímají a proč
 
@@ -657,8 +704,10 @@ Jaké data nás nezajímají a proč
 
 Jaké jsou omezení sběru dat.
 
+\subsection{Zpracování dat}
 
-\subsubsection{Interpretace dat}
+
+\subsection{Interpretace dat}
 
 Jaké možnosti interpretace dat jsou?
 
@@ -672,22 +721,7 @@ Jaké jsou možnosti do budoucna.
 Možnosti aproximace?
 
 
-\subsubsection{Etická stránka sběru dat}
 
-Problém etiky sběru dat.
-Právní problémy.
-Anonymní vs. neanonymní data.
-Webaplikace vs. webová stránka.
-Zákazník vs. náhodný návštěvník.
-Analogie z fyzického byznysu.
-
-
-
-
-
-%\section{Implementace (20 stránek i s grafy)}
-
-O čem je tato kapitola?
 
 
 \subsubsection{Popis technického řešení (10 Stran)}
@@ -706,6 +740,11 @@ proč jsem vybral tyto technologie
 detaily funkce měřícího skriptu (AES)
 detaily sběru dat
 detaily analýzy dat
+
+
+
+
+
 
 \section{Případová studie}
 
