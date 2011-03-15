@@ -672,23 +672,39 @@ Neplatící uživatelé jsou ti, kteří projevili zájem o produkt, ale ještě
 
 \subsubsection{Zákazník}
 
-Zákazníci jsou ti, kteří umožňují produktu žít a rozvíjet se. Tím, že platí za produkt vyjadřují tím, že jim produkt pomáhá natolik, že jej ohodnotí svými těžce vydělanými penězi. Zákazníci jsou srdcem a duší produktu.
+Zákazníci jsou ti, kteří umožňují produktu žít a rozvíjet se. Tím, že platí za produkt vyjadřují tím, že jim produkt pomáhá natolik, že jej ohodnotí svými těžce vydělanými penězi. V dnešních webových aplikací, které hojně využívají freemium model se může jednat o pouhých 10\% všech uživatelů, často i méně. 
 
-V dnešních webových aplikací, které hojně využívají freemium model se může jednat o pouhých 10\% všech uživatelů, často i méně. Několik procent zákazníků se v tom davu zbývajících neplatících uživatelů snadno ztratí a proto je třeba v první řadě oddělit jejich statistiky.
+Zákazníci jsou srdcem produktu a je třeba pečovat. Několik procent zákazníků se v tom davu zbývajících neplatících uživatelů snadno ztratí a tím pádem je třeba jejich statistiku oddělit. Jelikož jde o početně menší skupinu, je také záhodno využít nástrojů, které se dívají více do hloubky a držet si tak své nejdůležitější uživatele blíž u těla. 
+
+Můžeme identifikovat uživatele, kteří produkt používají nejčastěji, takzvané "power users". Tito znají produkt velmi dobře, možná lépe než naši zaměstnanci. V této skupině se budou pravděpodobně vyskytovat lidé, kteří se zasadili o rozšíření produktu mezi své přátele a zákazníky. Budou to lidé, kteří o produktu často mluví a dělají mu dobré (nebo taky špatné) jméno.
+
+Power users mohou pomoci s testováním nových funkcí, poskytnout dobrou referenci produktu, mohou se také stát evangelisty pro daný produkt, kteří ho propagují s oficiální podporou. O tuto skupinu je třeba se dobře starat, být s ní v kontaktu a naslouchat jim. 
+
+Na druhou stanu, mezi power uživateli se mohou vyskytovat i takoví, kteří produkt jednoduše přerostli a ten se už nehodí pro jejich účely. Toto je možné detekovat například monitorování funkcí, které používají a porovnání s ostatními zákazníky.
+
+Další podskupinou, o kterou je třeba se zajímat jsou noví zákazníci. Ti buď produkt už znají z doby, kdy používali neplacenou verzi, anebo jsou noví. Když zákazník začne platit, neznamená to, že bude produkt stále používat. Novým zákazníkům je možno nabídnout pomoc, poslat jim dopis s video tutoriálem k používání produktu, nebo je například po určité době používání oslovit, poděkovat jim a zeptat se, jak se jim produkt používá.
+
+Je také třeba sledovat, zda uživatelé, kteří začali platit produkt používají a v případě že ne, oslovit je a zjistit proč. Je možné, že produkt nepochopili, nebo třeba nevyhovuje jejich účelům. Někteří dokonce mohli zapomenout, že prosukt začli používat (pokud se to ještě nestalo jejich zvykem). Takto je možné získat nedocenitelnou zpětnou vazbu, podle které je možno upravit prezentaci produktu, doplnit sekci "Často kladené otázky", nebo upravit produkt tak, aby sám naučil uživatele, jak ho mají používat. 
+
+Takto lze dlouhodobě snížit počet zákazníků, kteří produkt opouští. Nejen, že si udržíme víc zákazníků, ale získáme přidanou hodnotu pro náš produkt, podle toho jak ho upravíme, aby se dobře a jednoduše používal.
 
 
-
-
-
-Z tohoto důvodu je záhodno být schopen odlišit zákazníky v analytickém nástroji a 
 
 
 \subsubsection{Konec používání aplikace}
 
+Určitá část uživatelů přestane používat náš produkt. Možná náš produkt nevyhovuje jejich vzrůstajícím požadavkům, přecházejí na konkurenční produkt, nebo již nepotřebují takový produkt vůbec používat. Ať už je důvod jakýkoli, strávili s naším produktem nějaký čas a pokud se jednalo o platící zákazníky, tak u nás zanechali i peníze a umožnili tak našemu produktu růst.
+
+Je zde určitý trend, kdy se podkitatelé a firmy snaží hrát na lidskou notu. Pokud to myslíme vážně, toto je vhodný čas, kdy jim můžeme odeslat poděkování za celou tu dobu strávenou s námi. Pěkný děkovný email podepsaný ředitelem společnosti zanchá v zákazníkovi pocit, že u této společnosti nebyl jen dalším číslem ale opravdu člověkem a pokud to souhlasí s tím, jak se k němu poskytovatel aplikace choval v průběhu používání, je velká šance, že produkt dále doporučí, vrátí se, nebo zmíní, jak se k zákazníkům u této společnosti chovají.
+
+Děkovný dopis je také dobrým místem, kde je můžeme dát zákazníkovi prostor, aby se vyjádřil k tomu, proč odhází a ukázat, že nám na něm záleží.
+
+\bigskip
+
+Tímto končí životní cyklus zákazníka a popis motivace k vývoji nového nástroje. Dále bude popsáno jaké funkce nástroj obsahuje a jakou roli hrají v celku.
 
 
-
-
+\begin{comment}
 
 Demonstrovat na příkladu.
 
@@ -707,18 +723,49 @@ Existuje nějaký podobný nástroj?
 Proč takový nástroj ještě neexistuje?
 (implementujou si in house řešení tohoto problému)
 
-\subsection{Sběr dat}
+\end{comment}
+
+
+297-,
+
+
+
+
+
+\subsection{Nástroj}
+
+Tato podkapitola se věnuje tomu, co nový nástroj dělá, proč a jak. Jak bylo řečeno v minulé části, nástroj se zaměřuje v první řadě na uživatele a podporuje čtyři fáze jejich životního cyklu: návštěvník, uživatel, zákazník a bývalý zákazník.
+
+Každá fáze životního cyklu je v nástroji reprezentována jako pohled, který zobrazuje jednotlivý segment takovým způsobem, který umožňuje získat přehled, který nás u dané skupiny zajímá.
+
+
+\subsubsection{Technické zázemí}
+
+Požadavky
+
+
+
+
+\subsubsection{Sběr dat}
 
 Jaké data nás zajímají a proč
 
 Jaké data nás nezajímají a proč
 
+Jak sbírám data (+schéma)
+
 Jaké jsou omezení sběru dat.
 
-\subsection{Zpracování dat}
+
+\subsubsection{Zpracování dat}
+
+MapReduce, pojďme do toho :)
 
 
-\subsection{Interpretace dat}
+
+\subsubsection{Interpretace dat}
+
+Podle sekce motivace.
 
 Jaké možnosti interpretace dat jsou?
 
