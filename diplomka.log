@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  10 MAR 2011 18:35
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  15 MAR 2011 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,20 +788,20 @@ Overfull \hbox (13.37689pt too wide) in paragraph at lines 484--485
 ounce rate". Bounce rate je pro-cento u[]zivatel[]u,
  []
 
-[13]
-Overfull \hbox (14.76732pt too wide) in paragraph at lines 529--530
+
+Overfull \hbox (14.76732pt too wide) in paragraph at lines 530--531
 []\OT1/ppl/m/n/10.95 D[]^^Pky cook-ies[] je mo[]zn[]e sle-dovat n[]av[]st[]evnk
 a str[]anky. P[]ri prvn[]^^P n[]av[]st[]ev[]e se n[]av[]st[]evn[]^^Pkovi
  []
 
-
-Overfull \hbox (3.35773pt too wide) in paragraph at lines 539--540
+[13]
+Overfull \hbox (3.35773pt too wide) in paragraph at lines 540--541
 []\OT1/ppl/m/n/10.95 Podle IP adresy n[]av[]st[]evn[]^^Pk[]u se zji[]st[]uje je
 -jich poloha a zo-brazuje se po-moc[]^^P jednoduch[]e
  []
 
 
-Overfull \hbox (3.65965pt too wide) in paragraph at lines 539--540
+Overfull \hbox (3.65965pt too wide) in paragraph at lines 540--541
 \OT1/ppl/m/n/10.95 Jend[]a se o statiskiku pro roz[]s[]^^P[]ren[]^^P do prohl[]
 ^^P[]ze[]ce Google Chrome. Je-liko[]z se jdn[]a o roz[]s[]^^P[]ren[]^^P
  []
@@ -814,127 +814,170 @@ DF version <1.5>, but at most version <1.4> allowed
 File: img/map-analytics.pdf Graphic file (type pdf)
 
 <use img/map-analytics.pdf>
-Overfull \hbox (9.94414pt too wide) in paragraph at lines 550--551
+Overfull \hbox (9.94414pt too wide) in paragraph at lines 551--552
 \OT1/ppl/m/n/10.95 po-moc[]^^P sle-dov[]an[]^^P o[]cn[]^^Pch po-hyb[]u n[]av[]s
 t[]evn[]^^Pk[]u po-moc[]^^P speci[]aln[]^^P kamery. Takov[]eto testov[]an[]^^P
  []
 
-[14]
-Overfull \hbox (28.20358pt too wide) in paragraph at lines 552--553
+[14 <./img/map-analytics.pdf>]
+Overfull \hbox (28.20358pt too wide) in paragraph at lines 553--554
 []\OT1/ppl/m/n/10.95 Mimo lab-o-rato[]r je mo[]zno takov[]e obr[]azky vy-gen-er
 ovat z po-hyb[]u my[]s[]^^P a klik[]an[]^^P n[]av[]st[]evn[]^^Pk[]u
  []
 
 
-Overfull \hbox (21.4033pt too wide) in paragraph at lines 554--555
+Overfull \hbox (21.4033pt too wide) in paragraph at lines 555--556
 []\OT1/ppl/m/n/10.95 Testovan[]e ro-zlo[]zen[]^^P str[]anky vyh-led[]ava[]ce Go
 ogle []z[]adn[]y lev[]y sloupe[]cek nem[]elo a u[]zivatel[]e
  []
 
-<img/google-bing-heatmap.pdf, id=77, 376.3671pt x 254.42453pt>
+<img/google-bing-heatmap.pdf, id=106, 376.3671pt x 254.42453pt>
 File: img/google-bing-heatmap.pdf Graphic file (type pdf)
 
-<use img/google-bing-heatmap.pdf>
-Overfull \hbox (9.08937pt too wide) in paragraph at lines 598--599
+<use img/google-bing-heatmap.pdf> [15 <./img/google-bing-heatmap.pdf>]
+Overfull \hbox (9.08937pt too wide) in paragraph at lines 599--600
 \OT1/ppl/m/n/10.95 A/B testov[]an[]^^P. Tato tech-nika spo[]c[]^^Pv[]a v tom, [
 ]ze se vytvo[]r[]^^P dv[]e vari-anty str[]anky a a n[]ekter[]ym
  []
 
-[15] [16 <./img/map-analytics.pdf> <./img/google-bing-heatmap.pdf>]
-Overfull \hbox (1.15161pt too wide) in paragraph at lines 602--603
+
+Overfull \hbox (1.15161pt too wide) in paragraph at lines 603--604
 \OT1/ppl/m/n/10.95 testing ka[]zd[]emu ex-per-i-men-to-vat s mnoha as-pekty a r
 e[]aln[]e ov[]e[]rit, zda navrho-van[]e zm[]eny
  []
 
 
-Overfull \hbox (0.8569pt too wide) in paragraph at lines 610--611
+Overfull \hbox (0.8569pt too wide) in paragraph at lines 611--612
 \OT1/ppl/m/n/10.95 z[]akazn[]^^Pka. Dne[]sn[]^^P an-a-lytck[]e n[]astroje maj[]
 ^^P pouze omezen[]e mo[]znosti pr[]ace se z[]akazn[]^^Pkem,
  []
 
-[17]
-Overfull \hbox (22.80519pt too wide) in paragraph at lines 641--642
-[]\OT1/ppl/m/n/10.95 Z[]am[]ern[]e za-halov[]an[]^^P iden-tity u[]zivatele je a
-r-gu-men-tov[]ano za-chov[]an[]^^Pm soukrom[]^^P u[]zivatele.
+[16] [17]
+Overfull \hbox (2.61874pt too wide) in paragraph at lines 636--637
+\OT1/ppl/m/n/10.95 mno-hem men[]s[]^^P mno[]zstv[]^^P plat[]^^Pc[]^^Pch u[]ziva
+tel[]u, ne[]z we-bov[]a str[]anka ne-plat[]^^Pc[]^^Pch n[]av[]st[]evn[]^^Pk[]u
  []
 
 
-Overfull \hbox (7.404pt too wide) in paragraph at lines 644--646
-[]\OT1/ppl/m/n/10.95 7.1 Neb-udete slu[]covat (nebo ne-do-vol[]^^Pte jak[]ekoli
-v t[]ret[]^^P osob[]e slu[]cov[]an[]^^P) jak[]akoli
+Overfull \hbox (4.55667pt too wide) in paragraph at lines 647--648
+[]\OT1/ppl/m/n/10.95 Zivotn[]^^P cyk-lus z[]akazn[]^^Pka je mo[]zn[]e rozd[]eli
+t chrono-log-icky do []cty[]r []c[]ast[]^^P. Akviz-ice, U[]zivatel,
  []
 
 
-Overfull \hbox (16.39476pt too wide) in paragraph at lines 644--646
-\OT1/ppl/m/n/10.95 data shrom[]a[]zd[]en[]a z va[]s[]^^P Web-site (va[]sich str
-[]anek Web-site) (nebo web-site takov[]eto
+Overfull \hbox (2.45978pt too wide) in paragraph at lines 653--654
+[]\OT1/ppl/m/n/10.95 Jeliko[]z se kon-ven[]cn[]^^P n[]astroje omezuj[]^^P a uni
+k[]atn[]e nei-den-ti-fikuj[]^^P u[]zivatele, je tato funkce
+ []
+
+
+Overfull \hbox (25.2301pt too wide) in paragraph at lines 653--654
+\OT1/ppl/m/n/10.95 pouze jed-nor[]azov[]a. To zna-men[]a d[]a se zjis-tit, []ze
+ p[]res reklamn[]^^P kampa[]n X p[]ri[]slo sto n[]av[]st[]evn[]^^Pk[]u
  []
 
 [18
 
 ]
-Overfull \hbox (10.73166pt too wide) in paragraph at lines 658--659
+Overfull \hbox (2.57974pt too wide) in paragraph at lines 665--666
+[]\OT1/ppl/m/n/10.95 U trial mod-elu mo-hou u[]zivatel[]e pou[]z[]^^Pvat v[]sec
+hny mo[]znosti ap-likace v r[]amci zku[]sebn[]^^P
+ []
+
+
+Overfull \hbox (3.26431pt too wide) in paragraph at lines 665--666
+\OT1/ppl/m/n/10.95 doby, pou[]z[]^^Pvaj[]^^P tedy ste-j-nou ap-likaci jako ti p
+lat[]^^Pc[]^^P. Nen[]^^P v[]sak jist[]e, []ze ap-likaci nep[]restanou
+ []
+
+
+Overfull \hbox (17.61433pt too wide) in paragraph at lines 669--670
+[]\OT1/ppl/m/n/10.95 Motivace plat[]^^Pc[]^^Pch a ne-plat[]^^Pc[]^^Pch u[]zivat
+el[]u se li[]s[]^^P. N[]ekte[]r[]^^P u[]zivatel[]e pouze hledaj[]^^P mo[]znost,
+
+ []
+
+[19]
+Overfull \hbox (11.09898pt too wide) in paragraph at lines 705--707
+[]\OT1/ppl/m/n/10.95 Pro[]c takov[]y n[]astroj je[]st[]e ne-ex-is-tuje? (im-ple
+-men-tu-jou si in house []re[]sen[]^^P to-hoto probl[]emu) 
+ []
+
+
+Overfull \hbox (22.80519pt too wide) in paragraph at lines 744--745
+[]\OT1/ppl/m/n/10.95 Z[]am[]ern[]e za-halov[]an[]^^P iden-tity u[]zivatele je a
+r-gu-men-tov[]ano za-chov[]an[]^^Pm soukrom[]^^P u[]zivatele.
+ []
+
+
+Overfull \hbox (7.404pt too wide) in paragraph at lines 747--749
+[]\OT1/ppl/m/n/10.95 7.1 Neb-udete slu[]covat (nebo ne-do-vol[]^^Pte jak[]ekoli
+v t[]ret[]^^P osob[]e slu[]cov[]an[]^^P) jak[]akoli
+ []
+
+
+Overfull \hbox (16.39476pt too wide) in paragraph at lines 747--749
+\OT1/ppl/m/n/10.95 data shrom[]a[]zd[]en[]a z va[]s[]^^P Web-site (va[]sich str
+[]anek Web-site) (nebo web-site takov[]eto
+ []
+
+[20]
+Overfull \hbox (10.73166pt too wide) in paragraph at lines 761--762
 []\OT1/ppl/m/n/10.95 Kdybyste nemohli IKEA v[]e[]rit, nemohli byste v n[]^^P an
 i nakupo-vat. Z toho d[]uvodu
  []
 
 
-Overfull \hbox (28.42773pt too wide) in paragraph at lines 658--659
+Overfull \hbox (28.42773pt too wide) in paragraph at lines 761--762
 \OT1/ppl/m/n/10.95 chr[]anit va[]se os-obn[]^^P []udaje p[]red p[]redv[]^^Pdate
 ln[]ym nebezpe[]c[]^^Pm. V n[]ekter[]ych p[]r[]^^Ppadech
  []
 
 
-Overfull \hbox (4.57939pt too wide) in paragraph at lines 658--659
+Overfull \hbox (4.57939pt too wide) in paragraph at lines 761--762
 \OT1/ppl/m/n/10.95 pov[]e[]r[]^^Pme je-jich zpra-cov[]an[]^^Pm, proto[]ze od ni
 ch chceme, aby v[]am poskytly ur[]cit[]e
  []
 
 
-Overfull \hbox (3.4622pt too wide) in paragraph at lines 665--666
+Overfull \hbox (3.4622pt too wide) in paragraph at lines 768--769
 \OT1/ppl/m/n/10.95 age-ment. CRM je n[]astroj ke shroma[]zd[]ov[]an[]^^P, zpra-
 cov[]an[]^^P a vyu[]zit[]^^P in-for-mac[]^^P o z[]akazn[]^^Pc[]^^Pch.
  []
 
-
-Overfull \hbox (27.80353pt too wide) in paragraph at lines 669--670
+[21]
+Overfull \hbox (27.80353pt too wide) in paragraph at lines 772--773
 \OT1/ppl/m/n/10.95 kter[]e maj[]^^P stovky a[]z tis[]^^Pce z[]akazn[]^^Pk[]u, k
 ter[]e fun-guj[]^^P typ-icky na z[]aklad[]e m[]es[]^^P[]cn[]^^Pho p[]redplatn[]
 eho.
  []
 
-[19]
-Overfull \hbox (11.09898pt too wide) in paragraph at lines 696--698
-[]\OT1/ppl/m/n/10.95 Pro[]c takov[]y n[]astroj je[]st[]e ne-ex-is-tuje? (im-ple
--men-tu-jou si in house []re[]sen[]^^P to-hoto probl[]emu) 
- []
-
-[20] [21
+[22] [23
 
 ]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 762--766
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 819--823
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
 
-[22
+[24
 
-] [23
+] [25
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 796--798
+Underfull \hbox (badness 1953) in paragraph at lines 853--855
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 796--798
+Underfull \hbox (badness 10000) in paragraph at lines 853--855
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
 
-[24
+[26
 
 ] (./diplomka.aux)
 
@@ -945,10 +988,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4675 strings out of 495061
- 59827 string characters out of 1182620
+ 4679 strings out of 495061
+ 59874 string characters out of 1182620
  189356 words of memory out of 3000000
- 7755 multiletter control sequences out of 15000+50000
+ 7759 multiletter control sequences out of 15000+50000
  28024 words of font info for 57 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  33i,12n,45p,1035b,1326s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -960,9 +1003,9 @@ usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-t
 exlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/typ
 e1/urw/palatino/uplb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (29 pages, 426704 bytes).
+Output written on diplomka.pdf (31 pages, 435335 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
+ 179 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

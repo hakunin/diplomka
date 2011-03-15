@@ -501,7 +501,7 @@ Velikost viewportu TODO
 \subsubsection{Možnosti logfile analýzy a page-taggingu}
 \label{sec:moznosti}
 
-
+\begin{comment}
 \begin{tabular}{ l c c }
 informace 				& logfile analýza & page-tagging \\ 
 \hline
@@ -519,6 +519,7 @@ velikost viewportu		& $\circ$	& $\bullet$ \\
 zobrazená část stránky	& $\circ$	& $\bullet$ \\
 
 \end{tabular}
+\end{comment}
 \bigskip
   
 
@@ -625,10 +626,114 @@ Tato kapitola popisuje problém, který známé analytické nástroje zatím ne�
 
 
 
+\subsubsection{Motivace}
+
+%Popis problému.
+Webové aplikace se od webových stránek odlišují v klíčových faktorech a tak si vyžadují odlišný náhled na analýzu jejich uživatelů. 
+
+Asi největší rozdíl spočívá v tom, jak webové aplikace a webové stránky vydělávají peníze. U aplikace platí uživatelé za její používaní, nebo za nadstadardní služby. Menší webové stránky jako například osobní blogy většinou přímo nevydělávají, ale poskytují autorovi status profesionality a odbornosti. Ty s větší návštěvností získávají peníze pomocí reklamy, affiliate programů, nebo PR článků.
+
+V závisloti na tom, kolik používání aplikace stojí může webová aplikace potřebovat mnohem menší množství platících uživatelů, než webová stránka neplatících návštěvníků k tomu, aby vydělávala. 
+
+Při vývoji nové aplikace potřebují tvůrci veškerou zpětnou vazbu, kterou mohou dostat. Mají jen velmi málo uživatelů a jsou s nimi v úzkem kontaktu. Takovým uživatelům se říká "early adopters" a z hlediska vývoje je spočívá jejich úloha v používání produktu a podávání zpětné vazby. 
+
+V okamžiku, kdy se produkt dostává k většímu počtu uživatelů, není možné se všemi udržovat písemný kontakt a jen malá část je ochotna podat zpětnou vazbu. 
+
+V tomto okžamžiku nastupuje nový nástroj, který si klade za cíl poskytovat podporu pro práci se zákazníkem a životním cyklem zákazníků.
+
+
+\subsection{Popis řešení} % co to bude umět
+
+Životní cyklus zákazníka je možné rozdělit chronologicky do čtyř částí. Akvizice, Uživatel, Zákazník a konec využívání aplikace. Každá fáze má své specifika a vyžaduje si trochu odlišný přístup, protože nás v ní zajímá něco jiného.
+
+\subsubsection{Akvizice uživatele}
+
+Ještě než se z návštěvníka stane uživatel musí přijít na webovous stránku aplikace, kde se informuje o aplikaci. Většina nástrojů v této fázi dokáže identifikovat odkud uživatel přišel a dokáže říct, kolik návštěvníků z jakého zdroje se registruje.
+
+Jelikož se konvenční nástroje omezují a unikátně neidentifikují uživatele, je tato funkce pouze jednorázová. To znamená dá se zjistit, že přes reklamní kampaň X přišlo sto návštěvníků a dva se zaregistrovali. Pokud se návštěvník na stránku vrátí a zaregistruje se až další den, nástroje to nezaznamenají kvůli anonymizaci dat.
+
+Nový nástroj naopak pracuje s uživateli jako s lidmi, ne daty a tak každý uživatel nese informaci o tom, odkud poprvé přšel a kdy se zaregistroval. To znamená, že je možno zpětně zjistit ze kterých kampaní vzniklo nejvíce placených zákazníků globálně a ne jednorázově.
+
+\subsubsection{Uživatel}
+
+Když se návštěvník zaregistruje, stane se z něho uživatel. V tuto chvíli většina webových aplikací poskytuje třicetidenní testovací lhůtu, během které se uživatel má seznámit s produktem a pak se rozhodne, jestli ho bude platit, nebo ne. Tomuto způsobu se říká "trial verze".
+
+Alternativou je tzv. Freemium, což znamená, že uživatel využívá základní verzi produktu a má možnost si zaplatit za prémiové funkce, nebo možnosti.
+
+Narozdíl od zákazníka, který za produkt platí a tudíž se dá předpokládat, že produkt vyhovuje jeho účelům a využívá ho pro svůj prospěch není u uživatele jasná motivace. 
+
+U trial modelu mohou uživatelé používat všechny možnosti aplikace v rámci zkušební doby, používají tedy stejnou aplikaci jako ti platící. Není však jisté, že aplikaci nepřestanou používat a začnou za ní platit. Cílem je tedy nabídnout něco, co je tak dobré, že se bez toho zákazník neobejde.
+
+Cílem freemium modelu je nabídnout něco, co uživatelé začnou používat zdarma a časem přejdou na placenou verzi. Tento model se liší hlavně v tom, že uživatelé používají nějakým způsobem omezenou verzi. Zde se opakuje to, že není jisté, že uživatelé začnou platit, podobně jako u trial verze.
+
+Motivace platících a neplatících uživatelů se liší. Někteří uživatelé pouze hledají možnost, jak zdarma vyřešit svůj problém a nemají zájem o prémiové funkce aplikace, jiní aplikaci jenom zkoušejí a časem si najdou jinou, nebo aplikaci sice používají, ale není pro ně tak podstatná, aby za ni platili.
+
+Neplatící uživatelé jsou ti, kteří projevili zájem o produkt, ale ještě se nestali platícími zákazníky. U freemium modelu tato skupina početně převažuje platící uživatele zhruba 10:1 a je nutno na ní pohlížet zvlášť.
+
+\subsubsection{Zákazník}
+
+Zákazníci jsou ti, kteří umožňují produktu žít a rozvíjet se. Tím, že platí za produkt vyjadřují tím, že jim produkt pomáhá natolik, že jej ohodnotí svými těžce vydělanými penězi. Zákazníci jsou srdcem a duší produktu.
+
+V dnešních webových aplikací, které hojně využívají freemium model se může jednat o pouhých 10\% všech uživatelů, často i méně. Několik procent zákazníků se v tom davu zbývajících neplatících uživatelů snadno ztratí a proto je třeba v první řadě oddělit jejich statistiky.
 
 
 
-\subsubsection{Motivace a etická stránka sběru dat}
+
+
+Z tohoto důvodu je záhodno být schopen odlišit zákazníky v analytickém nástroji a 
+
+
+\subsubsection{Konec používání aplikace}
+
+
+
+
+
+
+Demonstrovat na příkladu.
+
+Popis řešení.
+
+Co se bude měřit a proč.
+
+Co nástroj dělá a proč.
+
+Co nástroj nedělá a proč ne.
+
+Pro koho je nástroj určen.
+
+Existuje nějaký podobný nástroj?
+
+Proč takový nástroj ještě neexistuje?
+(implementujou si in house řešení tohoto problému)
+
+\subsection{Sběr dat}
+
+Jaké data nás zajímají a proč
+
+Jaké data nás nezajímají a proč
+
+Jaké jsou omezení sběru dat.
+
+\subsection{Zpracování dat}
+
+
+\subsection{Interpretace dat}
+
+Jaké možnosti interpretace dat jsou?
+
+Jaké možnosti se hodí?
+
+Jaké možnosti intepretace dat jsme zvolili a proč?
+
+Jaké jsou možnosi segmentace. 
+Jaké jsou možnosti do budoucna.
+
+Možnosti aproximace?
+
+
+
+\subsection{Etická stránka sběru dat}
 
 Problém etiky sběru dat.
 Právní problémy.
@@ -673,52 +778,6 @@ Nástroj si klade za cíl podporovat webovou aplikaci od jejích začátků až 
 V metafoře výše se je produkt na půl cesty mezi lahůdkářem, který osobně zná všechy své zákazníky a tato znalost je přidanou hodnotou služby zákazníkovi a obchodním řetězcem, který potřebuje analyzovat chování velkého množsví zákazníků.
 
 
-
-
-\subsubsection{Hypotéza}
-
-Popis problému.
-
-Demonstrovat na příkladu.
-
-Popis řešení.
-
-Co se bude měřit a proč.
-
-Co nástroj dělá a proč.
-
-Co nástroj nedělá a proč ne.
-
-Pro koho je nástroj určen.
-
-Existuje nějaký podobný nástroj?
-
-Proč takový nástroj ještě neexistuje?
-(implementujou si in house řešení tohoto problému)
-
-\subsection{Sběr dat}
-
-Jaké data nás zajímají a proč
-
-Jaké data nás nezajímají a proč
-
-Jaké jsou omezení sběru dat.
-
-\subsection{Zpracování dat}
-
-
-\subsection{Interpretace dat}
-
-Jaké možnosti interpretace dat jsou?
-
-Jaké možnosti se hodí?
-
-Jaké možnosti intepretace dat jsme zvolili a proč?
-
-Jaké jsou možnosi segmentace. 
-Jaké jsou možnosti do budoucna.
-
-Možnosti aproximace?
 
 
 
