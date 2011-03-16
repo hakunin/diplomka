@@ -761,22 +761,50 @@ ROI = \frac{(Zisk - Investice)}{Investice}
 
 Uvažujme reklamní kampaň, kde jeden proklik stojí korunu. Ze sto návštěvníků se pět zaregistruje, takže cena nového uživatele je dvacet korun. Jaká je v tomto případě návratnost investice? To zatím nevíme, protože není jasné, kolik z těch pěti uživatelů se stane zákazníky a zároveň netušíme, jak dlouho u nás zůstanou.
 
-Abychom mohli spočítat ROI potřebujeme, abychom věděli dvě věci. Za prvé je třeba znát, kolik procent uživatelů se průměrně stane zákazníky. Za druhé musíme vědět, jak dlouho naši zákazníci produkt používají a popularity jednotlivých plánů. 
+Abychom mohli spočítat ROI potřebujeme, abychom věděli dvě věci. Za prvé je třeba znát, kolik procent uživatelů se průměrně stane zákazníky. Za druhé musíme vědět, jak dlouho naši zákazníci produkt používají a popularity jednotlivých plánů. Pak můžeme předvídat návratnost investice následovně:
 
 
+\begin{equation}\label{eq:roi2}
+Investice = CenaZaProklik / Konverze = 5 / (0.05 * 0.1) = 100
+\end{equation}
+
+V našem teoretickém případě stojí proklik pět korun, pět procent návštěvníků se stane uživateli a dvacet procent z nich se stane zákazníky. Z toho vyplývá, že cena za platícího zákazníka je 500 korun.
 
 
+\begin{equation}\label{eq:roi3}
+Zisk = PocetMesicu * MesicniZisk = 15 * 300 = 4500
+\end{equation}
 
-Další podstatná informace, kterou pohled poskytuje je sledování počtu návštěvníků vůči počtu nových uživatelů. 
+Tímto způsobem můžeme odhadnout návratnosti investice.
 
- zaměřené na to, odkud se k nám návštěvníci dostávají, které stránky navštěvují a kolik z nich se stane uživateli.
+\begin{equation}\label{eq:roi4}
+ROI = \frac{(Zisk - Investice)}{Investice} = \frac{(4500 - 1000)}{1000} = 3.5
+\end{equation}
 
+Číslo tři a půl znamená, že z každé investované koruny jsme udělali tři a půl koruny. Takovéto výpočty se dnes dělají pomocí průměrných odhadů, pokud si ovšem někdo nedá tu práci a sám si tento výpočet udělá ručně za použití reálných dat.
 
+Google Analytics v tomto ohledu funguje tak, že pokud uživatel přijde přes kampaň, ale zaregistruje se až další den, nepočítají ho vůbec koverze k této kampani\footnote{TODO zdroj}. I s maximální vyvinutou snahou se tyto údaje nedají přesně spočítat, pokud analytický nástroj nepracuje přímo s uživateli.
+
+Pokud nástroj spolupracuje s webovou aplikací, lze vypočítat ROI jednotlivých kampaní pomocí reálných hodnot. Jeho působnost se ale neomezuje pouze na reklamní kamapně, ale na libobolnou formu u které je možno identifikovat zdroj návštěvnosti jako PR články, výměnné odkazy, vyhledávání a sociální sítě.
+
+\bigskip
+
+Ve fázi návštěvníků jde tedy primárně o to, odkud přicházejí, co na stránce dělají a jak z nich udělat uživatele. O tomto poskytuje pohled návštěvníků přehled pomocí relevantních grafů a tabulek.
 
 
 
 
 \subsubsection{Uživatelé}
+
+Tento pohled poskytuje přehled o uživatelech aplikace. Za uživatele považujeme člověka, který se zaregistroval a používá produkt zdarma (Freemium), nebo v časově omezenou (Trial) verzi.
+
+Noví uživatelé produkt zkoušejí, zjišťují, co produkt dokáže a učí se s ním zacházet. Tito lidé ještě nemají s  produktem většinou zkušenost, je však možné, že již používali podobný produkt. V této fázi je velmi snadné o ně přijít. Nic neplatí, takže nemají co ztratit a pokud si ještě nezvykli pravidelně aplikaci používat, je pro ně velmi snadné s tím přestat. 
+
+Proto je dobré sledovat, zda noví uživatelé produkt používají a případně je během periody, kdy produkt požívají zdarma se jich zdrořile zeptat, jak se jim s ním pracuje a připomenout, kde najdou pomoc, pokud by se jim s něčím nedařilo.
+
+Účelem této fáze je, aby si zákazník na produk trochu zvykl a mohl se pak rozhodnout, zda si produkt předplatí, nebo ne. Toto je krásný příklad win-win, kdy benefituje jak zákazník, tak poskytovatel.
+
+
 \subsubsection{Zákazníci}
 %80/20?
 \subsubsection{Návštěvníci}
