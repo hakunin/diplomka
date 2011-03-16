@@ -646,6 +646,13 @@ V tomto okžamžiku nastupuje nový nástroj, který si klade za cíl poskytovat
 
 Životní cyklus zákazníka je možné rozdělit chronologicky do čtyř částí. Akvizice, Uživatel, Zákazník a konec využívání aplikace. Každá fáze má své specifika a vyžaduje si trochu odlišný přístup, protože nás v ní zajímá něco jiného.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img/user_lifecycle_slim.pdf}
+	\caption{Životní cyklus uživatelů}
+	\label{lifecycle}
+\end{figure}
+
 \subsubsection{Akvizice uživatele}
 
 Ještě než se z návštěvníka stane uživatel musí přijít na webovous stránku aplikace, kde se informuje o aplikaci. Většina nástrojů v této fázi dokáže identifikovat odkud uživatel přišel a dokáže říct, kolik návštěvníků z jakého zdroje se registruje.
@@ -704,29 +711,9 @@ Děkovný dopis je také dobrým místem, kde je můžeme dát zákazníkovi pro
 Tímto končí životní cyklus zákazníka a popis motivace k vývoji nového nástroje. Dále bude popsáno jaké funkce nástroj obsahuje a jakou roli hrají v celku.
 
 
-\begin{comment}
-
-Demonstrovat na příkladu.
-
-Popis řešení.
-
-Co se bude měřit a proč.
-
-Co nástroj dělá a proč.
-
-Co nástroj nedělá a proč ne.
-
-Pro koho je nástroj určen.
-
-Existuje nějaký podobný nástroj?
-
-Proč takový nástroj ještě neexistuje?
-(implementujou si in house řešení tohoto problému)
-
-\end{comment}
 
 
-297-,
+
 
 
 
@@ -734,9 +721,66 @@ Proč takový nástroj ještě neexistuje?
 
 \subsection{Nástroj}
 
-Tato podkapitola se věnuje tomu, co nový nástroj dělá, proč a jak. Jak bylo řečeno v minulé části, nástroj se zaměřuje v první řadě na uživatele a podporuje čtyři fáze jejich životního cyklu: návštěvník, uživatel, zákazník a bývalý zákazník.
+\begin{comment}
+Demonstrovat na příkladu.
+Popis řešení.
+Co se bude měřit a proč.
+Co nástroj dělá a proč.
+Co nástroj nedělá a proč ne.
+Pro koho je nástroj určen.
+Existuje nějaký podobný nástroj?
+Proč takový nástroj ještě neexistuje?
+(implementujou si in house řešení tohoto problému)
+\end{comment}
 
-Každá fáze životního cyklu je v nástroji reprezentována jako pohled, který zobrazuje jednotlivý segment takovým způsobem, který umožňuje získat přehled, který nás u dané skupiny zajímá.
+
+
+Tato podkapitola se věnuje tomu, co nový nástroj dělá, proč a jak. Jak bylo řečeno v minulé části, nástroj se zaměřuje v první řadě na uživatele a podporuje čtyři fáze jejich životního cyklu: návštěvník, uživatel, zákazník a bývalý zákazník, nebo uživatel.
+
+Tedy přidanou hodnotou produktu je to, že kopíruje životní cyklus uživatele a je úzce zaměřený ná práci s uživateli. Narozdíl od ostatních analytických nástrojů, které jsou neposkytují žádné základní přizpůbosebí pro daný typ aplikace a už vůbec nepracují s konkrétními uživately.
+
+Každá fáze životního cyklu je v nástroji reprezentována jako pohled, který zobrazuje jednotlivý segment takovým způsobem, který umožňuje získat ty informace, které nás u dané skupiny zajímají. Toto rozdělení umožňuje vnímat výsledky měření v kontextu a poskytuje základní segmentaci uživatelů.
+
+
+
+\subsubsection{Návštěvníci}
+
+Tento pohled zobrazuje pouze segment návštěvníků. Návštěvníkem myslíme toho, kdo se ještě nezaregistroval do aplikace. V rámci životního cyklu zákazníků je návštěvník chápán jako potenciální uživatel, nebo zákazník. Návštěvník se stane uživatelem v okamžiku, kdy se zaregistruje a zvolí "free" plán u freemium produktu, nebo placený plán s časově omezenou verzí.
+
+Návštěvníky můžeme rozdělit na nové a vracející se. Počet nových a vracejících se zákazníků umožňuje určit, zda se o naší stránce dovídá dostatešné množství nových návštěvníků a kolik z nich se po první návštěvě vrací. 
+
+Z hlediska konverze návštěvníků na uživatele nás bude zajímat, kolik času průměrně trvá, než se návštěvník stane zákazníkem, případně kolik návštěv, nebo zobrazení stránek. Zajímavé je taky porovnat jaké stránky navštívili návštěvníci, kteří se následn registrovali a porovnat je s těmi, kteří se nezaregistrovali.
+
+Když přijde návštěvník na stránku naší aplikace, bude nás v první řadě zajímat, odkud přišel a v okamžiku, kdy se zaregistruje se přiřadí k jeho profilu. Z dlouhodobého hlediska to umožňuje určit, který zdorj návštěvnosti přinesl největší počet uživatelů. 
+
+U reklamních kampaní tento dlouhodobý náhled umožňuje spočítat celkové ROI\footnote{Return of invest - návratnost zisku}, které je určeno jako poměr zisku, na investovanou jednotku, viz rovnice \ref{eq:roi}.
+
+\begin{equation}\label{eq:roi}
+ROI = \frac{(Zisk - Investice)}{Investice}
+\end{equation}
+
+Uvažujme reklamní kampaň, kde jeden proklik stojí korunu. Ze sto návštěvníků se pět zaregistruje, takže cena nového uživatele je dvacet korun. Jaká je v tomto případě návratnost investice? To zatím nevíme, protože není jasné, kolik z těch pěti uživatelů se stane zákazníky a zároveň netušíme, jak dlouho u nás zůstanou.
+
+Abychom mohli spočítat ROI potřebujeme, abychom věděli dvě věci. Za prvé je třeba znát, kolik procent uživatelů se průměrně stane zákazníky. Za druhé musíme vědět, jak dlouho naši zákazníci produkt používají a popularity jednotlivých plánů. 
+
+
+
+
+
+Další podstatná informace, kterou pohled poskytuje je sledování počtu návštěvníků vůči počtu nových uživatelů. 
+
+ zaměřené na to, odkud se k nám návštěvníci dostávají, které stránky navštěvují a kolik z nich se stane uživateli.
+
+
+
+
+
+
+\subsubsection{Uživatelé}
+\subsubsection{Zákazníci}
+%80/20?
+\subsubsection{Návštěvníci}
+
 
 
 \subsubsection{Technické zázemí}

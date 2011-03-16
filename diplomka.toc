@@ -16,18 +16,22 @@
 \contentsline {subsection}{\numberline {3.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{18}
 \contentsline {subsubsection}{Akvizice u\IeC {\v z}ivatele}{18}
 \contentsline {subsubsection}{U\IeC {\v z}ivatel}{19}
-\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }k}{19}
+\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }k}{20}
 \contentsline {subsubsection}{Konec pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}n\IeC {\'\i } aplikace}{20}
 \contentsline {subsection}{\numberline {3.2}N\IeC {\'a}stroj}{21}
-\contentsline {subsubsection}{Technick\IeC {\'e} z\IeC {\'a}zem\IeC {\'\i }}{21}
-\contentsline {subsubsection}{Sb\IeC {\v e}r dat}{21}
-\contentsline {subsubsection}{Zpracov\IeC {\'a}n\IeC {\'\i } dat}{21}
-\contentsline {subsubsection}{Interpretace dat}{21}
-\contentsline {subsection}{\numberline {3.3}Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{21}
-\contentsline {subsubsection}{Popis technick\IeC {\'e}ho \IeC {\v r}e\IeC {\v s}en\IeC {\'\i } (10 Stran)}{23}
-\contentsline {section}{\numberline {4}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{24}
-\contentsline {subsubsection}{Aplikace v re\IeC {\'a}ln\IeC {\'e}m provozu (10 stran i s grafy)}{24}
-\contentsline {subsubsection}{Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{24}
-\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i }}{25}
-\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{26}
-\contentsline {section}{\numberline {7}Reference}{27}
+\contentsline {subsubsection}{N\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }ci}{21}
+\contentsline {subsubsection}{U\IeC {\v z}ivatel\IeC {\'e}}{22}
+\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }ci}{22}
+\contentsline {subsubsection}{N\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }ci}{22}
+\contentsline {subsubsection}{Technick\IeC {\'e} z\IeC {\'a}zem\IeC {\'\i }}{22}
+\contentsline {subsubsection}{Sb\IeC {\v e}r dat}{22}
+\contentsline {subsubsection}{Zpracov\IeC {\'a}n\IeC {\'\i } dat}{22}
+\contentsline {subsubsection}{Interpretace dat}{22}
+\contentsline {subsection}{\numberline {3.3}Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{23}
+\contentsline {subsubsection}{Popis technick\IeC {\'e}ho \IeC {\v r}e\IeC {\v s}en\IeC {\'\i } (10 Stran)}{24}
+\contentsline {section}{\numberline {4}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{26}
+\contentsline {subsubsection}{Aplikace v re\IeC {\'a}ln\IeC {\'e}m provozu (10 stran i s grafy)}{26}
+\contentsline {subsubsection}{Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{26}
+\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i }}{27}
+\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{28}
+\contentsline {section}{\numberline {7}Reference}{29}
