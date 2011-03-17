@@ -22,16 +22,16 @@
 \contentsline {subsubsection}{N\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }ci}{21}
 \contentsline {subsubsection}{U\IeC {\v z}ivatel\IeC {\'e}}{23}
 \contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }ci}{23}
-\contentsline {subsubsection}{N\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }ci}{23}
-\contentsline {subsubsection}{Technick\IeC {\'e} z\IeC {\'a}zem\IeC {\'\i }}{23}
-\contentsline {subsubsection}{Sb\IeC {\v e}r dat}{24}
-\contentsline {subsubsection}{Zpracov\IeC {\'a}n\IeC {\'\i } dat}{24}
-\contentsline {subsubsection}{Interpretace dat}{24}
-\contentsline {subsection}{\numberline {3.3}Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{24}
-\contentsline {subsubsection}{Popis technick\IeC {\'e}ho \IeC {\v r}e\IeC {\v s}en\IeC {\'\i } (10 Stran)}{26}
-\contentsline {section}{\numberline {4}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{27}
-\contentsline {subsubsection}{Aplikace v re\IeC {\'a}ln\IeC {\'e}m provozu (10 stran i s grafy)}{27}
-\contentsline {subsubsection}{Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{27}
-\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i }}{28}
-\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{29}
-\contentsline {section}{\numberline {7}Reference}{30}
+\contentsline {subsubsection}{B\IeC {\'y}val\IeC {\'\i } z\IeC {\'a}kazn\IeC {\'\i }ci}{23}
+\contentsline {subsection}{\numberline {3.3}Sb\IeC {\v e}r dat}{24}
+\contentsline {subsubsection}{Technick\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{25}
+\contentsline {subsubsection}{Zpracov\IeC {\'a}n\IeC {\'\i } dat}{25}
+\contentsline {subsubsection}{Interpretace dat}{25}
+\contentsline {subsection}{\numberline {3.4}Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{25}
+\contentsline {subsubsection}{Popis technick\IeC {\'e}ho \IeC {\v r}e\IeC {\v s}en\IeC {\'\i } (10 Stran)}{27}
+\contentsline {section}{\numberline {4}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{28}
+\contentsline {subsubsection}{Aplikace v re\IeC {\'a}ln\IeC {\'e}m provozu (10 stran i s grafy)}{28}
+\contentsline {subsubsection}{Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{28}
+\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i }}{29}
+\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{30}
+\contentsline {section}{\numberline {7}Reference}{31}

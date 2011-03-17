@@ -753,7 +753,7 @@ Z hlediska konverze návštěvníků na uživatele nás bude zajímat, kolik ča
 
 Když přijde návštěvník na stránku naší aplikace, bude nás v první řadě zajímat, odkud přišel a v okamžiku, kdy se zaregistruje se přiřadí k jeho profilu. Z dlouhodobého hlediska to umožňuje určit, který zdorj návštěvnosti přinesl největší počet uživatelů. 
 
-U reklamních kampaní tento dlouhodobý náhled umožňuje spočítat celkové ROI\footnote{Return of invest - návratnost zisku}, které je určeno jako poměr zisku, na investovanou jednotku, viz rovnice \ref{eq:roi}.
+U reklamních kampaní tento dlouhodobý náhled umožňuje spočítat celkové ROI\footnote{Return of invest - návratnost investice}, které je určeno jako poměr zisku, na investovanou jednotku, viz rovnice \ref{eq:roi}.
 
 \begin{equation}\label{eq:roi}
 ROI = \frac{(Zisk - Investice)}{Investice}
@@ -819,18 +819,39 @@ Pokud zákazník poskytuje data o tom, jaké plány zákazníci využívají ote
 Otevírají se také možnosti, které se blíží systémům pro management vztahů se zákazníkem a vyhodnocování ziskovosti zákazníků v poměru s náklady na zákaznickou podoporu a tak dále. Tyto možnosti jsou potenciálním rošířením nástroje do budoucna, jsou však nad rámec této práce.
 
 
-\subsubsection{Návštěvníci}
+\subsubsection{Bývalí zákazníci}
+
+Tento pohled končí životní cyklus zákazníka. Karta s bývalímy zákazníky poskytuje souhrnou statistiku toho, kolik zákazníku odešlo, jak dlouho strávili používáním aplikace a odkud se o aplikaci poprvé dověděli.
+
+Údaje tohoto pohledu poskytují dlouhodobou retrospektivu.
 
 
+\subsection{Sběr dat}
 
-\subsubsection{Technické zázemí}
+Nástoj sbírá data dvojího charakteru. V první řadě jde o interakci s webovou aplikací, podle které se určuje jak často uživatel aplikaci používá a jaké funkce používá. V druhé řadě jde o informace o uživateli, což umožňuje v analytickém nástroji s uživateli dále pracovat.
 
-Požadavky
+Zaznamenávání uživatelské interakce s aplikací probíhá ve webovém prohlížeči, který zaznamenává, jak uživatel aplikaci používá pomocí sledování událostí. Pomocí skriptu na straně klienta jsou sledovány jsou kliky myší v jednotlivých částech aplikace. U těch se zaznamenává jejich pozice ve struktuře stránky, která jednoznačně určuje jestli uživatel kliknul na odkaz, tlačítko, nebo jiný element. Tyto data jsou následně odeslána do analytické aplikace, kde jsou zaznamenána do databáze.
+
+Spolu se zaznamenáváním uživatelovy interakce s aplikací jsou sbírána data, která umožňují segmentoval uživatele podle toho, jeslti jsou přihlášení, registrovaní, nebo jestli se jedná o zákazníky. Identifikace uživatelů spolu s jejich interakcí umožňuje segmentovat jednotlivé uživatele podle toho, jak často s aplikací pracují a dále vyhodnocovat nejpoužívanější funkce aplikace podle jednotlivých skupin uživatelů.
+
+Na obrázku \ref{img:measuring} je obecně zachyceno, jak probíhá komunikace mezi uživatelovým prohlížečem, webovou aplikací a analytickou aplikací.
+
+\bigskip
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img/measuring.pdf}
+	\caption{Schéma sběru dat}
+	\label{img:measuring}
+\end{figure}
+
+Měření je založeno na měřícím skriptu, který je vložen do webové aplikace a měření interakce, a zárově poskytuje informace o uživateli. Jelikož se jedná o data uživatele, jsou zašifrována pomocí tajného klíče kryptograficky bezpečným způsobem. Technické detaily jsou popsány v části \ref{sec:technicalities}.
 
 
+Identifikace uživatele je 
 
+Pro zaznamenávání 
 
-\subsubsection{Sběr dat}
 
 Jaké data nás zajímají a proč
 
@@ -839,6 +860,14 @@ Jaké data nás nezajímají a proč
 Jak sbírám data (+schéma)
 
 Jaké jsou omezení sběru dat.
+
+
+
+\subsubsection{Technické řešení}
+\label{sec:technicalities}
+
+Požadavky
+
 
 
 \subsubsection{Zpracování dat}
