@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  16 MAR 2011 14:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  17 MAR 2011 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -944,59 +944,89 @@ Overfull \hbox (15.92339pt too wide) in paragraph at lines 788--789
 se ale neomezuje pouze na reklamn[]^^P kamapn[]e,
  []
 
-[22] [23]
-Overfull \hbox (22.80519pt too wide) in paragraph at lines 865--866
+[22]
+Overfull \hbox (7.84718pt too wide) in paragraph at lines 807--808
+[]\OT1/ppl/m/n/10.95 Tento pohled se zam[]e[]ruje na seg-ment u[]zivatel[]u a p
+[]rehled o tom, ko-lik nov[]ych u[]zivatel[]u
+ []
+
+
+Overfull \hbox (6.82356pt too wide) in paragraph at lines 807--808
+\OT1/ppl/m/n/10.95 se zareg-istrovalo, ko-lik jich p[]re[]slo na pla-cen[]y pl[
+]an v porovn[]an[]^^P s dlouhodob[]ym pr[]um[]erem.
+ []
+
+
+Overfull \hbox (14.13754pt too wide) in paragraph at lines 807--808
+\OT1/ppl/m/n/10.95 Po str[]ance pou[]z[]^^Pv[]an[]^^P pro-duktu pak posky-tuje 
+p[]rehled o tom, jak[]e funkce pro-duktu u[]zivatel[]e
+ []
+
+
+Overfull \hbox (3.34065pt too wide) in paragraph at lines 813--814
+\OT1/ppl/m/n/10.95 Z[]akazn[]^^Pci jsou ti u[]zivatel[]e, kte[]r[]^^P ji[]z pla
+t[]^^P. Tento pohled se p[]r[]^^Pli[]s neli[]s[]^^P od pohledu u[]zivatel[]e,
+ []
+
+
+Overfull \hbox (22.73999pt too wide) in paragraph at lines 819--820
+[]\OT1/ppl/m/n/10.95 Otev[]^^Praj[]^^P se tak[]e mo[]znosti, kter[]e se bl[]^^P
+[]z[]^^P syst[]em[]um pro man-age-ment vz-tah[]u se z[]akazn[]^^Pkem
+ []
+
+[23]
+Overfull \hbox (22.80519pt too wide) in paragraph at lines 877--878
 []\OT1/ppl/m/n/10.95 Z[]am[]ern[]e za-halov[]an[]^^P iden-tity u[]zivatele je a
 r-gu-men-tov[]ano za-chov[]an[]^^Pm soukrom[]^^P u[]zivatele.
  []
 
 
-Overfull \hbox (7.404pt too wide) in paragraph at lines 868--870
+Overfull \hbox (7.404pt too wide) in paragraph at lines 880--882
 []\OT1/ppl/m/n/10.95 7.1 Neb-udete slu[]covat (nebo ne-do-vol[]^^Pte jak[]ekoli
 v t[]ret[]^^P osob[]e slu[]cov[]an[]^^P) jak[]akoli
  []
 
 
-Overfull \hbox (16.39476pt too wide) in paragraph at lines 868--870
+Overfull \hbox (16.39476pt too wide) in paragraph at lines 880--882
 \OT1/ppl/m/n/10.95 data shrom[]a[]zd[]en[]a z va[]s[]^^P Web-site (va[]sich str
 []anek Web-site) (nebo web-site takov[]eto
  []
 
-
-Overfull \hbox (10.73166pt too wide) in paragraph at lines 882--883
+[24]
+Overfull \hbox (10.73166pt too wide) in paragraph at lines 894--895
 []\OT1/ppl/m/n/10.95 Kdybyste nemohli IKEA v[]e[]rit, nemohli byste v n[]^^P an
 i nakupo-vat. Z toho d[]uvodu
  []
 
 
-Overfull \hbox (28.42773pt too wide) in paragraph at lines 882--883
+Overfull \hbox (28.42773pt too wide) in paragraph at lines 894--895
 \OT1/ppl/m/n/10.95 chr[]anit va[]se os-obn[]^^P []udaje p[]red p[]redv[]^^Pdate
 ln[]ym nebezpe[]c[]^^Pm. V n[]ekter[]ych p[]r[]^^Ppadech
  []
 
 
-Overfull \hbox (4.57939pt too wide) in paragraph at lines 882--883
+Overfull \hbox (4.57939pt too wide) in paragraph at lines 894--895
 \OT1/ppl/m/n/10.95 pov[]e[]r[]^^Pme je-jich zpra-cov[]an[]^^Pm, proto[]ze od ni
 ch chceme, aby v[]am poskytly ur[]cit[]e
  []
 
-[24]
-Overfull \hbox (3.4622pt too wide) in paragraph at lines 889--890
+
+Overfull \hbox (3.4622pt too wide) in paragraph at lines 901--902
 \OT1/ppl/m/n/10.95 age-ment. CRM je n[]astroj ke shroma[]zd[]ov[]an[]^^P, zpra-
 cov[]an[]^^P a vyu[]zit[]^^P in-for-mac[]^^P o z[]akazn[]^^Pc[]^^Pch.
  []
 
-
-Overfull \hbox (27.80353pt too wide) in paragraph at lines 893--894
+[25]
+Overfull \hbox (27.80353pt too wide) in paragraph at lines 905--906
 \OT1/ppl/m/n/10.95 kter[]e maj[]^^P stovky a[]z tis[]^^Pce z[]akazn[]^^Pk[]u, k
 ter[]e fun-guj[]^^P typ-icky na z[]aklad[]e m[]es[]^^P[]cn[]^^Pho p[]redplatn[]
 eho.
  []
 
-[25] [26] [27
+[26] [27
 
 ]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 940--944
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 952--956
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
@@ -1006,14 +1036,14 @@ Overfull \hbox (17.68532pt too wide) in paragraph at lines 940--944
 ] [29
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 974--976
+Underfull \hbox (badness 1953) in paragraph at lines 986--988
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 974--976
+Underfull \hbox (badness 10000) in paragraph at lines 986--988
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
@@ -1046,7 +1076,7 @@ are/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive
 helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a.
 pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/t
 exmf-texlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (35 pages, 481961 bytes).
+Output written on diplomka.pdf (35 pages, 483929 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
