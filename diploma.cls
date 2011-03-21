@@ -332,20 +332,49 @@ left=28mm,right=32mm,top=25mm,bottom=38mm,headheight=16pt]{geometry}
   \ifthenelse{\equal{\the\Dipl@DefaultLanguage}{xml}}
     {\lstset{language=XML}}{}
 }
-\lstset%
-{
-  extendedchars=true,
-  basicstyle=\footnotesize\sffamily,
-  commentstyle=\sffamily\slshape,
-  breaklines=true,
-  tabsize=3,
-  xleftmargin=3em,
-  columns=flexible,
-  print=true,
-  captionpos=b,
-  frame=lines,
-  framexleftmargin=3em,
-}
+
+
+
+
+\usepackage{caption}
+\usepackage{graphics}
+\usepackage{color}
+    
+    \usepackage{listings}
+  \usepackage{courier}
+ \lstset{
+         basicstyle=\footnotesize\ttfamily, % Standardschrift
+         %numbers=left,               % Ort der Zeilennummern
+         numberstyle=\tiny,          % Stil der Zeilennummern
+         %stepnumber=2,               % Abstand zwischen den Zeilennummern
+         numbersep=5pt,              % Abstand der Nummern zum Text
+         tabsize=2,                  % Groesse von Tabs
+         extendedchars=true,         %
+         breaklines=true,            % Zeilen werden Umgebrochen
+    		frame=b,         
+ %        keywordstyle=[1]\textbf,    % Stil der Keywords
+ %        keywordstyle=[2]\textbf,    %
+ %        keywordstyle=[3]\textbf,    %
+ %        keywordstyle=[4]\textbf,   \sqrt{\sqrt{}} %
+         showspaces=false,           % Leerzeichen anzeigen ?
+         showtabs=false,             % Tabs anzeigen ?
+         xleftmargin=17pt,
+         framexleftmargin=17pt,
+         framexrightmargin=5pt,
+         framexbottommargin=4pt,
+         %backgroundcolor=\color{lightgray},
+         showstringspaces=false      % Leerzeichen in Strings anzeigen ?        
+ }
+
+    %\DeclareCaptionFont{blue}{\color{blue}} 
+
+  %\captionsetup[lstlisting]{singlelinecheck=false, labelfont={blue}, textfont={blue}}
+  \usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
+
 \newcommand{\InlCode}[1]{\lstinline[basicstyle=\small\sffamily]$#1$}
 \def\appname{P\v{r}\'{\i}lohy}
 \renewcommand\appendix{\par

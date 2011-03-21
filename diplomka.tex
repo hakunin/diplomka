@@ -832,10 +832,6 @@ Nástoj sbírá data dvojího charakteru. V první řadě jde o interakci s webo
 
 Zaznamenávání uživatelské interakce s aplikací probíhá ve webovém prohlížeči, který zaznamenává, jak uživatel aplikaci používá pomocí sledování událostí. Pomocí skriptu na straně klienta jsou sledovány jsou kliky myší v jednotlivých částech aplikace. U těch se zaznamenává jejich pozice ve struktuře stránky, která jednoznačně určuje jestli uživatel kliknul na odkaz, tlačítko, nebo jiný element. Tyto data jsou následně odeslána do analytické aplikace, kde jsou zaznamenána do databáze.
 
-Spolu se zaznamenáváním uživatelovy interakce s aplikací jsou sbírána data, která umožňují segmentoval uživatele podle toho, jeslti jsou přihlášení, registrovaní, nebo jestli se jedná o zákazníky. Identifikace uživatelů spolu s jejich interakcí umožňuje segmentovat jednotlivé uživatele podle toho, jak často s aplikací pracují a dále vyhodnocovat nejpoužívanější funkce aplikace podle jednotlivých skupin uživatelů.
-
-Na obrázku \ref{img:measuring} je obecně zachyceno, jak probíhá komunikace mezi uživatelovým prohlížečem, webovou aplikací a analytickou aplikací.
-
 \bigskip
 
 \begin{figure}[h]
@@ -845,8 +841,41 @@ Na obrázku \ref{img:measuring} je obecně zachyceno, jak probíhá komunikace m
 	\label{img:measuring}
 \end{figure}
 
-Měření je založeno na měřícím skriptu, který je vložen do webové aplikace a měření interakce, a zárově poskytuje informace o uživateli. Jelikož se jedná o data uživatele, jsou zašifrována pomocí tajného klíče kryptograficky bezpečným způsobem. Technické detaily jsou popsány v části \ref{sec:technicalities}.
+Spolu se zaznamenáváním uživatelovy interakce s aplikací jsou sbírána data, která umožňují segmentoval uživatele podle toho, jeslti jsou přihlášení, registrovaní, nebo jestli se jedná o zákazníky. Identifikace uživatelů spolu s jejich interakcí umožňuje segmentovat jednotlivé uživatele podle toho, jak často s aplikací pracují a dále vyhodnocovat nejpoužívanější funkce aplikace podle jednotlivých skupin uživatelů.
 
+Na obrázku \ref{img:measuring} je obecně zachyceno, jak probíhá komunikace mezi uživatelovým prohlížečem, webovou aplikací a analytickou aplikací.
+
+
+Měření je založeno na měřícím skriptu, který je vložen do webové aplikace a měření interakce, a zárově poskytuje informace o uživateli. Jelikož se jedná o data uživatele, jsou zašifrována pomocí tajného klíče kryptograficky bezpečným způsobem.
+
+Jelikož je nutné na straně webového serveru bezpečně zašifrovat informace o uživateli, je nutné pro každý jazyk na serveru poskytnout měřící kód v takovém jazyce, který se na serveru používá. Například kód pro jazyk PHP vypadá následovně:
+
+\begin{lstlisting}[label=src:neco,language=PHP, caption=Měřící kód na straně serveru]
+$measuring = new UseDrivenMeasuring("chYmaXapl6Gl1VfRbGWfNA==");
+echo $measuring->code(array(
+    "id" => 0,
+    "name" => "John Smith",
+    "email" => "john.smith@example.org"
+  ));
+\end{lstlisting}
+
+Zbytek kódu bezpečně zašifruje dané informace a jeho výstupem je měřící skript, který se vloží do HTML stránky.
+
+\begin{lstlisting}[label=src:html,caption=Měřící skript,language=HTML]
+<script> 
+  var __ud = __ud || [];  
+  __ud.push(["id", 5001]);
+  __ud.push(["s", "7lINfXL3mM7GEgO2HSVf9RjJS5eb9mDuVv7ba3QksTXD2BsMvadDPeU-CoIzid5PDqJI6gCOi0EjmEGtI6XSDbu9at9vY8fw6rwssCDJVA2dfuZYF7kDwzpjzivNOOf AXQls78FzwcjDhc-gxwHohMAa0l9mb7MMlV5JcDDnx7A"]);
+  (function() {
+    var script = document.createElement("script");
+    script.type = "text/javascript"; script.async = true;
+    script.src = "http://www.use-driven.com/measure.js";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(script, s);
+  })();
+</script> 
+\end{lstlisting}
+\bigskip
 
 Identifikace uživatele je 
 
@@ -867,6 +896,29 @@ Jaké jsou omezení sběru dat.
 \label{sec:technicalities}
 
 Požadavky
+
+
+\subsubsection{Popis technického řešení (10 Stran)}
+
+1) diagram celého systému
+
+vybrané technologie:
+ - Google Vis. api
+ - AppEngine
+proč jsem vybral tyto technologie
+
+
+2) detail sběru dat
+detaily funkce měřícího skriptu (AES)
+
+3) detail interpretace dat
+
+4) zobrazení dat
+
+
+
+
+
 
 
 
@@ -939,26 +991,6 @@ V metafoře výše se je produkt na půl cesty mezi lahůdkářem, který osobn�
 
 
 
-
-
-
-
-\subsubsection{Popis technického řešení (10 Stran)}
-
-1) diagram celého systému
-
-2) detail sběru dat
-
-3) detail interpretace dat
-
-4) zobrazení dat
-
-
-vizualizační technologie, appengine
-proč jsem vybral tyto technologie
-detaily funkce měřícího skriptu (AES)
-detaily sběru dat
-detaily analýzy dat
 
 
 
