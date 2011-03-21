@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  21 MAR 2011 13:15
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  21 MAR 2011 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -214,6 +214,9 @@ Package color Info: Driver file: pdftex.def on input line 130.
 )
 (/usr/share/texmf-texlive/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
 ))
 (/usr/share/texmf-texlive/tex/generic/babel/babel.sty
 Package: babel 2008/07/06 v3.8l The Babel package
@@ -565,10 +568,6 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2008/03/28 v1.2 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-
-(/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 69.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
@@ -1052,65 +1051,66 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 853--853
 
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <9> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 855.
+
+Overfull \hbox (2.68352pt too wide) in paragraph at lines 864--865
+\OT1/ppl/m/n/10.95 vrhnout t[]ret[]^^P stra-nou. To tak[]e umo[]z[]nuje pou[]z[
+]^^Pt tuto in-for-maci k ov[]e[]ren[]^^P iden-tity u[]zivatele. 
+ []
+
 (/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 864--864
+Overfull \hbox (6.0pt too wide) in paragraph at lines 866--866
 [][][][][][][] 
  []
 
-
-Overfull \hbox (4.41266pt too wide) in paragraph at lines 868--869
-[][] 
- []
-
 [25]
-Overfull \hbox (22.80519pt too wide) in paragraph at lines 958--959
+Overfull \hbox (22.80519pt too wide) in paragraph at lines 957--958
 []\OT1/ppl/m/n/10.95 Z[]am[]ern[]e za-halov[]an[]^^P iden-tity u[]zivatele je a
 r-gu-men-tov[]ano za-chov[]an[]^^Pm soukrom[]^^P u[]zivatele.
  []
 
 
-Overfull \hbox (7.404pt too wide) in paragraph at lines 961--963
+Overfull \hbox (7.404pt too wide) in paragraph at lines 960--962
 []\OT1/ppl/m/n/10.95 7.1 Neb-udete slu[]covat (nebo ne-do-vol[]^^Pte jak[]ekoli
 v t[]ret[]^^P osob[]e slu[]cov[]an[]^^P) jak[]akoli
  []
 
 
-Overfull \hbox (16.39476pt too wide) in paragraph at lines 961--963
+Overfull \hbox (16.39476pt too wide) in paragraph at lines 960--962
 \OT1/ppl/m/n/10.95 data shrom[]a[]zd[]en[]a z va[]s[]^^P Web-site (va[]sich str
 []anek Web-site) (nebo web-site takov[]eto
  []
 
 [26]
-Overfull \hbox (10.73166pt too wide) in paragraph at lines 975--976
+Overfull \hbox (10.73166pt too wide) in paragraph at lines 974--975
 []\OT1/ppl/m/n/10.95 Kdybyste nemohli IKEA v[]e[]rit, nemohli byste v n[]^^P an
 i nakupo-vat. Z toho d[]uvodu
  []
 
 
-Overfull \hbox (28.42773pt too wide) in paragraph at lines 975--976
+Overfull \hbox (28.42773pt too wide) in paragraph at lines 974--975
 \OT1/ppl/m/n/10.95 chr[]anit va[]se os-obn[]^^P []udaje p[]red p[]redv[]^^Pdate
 ln[]ym nebezpe[]c[]^^Pm. V n[]ekter[]ych p[]r[]^^Ppadech
  []
 
 
-Overfull \hbox (4.57939pt too wide) in paragraph at lines 975--976
+Overfull \hbox (4.57939pt too wide) in paragraph at lines 974--975
 \OT1/ppl/m/n/10.95 pov[]e[]r[]^^Pme je-jich zpra-cov[]an[]^^Pm, proto[]ze od ni
 ch chceme, aby v[]am poskytly ur[]cit[]e
  []
 
 
-Overfull \hbox (3.4622pt too wide) in paragraph at lines 982--983
+Overfull \hbox (3.4622pt too wide) in paragraph at lines 981--982
 \OT1/ppl/m/n/10.95 age-ment. CRM je n[]astroj ke shroma[]zd[]ov[]an[]^^P, zpra-
 cov[]an[]^^P a vyu[]zit[]^^P in-for-mac[]^^P o z[]akazn[]^^Pc[]^^Pch.
  []
 
 
-Overfull \hbox (27.80353pt too wide) in paragraph at lines 986--987
+Overfull \hbox (27.80353pt too wide) in paragraph at lines 985--986
 \OT1/ppl/m/n/10.95 kter[]e maj[]^^P stovky a[]z tis[]^^Pce z[]akazn[]^^Pk[]u, k
 ter[]e fun-guj[]^^P typ-icky na z[]aklad[]e m[]es[]^^P[]cn[]^^Pho p[]redplatn[]
 eho.
@@ -1119,7 +1119,7 @@ eho.
 [27] [28] [29
 
 ]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 1013--1017
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 1012--1016
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
@@ -1129,14 +1129,14 @@ Overfull \hbox (17.68532pt too wide) in paragraph at lines 1013--1017
 ] [31
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 1047--1049
+Underfull \hbox (badness 1953) in paragraph at lines 1046--1048
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1049
+Underfull \hbox (badness 10000) in paragraph at lines 1046--1048
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
@@ -1152,10 +1152,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7758 strings out of 495061
- 113413 string characters out of 1182620
- 443280 words of memory out of 3000000
- 10811 multiletter control sequences out of 15000+50000
+ 7757 strings out of 495061
+ 113393 string characters out of 1182620
+ 446269 words of memory out of 3000000
+ 10810 multiletter control sequences out of 15000+50000
  27014 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  43i,12n,51p,1035b,2950s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1169,7 +1169,7 @@ xmf-texlive/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-texlive/fonts
 ic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a.pfb></u
 sr/share/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-te
 xlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (37 pages, 548349 bytes).
+Output written on diplomka.pdf (37 pages, 549638 bytes).
 PDF statistics:
  228 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

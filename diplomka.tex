@@ -859,13 +859,15 @@ echo $measuring->code(array(
   ));
 \end{lstlisting}
 
-Zbytek kódu bezpečně zašifruje dané informace a jeho výstupem je měřící skript, který se vloží do HTML stránky.
+Zbytek kódu na serveru bezpečně zašifruje dané informace a jeho výstupem je měřící skript, který se vloží do HTML stránky. Tento měřící skript obsahuje číslo, které identifikuje webovovou apliakci, zašifrované informace o uživateli a skript, který vloží kód, který zaznamenává uživatelovu interakci se stránkou a odesílá data.
+
+Zašifrované informace o uživateli jsou nečitelné třetí stranou a není je možno podvrhnout třetí stranou. To také umožňuje použít tuto informaci k ověření identity uživatele.
 
 \begin{lstlisting}[label=src:html,caption=Měřící skript,language=HTML]
 <script> 
   var __ud = __ud || [];  
   __ud.push(["id", 5001]);
-  __ud.push(["s", "7lINfXL3mM7GEgO2HSVf9RjJS5eb9mDuVv7ba3QksTXD2BsMvadDPeU-CoIzid5PDqJI6gCOi0EjmEGtI6XSDbu9at9vY8fw6rwssCDJVA2dfuZYF7kDwzpjzivNOOf AXQls78FzwcjDhc-gxwHohMAa0l9mb7MMlV5JcDDnx7A"]);
+  __ud.push(["s", "7lINfXL3mM7GEgO2HSVf9RjJS5eb9mDuVv7ba3QksTXD2BsMvadDPeU-CoIzid5PDqJI6gCOi0EjmEGtI6XSDbu9at9vY8fw6rwssCDJVA2dfuZYF7kDwzpjzivNO OfAXQls78FzwcjDhc-gxwHohMAa0l9mb7MMlV5JcDDnx7A"]);
   (function() {
     var script = document.createElement("script");
     script.type = "text/javascript"; script.async = true;
@@ -875,22 +877,40 @@ Zbytek kódu bezpečně zašifruje dané informace a jeho výstupem je měříc�
   })();
 </script> 
 \end{lstlisting}
-\bigskip
-
-Identifikace uživatele je 
-
-Pro zaznamenávání 
 
 
-Jaké data nás zajímají a proč
+Po načtení stránky do prohlížeče je pomocí měřícího kódu dodatečně nahrán skript, který umožňuje samotné měření. Tento postup kopíruje běžně používaný způsob měření. Výhodou tohoto způsobu je především možnost měnit měřící skript bez nutnosti zásahů zeč strany provozovatele webového serveru.
 
-Jaké data nás nezajímají a proč
+Během toho, kdy uživatel pracuje s webovou aplikací měřící skript zaznamenává interakci a ukládá ji do cookie. Jak již bylo řečeno, jedná se primárně o to, které prvky aplikace uživatel používá. Zaznamenávají se jednotlivé kliky na prvky na stránce, spolu s jejich pozicí v hierarchii dokumentu.
 
-Jak sbírám data (+schéma)
+V okamžiku, kdy je v cookie několik událostí, posílá měřící skript nasbíraná data analytické aplikaci spolu se zašifrovanými informacemi o uživateli. Agregace událostí umožňuje snížit počet interakcí s analytickým serverem několikanásobně a tak snížit náklady na provoz.
 
-Jaké jsou omezení sběru dat.
+Po přijetí dat na serveru je ověřena jejich autenticita pomocí zašifrovaného kódu. Pokud kód souhlasí jsou data jsou zaznamenána a později analyzována.
 
 
+\subsection{Zpracování a interpretace dat}
+
+MapReduce, pojďme do toho :)
+
+
+Podle sekce motivace.
+
+Jaké možnosti interpretace dat jsou?
+
+Jaké možnosti se hodí?
+
+Jaké možnosti intepretace dat jsme zvolili a proč?
+
+Jaké jsou možnosi segmentace. 
+Jaké jsou možnosti do budoucna.
+
+Možnosti aproximace?
+
+
+
+
+
+\begin{comment}
 
 \subsubsection{Technické řešení}
 \label{sec:technicalities}
@@ -914,34 +934,13 @@ detaily funkce měřícího skriptu (AES)
 3) detail interpretace dat
 
 4) zobrazení dat
+\end{comment}
 
 
 
 
 
 
-
-
-\subsubsection{Zpracování dat}
-
-MapReduce, pojďme do toho :)
-
-
-
-\subsubsection{Interpretace dat}
-
-Podle sekce motivace.
-
-Jaké možnosti interpretace dat jsou?
-
-Jaké možnosti se hodí?
-
-Jaké možnosti intepretace dat jsme zvolili a proč?
-
-Jaké jsou možnosi segmentace. 
-Jaké jsou možnosti do budoucna.
-
-Možnosti aproximace?
 
 
 

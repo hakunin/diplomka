@@ -339,9 +339,9 @@ left=28mm,right=32mm,top=25mm,bottom=38mm,headheight=16pt]{geometry}
 \usepackage{caption}
 \usepackage{graphics}
 \usepackage{color}
-    
-    \usepackage{listings}
-  \usepackage{courier}
+\usepackage{listings}
+\usepackage{courier}
+
  \lstset{
          basicstyle=\footnotesize\ttfamily, % Standardschrift
          %numbers=left,               % Ort der Zeilennummern
@@ -365,7 +365,15 @@ left=28mm,right=32mm,top=25mm,bottom=38mm,headheight=16pt]{geometry}
          %backgroundcolor=\color{lightgray},
          showstringspaces=false      % Leerzeichen in Strings anzeigen ?        
  }
-
+ \lstloadlanguages{% Check Dokumentation for further languages ...
+         %[Visual]Basic
+         %Pascal
+         %C
+         %C++
+         %XML
+         %HTML
+         Java
+ }
     %\DeclareCaptionFont{blue}{\color{blue}} 
 
   %\captionsetup[lstlisting]{singlelinecheck=false, labelfont={blue}, textfont={blue}}
