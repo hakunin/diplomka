@@ -888,8 +888,27 @@ V okamžiku, kdy je v cookie několik událostí, posílá měřící skript nas
 Po přijetí dat na serveru je ověřena jejich autenticita pomocí zašifrovaného kódu. Pokud kód souhlasí jsou data jsou zaznamenána a později analyzována.
 
 
+
+
 \subsection{Zpracování a interpretace dat}
 
+Nasbíraná data je nutno nějak zpracovat a interpretovat. Způsob zpracování musí být takový, aby umožňoval data zpracovat jednou a dále pak využívat pouze výsledky tohoto zpracování. To znamená, že je třeba pracovat s nasbíranými daty jako s proudem a postupně zpracovávat nová data jak přicházejí. Výstup zpracování bude pak uložen do databáze a nebude nutno data znova procházet.
+
+Pro zvolenou metodu musí být také dostatečně jednoduché definovat nová pravidla, která data vyhodnocují. Z těchto důvodu byla vytvořena obecná forma zpracování dat jedoduchým průchodem, který umožňuje zpracovávat data po částech. Každé pravidlo, které generuje statistiku pracuje s proudem nasbíraných dat tak že navštěvuje každou událost a systém se dále nestará co s daty dělá.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=9.5cm]{img/zpracovani_2.pdf}
+	\caption{Schéma proudového zpracování dat}
+	\label{img:measuring}
+\end{figure}
+
+Výstupem pravidel jsou dvou, nebo třírozměrné data, které jsou jednotně uložena do databáze. To umožňuje po nějaké stanovené době se zcela zbavit původních dat a ponechat si pouze z nich vyrobené statistiky, které zabírají méně místa v databázi. Po přidání nových pravidel je také možno získat jejich výsledky zpracováním dat, která již byla zpracována.
+
+Jelikož je výstup zpracovaných dat v normovaném tvaru, je mžono z nich jednoduše vytvřit různé grafy a do budoucna nechat uživatele systému vytvářet vlastní grafy a přehledy.
+
+\begin{comment}
 MapReduce, pojďme do toho :)
 
 
@@ -906,7 +925,7 @@ Jaké jsou možnosti do budoucna.
 
 Možnosti aproximace?
 
-
+\end{comment}
 
 
 
