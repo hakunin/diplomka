@@ -620,6 +620,58 @@ Příští kapitola se věnuje vlastnostem nového nástroje a jejich využití.
 
 
 
+\subsection{Etická stránka sběru dat}
+
+Problém etiky sběru dat.
+Právní problémy.
+Anonymní vs. neanonymní data.
+Webaplikace vs. webová stránka.
+Zákazník vs. náhodný návštěvník.
+Analogie z fyzického byznysu.
+
+
+Záměrné zahalování identity uživatele je argumentováno zachováním soukromí uživatele. Například Google Analytics obsahuje ve smluvním ujednání služeb Google Analytics následující text:
+
+\begin{quote}
+7.1 Nebudete slučovat (nebo nedovolíte jakékoliv třetí osobě slučování) jakákoli data shromážděná z vaší Website (vašich stránek Website) (nebo website takovéto třetí strany) s jakýmikoliv informacemi identifikujícími osoby, které pocházejí z jakéhokoli zdroje jsoucího částí vašeho užívání (nebo užívání takovéto třetí strany) Služby. Budete splňovat všechny zákony na ochranu dat a soukromí ve spojitosti s vašim používáním Služby a shromažďováním informací od návštěvníků na vašich stránkách website. Na své stránce na viditelném místě zpřístupníte (a budete i dodržovat) vhodnou směrnici o ochraně soukromí.
+\ldots
+\end{quote}
+
+Na jedné straně je snaha ochránit uživatelovo soukromí, na druhé poskytnout co nejlepší službu a relevantní obsah. Etickou stránku věci se spíše zabývají velké firmy, které mají uloženo mnoho uživatelských dat a nezávislí profesionálové, kteří poukazují na přestupky a nedostatky.
+
+Problém soukromí na webu je možno přirovnat k nakupování v obchodu. Pokud jsem v obchodním řetězci a nakupuji, budou mě sledovat kamery, které mě dokáží identifikovat a sbírají data o tom, kudy chodím. Z hlediska soukromí nechci, aby bez mého souhlasu o mě sbíral obchodní řetězec informace o tom, co nakupuji, jak často do obchodu chodím, nebo co mám na sobě. Toto je filosofie Google Analytics.
+
+Když se svým nákupem přistoupím k pokladně, první na co se mě prodavačka zeptá je, zda mám jejich "kartu". Pokud ano, vezme si ji k zařízení napojeném na pokladnu a v tom okamžiku se můj zatím anonymní nákup stává mým nákupem a je svázán s mou kartou. Tímto způsobem obchodní řetězec dokáže sledovat jak často nakupuji a co nakupuji.
+
+Aby měl zákazník důvod k pořízení karty, která umožňuje jeho sledování je motivován sbíráním bodů, nebo jinými výhodami\footnote{Například IKEA svým členům "IKEA Family" věnuje nápoje k jídlu zdarma.}. Při registraci pro kartu IKEA Family se do formuláře vyplňuje jméno, příjmení, bydliště, email a den narození. O ochraně osobních údajů říká IKEA, že jde o "vztah založený na důvěře". V následujícím výňatku z textu "Ochrany osobních údajů" spolešnost polopatě vysvětluje, že údaje bude poskytovat třetím stranám:
+
+\begin{quote}
+{\bf Informace, které nám sdělíte, u nás také zůstanou}\\
+Kdybyste nemohli IKEA věřit, nemohli byste v ní ani nakupovat. Z toho důvodu je pro nás ochrana vašich osobních důvodů navýsost důležitá. IKEA nesděluje vaše osobní údaje jiným firmám mimo IKEA. Informace, které nám poskytnete, využívá jen a jen IKEA. Někdy sice nastanou případy, kdy Vaše osobní údaje poskytneme některé z našich divizí v jiné zemi, ale v takových případech používáme všechny dostupné administrativní, technické i fyzické způsoby ochrany dat, abychom zabránili jejich možnému prozrazení, použití, změně či zničení. Stručně řečeno se všemi dostupnými prostředky snažíme chránit vaše osobní údaje před předvídatelným nebezpečím. V některých případech však opravdu musíme některé vaše údaje sdělit jiným společnostem, které pověříme jejich zpracováním, protože od nich chceme, aby vám poskytly určité služby. Zpracování osobních údajů probíhá v těchto případech podle našich pokynů. 
+\end{quote}
+
+Velké společnosti tedy respektují naše soukromí, ale v rámci vlasntí optimalizace se nás snaží získat do svých klubů, které jim umožňují sbírat libovolná data a vyhodnocovat je.
+
+Pro úplnost metafory o internetovém soukromí je třeba zmínit jak se k soukromí staví ti menší. Zákazník nakupuje v lahůdkářství víno a všelijaké dobroty. Lahůdkář dobře rozumí zboží a dokáže poradit a zákazník si rád nechá poradit,  protože sám není odborník a dobrou radu bere jako součást služby lahůdkářství. V této situaci nemá prodejce sepsaný dokument o ochraně osobních dat, nicméně ví, jaké zboží zákazník preferuje, jak často chodí, za kolik průměrně nakoupí a mnohdy i pro jaké příležitosti nakupuje.
+
+To, co má lahůdkář v hlavě se ve větším měřítků nazývá Customer Relationship Management. CRM je nástroj ke shromažďování, zpracování a využití informací o zákaznících. Je to vlastně takový drobnohled, kterým se pohlíží na zákazníka jako jednotlivce. Toto kontrastuje s tím,jak data využívá firma s mnoha zákazníky, která je sohrnně analyzuje.
+
+\bigskip
+
+Nástroj, kterým se tato diplomová zabývá představuje řešení pro webové aplikace, které mají stovky až tisíce zákazníků, které fungují typicky na základě měsíčního předplatného. V tomto případě je potřeba kombinovat způsoby analýzy dat velkých objemů a pohledu na konkrétní zákazníky. 
+
+Nástroj si klade za cíl podporovat webovou aplikaci od jejích začátků až k dospělosti. Zabývá se celým životním cyklem zákazníků od jejich prvního vstupu na web, přes registraci trial verze, změnu plánu na placený a používání aplikace.
+
+V metafoře výše se je produkt na půl cesty mezi lahůdkářem, který osobně zná všechy své zákazníky a tato znalost je přidanou hodnotou služby zákazníkovi a obchodním řetězcem, který potřebuje analyzovat chování velkého množsví zákazníků.
+
+
+
+
+
+
+
+
+
 \section{Nový nástroj}
 
 Tato kapitola popisuje problém, který známé analytické nástroje zatím neřeší, a konkrétní způsob jeho řešení. Jak již bylo zmíněno v předchozím textu, nástroje pro webovou analytiku nepracují s konkrétními zákazníky a některé dokonce zakazují jakkoli identifikovat uživatele webů.
@@ -890,7 +942,7 @@ Po přijetí dat na serveru je ověřena jejich autenticita pomocí zašifrovan�
 
 
 
-\subsection{Zpracování a interpretace dat}
+\subsection{Zpracování dat}
 
 Nasbíraná data je nutno nějak zpracovat a interpretovat. Způsob zpracování musí být takový, aby umožňoval data zpracovat jednou a dále pak využívat pouze výsledky tohoto zpracování. To znamená, že je třeba pracovat s nasbíranými daty jako s proudem a postupně zpracovávat nová data jak přicházejí. Výstup zpracování bude pak uložen do databáze a nebude nutno data znova procházet.
 
@@ -907,6 +959,7 @@ Pro zvolenou metodu musí být také dostatečně jednoduché definovat nová pr
 Výstupem pravidel jsou dvou, nebo třírozměrné data, které jsou jednotně uložena do databáze. To umožňuje po nějaké stanovené době se zcela zbavit původních dat a ponechat si pouze z nich vyrobené statistiky, které zabírají méně místa v databázi. Po přidání nových pravidel je také možno získat jejich výsledky zpracováním dat, která již byla zpracována.
 
 Jelikož je výstup zpracovaných dat v normovaném tvaru, je mžono z nich jednoduše vytvřit různé grafy a do budoucna nechat uživatele systému vytvářet vlastní grafy a přehledy.
+
 
 \begin{comment}
 MapReduce, pojďme do toho :)
@@ -926,6 +979,44 @@ Jaké jsou možnosti do budoucna.
 Možnosti aproximace?
 
 \end{comment}
+
+
+
+\subsection{Technické zázemí}
+
+Jako platformu pro implementaci nástroje byl zvolen Google AppEngine. Jedná se službu, která je provozována společností Google od roku 2008 a vznikla jako platforma pro vývoj webových aplikací. Jedná se o službu typu Sofwtare as a Service, která poskytuje škálovatelné výpočetní zdroje a zároveň sofwtarovou platformu pro vývoj aplikací.
+
+Díky tomu, že AppEngine poskytuje vlastní platformu pro vývoj software, umožňuje maximálně využít potenciál cloud computingu. Díky tomu, že sleduje vytížení aplikace, je schopný v okamžiku zvýšení zátěže nastartovat nové instance apliakce, které pak postupně vypíná, když zátěž klesně. Většina operací v aplikaci jsou ve skutečnosti voláním API a ty zase může zpracovávat jiný stroj, s menší zátěží. 
+
+Na Google AppEngine je možno programovat v Pythonu, nebo v Javě. Prostřednictvím Javy je pak možno na AppEngine provozovat aplikace napsané v libovolném jazyce, který se do Javy kompiluje, nebo je v javě napsanán. Mezi ty populární patří například JRuby (Ruby pro Javu), Groovy (dynamická java), Scala, JavaScript, Closure. 
+
+Já jsem si zvolil jazyk Mirah, který je poměrně nový a kompiluje se do Java bytekódu. Oproti ostatním jazykům má velkou výhodu v tom, že nevyžaduje žádnou runtime library. Filosofie Mirah je posktnout krásnější syntaxi pro psaní Javy spolu s jednodušším a kratším zápisem. Mirah má "pod kapotou" čistou Javu a nic víc a jde o jazyk s identikým výkonem jako má Java.
+
+
+
+\begin{lstlisting}[label=src:fib_java,caption=Fibonacciho posloupnost v Javě]
+public class Fibonacci {
+  public static int fib(int n) {
+    if (n < 2) {
+      return n;
+    } else {
+      return fib(n-1) + fib(n-2);
+    }
+  }
+}
+\end{lstlisting}
+
+Na výpisech \ref{src:fib_java} a \ref{src:fib_mirah} je možno porovnat jak se oba jazyky liší. Jazyk Mirah považuje kontrolní strukturu IF za výraz a implicitně vrací jeho hodnotu. Má také podstatně kratší zápis a další drobné vylepšení, které vychází z jazyka Ruby.
+
+\begin{lstlisting}[label=src:fib_mirah,caption=Fibonacciho posloupnost v Mirah,language=Ruby]
+def fib(a:int) 
+  if a < 2 
+    a 
+  else 
+    fib(a-1) + fib(a-2) 
+  end 
+end 
+\end{lstlisting}
 
 
 
@@ -957,55 +1048,6 @@ detaily funkce měřícího skriptu (AES)
 
 
 
-
-
-
-
-
-
-\subsection{Etická stránka sběru dat}
-
-Problém etiky sběru dat.
-Právní problémy.
-Anonymní vs. neanonymní data.
-Webaplikace vs. webová stránka.
-Zákazník vs. náhodný návštěvník.
-Analogie z fyzického byznysu.
-
-
-Záměrné zahalování identity uživatele je argumentováno zachováním soukromí uživatele. Například Google Analytics obsahuje ve smluvním ujednání služeb Google Analytics následující text:
-
-\begin{quote}
-7.1 Nebudete slučovat (nebo nedovolíte jakékoliv třetí osobě slučování) jakákoli data shromážděná z vaší Website (vašich stránek Website) (nebo website takovéto třetí strany) s jakýmikoliv informacemi identifikujícími osoby, které pocházejí z jakéhokoli zdroje jsoucího částí vašeho užívání (nebo užívání takovéto třetí strany) Služby. Budete splňovat všechny zákony na ochranu dat a soukromí ve spojitosti s vašim používáním Služby a shromažďováním informací od návštěvníků na vašich stránkách website. Na své stránce na viditelném místě zpřístupníte (a budete i dodržovat) vhodnou směrnici o ochraně soukromí.
-\ldots
-\end{quote}
-
-Na jedné straně je snaha ochránit uživatelovo soukromí, na druhé poskytnout co nejlepší službu a relevantní obsah. Etickou stránku věci se spíše zabývají velké firmy, které mají uloženo mnoho uživatelských dat a nezávislí profesionálové, kteří poukazují na přestupky a nedostatky.
-
-Problém soukromí na webu je možno přirovnat k nakupování v obchodu. Pokud jsem v obchodním řetězci a nakupuji, budou mě sledovat kamery, které mě dokáží identifikovat a sbírají data o tom, kudy chodím. Z hlediska soukromí nechci, aby bez mého souhlasu o mě sbíral obchodní řetězec informace o tom, co nakupuji, jak často do obchodu chodím, nebo co mám na sobě. Toto je filosofie Google Analytics.
-
-Když se svým nákupem přistoupím k pokladně, první na co se mě prodavačka zeptá je, zda mám jejich "kartu". Pokud ano, vezme si ji k zařízení napojeném na pokladnu a v tom okamžiku se můj zatím anonymní nákup stává mým nákupem a je svázán s mou kartou. Tímto způsobem obchodní řetězec dokáže sledovat jak často nakupuji a co nakupuji.
-
-Aby měl zákazník důvod k pořízení karty, která umožňuje jeho sledování je motivován sbíráním bodů, nebo jinými výhodami\footnote{Například IKEA svým členům "IKEA Family" věnuje nápoje k jídlu zdarma.}. Při registraci pro kartu IKEA Family se do formuláře vyplňuje jméno, příjmení, bydliště, email a den narození. O ochraně osobních údajů říká IKEA, že jde o "vztah založený na důvěře". V následujícím výňatku z textu "Ochrany osobních údajů" spolešnost polopatě vysvětluje, že údaje bude poskytovat třetím stranám:
-
-\begin{quote}
-{\bf Informace, které nám sdělíte, u nás také zůstanou}\\
-Kdybyste nemohli IKEA věřit, nemohli byste v ní ani nakupovat. Z toho důvodu je pro nás ochrana vašich osobních důvodů navýsost důležitá. IKEA nesděluje vaše osobní údaje jiným firmám mimo IKEA. Informace, které nám poskytnete, využívá jen a jen IKEA. Někdy sice nastanou případy, kdy Vaše osobní údaje poskytneme některé z našich divizí v jiné zemi, ale v takových případech používáme všechny dostupné administrativní, technické i fyzické způsoby ochrany dat, abychom zabránili jejich možnému prozrazení, použití, změně či zničení. Stručně řečeno se všemi dostupnými prostředky snažíme chránit vaše osobní údaje před předvídatelným nebezpečím. V některých případech však opravdu musíme některé vaše údaje sdělit jiným společnostem, které pověříme jejich zpracováním, protože od nich chceme, aby vám poskytly určité služby. Zpracování osobních údajů probíhá v těchto případech podle našich pokynů. 
-\end{quote}
-
-Velké společnosti tedy respektují naše soukromí, ale v rámci vlasntí optimalizace se nás snaží získat do svých klubů, které jim umožňují sbírat libovolná data a vyhodnocovat je.
-
-Pro úplnost metafory o internetovém soukromí je třeba zmínit jak se k soukromí staví ti menší. Zákazník nakupuje v lahůdkářství víno a všelijaké dobroty. Lahůdkář dobře rozumí zboží a dokáže poradit a zákazník si rád nechá poradit,  protože sám není odborník a dobrou radu bere jako součást služby lahůdkářství. V této situaci nemá prodejce sepsaný dokument o ochraně osobních dat, nicméně ví, jaké zboží zákazník preferuje, jak často chodí, za kolik průměrně nakoupí a mnohdy i pro jaké příležitosti nakupuje.
-
-To, co má lahůdkář v hlavě se ve větším měřítků nazývá Customer Relationship Management. CRM je nástroj ke shromažďování, zpracování a využití informací o zákaznících. Je to vlastně takový drobnohled, kterým se pohlíží na zákazníka jako jednotlivce. Toto kontrastuje s tím,jak data využívá firma s mnoha zákazníky, která je sohrnně analyzuje.
-
-\bigskip
-
-Nástroj, kterým se tato diplomová zabývá představuje řešení pro webové aplikace, které mají stovky až tisíce zákazníků, které fungují typicky na základě měsíčního předplatného. V tomto případě je potřeba kombinovat způsoby analýzy dat velkých objemů a pohledu na konkrétní zákazníky. 
-
-Nástroj si klade za cíl podporovat webovou aplikaci od jejích začátků až k dospělosti. Zabývá se celým životním cyklem zákazníků od jejich prvního vstupu na web, přes registraci trial verze, změnu plánu na placený a používání aplikace.
-
-V metafoře výše se je produkt na půl cesty mezi lahůdkářem, který osobně zná všechy své zákazníky a tato znalost je přidanou hodnotou služby zákazníkovi a obchodním řetězcem, který potřebuje analyzovat chování velkého množsví zákazníků.
 
 
 
