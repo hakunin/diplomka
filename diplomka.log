@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  23 MAR 2011 14:59
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  23 MAR 2011 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,6 +490,9 @@ LaTeX Warning: Label `src:Plain' multiply defined.
 
 
 LaTeX Warning: Label `img:measuring' multiply defined.
+
+
+LaTeX Warning: Label `analog_daily' multiply defined.
 
 )
 \openout1 = `diplomka.aux'.
@@ -1139,13 +1142,13 @@ re as a Ser-vice, kter[]a posky-tuje []sk[]alovateln[]e
  []
 
 [28 <./img/zpracovani_2.pdf>]
-Overfull \hbox (4.70491pt too wide) in paragraph at lines 991--992
+Overfull \hbox (4.70491pt too wide) in paragraph at lines 1008--1009
 []\OT1/ppl/m/n/10.95 Na Google Ap-pEngine je mo[]zno pro-gramo-vat v Pythonu, n
 ebo v Jav[]e. Prost[]rednictv[]^^Pm
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 997--997
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1014--1014
 [][][][][][][] 
  []
 
@@ -1155,36 +1158,45 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/share/texmf-texlive/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2004/09/05 1.3 listings language file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1028--1028
 [][][][][][][] 
  []
 
-[29] [30
+[29]
+Overfull \hbox (8.11034pt too wide) in paragraph at lines 1040--1041
+[]\OT1/ppl/m/n/10.95 Mimo datab[]aze umo[]z[]nuje Ap-pEngine sd[]^^Plen[]^^P sp
+r[]avy ap-likace, u[]zivatelsk[]e role, p[]rehled
+ []
+
+<img/appengine.pdf, id=190, 993.57497pt x 1027.69946pt>
+File: img/appengine.pdf Graphic file (type pdf)
+
+<use img/appengine.pdf> [30 <./img/appengine.pdf>] [31
 
 ]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 1073--1077
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 1101--1105
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
 
-[31
+[32
 
-] [32
+] [33
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 1107--1109
+Underfull \hbox (badness 1953) in paragraph at lines 1135--1137
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1107--1109
+Underfull \hbox (badness 10000) in paragraph at lines 1135--1137
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
 
-[33
+[34
 
 ] (./diplomka.aux)
 
@@ -1195,10 +1207,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7825 strings out of 495061
- 114248 string characters out of 1182620
- 446287 words of memory out of 3000000
- 10873 multiletter control sequences out of 15000+50000
+ 7830 strings out of 495061
+ 114348 string characters out of 1182620
+ 446288 words of memory out of 3000000
+ 10877 multiletter control sequences out of 15000+50000
  27014 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  43i,12n,51p,1035b,2950s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1212,9 +1224,9 @@ xmf-texlive/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-texlive/fonts
 ic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a.pfb></u
 sr/share/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-te
 xlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (38 pages, 565330 bytes).
+Output written on diplomka.pdf (39 pages, 743822 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
+ 251 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

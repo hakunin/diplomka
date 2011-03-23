@@ -988,6 +988,23 @@ Jako platformu pro implementaci nástroje byl zvolen Google AppEngine. Jedná se
 
 Díky tomu, že AppEngine poskytuje vlastní platformu pro vývoj software, umožňuje maximálně využít potenciál cloud computingu. Díky tomu, že sleduje vytížení aplikace, je schopný v okamžiku zvýšení zátěže nastartovat nové instance apliakce, které pak postupně vypíná, když zátěž klesně. Většina operací v aplikaci jsou ve skutečnosti voláním API a ty zase může zpracovávat jiný stroj, s menší zátěží. 
 
+
+\begin{comment}
+\bigskip
+\begin{tabular}{p{6cm} p{4cm} p{2cm}}
+Zdroj							& Jednotka 				& Cena\\
+\hline
+Příchozí data					& gigabajt				& \$0.12\\
+Odchozí data					& gigabajt				& \$0.10\\
+Čas procesoru					& CPU hodina			& \$0.10\\
+Uložená data					& gigabajt měsíčně		& \$0.15\\
+Vysoce replikovaná databáze		& gigabajt měsíčně		& \$0.45\\
+Odeslání emailu					& adresát				& \$0.0001 \\
+Vždy zapnuto					& N/A (denně)			& \$0.30 \\
+\end{tabular}
+\bigskip
+\end{comment}
+
 Na Google AppEngine je možno programovat v Pythonu, nebo v Javě. Prostřednictvím Javy je pak možno na AppEngine provozovat aplikace napsané v libovolném jazyce, který se do Javy kompiluje, nebo je v javě napsanán. Mezi ty populární patří například JRuby (Ruby pro Javu), Groovy (dynamická java), Scala, JavaScript, Closure. 
 
 Já jsem si zvolil jazyk Mirah, který je poměrně nový a kompiluje se do Java bytekódu. Oproti ostatním jazykům má velkou výhodu v tom, že nevyžaduje žádnou runtime library. Filosofie Mirah je posktnout krásnější syntaxi pro psaní Javy spolu s jednodušším a kratším zápisem. Mirah má "pod kapotou" čistou Javu a nic víc a jde o jazyk s identikým výkonem jako má Java.
@@ -1018,6 +1035,17 @@ def fib(a:int)
 end 
 \end{lstlisting}
 
+Použitá databáze je BigTable, distribuovaný úložný systém, který si Google vyvinul pro vlastní potřeby. Bigtable byl navržen pro potřeby Googlu aby zvládal obrovské objemy dat, které jsou uloženy na tisících serverů. Bigtable je součástí platformy AppEngine a v Googlu na něm běží například Google Finance, nebo Google Earth.
+
+Mimo databáze umožňuje AppEngine sdílení správy aplikace, uživatelské role, přehled vytížení, logování, časové spouštění úloh, profiler, statistiky používání databáze a díky tomu, že jazyk Mirah běží se kompiluje do Javy je možno také využít velké množství knihoven pro některé specializované účely.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14.5cm]{img/appengine.pdf}
+	\caption{Administrační rozhraní platformy Google Appengine}
+	\label{analog_daily}
+\end{figure}
 
 
 \begin{comment}
