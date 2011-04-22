@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  23 MAR 2011 15:47
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  24 MAR 2011 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1168,10 +1168,10 @@ Overfull \hbox (8.11034pt too wide) in paragraph at lines 1040--1041
 r[]avy ap-likace, u[]zivatelsk[]e role, p[]rehled
  []
 
-<img/appengine.pdf, id=190, 993.57497pt x 1027.69946pt>
-File: img/appengine.pdf Graphic file (type pdf)
+<img/appspot_window.pdf, id=190, 993.7125pt x 904.37875pt>
+File: img/appspot_window.pdf Graphic file (type pdf)
 
-<use img/appengine.pdf> [30 <./img/appengine.pdf>] [31
+<use img/appspot_window.pdf> [30 <./img/appspot_window.pdf>] [31
 
 ]
 Overfull \hbox (17.68532pt too wide) in paragraph at lines 1101--1105
@@ -1208,7 +1208,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  7830 strings out of 495061
- 114348 string characters out of 1182620
+ 114373 string characters out of 1182620
  446288 words of memory out of 3000000
  10877 multiletter control sequences out of 15000+50000
  27014 words of font info for 61 fonts, out of 3000000 for 9000
@@ -1224,7 +1224,7 @@ xmf-texlive/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-texlive/fonts
 ic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a.pfb></u
 sr/share/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-te
 xlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (39 pages, 743822 bytes).
+Output written on diplomka.pdf (39 pages, 720295 bytes).
 PDF statistics:
  251 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
