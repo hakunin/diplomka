@@ -11,6 +11,17 @@
 
 \setcounter{secnumdepth}{2}
 
+\begin{comment}
+ - moc často používáte spojení ve smyslu, jak již bylo řečeno.
+ - Taky bych by opatrný s kombinací webová analytika…často je to ve větě i se slovy analytika a analýza, což působí divně, např. první věta v úvodu
+ - Stromy na straně 10 – nedají se udělat graficky
+ - Všude musí být citovány zdroje a reference, např. Heatmapy, pokud jste je nedělal sám, pak není jasné, odkud jsou
+ - Pozor rozházené odstavce vůči ořezu, přesahy řádků
+ - Část věnující se vašemu řešení bych nenazíval Nový nástroj
+ - Pokuste se sjednotit vzhled obrázků a schémat
+
+ - V části 3 by mělo být více o tom, jak to řešíte..nejen z pohledu koncepčního (uživatelé), ale z pohledu procesního…třeba i nějaký diagram aktivit apod. Není tam jasná linka, o dpsecifikace požadavků k použití resp. implementaci
+\end{comment}
 
 
 
@@ -672,7 +683,7 @@ V metafoře výše se je produkt na půl cesty mezi lahůdkářem, který osobn�
 
 
 
-\section{Nový nástroj}
+\section{Analýza webových aplikací}
 
 Tato kapitola popisuje problém, který známé analytické nástroje zatím neřeší, a konkrétní způsob jeho řešení. Jak již bylo zmíněno v předchozím textu, nástroje pro webovou analytiku nepracují s konkrétními zákazníky a některé dokonce zakazují jakkoli identifikovat uživatele webů.
 
@@ -860,6 +871,7 @@ Tento pohled se zaměřuje na segment uživatelů a přehled o tom, kolik novýc
 
 Pohled poskytuje také pokročilou segmentaci uživatelů, podle toho jak dlouho a jak často aplikaci používají na nové zákazníky, pokročilé a ty, kteří aplikaci přestali používat.
 
+
 \subsubsection{Zákazníci}
 
 Zákazníci jsou ti uživatelé, kteří již platí. Tento pohled se příliš neliší od pohledu uživatelé, také obsahuje segmentaci zákazníků na nové, stálé, "power" a neaktivní uživatele.
@@ -962,8 +974,6 @@ Jelikož je výstup zpracovaných dat v normovaném tvaru, je mžono z nich jedn
 
 
 \begin{comment}
-MapReduce, pojďme do toho :)
-
 
 Podle sekce motivace.
 
@@ -1072,14 +1082,32 @@ detaily funkce měřícího skriptu (AES)
 3) detail interpretace dat
 
 4) zobrazení dat
+
+--- A co definování fičur? ---
+
 \end{comment}
 
 
 
+\subsubsection{Uživatelské rozhraní aplikace}
+
+Zobrazení dat
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img/ud_dashboard_2.pdf}
+	\caption{Hlavní panel aplikace}
+	\label{img:ud_dashboard}
+\end{figure}
 
 
 
-
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img/ud_visitors_2.pdf}
+	\caption{Přehled návštěvníků}
+	\label{img:ud_dashboard}
+\end{figure}
 
 
 
@@ -1087,14 +1115,79 @@ detaily funkce měřícího skriptu (AES)
 
 \section{Případová studie}
 
-\subsubsection{Aplikace v reálném provozu (10 stran i s grafy)}
+Na závěr této práce jsem se rozhodl vyvinutou aplikaci otestovat v reálném provozu. Cílem bylo zajistit, že je vyvinutá aplikace schopná nasazení do běžných webových aplikací, získat zpětnou vazbu a zkušenosti z provozu. 
 
-oběcně kolik dat tam lítalo denně, kolik uživatelů
-analýza dat (na co jsem se zaměřil)
-zajímavé grafy, co z nich vyplývá
-závěry (navhrnout změny)
+Vyvinutou aplikaci jsem nasadil u amerického startupu Chum.ly\footnote{http://chum.ly}. Chum.ly vzniklo jako platforma pro publikování do více sociálních sítí najednou. Nyní se zabývá více sociálními sítěmi a politikou. 
+
+Pro tento startup jsem měl možnost měsíc pracovat. Zabýval jsem se uživatelským rozhraním a mou hlavní prioritou bylo zjednodušit ovládaní aplikace a nejlépe poukázat na vše nadbytečné, co by mohlo být eliminováno. Tento úkol mě inspiroval k tomu abych se začal zabývat tím, jaké funkce aplikace jsou používany, kým a jak často. Z této myšlenky vznikl původní nápad vytvořit aplikaci, která monitoruje použivání jiné webové aplikace na základě znalosti uživatelů.
+
+\subsubsection{Spuštění na ostrém serveru}
+
+Aplikace je vyvinuta pro spuštění na platformě Google AppEngine. Jedná ze o takzvaný "PAAS", Platform as a Service. Životní cyklus vývoje aplikace vypadá tak, že je aplikace vyvíjena na lokálním stroji a je pak vypuštěna na server. Samotné spustění na serveru bylo bezproblémové. Prostředí serveru však nekopíruje domácí a proto bylo třeba upravit několik částí aplikace.
+
+Největším rozdílem je množství paměti na serveru, které je omezeno tak, že neumožňuje pracovat s padesáti tisíci záznamy najednou v paměti. Toto bylo nutno upravit, stejně jako omezení na maximální velikost odpovědi serveru na jeden megabajt. Obě tyto omezení jsem překročil, když jsem importovat a exportoval data mezi lokálním počítačem a serverem. Pro export a import jsem tedy vyvinul nástroj, který tato omezení obchází a pracuje s libovolným množstvím dat po částech.
+
+Omezení paměti a nároky na dlouhodobé zpracování dat po částech dalo vzniknout abstrakci nad sekcenčním zpracováním měřených dat. Umožňuje zpracovávat nové data po libovolně velkých částech, kdykoli přestat a zase začít ve stejném stavu a místě, kde bylo zpracovávání ukončeno. Zavedení abstrakce také podstatně zjednodušilo vytváření nových metrik a logiku aplikace.
+
+Nové data tedy aplikace zpracovává po částech pomocí časovaného úkolu, který předává zpracování dat jednotlivým metrikám a v univerzálním formátu je zaznamenává do databáze.
+
+Z praktických důvodů také došlo k optimalizaci měřícího skriptu tak, aby odesílal data v dávkách několika událostí najednou. Snížily se tak řádově nároky na procesorový čas na serveru (za který se platí) a tak i cena jeho provozu\footnote{AppEngine poskytuje 6.5 hodin procesorového času denně zdarma, ten jsem ani jednou nepřekročil.}.
+
+Měřící skript byl upraven aby fungoval ve všech běžných prohlížečích, jeho kód byl komprimován\footnote{Komprimace JavaScriptu proběhla pomocí Google Closure Compiler \url{http://code.google.com/closure/compiler/docs/gettingstarted_ui.html}} pro minimální velikost pro co nejrychlejší přenos na stranu klienta. Výhodou platformy AppEngine je v tomto případě i to, že statická data na serveru jsou poskutována pomocí CDN, která zajišťuje co nejlepší dostupnost souborů a tímpádem i měřícího skriptu.
+
+Optimalizace měřícího skriptu je završena kešováním, které ponechává skript v prohlížeči dva dny a nemusí ho po tuto dobu znova nahrávat. Tyto technky jsou běžně využívány měřícími nástroji, které používají měřící skript. Oproti zavedeným nástrojům jako je Google AppEngine je měřící skript velmi malý, lehce přes tisíc znaků. Zatímco sofistikovanjší AppEngine používá skript o délce přes dvacet tisíc znaků.
+
+V průběhu 55 dní, kdy aplikace běžela a sbírala data jsem ji dále vyvíjel a vznikaly tak nové verze. Při nahrávání nových verzí na server se může snadno stát, že se něco pokazí, a aplikace přestane měřit, nebo fungovat. Díky použití platformy AppEngine bych v  takovém okamžiku mohl přepnout aplikaci na předchozí a předejít tak ztrátě dat. Za dobu vývoje jsem takovýto problém naštěstí neměl.
+
+Během běhu aplikace nedošlo k žádným větším problémům. Pouze k krobnostem a jednalo se spíše o poznatky z ostrého provozu, které měly za výsledek zdokonaletí vnitřností aplikace. Získal jsem tím i lepší znalost platofrmy AppEngine, se kterou jsem začal experimentovat zhruba před necelým rokem.
+
+
+\subsubsection{Získaná data}
+
+Zaznamenávaná data se skládají výhradně z událostí kliknutí na stránce. Každé kliknutí je reprezentováno časem, ve kterém nastalo a umístěním v HTML dokumentu. Po každých pěti až patnácti kliknutích jsou měřícím skriptem data odeslána na server a ten je vyhodnocuje.
+
+Za sledované období padesáti pěti dní bylo zaznamenáno šedesát tisíc kliknutí. 
+
+--- TABULKA ---
+
+
+
+\begin{comment}
+
+Představení měřené aplikace - co dělají, odkdy existujou.
+
+Jak jsem k nim přišel, co jsem pro ně dělal, jaká to byla zkušenost.
+
+Proč se jim tahle analytika hodí.
+
+Nasazení - vložení php skriptu, podtrhnout, že jsem ho měl tak dobře připravený, že jsem ho nemusel měnit.
+
+Měření - kolik dat denně, zátěž appenginu <- zkusit tam šoupnout graf.
+
+Strčení měřícího skriptu do CDN.
+
+Objem zpracovávaných dat
+Kolik dat (kliků) lítalo denně, kolik je to místa v databázi, jak si s tím poradil appengine.
+
+Zpracování dat - jak je to dělané tím Cronem.
+
+Nahlédnutí do statistik - top uživatelé, počet aktivních uživatelů denně, chum.ly team, jednotlivé statistiky.
+
+Vyhodnocení - co teda nástroj říká.
+
+Vyhodnocení přínosu nástroje - reálné benefity hned, benefity plánované.
+
+Názor na nástroj od Chum.ly (možná)
+\end{comment}
+
 
 \subsubsection{Navrhnuté změny na základě získaných dat (2 stránky)}
+
+Nebudu navrhovat změny pro chum.ly, ale změny nástroje.
+
+ - trackovat referrery
+ - 
+
 
 
 \section{Zhodnocení}

@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {2.3}Interpretace dat}{13}
 \contentsline {subsubsection}{Aplikace v praxi}{15}
 \contentsline {subsection}{\numberline {2.4}Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{17}
-\contentsline {section}{\numberline {3}Nov\IeC {\'y} n\IeC {\'a}stroj}{20}
+\contentsline {section}{\numberline {3}Anal\IeC {\'y}za webov\IeC {\'y}ch aplikac\IeC {\'\i }}{20}
 \contentsline {subsubsection}{Motivace}{20}
 \contentsline {subsection}{\numberline {3.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{20}
 \contentsline {subsubsection}{Akvizice u\IeC {\v z}ivatele}{20}
@@ -27,9 +27,11 @@
 \contentsline {subsection}{\numberline {3.3}Sb\IeC {\v e}r dat}{26}
 \contentsline {subsection}{\numberline {3.4}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{28}
 \contentsline {subsection}{\numberline {3.5}Technick\IeC {\'e} z\IeC {\'a}zem\IeC {\'\i }}{29}
-\contentsline {section}{\numberline {4}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{31}
-\contentsline {subsubsection}{Aplikace v re\IeC {\'a}ln\IeC {\'e}m provozu (10 stran i s grafy)}{31}
-\contentsline {subsubsection}{Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{31}
-\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i }}{32}
-\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{33}
-\contentsline {section}{\numberline {7}Reference}{34}
+\contentsline {subsubsection}{U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i } aplikace}{30}
+\contentsline {section}{\numberline {4}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{32}
+\contentsline {subsubsection}{Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } na ostr\IeC {\'e}m serveru}{32}
+\contentsline {subsubsection}{Z\IeC {\'\i }skan\IeC {\'a} data}{33}
+\contentsline {subsubsection}{Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{33}
+\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i }}{34}
+\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{35}
+\contentsline {section}{\numberline {7}Reference}{36}
