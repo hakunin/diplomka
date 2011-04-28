@@ -154,6 +154,11 @@ Tato situace mě motivovala k vývoji nástroje, který je výhradně zaměřen 
 
 
 
+\subsection{Cíl práce}
+
+TODO
+Vytvořit apliakci, která...
+Seznámit se s platformou appengine, nasadit na Chum.ly, naučit se Mirah.
 
 
 
@@ -1091,7 +1096,7 @@ detaily funkce měřícího skriptu (AES)
 
 \subsubsection{Uživatelské rozhraní aplikace}
 
-Zobrazení dat
+K zobrazení dat
 
 \begin{figure}[h]
 	\centering
@@ -1117,10 +1122,9 @@ Zobrazení dat
 
 Na závěr této práce jsem se rozhodl vyvinutou aplikaci otestovat v reálném provozu. Cílem bylo zajistit, že je vyvinutá aplikace schopná nasazení do běžných webových aplikací, získat zpětnou vazbu a zkušenosti z provozu. 
 
-Vyvinutou aplikaci jsem nasadil u amerického startupu Chum.ly\footnote{http://chum.ly}. 
+Vyvinutou aplikaci jsem nasadil u amerického startupu Chum.ly\footnote{http://chum.ly}. Pro tento startup jsem měl možnost měsíc pracovat. Poprosil jsem zakladatele o krátký popis toho, jak Chum.ly začalo, kde je a kam směřuje.
 
-
-%quote
+\begin{quotation}
 CHUM.LY provides a single point of presence for reading and posting to your other social networks, as well as a local community blogging experience, where you can create or join public and private groups with shared interests.
 
 Chum.ly began in August, 2009, with the idea of creating a central blog platform that could connect to other social networks and exceed the 140 character limit of SMS and Twitter. We used version 8 of Laconica open source code as a starting point.
@@ -1128,8 +1132,11 @@ Chum.ly began in August, 2009, with the idea of creating a central blog platform
 Chum.ly has continued to refine the user interface and capabilities, driven by core user feedback and aided by core user community involvement. This involvement has enabled us to introduce features that are ahead of the curve, and later adopted by 'the big guys', such as inlined media and language translation. 
 
 The 'revenue model' and 'target market' have changed numerous times, and we believe we have finally found a sustainable non-advertising-based model. However, the most rewarding part of the experience, thus far, has been the friendships forged within the Chum.ly core user community.
-%quote
+\end{quotation}
 
+Uvádím také volný překlad do češtiny.
+
+\begin{quote}
 CHUM.LY poskytuje jediný bod přítomnosti pro čtení a odesílání do jiných sociálních sítí, stejně jako místní zážitek komunitních blogů, kde si můžete vytvořit, nebo připojit k veřejné, či soukromé skupiny se společnými zájmy.
 
 Chum.ly vzniklo v srpnu 2009, s nápadem vytvořit centrální platformu, která by mohla propojit blog k dalším sociálním sítím a překročit omezení 140 znaků v SMS zprávě a na Twitteru. Použili jsme osmou open source softwaru Laconica, jako výchozí bod.
@@ -1137,12 +1144,12 @@ Chum.ly vzniklo v srpnu 2009, s nápadem vytvořit centrální platformu, která
 Chum.ly pokračovalo ve vylepšování uživatelského rozhraní a funkcí, s pomocí zpětné vazby od uživatelů a podporovano komunitou uživatelů. Tato podpora nám umožnila zavést prvky, které jsou na špici, a později adoptovaný 'velké kluky', jako je inline média a jazyk překladu.
 
 'příjmy model' a 'cílový trh' mnohokrát změnily a věříme, že jsme konečně našli udržitelný ne-na-reklamě-založený model. Nicméně, nejvíce odměňující část zkušeností, byla zatím přátelství v rámci Chum.ly komunity uživatelů.
+\end{quote}
 
 
 
+V Chum.ly jsem se zabýval uživatelským rozhraním a mou hlavní prioritou bylo zjednodušit ovládaní aplikace a nejlépe poukázat na vše nadbytečné, co by mohlo být eliminováno. Tento úkol mě inspiroval k tomu abych se začal zabývat tím, jaké funkce aplikace jsou používany, kým a jak často. Z této myšlenky vznikl původní nápad vytvořit aplikaci, která monitoruje použivání jiné webové aplikace na základě znalosti uživatelů.
 
-
-Pro tento startup jsem měl možnost měsíc pracovat. Zabýval jsem se uživatelským rozhraním a mou hlavní prioritou bylo zjednodušit ovládaní aplikace a nejlépe poukázat na vše nadbytečné, co by mohlo být eliminováno. Tento úkol mě inspiroval k tomu abych se začal zabývat tím, jaké funkce aplikace jsou používany, kým a jak často. Z této myšlenky vznikl původní nápad vytvořit aplikaci, která monitoruje použivání jiné webové aplikace na základě znalosti uživatelů.
 
 \subsubsection{Spuštění na ostrém serveru}
 
@@ -1169,17 +1176,88 @@ Během běhu aplikace nedošlo k žádným větším problémům. Pouze k krobno
 
 Zaznamenávaná data se skládají výhradně z událostí kliknutí na stránce. Každé kliknutí je reprezentováno časem, ve kterém nastalo a umístěním v HTML dokumentu. Po každých pěti až patnácti kliknutích jsou měřícím skriptem data odeslána na server a ten je vyhodnocuje.
 
-Za sledované období padesáti pěti dní bylo zaznamenáno šedesát tisíc kliknutí. 
+Za sledované období padesáti pěti dní bylo zaznamenáno šedesát tisíc kliknutí. Záznamy těhto kliků a a výsledky jejich zpracování v databázi na AppEngine zabraly 24 megabajtů. Na platformě AppEngine je zvlášť platí za místo, čas procesoru a další služby. Spotřeba těhto služeb je uvedena v tabulce \ref{tab:consumption}.
 
---- TABULKA ---
+\bigskip
+
+\begin{tabular}{p{3.25cm} p{2.5cm} p{2cm} p{2.5cm} p{2cm}}
+zdroj					& jednotka & cena		& čerpání denně	& měsíčně \\
+\hline
+Příchozí data			& gigabajt				& \$0.12	& 0.01			& \$0.036 	\\
+Odchozí data			& gigabajt				& \$0.10	& 0.01			& \$0.03	\\
+Čas procesoru			& CPU hod.				& \$0.10	& 0.08 			& \$0.24	\\
+Uložená data			& gigabajt				& \$0.15	& 0.03			& \$0.135	\\
+\hline
+						& 		 				& 			& 				& \$0.441 \\
+\label{tab:consumption}
+\end{tabular}
+
+Dlouhodobě bylo v měřené aplikaci denně třicet uživatelů a každý den vzniklo průměrně kolem tisíce kliků. Tato návštěvnost podle tabulky \ref{tab:consumption} generuje měsíčně náklady za 45 centů. Pokud by se jednalo o zákazníka s desetinásobným počtem aktivních uživatelů, bude se jednat o náklady zhruba ve výši čtyř dolarů měsíčně. Z toho vyplývá rámcově jakým způsobem by zákazník za tuto aplikaci měl platit - podle počtu aktivních uživatelů.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13.45cm]{img/ud_active_users.pdf}
+	\caption{Aktivita uživatelů Chum.ly.}
+	\label{img:chumly_active_users}
+\end{figure}
+
+
+Na brázku \ref{img:chumly_active_users} je znázorněn denní počty uživatelů Chum.ly (červeně) spolu s počtem kliků za jednotlivé dny (modře). Chum.ly má v průměrně třicet aktivních uživatelů denně, kteří dohromady udělají tisíc kliků. Tento základní údaj je zobrazen pro všechny skupiny - návštěvníky, registrované uživatele a platící uživatele.  
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13.45cm]{img/ud_new_users.pdf}
+	\caption{Noví uživatelé Chum.ly}
+	\label{img:chumly_new_users}
+\end{figure}
+
+Pro tento graf a některé další jsem vybral logaritmické měřítko. Jelikož jsou grafu zobrazeny veličiny s řádovým rozdílem je na něm lépe vidět porovnání obou křivek.
+
+Na graf aktivních uživatelů navazuje znázornění počtu akvizice nových uživatelů (obr \ref{img:chumly_new_users}). Podobný graf je zobrazen na všech kartách, takže uživatel vidí jaký má nárůst návštěvníků, uživatelů a platících zákazníků. Rozhraní aplikace je psané v angličtině a proto i datumy na obou grafech jsou ve formátu měsíc/den. 
+
+
+
+
+Tyto dva grafy představují základní přehled o používání aplikace a akvizici nových uživatelů. Každý provozovatel webové apliakce by tyto grafy měl mít každý den na očích a v okamžiku poklesu okamžitě zjišťovat, co je jeho původem. Na druhou stranu je také zásadní, aby počet aktivních uživatelů stoupal a stejě tak i počet nových uživatelů.
+
+Každý provozovat webové aplikace může zjistit kolik má v daném okamžiku uživatelů. Pokud chce vědět jaké jsou počty aktivních uživatelů a nových uživatelů každý den musí si vést ručně evidenci, nebo na své stránky zavést měřící kód například Google Analytics a nakonfigurovat cíle konverze.
+
+S mým produktem jakékoli konfigurace a nastavování toto odpadá a výsledky jsou "chytře" vyextraktovány z dostupných informací o zákazníkovi. Tím, že se produkt zabývá pouze měřením webových aplikací tedy odpadá veškeré ruční nastavování.
+
+
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img/ud_chumly_define_features_blurry.pdf}
+	\caption{Noví uživatelé Chum.ly}
+	\label{img:define_features}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 \begin{comment}
-
-Představení měřené aplikace - co dělají, odkdy existujou.
 
 Jak jsem k nim přišel, co jsem pro ně dělal, jaká to byla zkušenost.
 

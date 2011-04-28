@@ -1,5 +1,6 @@
 \select@language {czech}
 \contentsline {section}{\numberline {1}\IeC {\'U}vod}{4}
+\contentsline {subsection}{\numberline {1.1}C\IeC {\'\i }l pr\IeC {\'a}ce}{5}
 \contentsline {section}{\numberline {2}Webov\IeC {\'a} analytika}{6}
 \contentsline {subsection}{\numberline {2.1}Historie}{6}
 \contentsline {subsection}{\numberline {2.2}Sb\IeC {\v e}r dat}{7}
@@ -29,9 +30,9 @@
 \contentsline {subsection}{\numberline {3.5}Technick\IeC {\'e} z\IeC {\'a}zem\IeC {\'\i }}{29}
 \contentsline {subsubsection}{U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i } aplikace}{30}
 \contentsline {section}{\numberline {4}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{32}
-\contentsline {subsubsection}{Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } na ostr\IeC {\'e}m serveru}{32}
-\contentsline {subsubsection}{Z\IeC {\'\i }skan\IeC {\'a} data}{33}
-\contentsline {subsubsection}{Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{33}
-\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i }}{34}
-\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{35}
-\contentsline {section}{\numberline {7}Reference}{36}
+\contentsline {subsubsection}{Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } na ostr\IeC {\'e}m serveru}{33}
+\contentsline {subsubsection}{Z\IeC {\'\i }skan\IeC {\'a} data}{34}
+\contentsline {subsubsection}{Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{35}
+\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i }}{37}
+\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{38}
+\contentsline {section}{\numberline {7}Reference}{39}

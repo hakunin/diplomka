@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  27 APR 2011 15:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  28 APR 2011 20:16
 entering extended mode
  %&-line parsing enabled.
 **diplomka.tex
@@ -496,6 +496,9 @@ LaTeX Warning: Label `analog_daily' multiply defined.
 
 LaTeX Warning: Label `img:ud_dashboard' multiply defined.
 
+
+LaTeX Warning: Label `img:chumly_new_users' multiply defined.
+
 )
 \openout1 = `diplomka.aux'.
 
@@ -682,25 +685,31 @@ Overfull \hbox (6.71439pt too wide) in paragraph at lines 143--144
 i[]aln[]e pro mo-biln[]^^P za[]r[]azen[]^^P. Na druhou
  []
 
+
+Overfull \hbox (1.16193pt too wide) in paragraph at lines 159--162
+\OT1/ppl/m/n/10.95 TODO Vytvo[]rit apli-akci, kter[]a... Sezn[]amit se s plat-f
+or-mou ap-pengine, nasa-dit na Chum.ly,
+ []
+
 [5]
-Overfull \hbox (0.899pt too wide) in paragraph at lines 166--167
+Overfull \hbox (0.899pt too wide) in paragraph at lines 171--172
 \OT1/ppl/m/n/10.95 Tato kapi-tola popisuje vznik we-bov[]e an-a-lytiky a zp[]us
 oby sb[]eru a in-tepre-tace dat v obecn[]e
  []
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 182.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 187.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 182--182
+Overfull \hbox (6.0pt too wide) in paragraph at lines 187--187
 [][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 182.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 187.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (15.71426pt too wide) in paragraph at lines 189--190
+Overfull \hbox (15.71426pt too wide) in paragraph at lines 194--195
 \OT1/ppl/m/n/10.95 server n[]av[]st[]ev ka[]zd[]y den, z ko-lika unik[]atn[]^^P
 ch IP adres, kter[]e str[]anky jsou ne-j-nav[]st[]evovan[]ej[]s[]^^P
  []
@@ -715,142 +724,142 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [6
 
 ]
-Overfull \hbox (3.84006pt too wide) in paragraph at lines 218--219
+Overfull \hbox (3.84006pt too wide) in paragraph at lines 223--224
 []\OT1/ppl/m/n/10.95 Na jedn[]e stran[]e je snaha do-stat nov[]e u[]zivatele na
  svou str[]anku, to se dociluje nap[]r[]^^Pklad
  []
 
 [7 <./img/analog_daily.pdf>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 250--250
+Overfull \hbox (6.0pt too wide) in paragraph at lines 255--255
 [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 257--257
+Underfull \hbox (badness 1024) in paragraph at lines 262--262
 []|\OT1/ppl/m/n/10.95 IP adresa n[]av[]st[]evn[]^^Pka. Po[]cet unik[]atn[]^^Pch
  IP adres
  []
 
 
-Underfull \hbox (badness 1960) in paragraph at lines 257--257
+Underfull \hbox (badness 1960) in paragraph at lines 262--262
 \OT1/ppl/m/n/10.95 byl p[]uvodn[]e pou[]z[]^^Pv[]an jako hrub[]y odhad po[]ctu
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 259--259
+Underfull \hbox (badness 2435) in paragraph at lines 264--264
 \OT1/ppl/m/n/10.95 se str[]anka pou[]z[]^^Pv[]a HTTP au-t-en-tifikaci. To plat[
 ]^^P
  []
 
 
-Underfull \hbox (badness 3482) in paragraph at lines 259--259
+Underfull \hbox (badness 3482) in paragraph at lines 264--264
 \OT1/ppl/m/n/10.95 skupinu lid[]^^P a tud[]^^P[]z u n[]ahodn[]eho n[]av[]st[]ev
 n[]^^Pka
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 265--265
+Underfull \hbox (badness 3977) in paragraph at lines 270--270
 []|\OT1/ppl/m/n/10.95 Po[]zadavek HTTP pro-tokolu. GET je z[]akladn[]^^Pm
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
 \OT1/ppl/m/n/10.95 n[]ejak[]y ob-sah. Dal[]s[]^^P pou[]z[]^^Pvan[]y po[]zadavek
  je
  []
 
 
-Underfull \hbox (badness 3000) in paragraph at lines 265--265
+Underfull \hbox (badness 3000) in paragraph at lines 270--270
 \OT1/ppl/m/n/10.95 nap[]r[]^^Pklad POST, kter[]y se pou[]z[]^^Pv[]a pro odesl[]
 an[]^^P
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 268--269
+Underfull \hbox (badness 2409) in paragraph at lines 273--274
 \OT1/ppl/m/n/10.95 spolu s po[]ctem n[]av[]st[]ev umo[]z[]nuje iden-ti-fiko-vat
 ,
  []
 
 [8]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 321--321
+Overfull \hbox (6.0pt too wide) in paragraph at lines 326--326
 [][][][][][][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <9> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 325.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 330.
 [9]
-Overfull \hbox (0.18259pt too wide) in paragraph at lines 359--360
+Overfull \hbox (0.18259pt too wide) in paragraph at lines 364--365
 []\OT1/ppl/m/n/10.95 Pro str[]anku, kter[]a p[]redstavuje []cl[]anek je po[]cet
  zo-brazen[]^^P ukaza-telem toho, jak je []cl[]anek
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 361.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 366.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 361.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 366.
  [10]
-Overfull \hbox (18.97293pt too wide) in paragraph at lines 420--421
+Overfull \hbox (18.97293pt too wide) in paragraph at lines 425--426
 []\OT1/ppl/m/n/10.95 Pod[]^^Ply jed-notliv[]ych prohl[]^^P[]ze[]c[]u se m[]en[]
 ^^P po-dle zam[]e[]ren[]^^P str[]anek a zem[]episn[]ych podm[]^^Pnek.
  []
 
 [11]
-Overfull \hbox (0.7089pt too wide) in paragraph at lines 422--423
+Overfull \hbox (0.7089pt too wide) in paragraph at lines 427--428
 []\OT1/ppl/m/n/10.95 Na druhou stranu na str[]ank[]ach s vysok[]ym pod[]^^Plem 
 star[]ych prohl[]^^P[]ze[]c[]u se d[]a o[]cek[]avat,
  []
 
 
-Overfull \hbox (1.77045pt too wide) in paragraph at lines 444--445
+Overfull \hbox (1.77045pt too wide) in paragraph at lines 449--450
 []\OT1/ppl/m/n/10.95 Klik[]an[]^^P my[]s[]^^P je na str[]ance zp[]usobuje p[]re
 chod na ji-nou str[]anku, spu[]st[]en[]^^P n[]ejak[]e funkce,
  []
 
 
-LaTeX Warning: Reference `sec:Heatmaps' on page 12 undefined on input line 471.
+LaTeX Warning: Reference `sec:Heatmaps' on page 12 undefined on input line 476.
 
 
 
-Overfull \hbox (7.50244pt too wide) in paragraph at lines 471--472
+Overfull \hbox (7.50244pt too wide) in paragraph at lines 476--477
 \OT1/ppl/m/n/10.95 tepl[]ymi bar-vami ([]zlut[]a, []cerven[]a), m[]^^Psta kter[
 ]ym se ne-dost[]av[]a po-zornost jsou naopak lad[]eny
  []
 
 
-Overfull \hbox (13.54652pt too wide) in paragraph at lines 474--475
+Overfull \hbox (13.54652pt too wide) in paragraph at lines 479--480
 \OT1/ppl/m/n/10.95 Tato tech-nika kom-bin-uje sle-dov[]an[]^^P klik[]u a po-hyb
 []u my[]si a tak po[]rizuje z[]aznam o u[]zivatelov[]e
  []
 
 [12]
-Overfull \hbox (5.00568pt too wide) in paragraph at lines 482--483
+Overfull \hbox (5.00568pt too wide) in paragraph at lines 487--488
 \OT1/ppl/m/n/10.95 t[]echto zkratek a p[]r[]^^Ppadn[]e je up-ravit tak, aby byl
 a nav-i-gace na je-jich webu co ne-j-jednodu[]s[]s[]^^P. 
  []
 
 
-Overfull \hbox (13.37689pt too wide) in paragraph at lines 495--496
+Overfull \hbox (13.37689pt too wide) in paragraph at lines 500--501
 []\OT1/ppl/m/n/10.95 Tato ud[]alost se pou[]z[]^^Pv[]a k vypo[]cten[]^^P tzv "b
 ounce rate". Bounce rate je pro-cento u[]zivatel[]u,
  []
 
 
-Overfull \hbox (14.76732pt too wide) in paragraph at lines 541--542
+Overfull \hbox (14.76732pt too wide) in paragraph at lines 546--547
 []\OT1/ppl/m/n/10.95 D[]^^Pky cook-ies[] je mo[]zn[]e sle-dovat n[]av[]st[]evnk
 a str[]anky. P[]ri prvn[]^^P n[]av[]st[]ev[]e se n[]av[]st[]evn[]^^Pkovi
  []
 
 [13]
-Overfull \hbox (3.35773pt too wide) in paragraph at lines 551--552
+Overfull \hbox (3.35773pt too wide) in paragraph at lines 556--557
 []\OT1/ppl/m/n/10.95 Podle IP adresy n[]av[]st[]evn[]^^Pk[]u se zji[]st[]uje je
 -jich poloha a zo-brazuje se po-moc[]^^P jednoduch[]e
  []
 
 
-Overfull \hbox (3.65965pt too wide) in paragraph at lines 551--552
+Overfull \hbox (3.65965pt too wide) in paragraph at lines 556--557
 \OT1/ppl/m/n/10.95 Jend[]a se o statiskiku pro roz[]s[]^^P[]ren[]^^P do prohl[]
 ^^P[]ze[]ce Google Chrome. Je-liko[]z se jdn[]a o roz[]s[]^^P[]ren[]^^P
  []
@@ -863,19 +872,19 @@ DF version <1.5>, but at most version <1.4> allowed
 File: img/map-analytics.pdf Graphic file (type pdf)
 
 <use img/map-analytics.pdf>
-Overfull \hbox (9.94414pt too wide) in paragraph at lines 562--563
+Overfull \hbox (9.94414pt too wide) in paragraph at lines 567--568
 \OT1/ppl/m/n/10.95 po-moc[]^^P sle-dov[]an[]^^P o[]cn[]^^Pch po-hyb[]u n[]av[]s
 t[]evn[]^^Pk[]u po-moc[]^^P speci[]aln[]^^P kamery. Takov[]eto testov[]an[]^^P
  []
 
 [14 <./img/map-analytics.pdf>]
-Overfull \hbox (28.20358pt too wide) in paragraph at lines 564--565
+Overfull \hbox (28.20358pt too wide) in paragraph at lines 569--570
 []\OT1/ppl/m/n/10.95 Mimo lab-o-rato[]r je mo[]zno takov[]e obr[]azky vy-gen-er
 ovat z po-hyb[]u my[]s[]^^P a klik[]an[]^^P n[]av[]st[]evn[]^^Pk[]u
  []
 
 
-Overfull \hbox (21.4033pt too wide) in paragraph at lines 566--567
+Overfull \hbox (21.4033pt too wide) in paragraph at lines 571--572
 []\OT1/ppl/m/n/10.95 Testovan[]e ro-zlo[]zen[]^^P str[]anky vyh-led[]ava[]ce Go
 ogle []z[]adn[]y lev[]y sloupe[]cek nem[]elo a u[]zivatel[]e
  []
@@ -884,80 +893,80 @@ ogle []z[]adn[]y lev[]y sloupe[]cek nem[]elo a u[]zivatel[]e
 File: img/google-bing-heatmap.pdf Graphic file (type pdf)
 
 <use img/google-bing-heatmap.pdf> [15 <./img/google-bing-heatmap.pdf>]
-Overfull \hbox (9.08937pt too wide) in paragraph at lines 610--611
+Overfull \hbox (9.08937pt too wide) in paragraph at lines 615--616
 \OT1/ppl/m/n/10.95 A/B testov[]an[]^^P. Tato tech-nika spo[]c[]^^Pv[]a v tom, [
 ]ze se vytvo[]r[]^^P dv[]e vari-anty str[]anky a a n[]ekter[]ym
  []
 
 
-Overfull \hbox (1.15161pt too wide) in paragraph at lines 614--615
+Overfull \hbox (1.15161pt too wide) in paragraph at lines 619--620
 \OT1/ppl/m/n/10.95 testing ka[]zd[]emu ex-per-i-men-to-vat s mnoha as-pekty a r
 e[]aln[]e ov[]e[]rit, zda navrho-van[]e zm[]eny
  []
 
 
-Overfull \hbox (0.8569pt too wide) in paragraph at lines 622--623
+Overfull \hbox (0.8569pt too wide) in paragraph at lines 627--628
 \OT1/ppl/m/n/10.95 z[]akazn[]^^Pka. Dne[]sn[]^^P an-a-lytck[]e n[]astroje maj[]
 ^^P pouze omezen[]e mo[]znosti pr[]ace se z[]akazn[]^^Pkem,
  []
 
 [16]
-Overfull \hbox (22.80519pt too wide) in paragraph at lines 644--645
+Overfull \hbox (22.80519pt too wide) in paragraph at lines 649--650
 []\OT1/ppl/m/n/10.95 Z[]am[]ern[]e za-halov[]an[]^^P iden-tity u[]zivatele je a
 r-gu-men-tov[]ano za-chov[]an[]^^Pm soukrom[]^^P u[]zivatele.
  []
 
 
-Overfull \hbox (7.404pt too wide) in paragraph at lines 647--649
+Overfull \hbox (7.404pt too wide) in paragraph at lines 652--654
 []\OT1/ppl/m/n/10.95 7.1 Neb-udete slu[]covat (nebo ne-do-vol[]^^Pte jak[]ekoli
 v t[]ret[]^^P osob[]e slu[]cov[]an[]^^P) jak[]akoli
  []
 
 
-Overfull \hbox (16.39476pt too wide) in paragraph at lines 647--649
+Overfull \hbox (16.39476pt too wide) in paragraph at lines 652--654
 \OT1/ppl/m/n/10.95 data shrom[]a[]zd[]en[]a z va[]s[]^^P Web-site (va[]sich str
 []anek Web-site) (nebo web-site takov[]eto
  []
 
 [17]
-Overfull \hbox (10.73166pt too wide) in paragraph at lines 661--662
+Overfull \hbox (10.73166pt too wide) in paragraph at lines 666--667
 []\OT1/ppl/m/n/10.95 Kdybyste nemohli IKEA v[]e[]rit, nemohli byste v n[]^^P an
 i nakupo-vat. Z toho d[]uvodu
  []
 
 
-Overfull \hbox (28.42773pt too wide) in paragraph at lines 661--662
+Overfull \hbox (28.42773pt too wide) in paragraph at lines 666--667
 \OT1/ppl/m/n/10.95 chr[]anit va[]se os-obn[]^^P []udaje p[]red p[]redv[]^^Pdate
 ln[]ym nebezpe[]c[]^^Pm. V n[]ekter[]ych p[]r[]^^Ppadech
  []
 
 
-Overfull \hbox (4.57939pt too wide) in paragraph at lines 661--662
+Overfull \hbox (4.57939pt too wide) in paragraph at lines 666--667
 \OT1/ppl/m/n/10.95 pov[]e[]r[]^^Pme je-jich zpra-cov[]an[]^^Pm, proto[]ze od ni
 ch chceme, aby v[]am poskytly ur[]cit[]e
  []
 
 
-Overfull \hbox (3.4622pt too wide) in paragraph at lines 668--669
+Overfull \hbox (3.4622pt too wide) in paragraph at lines 673--674
 \OT1/ppl/m/n/10.95 age-ment. CRM je n[]astroj ke shroma[]zd[]ov[]an[]^^P, zpra-
 cov[]an[]^^P a vyu[]zit[]^^P in-for-mac[]^^P o z[]akazn[]^^Pc[]^^Pch.
  []
 
 
-Overfull \hbox (27.80353pt too wide) in paragraph at lines 672--673
+Overfull \hbox (27.80353pt too wide) in paragraph at lines 677--678
 \OT1/ppl/m/n/10.95 kter[]e maj[]^^P stovky a[]z tis[]^^Pce z[]akazn[]^^Pk[]u, k
 ter[]e fun-guj[]^^P typ-icky na z[]aklad[]e m[]es[]^^P[]cn[]^^Pho p[]redplatn[]
 eho.
  []
 
 [18] [19]
-Overfull \hbox (2.61874pt too wide) in paragraph at lines 699--700
+Overfull \hbox (2.61874pt too wide) in paragraph at lines 704--705
 \OT1/ppl/m/n/10.95 mno-hem men[]s[]^^P mno[]zstv[]^^P plat[]^^Pc[]^^Pch u[]ziva
 tel[]u, ne[]z we-bov[]a str[]anka ne-plat[]^^Pc[]^^Pch n[]av[]st[]evn[]^^Pk[]u
  []
 
 
-Overfull \hbox (4.55667pt too wide) in paragraph at lines 710--711
+Overfull \hbox (4.55667pt too wide) in paragraph at lines 715--716
 []\OT1/ppl/m/n/10.95 Zivotn[]^^P cyk-lus z[]akazn[]^^Pka je mo[]zn[]e rozd[]eli
 t chrono-log-icky do []cty[]r []c[]ast[]^^P. Akviz-ice, U[]zivatel,
  []
@@ -974,13 +983,13 @@ File: img/user_lifecycle_slim.pdf Graphic file (type pdf)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (2.45978pt too wide) in paragraph at lines 723--724
+Overfull \hbox (2.45978pt too wide) in paragraph at lines 728--729
 []\OT1/ppl/m/n/10.95 Jeliko[]z se kon-ven[]cn[]^^P n[]astroje omezuj[]^^P a uni
 k[]atn[]e nei-den-ti-fikuj[]^^P u[]zivatele, je tato funkce
  []
 
 
-Overfull \hbox (25.2301pt too wide) in paragraph at lines 723--724
+Overfull \hbox (25.2301pt too wide) in paragraph at lines 728--729
 \OT1/ppl/m/n/10.95 pouze jed-nor[]azov[]a. To zna-men[]a d[]a se zjis-tit, []ze
  p[]res reklamn[]^^P kampa[]n X p[]ri[]slo sto n[]av[]st[]evn[]^^Pk[]u
  []
@@ -988,92 +997,92 @@ Overfull \hbox (25.2301pt too wide) in paragraph at lines 723--724
 [20
 
 ]
-Overfull \hbox (2.57974pt too wide) in paragraph at lines 735--736
+Overfull \hbox (2.57974pt too wide) in paragraph at lines 740--741
 []\OT1/ppl/m/n/10.95 U trial mod-elu mo-hou u[]zivatel[]e pou[]z[]^^Pvat v[]sec
 hny mo[]znosti ap-likace v r[]amci zku[]sebn[]^^P
  []
 
 
-Overfull \hbox (3.26431pt too wide) in paragraph at lines 735--736
+Overfull \hbox (3.26431pt too wide) in paragraph at lines 740--741
 \OT1/ppl/m/n/10.95 doby, pou[]z[]^^Pvaj[]^^P tedy ste-j-nou ap-likaci jako ti p
 lat[]^^Pc[]^^P. Nen[]^^P v[]sak jist[]e, []ze ap-likaci nep[]restanou
  []
 
 
-Overfull \hbox (17.61433pt too wide) in paragraph at lines 739--740
+Overfull \hbox (17.61433pt too wide) in paragraph at lines 744--745
 []\OT1/ppl/m/n/10.95 Motivace plat[]^^Pc[]^^Pch a ne-plat[]^^Pc[]^^Pch u[]zivat
 el[]u se li[]s[]^^P. N[]ekte[]r[]^^P u[]zivatel[]e pouze hledaj[]^^P mo[]znost,
 
  []
 
 [21 <./img/user_lifecycle_slim.pdf>]
-Overfull \hbox (12.43578pt too wide) in paragraph at lines 759--760
+Overfull \hbox (12.43578pt too wide) in paragraph at lines 764--765
 []\OT1/ppl/m/n/10.95 Takto lze dlouhodob[]e sn[]^^P[]zit po[]cet z[]akazn[]^^Pk
 []u, kte[]r[]^^P pro-dukt opou[]st[]^^P. Ne-jen, []ze si udr[]z[]^^Pme
  []
 
 [22]
-Overfull \hbox (19.48154pt too wide) in paragraph at lines 811--812
+Overfull \hbox (19.48154pt too wide) in paragraph at lines 816--817
 \OT1/ppl/m/n/10.95 ch[]ap[]an jako po-tenci[]aln[]^^P u[]zivatel, nebo z[]akazn
 []^^Pk. N[]av[]st[]evn[]^^Pk se stane u[]zivatelem v okam[]ziku,
  []
 
 
-Overfull \hbox (2.99135pt too wide) in paragraph at lines 815--816
+Overfull \hbox (2.99135pt too wide) in paragraph at lines 820--821
 \OT1/ppl/m/n/10.95 trv[]a, ne[]z se n[]av[]st[]evn[]^^Pk stane z[]akazn[]^^Pkem
 , p[]r[]^^Ppadn[]e ko-lik n[]av[]st[]ev, nebo zo-brazen[]^^P str[]anek.
  []
 
 [23]
-Overfull \hbox (5.27126pt too wide) in paragraph at lines 849--850
+Overfull \hbox (5.27126pt too wide) in paragraph at lines 854--855
 \OT1/ppl/m/n/10.95 ale zareg-istruje se a[]z dal[]s[]^^P den, nepo[]c[]^^Ptaj[]
 ^^P ho v[]ubec koverze k t[]eto kam-pani[]. I s maxim[]aln[]^^P
  []
 
 
-Overfull \hbox (2.7717pt too wide) in paragraph at lines 849--850
+Overfull \hbox (2.7717pt too wide) in paragraph at lines 854--855
 \OT1/ppl/m/n/10.95 vyv-in-utou sna-hou se tyto []udaje nedaj[]^^P p[]resn[]e sp
 o[]c[]^^Ptat, pokud an-a-lyt-ick[]y n[]astroj nepracuje
  []
 
 
-Overfull \hbox (15.92339pt too wide) in paragraph at lines 851--852
+Overfull \hbox (15.92339pt too wide) in paragraph at lines 856--857
 \OT1/ppl/m/n/10.95 pan[]^^P po-moc[]^^P re[]aln[]ych hod-not. Jeho p[]usobnost 
 se ale neomezuje pouze na reklamn[]^^P kamapn[]e,
  []
 
 [24]
-Overfull \hbox (7.84718pt too wide) in paragraph at lines 870--871
+Overfull \hbox (7.84718pt too wide) in paragraph at lines 875--876
 []\OT1/ppl/m/n/10.95 Tento pohled se zam[]e[]ruje na seg-ment u[]zivatel[]u a p
 []rehled o tom, ko-lik nov[]ych u[]zivatel[]u
  []
 
 
-Overfull \hbox (6.82356pt too wide) in paragraph at lines 870--871
+Overfull \hbox (6.82356pt too wide) in paragraph at lines 875--876
 \OT1/ppl/m/n/10.95 se zareg-istrovalo, ko-lik jich p[]re[]slo na pla-cen[]y pl[
 ]an v porovn[]an[]^^P s dlouhodob[]ym pr[]um[]erem.
  []
 
 
-Overfull \hbox (14.13754pt too wide) in paragraph at lines 870--871
+Overfull \hbox (14.13754pt too wide) in paragraph at lines 875--876
 \OT1/ppl/m/n/10.95 Po str[]ance pou[]z[]^^Pv[]an[]^^P pro-duktu pak posky-tuje 
 p[]rehled o tom, jak[]e funkce pro-duktu u[]zivatel[]e
  []
 
 
-Overfull \hbox (3.34065pt too wide) in paragraph at lines 877--878
+Overfull \hbox (3.34065pt too wide) in paragraph at lines 882--883
 \OT1/ppl/m/n/10.95 Z[]akazn[]^^Pci jsou ti u[]zivatel[]e, kte[]r[]^^P ji[]z pla
 t[]^^P. Tento pohled se p[]r[]^^Pli[]s neli[]s[]^^P od pohledu u[]zivatel[]e,
  []
 
 
-Overfull \hbox (22.73999pt too wide) in paragraph at lines 883--884
+Overfull \hbox (22.73999pt too wide) in paragraph at lines 888--889
 []\OT1/ppl/m/n/10.95 Otev[]^^Praj[]^^P se tak[]e mo[]znosti, kter[]e se bl[]^^P
 []z[]^^P syst[]em[]um pro man-age-ment vz-tah[]u se z[]akazn[]^^Pkem
  []
 
 [25]
-Overfull \hbox (1.77034pt too wide) in paragraph at lines 897--898
+Overfull \hbox (1.77034pt too wide) in paragraph at lines 902--903
 []\OT1/ppl/m/n/10.95 Zaznamen[]av[]an[]^^P u[]zivatelsk[]e in-ter-akce s ap-lik
 ac[]^^P prob[]^^Ph[]a ve we-bov[]em prohl[]^^P[]ze[]ci, kter[]y
  []
@@ -1085,13 +1094,13 @@ ersion <1.5>, but at most version <1.4> allowed
 <img/measuring.pdf, id=156, 283.32602pt x 163.99057pt>
 File: img/measuring.pdf Graphic file (type pdf)
  <use img/measuring.pdf>
-Overfull \hbox (32.64944pt too wide) in paragraph at lines 910--911
+Overfull \hbox (32.64944pt too wide) in paragraph at lines 915--916
 []\OT1/ppl/m/n/10.95 Na obr[]azku 6[] je obecn[]e zachyceno, jak prob[]^^Ph[]a 
 ko-mu-nikace mezi u[]zivatelov[]ym prohl[]^^P[]ze[]cem,
  []
 
 
-Overfull \hbox (2.45988pt too wide) in paragraph at lines 915--916
+Overfull \hbox (2.45988pt too wide) in paragraph at lines 920--921
 []\OT1/ppl/m/n/10.95 Jeliko[]z je nutn[]e na stran[]e we-bov[]eho serveru bezpe
 []cn[]e za[]sifrovat in-for-mace o u[]zivateli,
  []
@@ -1102,14 +1111,14 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/share/texmf-texlive/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2004/09/05 1.3 listings language file
 ) [26 <./img/measuring.pdf>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 917--917
+Overfull \hbox (6.0pt too wide) in paragraph at lines 922--922
 [][][][][][][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <9> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 919.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 924.
 
-Overfull \hbox (2.68352pt too wide) in paragraph at lines 928--929
+Overfull \hbox (2.68352pt too wide) in paragraph at lines 933--934
 \OT1/ppl/m/n/10.95 vrhnout t[]ret[]^^P stra-nou. To tak[]e umo[]z[]nuje pou[]z[
 ]^^Pt tuto in-for-maci k ov[]e[]ren[]^^P iden-tity u[]zivatele. 
  []
@@ -1120,7 +1129,7 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 930--930
+Overfull \hbox (6.0pt too wide) in paragraph at lines 935--935
 [][][][][][][] 
  []
 
@@ -1132,25 +1141,25 @@ F version <1.5>, but at most version <1.4> allowed
 File: img/zpracovani_2.pdf Graphic file (type pdf)
 
 <use img/zpracovani_2.pdf>
-Overfull \hbox (0.82259pt too wide) in paragraph at lines 997--998
+Overfull \hbox (0.82259pt too wide) in paragraph at lines 1002--1003
 \OT1/ppl/m/n/10.95 Jako plat-formu pro im-ple-mentaci n[]astroje byl zv-olen Go
 ogle Ap-pEngine. Jedn[]a se slu[]zbu,
  []
 
 
-Overfull \hbox (18.37538pt too wide) in paragraph at lines 997--998
+Overfull \hbox (18.37538pt too wide) in paragraph at lines 1002--1003
 \OT1/ppl/m/n/10.95 we-bov[]ych ap-likac[]^^P. Jedn[]a se o slu[]zbu typu Sofwta
 re as a Ser-vice, kter[]a posky-tuje []sk[]alovateln[]e
  []
 
 [28 <./img/zpracovani_2.pdf>]
-Overfull \hbox (4.70491pt too wide) in paragraph at lines 1018--1019
+Overfull \hbox (4.70491pt too wide) in paragraph at lines 1023--1024
 []\OT1/ppl/m/n/10.95 Na Google Ap-pEngine je mo[]zno pro-gramo-vat v Pythonu, n
 ebo v Jav[]e. Prost[]rednictv[]^^Pm
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1024--1024
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1029--1029
 [][][][][][][] 
  []
 
@@ -1160,12 +1169,12 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/share/texmf-texlive/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2004/09/05 1.3 listings language file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 1038--1038
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1043--1043
 [][][][][][][] 
  []
 
 [29]
-Overfull \hbox (8.11034pt too wide) in paragraph at lines 1050--1051
+Overfull \hbox (8.11034pt too wide) in paragraph at lines 1055--1056
 []\OT1/ppl/m/n/10.95 Mimo datab[]aze umo[]z[]nuje Ap-pEngine sd[]^^Plen[]^^P sp
 r[]avy ap-likace, u[]zivatelsk[]e role, p[]rehled
  []
@@ -1189,74 +1198,132 @@ File: img/ud_visitors_2.pdf Graphic file (type pdf)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [30 <./img/appspot_window.pdf>] [31 <./img/ud_dashboard_2.pdf> <./img/ud_visito
-rs_2.pdf>]
-Overfull \hbox (10.65106pt too wide) in paragraph at lines 1128--1129
+rs_2.pdf>] [32
+
+]
+Overfull \hbox (10.65106pt too wide) in paragraph at lines 1158--1159
 []\OT1/ppl/m/n/10.95 Nejv[]et[]s[]^^Pm rozd[]^^Plem je mno[]zstv[]^^P pam[]eti 
 na serveru, kter[]e je omezeno tak, []ze neumo[]z[]nuje
  []
 
 
-Overfull \hbox (9.26561pt too wide) in paragraph at lines 1128--1129
+Overfull \hbox (9.26561pt too wide) in paragraph at lines 1158--1159
 \OT1/ppl/m/n/10.95 jako omezen[]^^P na maxim[]aln[]^^P ve-likost odpov[]edi ser
 veru na je-den megabajt. Ob[]e tyto omezen[]^^P
  []
 
 
-Overfull \hbox (15.40826pt too wide) in paragraph at lines 1128--1129
+Overfull \hbox (15.40826pt too wide) in paragraph at lines 1158--1159
 \OT1/ppl/m/n/10.95 jsem p[]rekro[]cil, kdy[]z jsem im-por-to-vat a ex-por-to-va
 l data mezi lok[]aln[]^^Pm po[]c[]^^Pta[]cem a serverem.
  []
 
 
-Overfull \hbox (0.23212pt too wide) in paragraph at lines 1132--1133
+Overfull \hbox (0.23212pt too wide) in paragraph at lines 1162--1163
 \OT1/ppl/m/n/10.95 p[]red[]av[]a zpra-cov[]an[]^^P dat jed-notliv[]ym metrik[]a
 m a v uni-verz[]aln[]^^Pm form[]atu je za-z-na-men[]av[]a
  []
 
-[32
 
-]
-Overfull \hbox (19.56377pt too wide) in paragraph at lines 1138--1139
+Overfull \hbox (19.56377pt too wide) in paragraph at lines 1168--1169
 []\OT1/ppl/m/n/10.95 Optimalizace m[]e[]r[]^^Pc[]^^Pho skriptu je zavr[]sena ke
 []sov[]an[]^^Pm, kter[]e ponech[]av[]a skript v prohl[]^^P[]ze[]ci
  []
 
 
-Overfull \hbox (9.36397pt too wide) in paragraph at lines 1138--1139
+Overfull \hbox (9.36397pt too wide) in paragraph at lines 1168--1169
 \OT1/ppl/m/n/10.95 m[]e[]r[]^^Pc[]^^Pmi n[]astroji, kter[]e pou[]z[]^^Pvaj[]^^P
  m[]e[]r[]^^Pc[]^^P skript. Oproti zave-den[]ym n[]astroj[]um jako je Google
  []
 
-
-Overfull \hbox (4.6553pt too wide) in paragraph at lines 1147--1148
+[33]
+Overfull \hbox (4.6553pt too wide) in paragraph at lines 1177--1178
 \OT1/ppl/m/n/10.95 je reprezen-tov[]ano []casem, ve kter[]em nastalo a um[]^^Ps
 t[]en[]^^Pm v HTML doku-mentu. Po ka[]zd[]ych
  []
 
-[33]
-Overfull \hbox (17.68532pt too wide) in paragraph at lines 1194--1198
+
+Overfull \hbox (14.88878pt too wide) in paragraph at lines 1179--1180
+[]\OT1/ppl/m/n/10.95 Za sle-dovan[]e ob-dob[]^^P pades[]ati p[]eti dn[]^^P bylo
+ za-z-na-men[]ano []sedes[]at tis[]^^Pc kliknut[]^^P. Z[]aznamy
+ []
+
+
+Overfull \hbox (16.02669pt too wide) in paragraph at lines 1195--1196
+[]\OT1/ppl/m/n/10.95 Dlouhodob[]e bylo v m[]e[]ren[]e ap-likaci denn[]e t[]rice
+t u[]zivatel[]u a ka[]zd[]y den vzniklo pr[]um[]ern[]e
+ []
+
+
+Overfull \hbox (0.94283pt too wide) in paragraph at lines 1195--1196
+\OT1/ppl/m/n/10.95 jak[]ym zp[]usobem by z[]akazn[]^^Pk za tuto ap-likaci m[]el
+ platit - po-dle po[]ctu ak-tivn[]^^Pch u[]zivatel[]u. 
+ []
+
+<img/ud_active_users.pdf, id=224, 514.8525pt x 189.68265pt>
+File: img/ud_active_users.pdf Graphic file (type pdf)
+
+<use img/ud_active_users.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (3.91032pt too wide) in paragraph at lines 1205--1206
+\OT1/ppl/m/n/10.95 klik[]u za jed-notliv[]e dny (mod[]re). Chum.ly m[]a v pr[]u
+m[]ern[]e t[]ricet ak-tivn[]^^Pch u[]zivatel[]u denn[]e,
+ []
+
+<img/ud_new_users.pdf, id=225, 514.8525pt x 189.68265pt>
+File: img/ud_new_users.pdf Graphic file (type pdf)
+
+<use img/ud_new_users.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[34]
+Overfull \hbox (7.57379pt too wide) in paragraph at lines 1225--1226
+[]\OT1/ppl/m/n/10.95 Ka[]zd[]y provo-zo-vat we-bov[]e ap-likace m[]u[]ze zjis-t
+it ko-lik m[]a v dan[]em okam[]ziku u[]zivatel[]u.
+ []
+
+
+Overfull \hbox (6.5391pt too wide) in paragraph at lines 1227--1228
+\OT1/ppl/m/n/10.95 "chyt[]re"vyextraktov[]any z dos-tupn[]ych in-for-mac[]^^P o
+ z[]akazn[]^^Pkovi. T[]^^Pm, []ze se pro-dukt zab[]yv[]a
+ []
+
+<img/ud_chumly_define_features_blurry.pdf, id=229, 981.531pt x 825.9718pt>
+File: img/ud_chumly_define_features_blurry.pdf Graphic file (type pdf)
+
+<use img/ud_chumly_define_features_blurry.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[35 <./img/ud_active_users.pdf> <./img/ud_new_users.pdf>] [36 <./img/ud_chumly_
+define_features_blurry.pdf>]
+Overfull \hbox (17.68532pt too wide) in paragraph at lines 1295--1299
 \OT1/ppl/m/n/10.95 co splnilo o[]cek[]av[]an[]^^P co ne-s-plnilo / p[]red[]cilo
  o[]cek[]av[]an[]^^P p[]r[]^^Pnos pro u[]zivatele v praxi porovn[]an[]^^P
  []
 
-[34
+[37
 
-] [35
+] [38
 
 ]
-Underfull \hbox (badness 1953) in paragraph at lines 1228--1230
+Underfull \hbox (badness 1953) in paragraph at lines 1329--1331
 []\OT1/ppl/m/n/10.95 Pecinovsk[]y, Rudolf, \OT1/ppl/m/it/10.95 Sou^^Tcasn^^Se t
 rendy v metodice v^^Syuky pro-gramov^^San^^S^^P\OT1/ppl/m/n/10.95 , dos-tupn[]e
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1228--1230
+Underfull \hbox (badness 10000) in paragraph at lines 1329--1331
 \OT1/ppl/m/n/10.95 z url $\OT1/pcr/m/n/10.95 http : / / gynome . nmnm . cz / ko
 nference / files / 2006 / sbornik /
  []
 
-[36
+[39
 
 ] (./diplomka.aux)
 
@@ -1267,10 +1334,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7842 strings out of 495061
- 114649 string characters out of 1182622
- 446331 words of memory out of 3000000
- 10887 multiletter control sequences out of 15000+50000
+ 7861 strings out of 495061
+ 115186 string characters out of 1182622
+ 446360 words of memory out of 3000000
+ 10903 multiletter control sequences out of 15000+50000
  27014 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  43i,12n,51p,1035b,2950s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1284,9 +1351,9 @@ xmf-texlive/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-texlive/fonts
 ic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a.pfb></u
 sr/share/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-te
 xlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (41 pages, 857368 bytes).
+Output written on diplomka.pdf (44 pages, 1469141 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
+ 298 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
