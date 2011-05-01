@@ -1,20 +1,19 @@
 \select@language {czech}
-\contentsline {figure}{\numberline {1}{\ignorespaces Analog - denn\IeC {\'\i } n\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vnost\relax }}{8}
-\contentsline {figure}{\numberline {2}{\ignorespaces Google Analytics - n\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vy podle zem\IeC {\'\i }\relax }}{16}
-\contentsline {figure}{\numberline {3}{\ignorespaces Heatmapy - vlevo Bing, vpravo Google\relax }}{16}
-\contentsline {figure}{\numberline {4}{\ignorespaces \IeC {\v Z}ivotn\IeC {\'\i } cyklus u\IeC {\v z}ivatel\IeC {\r u}\relax }}{22}
-\contentsline {figure}{\numberline {5}{\ignorespaces Sch\IeC {\'e}ma sb\IeC {\v e}ru dat\relax }}{27}
-\contentsline {figure}{\numberline {6}{\ignorespaces Sch\IeC {\'e}ma proudov\IeC {\'e}ho zpracov\IeC {\'a}n\IeC {\'\i } dat\relax }}{29}
-\contentsline {figure}{\numberline {7}{\ignorespaces Indexy definovan\IeC {\'e} v Google Datastore\relax }}{32}
-\contentsline {figure}{\numberline {8}{\ignorespaces Administra\IeC {\v c}n\IeC {\'\i } rozhran\IeC {\'\i } platformy Google Appengine\relax }}{33}
-\contentsline {figure}{\numberline {9}{\ignorespaces Hlavn\IeC {\'\i } panel aplikace\relax }}{34}
-\contentsline {figure}{\numberline {10}{\ignorespaces P\IeC {\v r}ehled n\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }k\IeC {\r u}\relax }}{34}
-\contentsline {figure}{\numberline {11}{\ignorespaces Aktivita u\IeC {\v z}ivatel\IeC {\r u} Chum.ly.\relax }}{38}
-\contentsline {figure}{\numberline {12}{\ignorespaces Nov\IeC {\'\i } u\IeC {\v z}ivatel\IeC {\'e} Chum.ly\relax }}{38}
-\contentsline {figure}{\numberline {13}{\ignorespaces Z leva: ned\IeC {\'a}vno vid\IeC {\v e}n\IeC {\'\i } a nejaktivn\IeC {\v e}j\IeC {\v s}\IeC {\'\i } u\IeC {\v z}ivatel\IeC {\'e}.\relax }}{39}
-\contentsline {figure}{\numberline {14}{\ignorespaces Profil u\IeC {\v z}ivatele.\relax }}{39}
-\contentsline {figure}{\numberline {15}{\ignorespaces \IeC {\v C}etnost pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}n\IeC {\'\i } jednotliv\IeC {\'y}ch funkc\IeC {\'\i } v logaritmick\IeC {\'e}m m\IeC {\v e}\IeC {\v r}\IeC {\'\i }tku\relax }}{40}
-\contentsline {figure}{\numberline {16}{\ignorespaces \IeC {\v C}etnost pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}n\IeC {\'\i } jednotliv\IeC {\'y}ch funkc\IeC {\'\i } v line\IeC {\'a}rn\IeC {\'\i }m m\IeC {\v e}\IeC {\v r}\IeC {\'\i }tku\relax }}{40}
-\contentsline {figure}{\numberline {17}{\ignorespaces Jeden p\IeC {\v r}\IeC {\'\i }b\IeC {\v e}h, jedn\IeC {\'a} se o vytvo\IeC {\v r}en\IeC {\'\i } zpr\IeC {\'a}vy.\relax }}{40}
-\contentsline {figure}{\numberline {18}{\ignorespaces Definov\IeC {\'a}n\IeC {\'\i } sledovan\IeC {\'y}ch funkc\IeC {\'\i } pomoc\IeC {\'\i } grafick\IeC {\'e}ho rozhran\IeC {\'\i }\relax }}{41}
-\contentsline {figure}{\numberline {19}{\ignorespaces Cel\IeC {\'e} rozhran\IeC {\'\i } aplikace. Karta funkce pro v\IeC {\'y}voj\IeC {\'a}\IeC {\v r}e.\relax }}{42}
+\contentsline {figure}{\numberline {1}{\ignorespaces Google Analytics - n\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vy podle zem\IeC {\'\i }\relax }}{15}
+\contentsline {figure}{\numberline {2}{\ignorespaces Heatmapy - vlevo Bing, vpravo Google\relax }}{16}
+\contentsline {figure}{\numberline {3}{\ignorespaces \IeC {\v Z}ivotn\IeC {\'\i } cyklus u\IeC {\v z}ivatel\IeC {\r u}\relax }}{21}
+\contentsline {figure}{\numberline {4}{\ignorespaces Sch\IeC {\'e}ma sb\IeC {\v e}ru dat\relax }}{26}
+\contentsline {figure}{\numberline {5}{\ignorespaces Sch\IeC {\'e}ma proudov\IeC {\'e}ho zpracov\IeC {\'a}n\IeC {\'\i } dat\relax }}{28}
+\contentsline {figure}{\numberline {6}{\ignorespaces Indexy definovan\IeC {\'e} v Google Datastore\relax }}{31}
+\contentsline {figure}{\numberline {7}{\ignorespaces Administra\IeC {\v c}n\IeC {\'\i } rozhran\IeC {\'\i } platformy Google Appengine\relax }}{32}
+\contentsline {figure}{\numberline {8}{\ignorespaces Hlavn\IeC {\'\i } panel aplikace\relax }}{33}
+\contentsline {figure}{\numberline {9}{\ignorespaces P\IeC {\v r}ehled n\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }k\IeC {\r u}\relax }}{33}
+\contentsline {figure}{\numberline {10}{\ignorespaces Aktivita u\IeC {\v z}ivatel\IeC {\r u} Chum.ly.\relax }}{37}
+\contentsline {figure}{\numberline {11}{\ignorespaces Nov\IeC {\'\i } u\IeC {\v z}ivatel\IeC {\'e} Chum.ly\relax }}{37}
+\contentsline {figure}{\numberline {12}{\ignorespaces Z leva: ned\IeC {\'a}vno vid\IeC {\v e}n\IeC {\'\i } a nejaktivn\IeC {\v e}j\IeC {\v s}\IeC {\'\i } u\IeC {\v z}ivatel\IeC {\'e}.\relax }}{38}
+\contentsline {figure}{\numberline {13}{\ignorespaces Profil u\IeC {\v z}ivatele.\relax }}{38}
+\contentsline {figure}{\numberline {14}{\ignorespaces \IeC {\v C}etnost pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}n\IeC {\'\i } jednotliv\IeC {\'y}ch funkc\IeC {\'\i } v logaritmick\IeC {\'e}m m\IeC {\v e}\IeC {\v r}\IeC {\'\i }tku\relax }}{39}
+\contentsline {figure}{\numberline {15}{\ignorespaces \IeC {\v C}etnost pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}n\IeC {\'\i } jednotliv\IeC {\'y}ch funkc\IeC {\'\i } v line\IeC {\'a}rn\IeC {\'\i }m m\IeC {\v e}\IeC {\v r}\IeC {\'\i }tku\relax }}{39}
+\contentsline {figure}{\numberline {16}{\ignorespaces Jeden p\IeC {\v r}\IeC {\'\i }b\IeC {\v e}h, jedn\IeC {\'a} se o vytvo\IeC {\v r}en\IeC {\'\i } zpr\IeC {\'a}vy.\relax }}{39}
+\contentsline {figure}{\numberline {17}{\ignorespaces Definov\IeC {\'a}n\IeC {\'\i } sledovan\IeC {\'y}ch funkc\IeC {\'\i } pomoc\IeC {\'\i } grafick\IeC {\'e}ho rozhran\IeC {\'\i }\relax }}{40}
+\contentsline {figure}{\numberline {18}{\ignorespaces Cel\IeC {\'e} rozhran\IeC {\'\i } aplikace. Karta funkce pro v\IeC {\'y}voj\IeC {\'a}\IeC {\v r}e.\relax }}{41}
