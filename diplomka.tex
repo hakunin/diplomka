@@ -1166,13 +1166,13 @@ Uvádím také volný překlad do češtiny.
 
 % TODO upravit!
 \begin{quote}
-CHUM.LY poskytuje jediný bod přítomnosti pro čtení a odesílání do jiných sociálních sítí, stejně jako místní zážitek komunitních blogů, kde si můžete vytvořit, nebo připojit k veřejné, či soukromé skupiny se společnými zájmy.
+CHUM.LY poskytuje pro čtení a odesílání do jiných sociálních sítí v jednom místě, stejně jako komunitní blogy, kde si můžete vytvořit, nebo připojit se k veřejné, či soukromé skupině se společnými zájmy.
 
-Chum.ly vzniklo v srpnu 2009, s nápadem vytvořit centrální platformu, která by mohla propojit blog k dalším sociálním sítím a překročit omezení 140 znaků v SMS zprávě a na Twitteru. Použili jsme osmou open source softwaru Laconica, jako výchozí bod.
+Chum.ly vzniklo v srpnu 2009, s nápadem vytvořit centrální platformu, která by mohla propojit blog s dalšími sociálními sítěmi a překročit omezení 140 znaků v SMS zprávě, nebo na Twitteru. Jako výchozí bod jsme použili jsme open source softwaru Laconica verze osm.
 
-Chum.ly pokračovalo ve vylepšování uživatelského rozhraní a funkcí, s pomocí zpětné vazby od uživatelů a podporovano komunitou uživatelů. Tato podpora nám umožnila zavést prvky, které jsou na špici, a později adoptovaný 'velké kluky', jako je inline média a jazyk překladu.
+S pomocí zpětné vazby od a podporovano komunitou uživatelů pokračovalo Chum.ly ve vylepšování uživatelského rozhraní a funkcí. Tato podpora nám umožnila zavést prvky, které jsou na špici, které byly později adoptovany velkými sociálními sítěmi. Jedná se především o vkládání médií do zpráv a překládání.
 
-'příjmy model' a 'cílový trh' mnohokrát změnily a věříme, že jsme konečně našli udržitelný ne-na-reklamě-založený model. Nicméně, nejvíce odměňující část zkušeností, byla zatím přátelství v rámci Chum.ly komunity uživatelů.
+Byznys model a cílový trh semnohokrát změnily a věříme, že jsme konečně našli udržitelný ne-na-reklamě-založený model. Nicméně, nejvíce odměňující část zkušeností doteď, bylo přátelství v rámci komunity Chum.ly uživatelů.
 \end{quote}
 
 
@@ -1306,9 +1306,9 @@ Známé funkce sledované aplikace také umožňují identifikovat akce proveden
 \end{figure}
 
 
-Na obrázku \ref{img:user_story} je vidět takovýto jeden příběh.
+Na obrázku \ref{img:user_story} je vidět takovýto jeden příběh. Uživatel kliknul na tlačítko, které otevře formulář s vytvořením nové zprávy. Poté nastavil, do které sociální sítě chce zprávu poslat, vepsal titulek zprávy a text. V dalším okamžiku připojil přílohu (obrázek, zvuk, nebo jiný soubor) a potvrdil vytvoření zprávy.
 
-
+Jednotlivé funkce aplikace jsou definovány pomocí jednoduchého rozhraní, ve kterém uživatel "nakliká" funkce, které má zájem sledovat (obrázek \ref{img:define_features}). Vytvořené funkce jsou automaticky pojmenovány podle pozice v struktuře dokumentu a sémantiky a uživatel má možnost názvy změnit.
 
 \begin{figure}[h]
 	\centering
@@ -1317,10 +1317,7 @@ Na obrázku \ref{img:user_story} je vidět takovýto jeden příběh.
 	\label{img:define_features}
 \end{figure}
 
-
-
-
-Mimo jiné obsahuje aplikace i nástroje pro vývojáře, kteé generují náhodné data, jsou schopné importovat a exportovat data a spravovat metriky. Na obrázku \ref{img:developer_features} jsou jednotlivé metriky a jejich aktuální stav. V případě, že se nějaká metrika zasekne, je možno ji odlokovat, případně promazat data nebo zcela metriku odebrat.
+Mimo jiné obsahuje aplikace i nástroje pro vývojáře, které generují náhodné data, jsou schopné importovat a exportovat data a spravovat metriky. Na obrázku \ref{img:developer_features} jsou jednotlivé metriky a jejich aktuální stav. V případě, že se nějaká metrika zasekne, je možno ji odlokovat, případně promazat data nebo zcela metriku odebrat.
 
 Každá metrika je schopna sekvenčním procházením zpracovávat události měřené aplikace a produkovat výstup v normovaném tvaru, který je zobrazován na grafech. Do budoucna je možné nechat uživatele vytvářet vlastní grafy, ve kterýh se promítnou metriky, které si uživatel zvolí pomocí grafického uživatelského rozhraní.
 
@@ -1436,16 +1433,17 @@ Cílem práce je vytvoření nástroje, jakožto podpory pro aplikaci a navržen
 5.Zhodnoťte vyvinutý nástroj především z pohledu reálného nasazení a jeho přínosů, porovnejte jej s obdobnými nástroji a jejich metodami.
 \end{comment}
 
-čo som mal spraviť
+% čo som mal spraviť
 
-čo som spravil, čo som nespravil
+Cílem práce bylo vytvořit nástroj pro podporu webových aplikací a navržení metody měření chování jejích uživatelů při využití znalosti konkrétního uživatele, jeho chování a využívaných funkcí webové aplikace.
 
-výhľady do budůcna
+% čo som spravil, čo som nespravil
 
+Vytvořil jsem metodu i nástroj, který umožňuje snadno měřit webové aplikace pomocí měřícího vložení skiptu do zákaznické aplikace. Nástroj byl vyvinut pro platformu Google AppEngine v jazyce Mirah a tam byl také nasazen.  Potenciální zákazník, se kterým jsem měl v minulosti dobrý vztah mi umožnil nástroj nasadit na jeho webové aplikaci a měřit ji. Vytvořil jsem abstrakci pro zpracování měřených dat, které mi umožňuje doplňovat nové interpretace a prezentoval jsem výsledky měření.
 
+% výhľady do budůcna
 
-Byla to bomba :)
-
+Tuto aplikaci jsem vyvinul se záměrem prorazit na americký trh s vlastním produktem pro podporu webových aplikací. Budu pokračovat v jejím vývoji s klíčovými zákazníky a v blízké době chci začít s monetizací.
 
 
 
