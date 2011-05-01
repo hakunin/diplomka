@@ -353,24 +353,24 @@ Nyní je třeba si říct, jaké informace můžeme získat a k čemu se dají v
 
 Udává o kterou stránku je zájem. Tento údaj se v nejjednodušším příkladě používá k určení popularity jednotlivých stránek na webovém serveru. Z hlediska toho, jak jsou dnešní webové stránky strukturovány, dá se předpokládat, že čím hlouběji je stránka zanořená ve stromové struktuře webu, tím toto číslo bude menší. Například:
 
-\begin{verbatim}
---+ Hlavní stránka 			(150 návštěv)
-  |--+ Podstránka 1			( 50 návštěv)
-  |  \-- Pod-pod stránka	( 10 návštěv)
-  \--- Podstránka 2			( 50 návštěv)
-\end{verbatim}
+\begin{lstlisting}[label=src:Plain,caption=Distribuce návštěv ve stromové struktuře]
+--+ Hlavni stranka 				(150x)
+  |--+ Podstranka 1				( 50x)
+  |  \-- Pod-pod stranka	( 10x)
+  \--- Podstranka 2				( 50x)
+\end{lstlisting}
 
 Tato informace má různý význam v různých kontextech. Uvažujme informační server na kterém každý den vyjde několik článků v různých kategoriích. Hlavní stránka klade největší důraz na nejnovější články a v postranním panelu obsahuje odkazy na jednotlivé kategorie článků.
 
-\begin{verbatim}
---+ Hlavní stránka informačního serveru		
-  |-- 1. Nejnovější článek
-  |-- 2. Nejnovější článek		
-  |-- 3. Nejnovější článek	
+\begin{lstlisting}[label=src:Plain,caption=Struktura informačního serveru]
+--+ Hlavni stranka
+  |-- 1. Clanek A
+  |-- 2. Clanek	B	
+  |-- 3. Clanek	C
   ...
-  |-- Kategorie článků A
-  \-- Kategorie článků B  
-\end{verbatim}
+  |-- Kategorie clanku 1
+  \-- Kategorie clanku 2
+\end{lstlisting}
 
 Pro kategorie znamená počet zobrazení popularitu jednotlivých kategorií. Tento údaj by měl být odpovídat počtu zobrazení článků v jednotlivých kategoriích a měl by se porovnávat k počtu zobrazení dalších kategorií. Například v případě že poměr návštěv kategorie vaření je velký ale poměr přečtení článků o vaření je malý, může to například znamenat, že kategorie je zajímavá ale neobsahuje tak zajímavé články.
 
@@ -385,15 +385,15 @@ Pro stránku, která představuje článek je počet zobrazení ukazatelem toho,
 
 V kontextu webové aplikace se může jednat o údaj, který udává nejpoužívanější sadu funkcí. Následující příklad toto demonstruje na zjednodušené administraci E-shopu.
 
-\begin{verbatim}
---+ Administrace E-shopu
-  |-+ Objednávky
-  | |-- nevyřízené objednávky
-  | |-- vyřízené objednávky
-  | \-- hledat objednávky
-  |-- Zboží
-  \-- Nastavení  
-\end{verbatim}
+\begin{lstlisting}[label=src:Plain,caption=Struktura administrace elekronického obchodu]
+--+ Administrace
+  |-+ Objednavky
+  | |-- nevyrizene
+  | |-- vyrizene
+  | \-- hledat
+  |-- Zbozi
+  \-- Nastaveni
+\end{lstlisting}
 
 V této fiktivní administraci E-shopu jsou tři hlavní podstránky - Objednávky, Zboží a Nastavení. V tomto případě počet zobrazení jednotlivých kategorií umožňuje zjistit (zhruba), jak často je pracováno s objednávkami v poměru se zbožím a nastavením.
 
@@ -409,9 +409,9 @@ Ještě zajímavější využití této informace je v případě, že uživatel
 
 V query string části adresy se nacházejí údaje, které modifikují obsah stránky. Je to část adresy stránky za otazníkem a není povinná. Například, pokud zadáte "web analytics" do hledání v Google, bude adresa stránky vypadat následovně:
 
-\begin{verbatim}
+\begin{lstlisting}[label=src:Plain,caption=Adresa ve vyhledávači pro dota "web analytics"]
 www.google.com/search?sourceid=chrome&ie=UTF-8&q=web+analytics
-\end{verbatim}
+\end{lstlisting}
 
 \begin{tabular}{ll}
 	Část adresy & Význam \\	\hline \smallskip

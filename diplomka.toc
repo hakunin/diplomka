@@ -9,9 +9,9 @@
 \contentsline {subsubsection}{Po\IeC {\v z}adovan\IeC {\'a} str\IeC {\'a}nka}{10}
 \contentsline {subsubsection}{Referrer}{12}
 \contentsline {subsubsection}{Query string}{12}
-\contentsline {subsubsection}{Mo\IeC {\v z}nosti logfile anal\IeC {\'y}zy a page-taggingu}{14}
-\contentsline {subsection}{\numberline {2.3}Interpretace dat}{14}
-\contentsline {subsubsection}{Aplikace v praxi}{16}
+\contentsline {subsubsection}{Mo\IeC {\v z}nosti logfile anal\IeC {\'y}zy a page-taggingu}{15}
+\contentsline {subsection}{\numberline {2.3}Interpretace dat}{15}
+\contentsline {subsubsection}{Aplikace v praxi}{15}
 \contentsline {subsection}{\numberline {2.4}Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{18}
 \contentsline {section}{\numberline {3}Anal\IeC {\'y}za webov\IeC {\'y}ch aplikac\IeC {\'\i }}{21}
 \contentsline {subsubsection}{Motivace}{21}
