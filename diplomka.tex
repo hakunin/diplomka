@@ -13,7 +13,7 @@
 
 \begin{comment}
  - moc často používáte spojení ve smyslu, jak již bylo řečeno.
- - Taky bych by opatrný s kombinací webová analytika…často je to ve větě i se slovy analytika a analýza, což působí divně, např. první věta v úvodu
+ - Taky bych by opatrný s kombinací webová analytika…často je to ve větě i se slovy analytika a analýza, což působí divně, např. 	první věta v úvodu
  - Stromy na straně 10 – nedají se udělat graficky
  - Všude musí být citovány zdroje a reference, např. Heatmapy, pokud jste je nedělal sám, pak není jasné, odkud jsou
  - Pozor rozházené odstavce vůči ořezu, přesahy řádků
@@ -156,12 +156,25 @@ Tato situace mě motivovala k vývoji nástroje, který je výhradně zaměřen 
 
 \subsection{Cíl práce}
 
+\begin{comment}
 TODO
 Vytvořit apliakci, která...
 Seznámit se s platformou appengine, nasadit na Chum.ly, naučit se Mirah.
+\end{comment}
 
+Cílem práce je vytvoření nástroje, jakožto podpory pro aplikaci a navržení metody získávání informací o chování uživatele webové aplikace. Nebude se jednat pouze o klasický přístup založený na sběru statistických dat anonymních návštěvníků, ale o využití znalosti o konkrétním uživateli, jeho chování, využívání funkcí a služeb webové aplikace.
 
+\begin{itemize}
+	\item Zanalyzujte a popište možnosti monitorování chování návštěvníků webových stránek a aplikací, a to s důrazem na získané informace a metody jejich zpracování.
+	\item Navrhněte a popište technické postupy a metody pro získávání potřebných informací a dat o chování uživatele.
+	\item Naimplementujte nástroj pro monitorování chování návštěvníků webových aplikací, a to včetně modulu pro integraci do jakékoli webové (HTML) aplikace.
+	\item Vyvinutý nástroj aplikujte do provozu a získaná data analyzujte a popište závěry plynoucí ze získaných informací.
+	\item Zhodnoťte vyvinutý nástroj především z pohledu reálného nasazení a jeho přínosů, porovnejte jej s obdobnými nástroji a jejich metodami.
+\end{itemize}
 
+\begin{comment}
+	TODO tu bych mohl hodit ještě nějaký popis
+\end{comment}
 
 
 
@@ -1050,17 +1063,35 @@ def fib(a:int)
 end 
 \end{lstlisting}
 
-Použitá databáze je BigTable, distribuovaný úložný systém, který si Google vyvinul pro vlastní potřeby. Bigtable byl navržen pro potřeby Googlu aby zvládal obrovské objemy dat, které jsou uloženy na tisících serverů. Bigtable je součástí platformy AppEngine a v Googlu na něm běží například Google Finance, nebo Google Earth.
+Použitá databáze je Google Datastore, distribuovaný úložný systém, který si Google vyvinul pro vlastní potřeby. Datastore používá technologii BigTable, která je původně navržena pro potřeby Googlu. Podmínkou bylo zvládat obrovské objemy dat, které jsou distrubuovaně uloženy na tísících serverů s replikovanými daty. Na technologii BigTable běží na například Google Finance, nebo Google Earth.
 
-Mimo databáze umožňuje AppEngine sdílení správy aplikace, uživatelské role, přehled vytížení, logování, časové spouštění úloh, profiler, statistiky používání databáze a díky tomu, že jazyk Mirah běží se kompiluje do Javy je možno také využít velké množství knihoven pro některé specializované účely.
+Z hlediska rozdílů návrhu oproti klasické relační databázi neobsahuje datastore tabulky a sloupce, nýbrž entity a atributy. Když například v MySQL přejmenuji sloupec, změní se název sloupce u všech záznamů. Datastore pojem sloupec nezná a pokud chci nutně přejmenovat atribut u entity, je nutné projít každou entitu a změnit ji.
+
+Dalším významným rozdílem je absence cizích klíčů a dotazů, které skládají tabulky. Dotazy do databáze jsou také značně zjednodušeny. Například pokud chci vyselektovat uživatele, kteří se zaregistrovali v určitém období mohu v dotazu omezit výsledky pouze z jedné strany a seřadit je podle omezujícího atributu. Během posílání záznamů z databáze pak přestanu požadovat další záznamy, když detekuji překročení maximální hodnotu omezujího atributu.
+
+Datastore tedy tlačí na programátora, aby zjednodušil logiku aplikace a omezil složitost databázového schéma. Veškeré dotazování a třídění záznamů se pak děje pomocí předdefinovaných indexů. Dokud uživatel nedefinuje index, nemůže podle atributu dotazovat, nebo seřazovat záznamy.
+
+Na obrázku \ref{img:datastore_indexes} je výpis všech indexů mojí aplikace. AppEngine je sám obhospodařuje a v případě vytvoření nového indexu chvíli trvá, než je dostupný. Informace o zpracování indexu je vidět na obrázku ve žlutém rámečku.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img/datastore_indexes.pdf}
+	\caption{Indexy definované v Google Datastore}
+	\label{img:datastore_indexes}
+\end{figure}
+
+
+Mimo databáze umožňuje AppEngine sdílení správy aplikace, uživatelské role, přehled vytížení, logování, časové spouštění úloh, profiler, statistiky používání databáze a díky tomu, že jazyk Mirah běží se kompiluje do Javy je možno také využít velké množství knihoven pro speciální účely.
+
 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15cm]{img/appspot_window.pdf}
+	\includegraphics[width=15cm]{img/appspot.pdf}
 	\caption{Administrační rozhraní platformy Google Appengine}
 	\label{analog_daily}
 \end{figure}
+
 
 
 \begin{comment}
@@ -1094,9 +1125,6 @@ detaily funkce měřícího skriptu (AES)
 
 
 
-\subsubsection{Uživatelské rozhraní aplikace}
-
-K zobrazení dat
 
 \begin{figure}[h]
 	\centering
@@ -1136,6 +1164,7 @@ The 'revenue model' and 'target market' have changed numerous times, and we beli
 
 Uvádím také volný překlad do češtiny.
 
+% TODO upravit!
 \begin{quote}
 CHUM.LY poskytuje jediný bod přítomnosti pro čtení a odesílání do jiných sociálních sítí, stejně jako místní zážitek komunitních blogů, kde si můžete vytvořit, nebo připojit k veřejné, či soukromé skupiny se společnými zájmy.
 
@@ -1218,32 +1247,91 @@ Pro tento graf a některé další jsem vybral logaritmické měřítko. Jeliko�
 Na graf aktivních uživatelů navazuje znázornění počtu akvizice nových uživatelů (obr \ref{img:chumly_new_users}). Podobný graf je zobrazen na všech kartách, takže uživatel vidí jaký má nárůst návštěvníků, uživatelů a platících zákazníků. Rozhraní aplikace je psané v angličtině a proto i datumy na obou grafech jsou ve formátu měsíc/den. 
 
 
+Tyto dva grafy představují základní přehled o používání aplikace a akvizici nových uživatelů. Každý provozovatel webové apliakce by tyto grafy měl mít každý den na očích, aby přel představu o svém byznysu. Pokud počet nových uživatelů je nulový, nebo počet aktivních uživatelů nestoupá, je třeba nějak zakročit. To stejné platí pro platící uživatele, jejich počet by měl stoupat a počet nových platících uživatelů by měl být přinejmenším vyrovnaný s počtem platících uživatelů, kteří aplikaci opouští.
+
+Z hlediska porovnání s dostupnými nástroji a tím, co si může výrobce webové aplikace naprogramovat sám může každý provozovat webové aplikace zjistit kolik má v daném okamžiku uživatelů, nebo použít Google Analytics. Pokud to chce znát počet aktivních uživatelů, zákazníků a návštěvníků, musí v si to umět nastavit a vědět, které statistiky sledovat. Jelikož však Google Analytics nepracuje s jednotlivými uživateli, není již možné získat detailní informace o jednotlivých uživatelích.
+
+S mým produktem jakékoli konfigurace a nastavování odpadá a výsledky jsou vyextraktovány z dostupných informací o zákazníkovi. Přesto, že se do měřícího skriptu zadává pouze několik údajů, je možno z nich získat široké spektrum informací. Tím, že se produkt zabývá pouze měřením webových aplikací dokáže poskytnout sadu statistik, které provozovatelé potřebují, bez nutnosti zdlouhavé konfigurace.
+
+Na orázku \ref{img:users_table} je tabulka znázorňující seznam nedávných uživatelů aplikace a nejaktivnějších uživatelů. Tato releativně jednoduchá funkcionalita již překračuje možnosti drtivé většiny nástrojů pro měření webových stránek. 
 
 
-Tyto dva grafy představují základní přehled o používání aplikace a akvizici nových uživatelů. Každý provozovatel webové apliakce by tyto grafy měl mít každý den na očích a v okamžiku poklesu okamžitě zjišťovat, co je jeho původem. Na druhou stranu je také zásadní, aby počet aktivních uživatelů stoupal a stejě tak i počet nových uživatelů.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img/users_table.pdf}
+	\caption{Z leva: nedávno vidění a nejaktivnější uživatelé.}
+	\label{img:users_table}
+\end{figure}
 
-Každý provozovat webové aplikace může zjistit kolik má v daném okamžiku uživatelů. Pokud chce vědět jaké jsou počty aktivních uživatelů a nových uživatelů každý den musí si vést ručně evidenci, nebo na své stránky zavést měřící kód například Google Analytics a nakonfigurovat cíle konverze.
+Tyto informace mají mnoho využití. Například našel jsem uživatele, který byl na chum.ly velmi aktivní a najednou přestal chodit. Vžil jsem se do role majitele webové aplikace a šel zjistit, co se stalo. Ukázalo se, že před čtyřiceti šesti dny zlomil nohu a byl v nemocnici bez internetu. 
 
-S mým produktem jakékoli konfigurace a nastavování toto odpadá a výsledky jsou "chytře" vyextraktovány z dostupných informací o zákazníkovi. Tím, že se produkt zabývá pouze měřením webových aplikací tedy odpadá veškeré ruční nastavování.
+Kdyby se jednalo o platícího zákazníka, pomohla by mi tato informace v rozhodování, zda mu účet zamrazit, nebo smazat. Je tedy možno zaujmout více individuální přístup k zákazníkům, kteří to pravděpodobně ocení a mohou pak z vlastní pozitivní zkušenosti aplikaci doporučit.
+
+Po kliknutí na jméno v tabulce se zobrazí detailní přehled uživatele (obrázek \ref{img:user_profile}). Je z něj vidět, zda se jedná o platícího zákazníka, nebo uživatele (položka "Class"). Pro případ nutnosti kontaktu jeho email, kdy byl naposledy vidět a kdy byl poprvé zaznamenán. Napravo od profilu je graf s počtem kliknutí v jednotlivých dnech.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img/user_profile.pdf}
+	\caption{Profil uživatele.}
+	\label{img:user_profile}
+\end{figure}
+
+Na obrázcích \ref{img:chumly_features} a \ref{img:chumly_features_nolog} je znázorněna absolutní používanost jednotlivých funkcí v čase. Prvním graf používá logaritmické měřítko, druhý lineární. V tomto případě se mají obě zobrazení svoje pro a proti. 
+
+Předpokládám, že u aplikace s řádově vyšším počtem uživatelů by logaritmický graf zobrazoval vyrovnanější křivky. Ne každá aplikace však bude mít tisíce uživatelů denně, takže v tomto případě a podobných bude třeba nabídnout přepnutí měřítka grafu a případně přiblížení nebo další pohledy.
 
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img/chumly_features_small_nolegend.pdf}
+	\caption{Četnost používání jednotlivých funkcí v logaritmickém měřítku}
+	\label{img:chumly_features}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img/chumly_features_small_nolog_nolegend.pdf}
+	\caption{Četnost používání jednotlivých funkcí v lineárním měřítku}
+	\label{img:chumly_features_nolog}
+\end{figure}
+
+Známé funkce sledované aplikace také umožňují identifikovat akce provedené uživatelem. Jednotlivé akce, které uživatel dělá se pak shlukují do jednotlivých návštěv. Jelikož výpisy návštěv obsahují informace o tom, co uživatel zhruba dělal, říkám jim příběhy.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14.65cm]{img/user_story.pdf}
+	\caption{Jeden příběh, jedná se o vytvoření zprávy.}
+	\label{img:user_story}
+\end{figure}
+
+
+Na obrázku \ref{img:user_story} je vidět takovýto jeden příběh.
 
 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=14cm]{img/ud_chumly_define_features_blurry.pdf}
-	\caption{Noví uživatelé Chum.ly}
+	\includegraphics[width=14cm]{img/ud_chumly_define_features_blurry_bw.pdf}
+	\caption{Definování sledovaných funkcí pomocí grafického rozhraní}
 	\label{img:define_features}
 \end{figure}
 
 
 
 
+Mimo jiné obsahuje aplikace i nástroje pro vývojáře, kteé generují náhodné data, jsou schopné importovat a exportovat data a spravovat metriky. Na obrázku \ref{img:developer_features} jsou jednotlivé metriky a jejich aktuální stav. V případě, že se nějaká metrika zasekne, je možno ji odlokovat, případně promazat data nebo zcela metriku odebrat.
 
+Každá metrika je schopna sekvenčním procházením zpracovávat události měřené aplikace a produkovat výstup v normovaném tvaru, který je zobrazován na grafech. Do budoucna je možné nechat uživatele vytvářet vlastní grafy, ve kterýh se promítnou metriky, které si uživatel zvolí pomocí grafického uživatelského rozhraní.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14.65cm]{img/developer_functions.pdf}
+	\caption{Celé rozhraní aplikace. Karta funkce pro vývojáře.}
+	\label{img:developer_features}
+\end{figure}
 
-
+V neposlední řadě aplikace obsahuje kontaktní formulář, který odesílá email tvůrci, úpravu uživatelského účtu a podporu více aplikací pro jednoho uživatele. Během vývoje aplikace jsem se snažil zohlednit potřeby uživatele i správce aplikace tak, že jsem trávil více času na funkcích, které byly používány častěji.
 
 
 
@@ -1284,7 +1372,11 @@ Názor na nástroj od Chum.ly (možná)
 \end{comment}
 
 
-\subsubsection{Navrhnuté změny na základě získaných dat (2 stránky)}
+
+\subsection{Zhodnocení}
+
+
+\subsubsection{Budoucí vývoj a uplatnění}
 
 Nebudu navrhovat změny pro chum.ly, ale změny nástroje.
 
@@ -1293,21 +1385,77 @@ Nebudu navrhovat změny pro chum.ly, ale změny nástroje.
 
 
 
-\section{Zhodnocení}
-co splnilo očekávání
-co nesplnilo / předčilo očekávání
-přínos pro uživatele v praxi
-porovnání s podobnými nástroji
+Globální pohled
+ - jak dlouho jsem nad tím strávil
+ - co jsem mezitím organizoval? :)
+ - zmínit, že jsme v kanclu
 
+O Mirah a AppEnginu
+ - očekávání
+ - co to přináší (Google Datastore, škálovatelnost, cloud, rozvoj platformy)
+ - co to stojí.
+
+O nástroji
+  - jaké bylo očekávání
+  - jeho využitelnost v praxi a přínos pro provozovatele webových aplikací.
+  - porovnání s podobnými nástroji
+  
+O procesu
+  - co jsem se naučil
+  	- mirah, appengine, time management
+  - co bych dělal jinak
+  	- dobrá otázka
+  - co bych dělal stejně
+  	- appengine
+  - co mě překvapilo 
+  	- jak si urovnám psaní myšlenky
+  
+Jak se změnil můj pohled na vývoj aplikací?
 
 
 
 \section{Závěr}
 \label{sec:Conclusion}
 
-Nástroj splnil předpoklady..
+
+
+
+
+
+
+
+\begin{comment}
+Vyjít ze zadání...
+
+Cílem práce je vytvoření nástroje, jakožto podpory pro aplikaci a navržení metody získávání informací o chování uživatele webové aplikace. Nebude se jednat pouze o klasický přístup založený na sběru statistických dat anonymních návštěvníků, ale o využití znalosti o konkrétním uživateli, jeho chování, využívání funkcí a služeb webové aplikace.
+
+1. Zanalyzujte a popište možnosti monitorování chování návštěvníků webových stránek a aplikací, a to s důrazem na získané informace a metody jejich zpracování.
+2. Navrhněte a popište technické postupy a metody pro získávání potřebných informací a dat o chování uživatele.
+3. Naimplementujte nástroj pro monitorování chování návštěvníků webových aplikací, a to včetně modulu pro integraci do jakékoli webové (HTML) aplikace.
+4.Vyvinutý nástroj aplikujte do provozu a získaná data analyzujte a popište závěry plynoucí ze získaných informací.
+5.Zhodnoťte vyvinutý nástroj především z pohledu reálného nasazení a jeho přínosů, porovnejte jej s obdobnými nástroji a jejich metodami.
+\end{comment}
+
+čo som mal spraviť
+
+čo som spravil, čo som nespravil
+
+výhľady do budůcna
+
+
 
 Byla to bomba :)
+
+
+
+
+
+
+
+
+
+
+
 
 \bigskip
 \begin{flushright}

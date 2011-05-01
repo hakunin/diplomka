@@ -1,38 +1,37 @@
 \select@language {czech}
 \contentsline {section}{\numberline {1}\IeC {\'U}vod}{4}
 \contentsline {subsection}{\numberline {1.1}C\IeC {\'\i }l pr\IeC {\'a}ce}{5}
-\contentsline {section}{\numberline {2}Webov\IeC {\'a} analytika}{6}
-\contentsline {subsection}{\numberline {2.1}Historie}{6}
-\contentsline {subsection}{\numberline {2.2}Sb\IeC {\v e}r dat}{7}
-\contentsline {subsubsection}{Anal\IeC {\'y}za dat z logovac\IeC {\'\i }ch soubor\IeC {\r u}}{8}
-\contentsline {subsubsection}{Informace z\IeC {\'\i }skan\IeC {\'e} pomoc\IeC {\'\i } HTTP protokolu}{9}
-\contentsline {subsubsection}{Po\IeC {\v z}adovan\IeC {\'a} str\IeC {\'a}nka}{9}
-\contentsline {subsubsection}{Referrer}{11}
-\contentsline {subsubsection}{Query string}{11}
-\contentsline {subsubsection}{Mo\IeC {\v z}nosti logfile anal\IeC {\'y}zy a page-taggingu}{13}
-\contentsline {subsection}{\numberline {2.3}Interpretace dat}{13}
-\contentsline {subsubsection}{Aplikace v praxi}{15}
-\contentsline {subsection}{\numberline {2.4}Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{17}
-\contentsline {section}{\numberline {3}Anal\IeC {\'y}za webov\IeC {\'y}ch aplikac\IeC {\'\i }}{20}
-\contentsline {subsubsection}{Motivace}{20}
-\contentsline {subsection}{\numberline {3.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{20}
-\contentsline {subsubsection}{Akvizice u\IeC {\v z}ivatele}{20}
-\contentsline {subsubsection}{U\IeC {\v z}ivatel}{21}
-\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }k}{22}
-\contentsline {subsubsection}{Konec pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}n\IeC {\'\i } aplikace}{22}
-\contentsline {subsection}{\numberline {3.2}N\IeC {\'a}stroj}{23}
-\contentsline {subsubsection}{N\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }ci}{23}
-\contentsline {subsubsection}{U\IeC {\v z}ivatel\IeC {\'e}}{25}
-\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }ci}{25}
-\contentsline {subsubsection}{B\IeC {\'y}val\IeC {\'\i } z\IeC {\'a}kazn\IeC {\'\i }ci}{25}
-\contentsline {subsection}{\numberline {3.3}Sb\IeC {\v e}r dat}{26}
-\contentsline {subsection}{\numberline {3.4}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{28}
-\contentsline {subsection}{\numberline {3.5}Technick\IeC {\'e} z\IeC {\'a}zem\IeC {\'\i }}{29}
-\contentsline {subsubsection}{U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i } aplikace}{30}
-\contentsline {section}{\numberline {4}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{32}
-\contentsline {subsubsection}{Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } na ostr\IeC {\'e}m serveru}{33}
-\contentsline {subsubsection}{Z\IeC {\'\i }skan\IeC {\'a} data}{34}
-\contentsline {subsubsection}{Navrhnut\IeC {\'e} zm\IeC {\v e}ny na z\IeC {\'a}klad\IeC {\v e} z\IeC {\'\i }skan\IeC {\'y}ch dat (2 str\IeC {\'a}nky)}{35}
-\contentsline {section}{\numberline {5}Zhodnocen\IeC {\'\i }}{37}
-\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{38}
-\contentsline {section}{\numberline {7}Reference}{39}
+\contentsline {section}{\numberline {2}Webov\IeC {\'a} analytika}{7}
+\contentsline {subsection}{\numberline {2.1}Historie}{7}
+\contentsline {subsection}{\numberline {2.2}Sb\IeC {\v e}r dat}{8}
+\contentsline {subsubsection}{Anal\IeC {\'y}za dat z logovac\IeC {\'\i }ch soubor\IeC {\r u}}{9}
+\contentsline {subsubsection}{Informace z\IeC {\'\i }skan\IeC {\'e} pomoc\IeC {\'\i } HTTP protokolu}{10}
+\contentsline {subsubsection}{Po\IeC {\v z}adovan\IeC {\'a} str\IeC {\'a}nka}{10}
+\contentsline {subsubsection}{Referrer}{12}
+\contentsline {subsubsection}{Query string}{12}
+\contentsline {subsubsection}{Mo\IeC {\v z}nosti logfile anal\IeC {\'y}zy a page-taggingu}{14}
+\contentsline {subsection}{\numberline {2.3}Interpretace dat}{14}
+\contentsline {subsubsection}{Aplikace v praxi}{16}
+\contentsline {subsection}{\numberline {2.4}Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{18}
+\contentsline {section}{\numberline {3}Anal\IeC {\'y}za webov\IeC {\'y}ch aplikac\IeC {\'\i }}{21}
+\contentsline {subsubsection}{Motivace}{21}
+\contentsline {subsection}{\numberline {3.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{21}
+\contentsline {subsubsection}{Akvizice u\IeC {\v z}ivatele}{21}
+\contentsline {subsubsection}{U\IeC {\v z}ivatel}{22}
+\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }k}{23}
+\contentsline {subsubsection}{Konec pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}n\IeC {\'\i } aplikace}{23}
+\contentsline {subsection}{\numberline {3.2}N\IeC {\'a}stroj}{24}
+\contentsline {subsubsection}{N\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }ci}{24}
+\contentsline {subsubsection}{U\IeC {\v z}ivatel\IeC {\'e}}{26}
+\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }ci}{26}
+\contentsline {subsubsection}{B\IeC {\'y}val\IeC {\'\i } z\IeC {\'a}kazn\IeC {\'\i }ci}{26}
+\contentsline {subsection}{\numberline {3.3}Sb\IeC {\v e}r dat}{27}
+\contentsline {subsection}{\numberline {3.4}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{29}
+\contentsline {subsection}{\numberline {3.5}Technick\IeC {\'e} z\IeC {\'a}zem\IeC {\'\i }}{30}
+\contentsline {section}{\numberline {4}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{35}
+\contentsline {subsubsection}{Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } na ostr\IeC {\'e}m serveru}{36}
+\contentsline {subsubsection}{Z\IeC {\'\i }skan\IeC {\'a} data}{37}
+\contentsline {subsection}{\numberline {4.1}Zhodnocen\IeC {\'\i }}{42}
+\contentsline {subsubsection}{Budouc\IeC {\'\i } v\IeC {\'y}voj a uplatn\IeC {\v e}n\IeC {\'\i }}{42}
+\contentsline {section}{\numberline {5}Z\IeC {\'a}v\IeC {\v e}r}{43}
+\contentsline {section}{\numberline {6}Reference}{44}
