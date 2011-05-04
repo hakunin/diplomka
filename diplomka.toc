@@ -34,16 +34,16 @@
 \contentsline {subsubsection}{N\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }ci}{26}
 \contentsline {subsubsection}{U\IeC {\v z}ivatel\IeC {\'e}}{28}
 \contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }ci}{28}
-\contentsline {subsubsection}{B\IeC {\'y}val\IeC {\'\i } z\IeC {\'a}kazn\IeC {\'\i }ci}{29}
-\contentsline {section}{\numberline {4}Technick\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{30}
-\contentsline {subsection}{\numberline {4.1}Sb\IeC {\v e}r dat}{30}
-\contentsline {subsection}{\numberline {4.2}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{32}
-\contentsline {subsection}{\numberline {4.3}Pou\IeC {\v z}it\IeC {\'e} technologie}{34}
-\contentsline {subsection}{\numberline {4.4}U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i }}{37}
-\contentsline {section}{\numberline {5}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{38}
-\contentsline {subsection}{\numberline {5.1}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } na ostr\IeC {\'e}m serveru}{39}
-\contentsline {subsection}{\numberline {5.2}Z\IeC {\'\i }skan\IeC {\'a} data}{40}
-\contentsline {subsection}{\numberline {5.3}Zhodnocen\IeC {\'\i }}{45}
-\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{47}
-\contentsline {section}{\numberline {7}P\IeC {\v r}\IeC {\'\i }lohy}{48}
-\contentsline {section}{\numberline {8}Reference}{49}
+\contentsline {subsubsection}{B\IeC {\'y}val\IeC {\'\i } z\IeC {\'a}kazn\IeC {\'\i }ci}{28}
+\contentsline {section}{\numberline {4}Technick\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{29}
+\contentsline {subsection}{\numberline {4.1}Sb\IeC {\v e}r dat}{29}
+\contentsline {subsection}{\numberline {4.2}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{31}
+\contentsline {subsection}{\numberline {4.3}Pou\IeC {\v z}it\IeC {\'e} technologie}{33}
+\contentsline {subsection}{\numberline {4.4}U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i }}{36}
+\contentsline {section}{\numberline {5}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{37}
+\contentsline {subsection}{\numberline {5.1}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } na ostr\IeC {\'e}m serveru}{38}
+\contentsline {subsection}{\numberline {5.2}Z\IeC {\'\i }skan\IeC {\'a} data}{39}
+\contentsline {subsection}{\numberline {5.3}Zhodnocen\IeC {\'\i }}{44}
+\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{46}
+\contentsline {section}{\numberline {7}P\IeC {\v r}\IeC {\'\i }lohy}{47}
+\contentsline {section}{\numberline {8}Reference}{48}

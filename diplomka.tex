@@ -17,17 +17,18 @@
 TODO
  - doplnit REFERENCE
  - doplnit text před nasazením
- - dopnit názor chum.ly
  - projít celou diplomku
- - dopsat ZHODNOCENÍ
  - přepsat Abstrakt
- - fixnout přetékající text
+ - najit a smazat všechny TODO
 
 Projít si: \subsection{Webové aplikace}
  
 DONE
  - všem tabulkám doplnit CAPTION
  - odkazovat na tabulky
+ - fixnout přetékající text
+ - dopsat ZHODNOCENÍ
+ - dopnit názor chum.ly
  
 Před tiskem:
  - ******************* upravit DATUM u podpisu *****************
@@ -95,10 +96,11 @@ The goal of this thesis is to create a tool to aid web application development a
 
 
 % Pridame pouzivane zkratky (pokud nejake pouzivame).
+\AddAcronym{CDN}{Síť pro doručování obsahu (Content Delivery Network)}
 \AddAcronym{GUI}{Grafické uživatelské rozhraní (Graphical User Interface)}
 \AddAcronym{HTML}{Jazyk pro vytváření webových stránek (HyperText Markup Language)}
 \AddAcronym{HTTP}{Hypertextový protokol (Hypertext Transfer Protocol)}
-
+\AddAcronym{PPC}{Platba za proklik (Pay per click)}
 
 
 
@@ -199,7 +201,7 @@ Na začátku devadesátých let došlo ke zrození WWW stránek. Uživatelé teh
 
 \bigskip
 
-\begin{lstlisting}[label=src:Plain,caption=Ukázka záznamu z logovacího souboru ve formátu RFC931]
+\begin{lstlisting}[label=src:Plain,caption=Ukázka záznamu z logovacího souboru]
 10.20.30.40 - - [26/Apr/2000:00:23:48 -0400] "GET /index.html HTTP/1.0" 200 6248 "http://www.jafsoft.com/asctortf/" "Mozilla/4.05 (Macintosh; I; PPC)"
 10.20.30.40 - - [26/Apr/2000:00:23:48 -0400] "GET /background.gif HTTP/1.0" 200 4005 "http://www.example.org/" "Mozilla/4.05 (Macintosh; I; PPC)"
 \end{lstlisting}
@@ -288,7 +290,7 @@ Když na začátku devadesátých let vznikl web, provozovatelé serverů si uv�
 
 \bigskip
 
-\begin{lstlisting}[label=src:logfile_record,caption=Formát logovacího souboru dle RFC931]
+\begin{lstlisting}[label=src:logfile_record,caption=Formát logovacího souboru]
 127.0.0.1 - frank [10/Oct/2000:13:55:36 -0700] "GET /apache_pb.gif HTTP/1.0" 200 2326
 \end{lstlisting}
 
@@ -513,7 +515,7 @@ Pohyb myši na stránce není kritický faktor, který je třeba sledovat na vš
 
 Agregace pohybů myší se využívá ke konstrukci heatmap. Účel heatmap je graficky znázornit, kterým částem webové stránky se dostává nejvíce pozornosti, ty se zobrazují teplými barvami (žlutá, červená), místa kterým se nedostává pozornost jsou naopak la\-dě\-ny do studeých barev (zelená, modrá).
 
-Jiným využití znalosti o pohybu myši je mouse-tracking. Tato technika kombinuje sledování kliků a pohybů myši a tak pořizuje záznam o uživatelově činnosti na stránce. Jedná se o velmi specifickou techniku, která se používá k testování stránek ještě dřív, než se uvolní na veřejnost, nebo k optimalizaci těch částí stránky, kde dochází ke sledované konverzi\footnote{Konverze TODO}. Příklad apliakce mouse-trackingu ke sledování konverze je například v proces dokončení objednávky elektronickém obchodě.
+Jiným využití znalosti o pohybu myši je mouse-tracking. Tato technika kombinuje sledování kliků a pohybů myši a tak pořizuje záznam o uživatelově činnosti na stránce. Jedná se o velmi specifickou techniku, která se používá k testování stránek ještě dřív, než se uvolní na veřejnost, nebo k optimalizaci těch částí stránky, kde dochází ke sledované konverzi. Příklad apliakce mouse-trackingu ke sledování konverze je například v proces dokončení objednávky elektronickém obchodě.
 
 
 
@@ -893,8 +895,6 @@ ROI = \frac{(Zisk - Investice)}{Investice} = \frac{(4500 - 1000)}{1000} = 3.5
 \end{equation}
 
 Číslo tři a půl znamená, že z každé investované koruny jsme udělali tři a půl koruny. Takovéto výpočty se dnes dělají pomocí průměrných odhadů, pokud si ovšem někdo nedá tu práci a sám si tento výpočet udělá ručně za použití reálných dat.
-
-Google Analytics v tomto ohledu funguje tak, že pokud uživatel přijde přes kampaň, ale zaregistruje se až další den, nepočítají ho vůbec koverze k této kampani\footnote{TODO zdroj}. I s maximální vyvinutou snahou se tyto údaje nedají přesně spočítat, pokud analytický nástroj nepracuje přímo s uživateli.
 
 Pokud nástroj spolupracuje s webovou aplikací, lze vypočítat ROI jednotlivých kampaní pomocí reálných hodnot. Jeho působnost se ale neomezuje pouze na reklamní kampaně, ale na libobolnou formu u které je možno identifikovat zdroj návštěvnosti jako PR články, výměnné odkazy, vyhledávání a sociální sítě.
 
@@ -1658,6 +1658,39 @@ Michal Hantl
 
 \bibitem{kaushik} Kaushik, Avinash
 \textit{Web Analytics 2.0}, Sybex, 2009. ISBN 9780470529393.
+
+\bibitem{kaushik} Kawasaki, Guy
+\textit{The Art of the Start}, Portfolio Hardcover, 2004. ISBN 9781591840565.
+
+\bibitem{gae} Sanderson, Dan
+\textit{Programming Google App Engine}, O'Reilly Media, 2009. ISBN 059652272X.
+
+
+%Článek o akvizici v New York Times \url{http://www.nytimes.com/2005/03/29/technology/29urchin.html}
+
+\bibitem{peci_trendy} New York Times,
+\textit{Google Acquires Urchin Software}, dostupné z url \url{www.nytimes.com/2005/03/29/technology/29urchin.html}.
+
+\bibitem{cdn} Björn Sållarp,
+\textit{Google App Engine as your CDN?}, dostupné z url \url{http://blog.sallarp.com/google-app-engine-cdn/}.
+
+\bibitem{url} Network Working Group,
+\textit{Uniform Resource Locators}, dostupné z url \url{www.ietf.org/rfc/rfc1738.txt}.
+
+\bibitem{clf} Business Insider,
+\textit{Bing Is Better For Ads Than Google}, dostupné z url \url{www.businessinsider.com/microsoft-bing-has-a-more-ad-} \url{friendly-design-than-google-according-to-heatmaps-2009-6}.
+
+\bibitem{cookies} Jak Psát Web,
+\textit{Cookies}, dostupné z url \url{www.jakpsatweb.cz/enc/cookies.html}.
+
+\bibitem{billing} Google AppEngine,
+\textit{Billing and Budgeting Resources}, dostupné z url \url{http://code.google.com/appengine/docs/billing.html}.
+
+\bibitem{clf} W3C,
+\textit{Common logfile format}, dostupné z url \url{www.w3.org/Daemon/User/Config/Logging.html#common-logfile-format}.
+
+
+
 
 \begin{comment}
 Jim Sterne: Social Media Metrics, Wiley (2010), ISBN 9780470583784, 272 stran
