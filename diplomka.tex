@@ -1,5 +1,6 @@
 % Nejprve uvedeme tridu dokumentu s volbami
-\documentclass[bc,female,java,dept456]{diploma}						% jednostranny dokument
+\documentclass[bc,male,java,dept456]{diploma}						% jednostranny dokument
+
 \usepackage[czech]{babel}
 %\usepackage[cp1250]{inputenc}
 \usepackage[utf8]{inputenc}
@@ -9,20 +10,30 @@
 \usepackage{longtable}
 %\usepackage{dialogue}
 
+%\usepackage[a-1b]{pdfx}
 
 
 \begin{comment}
 TODO
- - všem tabulkám doplnit CAPTION
- - odkazovat na tabulky
  - doplnit REFERENCE
  - doplnit text před nasazením
  - dopnit názor chum.ly
  - projít celou diplomku
  - dopsat ZHODNOCENÍ
+ - přepsat Abstrakt
+ - fixnout přetékající text
+
+Projít si: \subsection{Webové aplikace}
+ 
+DONE
+ - všem tabulkám doplnit CAPTION
+ - odkazovat na tabulky
  
 Před tiskem:
  - ******************* upravit DATUM u podpisu *****************
+ 
+Po tisku:
+ - zkompilovat do PDFX-A
 	
 \end{comment}
 
@@ -31,15 +42,19 @@ Před tiskem:
 \setcounter{secnumdepth}{2}
 
 \begin{comment}
- - moc často používáte spojení ve smyslu, jak již bylo řečeno.
- - Taky bych by opatrný s kombinací webová analytika…často je to ve větě i se slovy analytika a analýza, což působí divně, např. 	první věta v úvodu
- - Stromy na straně 10 – nedají se udělat graficky
- - Všude musí být citovány zdroje a reference, např. Heatmapy, pokud jste je nedělal sám, pak není jasné, odkud jsou
- - Pozor rozházené odstavce vůči ořezu, přesahy řádků
- - Část věnující se vašemu řešení bych nenazíval Nový nástroj
- - Pokuste se sjednotit vzhled obrázků a schémat
 
- - V části 3 by mělo být více o tom, jak to řešíte..nejen z pohledu koncepčního (uživatelé), ale z pohledu procesního…třeba i nějaký diagram aktivit apod. Není tam jasná linka, o dpsecifikace požadavků k použití resp. implementaci
+> Taky bych by opatrný s kombinací webová analytika…často je to ve větě i se slovy analytika a analýza, což působí divně, např. 	první věta v úvodu
+
+> Všude musí být citovány zdroje a reference, např. Heatmapy, pokud jste je nedělal sám, pak není jasné, odkud jsou
+> Pozor rozházené odstavce vůči ořezu, přesahy řádků
+> Část věnující se vašemu řešení bych nenazíval Nový nástroj
+
+> Pokuste se sjednotit vzhled obrázků a schémat
+Pokusil, ještě projdu.
+
+> V části 3 by mělo být více o tom, jak to řešíte..nejen z pohledu koncepčního (uživatelé), ale z pohledu procesního…třeba i nějaký diagram aktivit apod. Není tam jasná linka, od psecifikace požadavků k použití resp. implementaci
+
+
 \end{comment}
 
 
@@ -57,7 +72,6 @@ Před tiskem:
 
 
 
-
 \Thanks{Rád bych na tomto místě poděkoval svým rodičům za podporu během celého studia, panu Ing. Michalovi Radeckému, za vedení během vypracování diplomové práce a své přítelkyni Míše.}
 
 
@@ -65,15 +79,13 @@ Před tiskem:
 
 
 \CzechAbstract{
-Cílem práce je vytvoření nástroje, jakožto podpory pro aplikaci a navržení metody získávání informací o chování uživatele webové aplikace. Nebude se jednat o klasický přístup založený na sběru statistických dat anonymních návštěvníků, ale o využití znalosti o konkrétním uživateli, jeho chování, využívání funkcí a služeb webové aplikace.
-
-Výsledkem praktické části je webová aplikace ...
+Cílem práce je vytvoření nástroje, jakožto podpory pro aplikaci a navržení metody zí\-ská\-vá\-ní informací o chování uživatele webové aplikace. Nebude se jednat o klasický přístup založený na sběru statistických dat anonymních návštěvníků, ale o využití znalosti o konkrétním uživateli, jeho chování, využívání funkcí a služeb webové aplikace.
 }
 
 \CzechKeywords{webová analytika, chování uživatelů, webová aplikace, diplomová práce}
 
 \EnglishAbstract{
-The goal of this thesis is to create a tool to aid web application development and to create a method for gaining knowledge of the web application users' behaviour. It is not the case of usual anonymized data gathering, but make us of the knowledge of concrete user, his behaviour and his usage of web app's functions and services. 
+The goal of this thesis is to create a tool to aid web application development and to create a method for gaining knowledge of the web application users' behaviour. It is not the case of usual anonymized data gathering, but making use of the knowledge of concrete user, his behaviour and his usage of web app's functions and services. 
 }
 
 \EnglishKeywords{web analytics, user behaviour, web application, master thesis}
@@ -85,6 +97,7 @@ The goal of this thesis is to create a tool to aid web application development a
 % Pridame pouzivane zkratky (pokud nejake pouzivame).
 \AddAcronym{GUI}{Grafické uživatelské rozhraní (Graphical User Interface)}
 \AddAcronym{HTML}{Jazyk pro vytváření webových stránek (HyperText Markup Language)}
+\AddAcronym{HTTP}{Hypertextový protokol (Hypertext Transfer Protocol)}
 
 
 
@@ -104,8 +117,8 @@ The goal of this thesis is to create a tool to aid web application development a
 
 % Jsou v praci tabulky? Pokud ano vysazime jejich seznam.
 % Pokud ne smazeme nasledujici makro.
-%\listoftables
-%\cleardoublepage	% odstrankujeme, u jednostranneho dokumentu o jednu stranku, u oboustrenneho o dve
+\listoftables
+\cleardoublepage	% odstrankujeme, u jednostranneho dokumentu o jednu stranku, u oboustrenneho o dve
 
 % Jsou v praci obrazky? Pokud ano vysazime jejich seznam.
 \listoffigures
@@ -133,45 +146,17 @@ Tato diplomová práce se zabývá webovou analytikou a novým nástrojem pro an
 
 Od vzniku webových stránek se web rozvíjel až do dnešní podoby a webová analytika ho provázela. Čím sofistikovanějšími se webové stránky stávaly, tím důmyslnější způsoby byly nacházeny k analýze uživatelského chování.
 
-Z počátku byly používány nástroje na straně serveru, které pasivně analyzovaly data o návštěvách stránek. Až v polovině dvadesátkých let masivní vývoj webových prohlížečů přesunul sběr dat na stranu klienta, kde umožnil aktivní sběr dat o uživatelském chování přímo na stránce.
+Zpočátku byly používány nástroje na straně serveru, které pasivně analyzovaly data o návštěvách stránek. V polovině dvadesátkých let masivní vývoj webových prohlížečů přesunul sběr dat na stranu klienta, kde umožnil aktivní sběr dat o uživatelském chování.
 
-Sběr dat na straně klienta umožnil rozvoj jednoduše použitelných nástrojů pro webovou analytiku. Ty však svým způsobem stále kopírují konvenční přístup k analýze návštěvníků.
+Sběr dat na straně klienta umožnil rozvoj jednoduše použitelných nástrojů pro webovou analytiku. Odpadla nutnost instalovat nástroj na server, stačilo vložit skript na stránky. Tyto nástoje však stále kopírují konvenční přístup k analýze návštěvníků.
 
-Současné metody měření a interpretace dat dobře vyhovují jednorázovým účelům jako je měření konverze reklamní kampaně, nebo poskytují průměrné statistiky, jako je top 10 nejnavštěvovanějších stránek na serveru v daném období.
+Současné metody měření a interpretace dat dobře vyhovují jednorázovým účelům, jako je měření konverze reklamní kampaně, nebo poskytují statistiky, jako je top 10 nejnavštěvovanějších stránek na serveru v daném období. Objevují se však již nástroje, které se snaží poskytnout něco navíc.
 
-Kromě webových stránek jsou na internetu také webové aplikace. Moderní technologie jako HTML5 se snaží smazat rozdíl mezi desktopovou aplikací a tou webovou. Tento trend potvrzuje i to, že Google připravuje svůj vlastní operační systém, který je výhradně založen na webovém prohlížeči a všechny aplikace poběží v něm.
+Kromě webových stránek jsou na internetu také webové aplikace. Díky moderních technologiích jako HTML5 se začíná smazávat rozdíl mezi možnostmi desktopových aplikací a webových. Tento trend potvrzuje i to, že Google připravuje svůj vlastní operační systém Chrome OS\footnote{\url{http://www.google.com/chromeos/}}, který je výhradně založen na webovém prohlížeči.
 
-Možnosti webových aplikací jsou již nyní rozšířeny o podporu audia, videa (včetně manipulace) a zobrazení trojrozměrných objektů pomocí technologie WebGl. 
+Možnosti webových aplikací jsou již nyní rozšířeny o podporu audia, videa (včetně manipulace) a zobrazení trojrozměrných objektů pomocí technologie WebGl\footnote{WebGl je OpenGL upravené speciálně pro webové prohlížeče.}. Někteří i tak budou tvrdit, že webové aplikace se nikdy nebudou moci měřit s desktopovými. Na druhou stranu dnes již existují pluginy do prohlížečů, které jakoby umožňují spouštět nativní kód jako SilverLight, nebo Flash a skutečnou podporu nativního kódu slibuje například technologie Native Client, kterou prosazuje Google ve svém prohlížeči Chrome.
 
-Někteří i tak budou tvrdit, že webové aplikace se nikdy nebudou moci měřit s desktopovými. To by možná byla pravda, pokud by jistá posvátná hranice mezi internetovým prohlížečem a nativní aplikací nebyla překročena technologií NaCl\footnote{NaCl není jediná technologie, která rozšiřuje možnosti prohlížeče o funkce a ryhlost nativního kódu. V současnosti se k těmto účelům používá Adobe Flash, nebo Microsoft Silverlight. Jde však o první implementaci, která si klade za cíl spouštět nativní kód, nepodléhající proprietární technologii.} - nativním kódem pro webové aplikace. Ano, v budoucnu budeme moci spouštět nativní kód v prohlížeči. Tím končí exkluzivní postavení desktopových aplikací.
-
-\bigskip
-
-S nástupem webových aplikací se mění i požadavky na nástroje webové analytiky. Webová aplikace se od webové stránky liší v několika věcech. Obecně rozdíl mezi stránkou a aplikací je interakce. Do webových aplikací vstupují uživatelská data ať už ve tradiční formě hodnot z formuláře, nebo data, které vznikají samotnou interakcí (například  malování). 
-
-Když tedy uživatel vkládá, nebo vytváří v aplikaci data, je třeba je nějak uložit k tomu, aby mohly být později vyvolána a dalo se s nimi pracovat. Pro tento účel webové aplikace vyžadují způsob, jak unikátně identifikovat uživatele. V praxi to znamená, že se uživatel musí zaregistrovat a potvrdit svou identitu e-mailem\footnote{Stále častější alternativou se stávají identifikační autority jako Facebook, Twitter, nebo OpenId. To umožňuje, že uživatel nemusí vyplňovat email, ani heslo a je přihlášen pomocí jediného kliknutí.}.
-
-Právě to, že je uživatel přihlášen dává nové možnosti vývoje nástrojů pro webobou analytiku. Narozdíl od webových stránek, kde nemůžeme s jistotou určit, zda se jedná o stejného uživatele můžeme podle přihlášení s jistotou tvrdit, že se o jedná o stejného uživatele a víme kterého.
-
-V prostředí, kde je uživatel přihlášen můžeme na data pohlížet zcela jiným způsobem. Vezměme si statistiku počtu návštěv, kterou zpracovává Google Analytics a podává ji hned na hlavní stránce statistik pro daný web. Denní počet návštěv je vypočítán tak, že pokud přijdu na stránku ráno, v poledne a večer, započítá se to jako tři návštěvy. Pro webovou stránku to dává smysl ze dvou důvodů. Zaprvé ze stejného počítače může přijít ráno v poledne a večer úplně jiný člověk a to nelze nijak rozeznat. Zadruhé webové stránky nemají uživatele, ale návštěvníky tudíž dává smysl sledovat návštěvy. 
-
-Na druhé straně jsou aplikace, které mají uživatele a tak dává smysl sledovat používání. Jestli uživatel přijde třikrát denně, nebo jednou a stráví v aplikaci 3x tolik času je hezké vědět, ale není to tak podstatné. Co je podstatné je kolik uživatelů reálně dnes navštívilo aplikaci a kolik v ní strávili času.
-
-Tento rozdíl se nezdá na první pohled až tak markantní. Je třeba si uvědomit, že se jedná o odlišný úhel pohledu a z toho vycházejí odlišné závěry. Například z Google Analytics se dá zjistit, kolik procent návštěv je z mobilních zařízení. 
-
-Řekněme, že mobilní zařízení tvoří 3\% všech návštěv. To není jako mnoho, pravděpodobně neznamená, že budeme urpavovat naši aplikaci speciálně pro mobilní zařázení. Na druhou stranu, pokud máme 85\% uživatelů, kteří používají free účet a 15\% platících\footnote{Freemium model, spočívá v účtech zdarma a placených, které poskytují něco navíc.}, mohou tři procenta znamenat až 20\% platících uživatelů. Pokud máme více, než jeden placený tarif, například basic (\$19), gold (\$49) a platinum (\$199). V takovém případě bude velmi důležité vědět, kolik z našich 3\% je ve kterém tarifu.
-
-\bigskip
-
-Některé věci, které jsem popsal Google Analytics umožňuje. Je pouze na uživateli, aby si svoje Analytics co nejlépe nastavil a svou aplikaci opatřil příslušným nastavením, které umožní sledovat zajímavé údaje o uživateli.
-
-Tento univerzální přístup ovšem znamená, že co si užiavtel sám neudělá, to nemá. Další omezení spočívá v tom, že Analytics zakazuje identifikovat uživatele.
-
-Tato situace mě motivovala k vývoji nástroje, který je výhradně zaměřen na analytiku webových aplikací s důrazem na práci s uživateli. Nejedná se pouze o přesnění výsledků, jde o to zaměřit se na zákazníky a nikoliv na průměrná čísla.
-
-
-
-
+Můžeme tedy očekávat nárůst počtu webových aplikací, které nezaostávají za desktopovými. 
 
 \subsection{Cíl práce}
 
@@ -181,10 +166,10 @@ Vytvořit apliakci, která...
 Seznámit se s platformou appengine, nasadit na Chum.ly, naučit se Mirah.
 \end{comment}
 
-Cílem práce je vytvoření nástroje, jakožto podpory pro aplikaci a navržení metody získávání informací o chování uživatele webové aplikace. Nebude se jednat pouze o klasický přístup založený na sběru statistických dat anonymních návštěvníků, ale o využití znalosti o konkrétním uživateli, jeho chování, využívání funkcí a služeb webové aplikace.
+Cílem práce je vytvoření nástroje, jakožto podpory pro aplikaci a navržení metody zí\-ská\-vá\-ní informací o chování uživatele webové aplikace. Nebude se jednat pouze o klasický přístup založený na sběru statistických dat anonymních návštěvníků, ale o využití znalosti o konkrétním uživateli, jeho chování, využívání funkcí a služeb webové aplikace.
 
 \begin{itemize}
-	\item Zanalyzujte a popište možnosti monitorování chování návštěvníků webových stránek a aplikací, a to s důrazem na získané informace a metody jejich zpracování.
+	\item Zanalyzujte a popište možnosti monitorování chování návštěvníků webových strá\-nek a aplikací, a to s důrazem na získané informace a metody jejich zpracování.
 	\item Navrhněte a popište technické postupy a metody pro získávání potřebných informací a dat o chování uživatele.
 	\item Naimplementujte nástroj pro monitorování chování návštěvníků webových aplikací, a to včetně modulu pro integraci do jakékoli webové (HTML) aplikace.
 	\item Vyvinutý nástroj aplikujte do provozu a získaná data analyzujte a popište závěry plynoucí ze získaných informací.
@@ -206,13 +191,11 @@ Tato kapitola popisuje vznik webové analytiky a způsoby sběru a intepretace d
 
 \subsection{Historie}
 
-Jak již bylo řečeno v úvodu, dnešní nástoje v podstatě kopírují způsob interpretace dat a proto je vhodné nastínit historii webové analytiky. Je proto vhodné se chvíli pozastavit nad tím, jak to všechno začalo.
+%TODO přepsat trošku
 
-Na začátku devadesátých let došlo ke zrození WWW stránek[reference]. Uživatelé tehdy prohlíželi statické stránky a pokaždé, když si nějakou prohlédli, vznikl záznam v logovacím souboru, takzvaný "hit". Počet hitů se stal ukazatelem úspěšnosti webový stránek.
+Dnešní nástoje v podstatě kopírují způsob interpretace dat a proto je vhodné nastínit historii webové analytiky.
 
-V roce devadesát čtyři vznikl grafický webový prohlížeč s názvem Mosaic[reference]. Díky jeho snadné instalaci a srozumitelnému uživatelskému rozhraní se web otevřel široké veřejnosti. Tento prohlížeč byl později přejmenován na Netscape a v roce 1995 ho používalo 80\% uživatelů internetu.
-
-V roce devadesát pět znikl Analog - nástroj pro analýzu logovacích souborů. Jeho autor Stephen Turner ho poskytoval zdarma jako freeware pro několik platform. Jednalo se o první sofistikovaný nástroj pro analýzu a zobrazení návštěvnosti webových stránek. V tabulce \ref{table:analog_output} je znázorněno, jak vypadal jeden z prvních textových výstupů programu analog.
+Na začátku devadesátých let došlo ke zrození WWW stránek. Uživatelé tehdy pro\-hlí\-želi statické stránky a pokaždé, když si nějakou prohlédli, vznikl záznam v logovacím souboru, takzvaný "hit". A počet hitů se stal ukazatelem úspěšnosti webový stránek.
 
 \bigskip
 
@@ -223,26 +206,14 @@ V roce devadesát pět znikl Analog - nástroj pro analýzu logovacích souborů
 
 \bigskip
 
-Logovací soubor obsahuje jden řádek pro každou návštěvu stránky, nebo souboru na serveru. Nástroj pro analýzu logovacích souborů z toho pak dokáže zjistit kolik měl server návštěv každý den, z kolika unikátních IP adres, které stránky jsou nejnavštěvovanější a kolik bylo přenesených dat.
+Logovací soubor obsahuje jden řádek pro každou návštěvu stránky, nebo souboru na serveru. Nástroj pro analýzu logovacích souborů z toho pak dokáže zjistit kolik měl server návštěv každý den, z kolika unikátních IP adres, které stránky jsou nej\-na\-vště\-vo\-va\-něj\-ší a kolik bylo přenesených dat.
 
-\begin{comment}
-The data collection became unusable with the advent of search engines and their robots, proxies servers to surf anonymously, allocation of dynamic IP addresses by ISPs and cached content techniques. All these developments have rendered the use of log files inappropriate to analyze user behavior. The data contained in log files were indeed biased and unique visitor identification almost impossible. 
-\end{comment}
+V roce devadesát čtyři vznikl grafický webový prohlížeč s názvem Mosaic. Díky jeho snadné instalaci a srozumitelnému uživatelskému rozhraní se web otevřel široké veřejnosti. Tento prohlížeč byl později přejmenován na Netscape a v roce 1995 ho po\-u\-ží\-va\-lo 80\% uživatelů internetu.
 
-\begin{comment}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=14cm]{img/analog_daily.pdf}
-	\caption{Analog - denní návštěvnost}
-	\label{analog_daily}
-\end{figure}
-\end{comment}
+V roce devadesát pět vznikl Analog - nástroj pro analýzu logovacích souborů. Jeho autor Stephen Turner ho poskytoval zdarma jako freeware pro několik platform. Jednalo se o první sofistikovanější nástroj pro analýzu a zobrazení návštěvnosti webových stránek. V tabulce \ref{table:analog_output} je znázorněno, jak vypadal jeden z prvních textových výstupů programu analog.
 
-
-
-\begin{table}[h] 
-\label{table:analog_output}
-\centering      
+\begin{table}[h]
+	\centering	
 \begin{tabular}{p{2cm} p{3cm} p{2cm} p{5cm}}
 den&požadavků&stránek&\\
 \hline
@@ -254,29 +225,44 @@ Pátek			& 3589076			& 1076	& ===============\\
 Sobota			& 3589076			& 1007	& ============= \\
 Neděle			& 3036246			& 1261	& ======================\\
 \end{tabular}
- \caption{Výpis návštěvnosti z progrmau Analog} 
+
+
+
+\begin{comment}
+The data collection became unusable with the advent of search engines and their robots, proxies servers to surf anonymously, allocation of dynamic IP addresses by ISPs and cached content techniques. All these developments have rendered the use of log files inappropriate to analyze user behavior. The data contained in log files were indeed biased and unique visitor identification almost impossible. 
+\end{comment}
+
+\begin{comment}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img/analog_daily.pdf}
+	\caption{Analog - denní návštěvnost}
+	\label{tab:analog_daily}
+\end{figure}
+\end{comment}
+
+
+
+
+
+	\caption{Výpis návštěvnosti z progrmau Analog} 
+	\label{table:analog_output}
 \end{table}
 
-V roce 1996 byl v obou nejpoužívanějších prohlížečích\footnote{V roce 1996 měl Netscape Navigator zhruba 80\% podíl a Internet Explorer 14\%} k dispozici JavaScript. 
-
-Tvůrce webových stránek na každou stránku umístil kód, který mu vygeneroval poskytovatel měřícího nástroje. 
-
+V roce 1996 byl v obou nejpoužívanějších prohlížečích\footnote{V roce 1996 měl Netscape Navigator zhruba 80\% podíl a Internet Explorer 14\%} k dispozici JavaScript. Tvůrce webových stránek na každou stránku umístil kód, který mu vygeneroval poskytovatel měřícího nástroje. 
 
 Tento postup se zásadně liší od analýzy logových souborů. Místo statické analýzy zaznamenaných dat na straně serveru tento přístup data dynamicky sbírá na straně klienta.
 
-Tento průlom umožnil použtití třetích stran pro sběr i vyhodnocení dat a tak dal vzniknout prvním online nástrojům pro webovou analytiku. V různých obměnách se tato technika používá dodnes.
+Průlom v prohlížečích umožnil použtití třetích stran pro sběr i vyhodnocení dat a tak dal vzniknout prvním online nástrojům pro webovou analytiku. V různých obměnách se tato technika používá dodnes.
 
-V roce 2005 koupila společnost Google analytický systém Urchin on Demand a ještě v témž roce ho poskytla zdarma široké veřejnosti jako webovou aplikaci pod názvem Google Aanlytics. Pro obrovský zájem byl tento produkt zpřístupněn pouze omezenému počtu uživatelů. Od října roku 2006 byly znovu otevřeny volné registrace a dodnes se jedná o nejpoužívanější systém pro webovou analytiku.
-
-\bigskip
+V roce 2005 koupila\footnote{Článek o akvizici v New York Times \url{http://www.nytimes.com/2005/03/29/technology/29urchin.html}} společnost Google analytický systém Urchin on Demand a ještě v témž roce ho poskytla zdarma široké veřejnosti jako webovou aplikaci pod názvem Google Aanlytics. Pro obrovský zájem byl tento produkt zpřístupněn pouze omezenému počtu uživatelů. Od října roku 2006 byly znovu otevřeny volné registrace a dodnes se jedná o nejpoužívanější systém pro webovou analytiku.
 
 S nástupem sociálních médií a chytrých mobilních zařízení dochází k nárůstu času, který uživatelé tráví na internetu. Poměrně k tomuto nárůstu se zvyšují investice do internetových stránek a webových aplikací. 
 
-Na jedné straně je snaha dostat nové uživatele na svou stránku, to se dociluje například pomocí optimalizace pro vyhledávače, reklamních bannerů, nebo PPC reklamy\footnote{PPC - Pay per click, platba za proklik (cena prokliku je určena pomocí aukce).}. V tomto případě slouží webová analytika k měření efektivity jednotlivých kampaní a k jejich následné optimalizaci.
+Na jedné straně je snaha dostat nové uživatele na svou stránku, to se dociluje na\-pří\-klad pomocí optimalizace pro vyhledávače, reklamních bannerů, nebo PPC reklamy\footnote{PPC - Pay per click, platba za proklik.}. V ta\-ko\-vém případě slouží webová analytika k měření efektivity jednotlivých kampaní a k jejich následné optimalizaci.
 
 Na druhé je snaha pracovat s uživateli, které už webová stránka, nebo aplikace má. Zde je snaha identifikovat problémy a optimalizavat uživatelskou zkušenost. V obou případech je to webová analytika, která nám umožňuje získat přehled, optimalzovat a vyhodnotit návratnost investic.
 
-{\bf Nástroj, kterým se tato práce zabývá je primárně zaměřen na práci s uživateli}.
 
 
 
@@ -288,11 +274,9 @@ Na druhé je snaha pracovat s uživateli, které už webová stránka, nebo apli
 
 \subsection{Sběr dat}
 
-Podstatou webové analytiky je sběr a interpretace dat. Jak již bylo řečeno, sběr dat se za dobu existence webu vyvinul z pasivní formy analýzy logových souborů na serveru do dnešní - aktivního sběru dat na straně uživatele třetí stranou.
+Podstatou webové analytiky je sběr a interpretace dat. Ten se za dobu existence webu vyvinul z pasivní formy analýzy logových souborů na serveru do dnešní - aktivního sběru dat na straně uživatele třetí stranou.
 
-Tato kapitola popisuje popisuje používané způsoby sběru dat s důrazem na to, jaké informace z nich získáváme, jaké další informace z nich můžeme vyčíst a jaké způsoby vizualizace se běžně vyskytují.
-
-
+Tato podkapitola popisuje popisuje používané způsoby sběru dat s důrazem na to, jaké informace z nich získáváme, jaké další informace z nich můžeme vyčíst a jaké způ\-so\-by vizualizace se běžně vyskytují.
 
 
 
@@ -304,13 +288,17 @@ Když na začátku devadesátých let vznikl web, provozovatelé serverů si uv�
 
 \bigskip
 
-\begin{lstlisting}[label=src:Plain,caption=Formát logovacího souboru dle RFC931]
+\begin{lstlisting}[label=src:logfile_record,caption=Formát logovacího souboru dle RFC931]
 127.0.0.1 - frank [10/Oct/2000:13:55:36 -0700] "GET /apache_pb.gif HTTP/1.0" 200 2326
 \end{lstlisting}
 
 \bigskip
 
-\begin{longtable}{ lp{9cm} }
+Výpis \ref{src:logfile_record} je ukázkou záznamnu v logovacím souboru. Později docházelo k rozšíření tohoto formátu, aby obsahoval další zajímavé informace, které mohl analytický sofwtare zpracovávat. Význam jednotlivých částí typického řádku logovacího souboru jsou po\-psá\-ny v tabulce \ref{tab:http_log_info}.
+
+\begin{table}
+	\centering      
+	\begin{tabular}{ lp{9cm} }
   \verb!127.0.0.1! & IP adresa návštěvníka. Počet unikátních IP adres byl původně používán jako hrubý odhad počtu uživatelů. \\ \bigskip
   \verb!-! & pomlčka \\ \bigskip
   \verb!frank! & Uživatelské jméno. Tento údaj je přítomen v případě se stránka používá HTTP autentifikaci. To platí pro stránky s omezením přístupu pro uzavřenou skupinu lidí a tudíž u náhodného návštěvníka stránky tento údaj nenajdeme. V takovém případě se místo uživatelského jména zaznamená pomlčka. \\ \bigskip
@@ -323,7 +311,10 @@ Když na začátku devadesátých let vznikl web, provozovatelé serverů si uv�
   
   \verb!200! & Kód odpovědi. Kód 200 znamená vše v pořádku. Obvyklé a pro webovou analytiku také zajímavé jsou 404 - stránka nenalezena, 500 - problém na serveru, nebo 303 - přesměrování stránky. \\ \bigskip
   \verb!2326! & Délka odpovědi v bajtech. Sledování této veličiny spolu s počtem návštěv umožňuje identifikovat, který obsah nejvíce zatěžuje internetové připojení daného serveru.
-\end{longtable}
+	\end{tabular}
+	\caption{Informace obsažené v HTTP hlavičce}
+	\label{tab:http_log_info}
+\end{table}
 
 
 
@@ -356,22 +347,20 @@ This is the status code that the server sends back to the client. This informati
 The last entry indicates the size of the object returned to the client, not including the response headers. If no content was returned to the client, this value will be "-". To log "0" for no content, use %B instead.
 \end{comment}
 
-Jak web rostl, tak i jeho složitost a z jednoduchých stránek bez obrázků se staly různě provázené stránky s odkazy a obrázky. S vzůrstající složitostí internetových stránek se i nástroje pro analýzu logovacích souborů stávaly sofistikovanější a začaly na sebe nabalovat další možnosti.
-
-Pole zaznamenávaných dat sbíraných v logovacích souborech byl rozšířen o další informace HTTP protokolu, kterými se zabývá další část kapitoly. Samotný formát je z hlediska anlaytiky vedlejší a není není již nutno ho rozebírat.
+Jak web rostl, zvětšovala se i jeho složitost. Z jednoduchých stránek bez obrázků se staly různě provázené stránky s odkazy a obrázky. Stehně tak i nástroje pro analýzu logovacích souborů se stávaly sofistikovanějšími a začaly na sebe nabalovat další možnosti. Pole zaznamenávaných dat sbíraných v logovacích souborech byl rozšířen o další informace HTTP protokolu, kterými se zabývá další část kapitoly.
 
 
 
 
 
   
-\subsubsection{Informace získané pomocí HTTP protokolu}
+\subsection{Informace získané pomocí HTTP protokolu}
 
 Prohlížení webových stránek na internetu je zajišťěno pomocí HTTP protokolu. HTTP je zkratka pro Hyper Text Tranfer Protokol, neboli protokol pro výměnu hypertextů (hypertextových stránek). Je to způsob jak webový prohlížeč komunikuje s webovým serverem.
 
 Pomocí HTTP protokolu poskytuje prohlížeč informace o uživateli tak, aby webový server mohl co nejlépe vyhovět požadavku.
 
-Formátem HTTP protokolu se na tomto místě není třeba zabývat. Stačí vědět, že obsahuje podstatné jsou informace, které se používají ve webové analytice. Pro názornost je uveden příklad HTTP požadavku a některých základních informací, které obsahuje.
+Formátem HTTP protokolu se na tomto nebudeme hlboce zabývat. Stačí vědět, že obsahuje podstatné jsou informace, které se používají ve webové analytice. Pro zajímavost je uveden příklad HTTP požadavku a některých základních informací, které obsahuje.
 
 \bigskip
 
@@ -386,11 +375,11 @@ Accept-Language: cs-CZ,cs;q=0.8
 Accept-Charset: windows-1250,utf-8;q=0.7,*;q=0.3
 \end{lstlisting}
 
-Nyní je třeba si říct, jaké informace můžeme získat a k čemu se dají využít. Jsou to:
+Z hlaviček HTTP protokolů je možno získat většinu informací, se kterými analytické nástroje pracují. Následující text popisuje které jsou ty základní a jak se používají.
 
 \subsubsection{Požadovaná stránka}
 
-Udává o kterou stránku je zájem. Tento údaj se v nejjednodušším příkladě používá k určení popularity jednotlivých stránek na webovém serveru. Z hlediska toho, jak jsou dnešní webové stránky strukturovány, dá se předpokládat, že čím hlouběji je stránka zanořená ve stromové struktuře webu, tím toto číslo bude menší. Například:
+Zaznamenáváním, kolikrát je každá stránka vyžadována získáme počet zobrazení stránek na serveru. Tento údaj se v nejjednodušším příkladě používá k určení popularity jednotlivých stránek na webovém serveru. Z hlediska toho, jak jsou dnešní webové stránky strukturovány, dá se předpokládat, že čím hlouběji je stránka zanořená ve stromové struktuře webu, tím toto číslo bude menší. Například:
 
 \begin{lstlisting}[label=src:Plain,caption=Distribuce návštěv ve stromové struktuře]
 --+ Hlavni stranka 				(150x)
@@ -446,13 +435,17 @@ Ještě zajímavější využití této informace je v případě, že uživatel
 
 \subsubsection{Query string}
 
-V query string části adresy se nacházejí údaje, které modifikují obsah stránky. Je to část adresy stránky za otazníkem a není povinná. Například, pokud zadáte "web analytics" do hledání v Google, bude adresa stránky vypadat následovně:
+V query string části adresy se nacházejí údaje, které modifikují 0obsah stránky. V začátcích webů se takto odlišovaly dynamické stránky od statických. Je to část adresy stránky za otazníkem a často nese zajímavé informace. Například pokud zadáte "web analytics" do hledání v Google, bude adresa stránky vypadat následovně:
 
-\begin{lstlisting}[label=src:Plain,caption=Adresa ve vyhledávači pro dotaz web analytics]
+\begin{lstlisting}[label=src:Plain,caption=Adresa ve vyhledávači pro dotaz web analytics, label=lala]
 www.google.com/search?sourceid=chrome&ie=UTF-8&q=web+analytics
 \end{lstlisting}
 
-\begin{tabular}{ll}
+Formát jednotlivých částí adresy je dán specifikací RFC1738\footnote{Uniform Resource Locators (URL) \url{http://www.ietf.org/rfc/rfc1738.txt}}, pro názornost uvádím v tabulce \ref{table:web_address_meaning} zjednodušený pohled na část adresy "za otazníkem" konkrétně v našem případě.
+
+\begin{table}
+	\centering
+	\begin{tabular}{ll}
 	Část adresy & Význam \\	\hline \smallskip
 	znak "?" & začátek query string \\ \smallskip
 	znak "\&" & odděluje dvojice klíče a hodnoty \\ \smallskip
@@ -460,79 +453,71 @@ www.google.com/search?sourceid=chrome&ie=UTF-8&q=web+analytics
 	ie=UTF-8 & požadujeme výslednou stránku v UTF-8 \\ \smallskip
 	q=web+analytics & vyhledávaný dotaz je "web analytics"
 \end{tabular}
+	\caption{Význam částí webové adresy}	
+	\label{table:web_address_meaning}	
+\end{table}
+
 
 \bigskip
 
-Stejný princip se používá například když uživatel listuje produkty v elektronickém obchodě. V část adresy bude obsahovat informaci o tom, na které stránce se nachází.
+Stejný princip se používá například když uživatel listuje produkty v elektronickém obchodě. Část adresy bude obsahovat informaci o tom, do které kategorie nahlíží, další bude udávat na které stránce se nachází.
 
 Významné využití je například ve zjišťování, co zákazníci v elektronickém obchodě hledají a jaké fráze při tom používají. Zajímavé je také kolik zákazníků vyhledávání používá a jak často.
 
-%%\subsubsection{Akceptovaný jazyk}
+\subsubsection{Akceptovaný jazyk}
 
-Pokud má uživatel v operačním systému nastavený jazyk češtinu, HTTP požadavek říká serveru, že preferuje českou verzi obsahu. Tato informace je zajímavá především pro servery s velkou návštěvností, které plánují přidat jazykovou mutaci.
+Pokud má uživatel v operačním systému nastavený jazyk češtinu, HTTP požadavek říká serveru, že preferuje českou verzi obsahu. Tato informace je zajímavá především pro servery s velkou návštěvností, které plánují přidat jazykovou mutaci. Tuto informaci je také možno kombinovat spolu s polohou návštěvníka a tak odhadovat kolik procent uživatelů ze kterých oblastí hovoří daným jazykem.
 
 
-%\subsubsection{Prohlížeče a jejich verze}
+\subsubsection{Prohlížeče a jejich verze}
 
 Podíly jednotlivých prohlížečů se mění podle zaměření stránek a zeměpisných podmínek. Na stránkách o technologiích Microsoftu se dá očekávat vyšší podíl Internet Exploreru\footnote{Internetový prohlížeč od Miscrosoftu}, na stránkách o vaření se zase mohou objevovat vyšší podíly starých prohlížečů. Každý web by měl fungovat pod většinou prohlížečů, pokud se však jedná o stránku o nových technologiích, kde převažují moderní prohlížeče, může se majitel rozhodnout o využití moderních vlatností těhto prohlížečů.
 
-Na druhou stranu na stránkách s vysokým podílem starých prohlížečů se dá očekávat, že uživatelé stránky zobrazují na starých počítačích a tak je třeba tomu přizpůsobit obsah stránky, aby bylo prohlížení bezproblémové a plynulé.
+Na druhou stranu na stránkách s vysokým podílem starých prohlížečů se dá očekávat, že uživatelé stránky zobrazují na starých počítačích a tak je třeba tomu přizpůsobit obsah stránky tak, aby bylo prohlížení plynulé a bezproblémové.
 
-%%\subsubsection{Možnosti HTTP a JavaScripu}
+\subsubsection{IP adresa}
 
-Většina těhto informací se dá zjistit jak pomocí JavaScriptu na straně klienta, tak pomocí HTTP protokolu na straně serveru.
+Podle IP adresy návštěvníků se zjišťuje jejich poloha a zobrazuje se pomocí jednoduché mapy. Na obrázku \ref{img:analytics-map} je ukázka takové mapy, která znázorňuje počet návštěv pro Ameriku. Jendá se o statiskiku pro rozšíření do prohlížeče Google Chrome. Jelikož se jdná o rozšíření pro technické typy, lze usuzovat, že takoví se vyskytují v Kalifornii (tmavě zelená vlevo) a New Yorku.
 
-V sekci ~\ref{sec:moznosti} je tabulka porovnání toho, co je možno měřit oběma metodami. Všechny následující informace vznikají přímo v prohlížeči a jediný způsob, jak se dají měřit je JavaScriptem.
-
-
-%\subsubsection{Události v prohlížeči}
-
-Událostí je myšlen klik na tlačítko, psaní do textového pole, skrolování na stránce, dokonce i pohyb myší a změna velikosti prohlížeče. Jedná se o interakci uživatele se stránkou - ta probíhá v rámci prohlížeče na straně uživatele a tudíž není ji možno měřit jinak, než na straně uživatele.
-
-K sběru dat na straně uživatele se používá JavaScript, který v určitých intervalech posílá tyto informace na server třetí strany, která je vyhodnocuje a smysluplně zobrazuje.
-
-Tato čás popisuje jednotlivé události a jaké mají využití ve webové analytice.
+\begin{figure}[hp]
+	\centering
+	\includegraphics[width=14.25cm]{img/map-analytics.pdf}
+	\caption{Google Analytics - návštěvy podle zemí}
+	\label{img:analytics-map}
+\end{figure}
 
 
 
+\subsection{Sběr dat pomocí JavaScriptu}
+
+Většina těhto informací se dá zjistit jak pomocí JavaScriptu na straně klienta, tak pomocí HTTP protokolu na straně serveru. Tato kapitola popisuje ty, které se dějí uvnitř prohlížeče a není je tedy možno měřit analýzou logovacích souborů.
+
+Událostí v prohlížeči je třeba klik na tlačítko, psaní do textového pole, skrolování na stránce, dokonce i pohyb myší a změna velikosti prohlížeče. Jedná se o interakci uživatele se stránkou - ta probíhá v rámci prohlížeče na straně uživatele a tudíž není ji možno měřit jinak, než na straně uživatele.
+
+K sběru dat na straně uživatele se používá JavaScript. Jedná se o skriptovací jazyk a kromě jména nemá nic společného s jazykem Java. Pomocí tohoto jazyka jsou v prohlížeči veškeré události zachyceny, zaznamenány a zpracovány.
+
+\subsubsection{Klání myší}
+
+Klikání myší na stránce způsobuje přechod na jinou stránku, nebo spuštění nějaké funkce. Pokud by se jednalo pouze o odkaz na jinou stránku, vystačili bychom si s analýzou logových souborů. Stránky však často obsahují akticní prvky, které nepožadují novou stránku, ale mění pouze část stránky. 
+
+Například fotoalba umožňují větší náhled obrázku bez nutnostni přejít na novou stránku. Takovou událost je ale možno zachytit a zpracovat. Podobně ani odchozí odkazy nezpůsobují požadavek na náš server, na kterém bychom mohli provést analýzu logovacího souboru. 
+
+Odkaz, který vede na stránku na jiném serveru, totiž nezpůsobí požadavek na náš server a je nutné ho zaznamenat už při události kliknutí v prohlížeči. Takovému odkazu, u kterého návštěvník opouští naší stránku říkáme takovému odchozí. 
+
+Provozovatele serveru může zajímat, kam z jeho stránky návštěvníci odcházejí. Autora článku zajímá, které odkazy z jeho článku jsou nejzajímavější pro jeho čtenáře.
 
 
-
-Klikání myší je na stránce způsobuje přechod na jinou stránku, spuštění nějaké funkce, nebo nic, pokud uživatel klikl v místě, kterému není přiřazená žádná funkce.
-
-\begin{comment}
-Událost kliku na stránce poskytuje tyto informace:
-
-\begin{itemize}
-	\item pozici myši na stránce v okamžiku kliku
-	\item objeckt, na který bylo kliknuto
-	\item stav kláves ctrl, shift a alt v okamžiku kliku
-	\item tlačítko kliknutí (levé, pravé, prostřední a kombinace)
-\end{itemize}
-\end{comment}
-
-{\bf Interakce s aktiviními prvky} na stránce. V dnešní době obsahují stránky aktivní prvky, například fotoalba umožňují větší náhled obrázku bez nutnostni přejít na novou stránku. Protože tento náhled nezpůsobí zobrazení nové stránky, nevznikne ani nový záznam návštěvy stránky a většina nástrojů pro webovou analytiku tuto skutečnost nezaznamenávají.
-
-{\bf Odchozí odkazy}. Odkaz, který vede na stránku na jiném serveru, říkáme takovému odkazu odchozí. Provozovatele serveru může zajímat, kam z jeho stránky návštěvníci odcházejí. Autora článku zajímá, které odkazy z jeho článku jsou nejzajímavější pro jeho čtenáře.
-
-Sledování {\bf odkazů na soubory} umožňuje získat podobný přehled jako odchozí odkazy. Zatímco analýza logových souborů sleduje stahování souborů na serveru, sběr dat na straně klienta tuto informaci získá, když uživatel klikne na odkaz.
-
-Ze všech kliků na stránce se navíc sestavují takzvané heatmapy\footnote{Heatmapy zobrazují TODO, viz sekce TODO}
-
-
-
-
+\subsubsection{Pohyb myši}
 
 Pohyb myši na stránce není kritický faktor, který je třeba sledovat na všech webech jako například kliky myší. Samy o sobě nemají velkou vypovídají hodnotu, existují však nástroje, které je těhto informací dokážou využít.
 
-Agregace pohybů myší se využívá ke konstrukci heatmap. Účel heatmap je graficky znázornit, kterým částem webové stránky se dostává nejvíce pozornosti, ty se zobrazují teplými barvami (žlutá, červená), místa kterým se nedostává pozornost jsou naopak laděny do studeých barev (zelená, modrá). Více o heatmapách v sekci\ref{sec:Heatmaps}
+Agregace pohybů myší se využívá ke konstrukci heatmap. Účel heatmap je graficky znázornit, kterým částem webové stránky se dostává nejvíce pozornosti, ty se zobrazují teplými barvami (žlutá, červená), místa kterým se nedostává pozornost jsou naopak la\-dě\-ny do studeých barev (zelená, modrá).
 
-
-Druhým zcela pdlišným způsobem využití znalosti o pohybu myši je mouse-tracking. Tato technika kombinuje sledování kliků a pohybů myši a tak pořizuje záznam o uživatelově činnosti na stránce. Jedná se o velmi specifickou techniku, která se používá k testování stránek ještě dřív, než se uvolní na veřejnost, nebo k optimalizaci těch částí stránky, kde dochází ke sledované konverzi\footnote{Konverze TODO}. Příklad apliakce mouse-trackingu ke sledování konverze je například v proces dokončení objednávky elektronickém obchodě.
-
+Jiným využití znalosti o pohybu myši je mouse-tracking. Tato technika kombinuje sledování kliků a pohybů myši a tak pořizuje záznam o uživatelově činnosti na stránce. Jedná se o velmi specifickou techniku, která se používá k testování stránek ještě dřív, než se uvolní na veřejnost, nebo k optimalizaci těch částí stránky, kde dochází ke sledované konverzi\footnote{Konverze TODO}. Příklad apliakce mouse-trackingu ke sledování konverze je například v proces dokončení objednávky elektronickém obchodě.
 
 
 
+\subsubsection{Stisky kláves}
 
 Události používání kláves se používá nejčastěji ve spojení s mouse-trackingem (viz Pohyb myši) k testování uživatelské zkušenosti, nebo k optimalizalizaci objednávkových formulářů v podobných situacích.
 
@@ -546,30 +531,31 @@ Událost skrolování stránky nastává když uživatel posouvá stránku nahor
 V kombinací s velikostí vnítřní části okna prohlížeče se dá přesně uričit, na kterou část stránky se uživatel dívá. Toho se například využívá k vykreslení heatmapy, která kolik času uživatelé věnují jednotlivým částem stránky. 
 
 
+\subsubsection{Opuštění stránky}
+Odchod ze stránky je událost, která je spuštěna když uživatel přechází na jinou stránku, nebo zavírá okno se stránkou. 
 
-{\bf Odchod ze stránky} je událost, která je spuštěna když uživatel přechází na jinou stránku, nebo zavírá okno se stránkou. 
-
-Tato událost se používá k vypočtení tzv "bounce rate". Bounce rate je procento uživatelů, kteří na stránku přijdou a hned zase odejdou. Takové chování se dá očekávat například, když uživatel něco hledá ve vyhledávači, prohlédne si a vzápětí odchází, protože na první pohled stránka neobsahuje informace, které hledal.
+Tato událost se používá k vypočtení tzv "bounce rate". Jedná se o procento uživatelů, kteří na stránku přijdou a hned zase odejdou. Takové chování se dá očekávat například, když uživatel něco hledá ve vyhledávači, prohlédne si a vzápětí odchází, protože na první pohled stránka neobsahuje informace, které hledal.
 
 Bounce rate je třeba chápat v kontextu s tím, odkud uživatel přichází. Měl by se odlišovat podle zdroje, odkud návštěvník přišel. Například návštěvníci z vyhledávače budou mít odlišný bounce rate, než návštěvníci z odkazujících článků, reklamy, nebo ti, kteří přímo napíší adresu stránky do adresního řádku.
 
+\subsubsection{Rozlišení obrazovky}
 
-Rozlišení obrazovky, stejně jako používaný prohlížeč je informace která vypovídá o návštěvníkovi a zařízení, které používá. Starší monitory mají například poměr stran 4:3, novější zase 16:9 a 16:10. Stejně tak se dá usuzovat, že u nízkých rozlišení moderních úhlopříček se bude jednat o netbooky a notebooky. Nejvyšší rozlišení mají nejmodernější dvaceti sedmi palcové monitory, a ještě větší rozlišení jako je 3200x1200 znamená, že má uživatel dva monitory, konkrétně s rozlišením 1920x1200 a 1280x1024.
+Rozlišení obrazovky je informace která vypovídá o návštěvníkovi a zařízení, které po\-u\-ží\-vá. Starší monitory se například poznají tím, že mají poměr stran 4:3. ty novější zase 16:9 a 16:10. Stejně tak se dá usuzovat, že u pokud je rozlišení nízké, ale zároveň se jedná o širokoúhlý monitor, může se jednat o netbooky, nebo notebooky.
+
+Nejvyšší rozlišení mají nejmodernější dvaceti sedmi a třiceti-palcové monitory. Ještě větší rozlišení jako je 3200x1200 znamená, že má uživatel více, než jeden monitor. V případě 3200x1200 se může jednat o monitory s rozlišením 1920x1200 a 1280x1024, tedy sedmnáct, až devatenáctipalcový a dvacetičtyřpalcový monitor vedle sebe.
 
 
-Velikost viewportu TODO
+%Velikost viewportu TODO
 
 
-(zobrazení stránek, jako analýza logů)
+%(zobrazení stránek, jako analýza logů)
  
 
 
   
-  
+\begin{comment}
 \subsubsection{Možnosti logfile analýzy a page-taggingu}
 \label{sec:moznosti}
-
-\begin{comment}
 \begin{tabular}{ l c c }
 informace 				& logfile analýza & page-tagging \\ 
 \hline
@@ -591,36 +577,33 @@ zobrazená část stránky	& $\circ$	& $\bullet$ \\
 \bigskip
   
 
+\begin{comment}
+\clearpage
 \subsection{Interpretace dat}
 
-Přidaná hodnota analytických nástrojů spočívá v interpretaci nasbíraných dat. Většina údajů, podle kterých se orientujeme vzniká kombinací několika událostí, nebo informací.
+Přidaná hodnota analytických nástrojů spočívá v nejen ve správném sběru, ale i v interpretaci nasbíraných dat. Většina údajů, podle kterých se orientujeme vzniká kombinací několika událostí, nebo informací.
+\end{comment}
 
-Díky cookies\footnote{Do tzv. Cookie je možno uložit uživateli zhruba 4096 znaků a internetový prohlížeč se o tuto hodnotu stará.} je možné sledovat návštěvnka stránky. Při první návštěvě se návštěvníkovi uloží do cookies jeho unikátní identifikátor a lze tak při příští návštěvě identifikovat, že se jedná o stejného návštěvníka. Označování návštěvníků umožňuje zjistit například počet unikátních návštěvníků. Přesto, že někteří uživatelé si Cookie ručně mažou, většina to nedělá a počet unikátních návštěvníků se dá pokládat za relativně přesný.
+\subsubsection{Cookies}
 
-Označování uživatelů umožňuje také sledovat počet návštěv. Pokud uživatel stráví pět minut prohlížením stránek, zavře stránku a pak se za dvě hodiny vrátí, vyhodnocuje se to jako dvě návštěvy.
+Díky cookies\footnote{\url{http://www.jakpsatweb.cz/enc/cookies.html}} je možné rozpoznat návštěvnka stránky. Při první návštěvě se ná\-vště\-vní\-ko\-vi uloží do cookies jeho unikátní identifikátor a lze tak při příští návštěvě říct, že se jedná o stejného návštěvníka. Označování návštěvníků umožňuje zjistit například počet uni\-kát\-ních návštěvníků. Přesto, že někteří uživatelé si cookies ručně mažou, většina to nedělá a počet unikátních návštěvníků získaný pomocí cookies lze pokládat za relativně přesný.
+
+Označování uživatelů umožňuje také sledovat počet návštěv. Pokud uživatel stráví pět minut prohlížením stránek, zavře stránku a pak se za dvě hodiny vrátí, říkáme, že šlo o dvě návštěvy.
 
 Dlouhodobé opakování návštěv označujeme jako loajalitu návštěvníků. Stránky, které mají tuto hodnotu vysokou mají stabilní bázi návštěvníků, kteří si tam zvykli pravidelně chodit. Tato hodnota je důležitá pro informační servery, elektronické obchody, blogy, fóra a komunitní stránky.
 
-{\bf Doba strávená na stránce}
+%{\bf Doba strávená na stránce}
+%\bigskip
 
-\bigskip
 
-Podle IP adresy návštěvníků se zjišťuje jejich poloha a zobrazuje se pomocí jednoduché mapy. Na obrázku \ref{img:analytics-map} je ukázka takové mapy, která znázorňuje počet návštěv pro Ameriku. Jendá se o statiskiku pro rozšíření do prohlížeče Google Chrome. Jelikož se jdná o rozšíření pro technické typy, lze usuzovat, že takoví se vyskytují v Kalifornii (tmavě zelená vlevo) a New Yorku.
+%\bigskip
 
-\begin{figure}[hp]
-	\centering
-	\includegraphics[width=14.25cm]{img/map-analytics.pdf}
-	\caption{Google Analytics - návštěvy podle zemí}
-	\label{img:analytics-map}
-\end{figure}
 
-\bigskip
+\subsubsection{Tepelné mapy}
 
-Na obrázku \ref{img:heatmap-bing-google} je ukázka heatmapy pro stránky výsledků vyhledávačů Google a Bing. Vstupními daty pro vytvoření takových interpretací jsou v ideálním případě data získaná pomocí sledování očních pohybů návštěvníků pomocí speciální kamery. Takovéto testování je možnos provádět pouze v laboratoři a s potřebným vybavením.
+Na obrázku \ref{img:heatmap-bing-google} je ukázka heatmapy pro stránky výsledků vyhledávačů Google a Bing. Vstupními daty pro vytvoření takových interpretací jsou v ideálním případě data získaná pomocí sledování očních pohybů návštěvníků pomocí speciální kamery. Takovéto tes\-to\-vá\-ní je možnos provádět pouze v laboratoři a s potřebným vybavením.
 
-Mimo laboratoř je možno takové obrázky vygenerovat z pohybů myší a klikání návštěvníků stránky. Cílem heatmap je odhalit, kterým částem stránky se dostává více pozornosti. Na obrázku \ref{img:heatmap-bing-google} je vidět, že uživatelé vyhledávače Bing věnují pozornost levému sloupečku. 
-
-Testované rozložení stránky vyhledávače Google žádný levý sloupeček nemělo a uživatelé nevěnovali pozornost odkazům pro hledání obrázků a další alternativám. Možná proto má dnes vyhledávač google tyto odkazy nalevo, hned vedle výsledků vyhledávání.
+Mimo laboratoř je možno takové obrázky vygenerovat z pohybů myší a klikání ná\-vště\-vní\-ků stránky. Cílem heatmap je odhalit, kterým částem stránky se dostává více pozornosti. Na obrázku \ref{img:heatmap-bing-google} jsou vidět heatmapy ze studie\footnote{Business Insider: Bing Is Better For Ads Than Google \url{http://www.businessinsider.com/microsoft-bing-has-a-more-ad-friendly-design-than-google-according-to-heatmaps-2009-6}}, která porovnává, kam se uživatelé na obou stránkách nejčastěji dívají.
 
 \begin{figure}[hp]
 	\centering
@@ -645,7 +628,7 @@ Teď, když byly nastíněny základy toho, jak webová analytika sbírá a inte
 
 Na počátku, kdy se měřil pouze počet zobrazení stránky, byly tyto nástroje měřítkem popularity stránek. Podle denní návštěvnosti se dalo odvodit, kolik by si měla stránka účtovat za reklamu\footnote{Dnes jsou více rozšířené sytémy, které použadují platbu za počet prokliků a jejich cena se určuje formou aukce. Například AdWords, u nás Sklik.}, většinou formou bannerů. Návštěvnost stránek i dnes určuje cenu reklamy na stránce, PR článků a obecně hodnotu celé stránky.
 
-Když potenciální zákazník klikne na reklamu a dostane se naši stránku, stojí nás to peníze. Ne každý zákazník objedná, nebo jinak vygeneruje zisk. Takže kolik zákazníků, kteří se na naši stránku dostali přes reklamu u nás vlastně nakoupí? A ještě lépe - kolik nás ve výsledku stojí nová objednávka? Na tyto otázky standardně odpovídá napříkald Google Analytics, který je přímo napojen na AdWords\footnote{Pay Per Click reklama od Googlu}.
+Když potenciální zákazník klikne na reklamu a dostane se naši stránku, stojí nás to peníze. Ne každý zákazník objedná, nebo jinak vygeneruje zisk. Takže kolik zákazníků, kteří se na naši stránku dostali přes reklamu u nás vlastně nakoupí? A ještě lépe - kolik nás ve výsledku stojí nová objednávka? Na tyto otázky standardně odpovídá napříkald Google Analytics, který je přímo napojen na AdWords\footnote{Google Adwords \url{http://adwords.google.com}}.
 
 V okamžiku, kdy se na naši stránku dostane uživatel, vstupuje do hry měření konverze. Ta měří poměr návštěv a uskutečněných cílů - například počet objednávek, nebo počet nových emailů v seznamu odběratelů novinek. Konverzní poměr se zvlášť měří u uživatelů, kteří přišli z vyhledávače, přes reklamu anebo sami napsali adresu webové stránky do prohlížeče.
 
@@ -653,7 +636,7 @@ Znalost jednotlivých konverzí a napojení na reklamní systém umžňuje urči
 
 
 
-\bigskip
+%\bigskip
 
 %Optimalizace pro vyhledávače
 
@@ -664,7 +647,7 @@ Návštěvnost z vyhledávačů se dá efektivně měřít i s zjištěním náv
 
 %Split testing
 
-Mocným nástrojem pro optimalizaci webových stránek je split-testování, taktéž zvané A/B testování. Tato technika spočívá v tom, že se vytvoří dvě varianty stránky a a některým uživatelům se zobrazí jedna varianta a některým druhá. Na daných stránkách se pak měří konverze a výsledkem testu je zjištění, která stránka měla větší konverzi.
+Mocným nástrojem pro optimalizaci webových stránek je split-testování, taktéž zvané A/B testování. Tato technika spočívá v tom, že se vytvoří dvě varianty stránky a něk\-te\-rým uživatelům se zobrazí jedna varianta a některým druhá. Na daných stránkách se pak měří konverze a výsledkem testu je zjištění, která stránka měla větší konverzi.
 
 Tímto způsobem se dají optimalizovat stránky, které mají zákazníka přimět k registraci, nákupu, nebo jiné cílové akci. Tato technika umožňuje určit, jaký název produktu bude mít lepší výsledky, alternativní slogany, vzhled produktu, nebo dokonce i cenu produktu. 
 
@@ -682,26 +665,23 @@ Na práci se zákazníky se specializují jiné systémy jako jsou CRM Systémy\
 
 Právě znalost konkrétního zákazníka a práce s ním odlišuje nový analytický produkt od ostatních. V dnešní době sodiálních médií, kdy telefonní operátoři mají teamy lidí, kteří se starají o zákaznickou podporu na sociálních sítích, je kritické mít přehled o svých zákaznících a to zvláště u webových aplikací, kde interakce zákazníka s apliakcí je to, za co nás zákazník platí.
 
-Příští kapitola se věnuje vlastnostem nového nástroje a jejich využití.
-
-
-
 
 
 \subsection{Etická stránka sběru dat}
 
+\begin{comment}
 Problém etiky sběru dat.
 Právní problémy.
 Anonymní vs. neanonymní data.
 Webaplikace vs. webová stránka.
 Zákazník vs. náhodný návštěvník.
 Analogie z fyzického byznysu.
+\end{comment}
 
-
-Záměrné zahalování identity uživatele je argumentováno zachováním soukromí uživatele. Například Google Analytics obsahuje ve smluvním ujednání služeb Google Analytics následující text:
+Záměrné zahalování identity uživatele je argumentováno zachováním soukromí u\-ži\-va\-te\-le. Například Google Analytics obsahuje ve smluvním ujednání služeb Google Analytics následující text:
 
 \begin{quote}
-7.1 Nebudete slučovat (nebo nedovolíte jakékoliv třetí osobě slučování) jakákoli data shromážděná z vaší Website (vašich stránek Website) (nebo website takovéto třetí strany) s jakýmikoliv informacemi identifikujícími osoby, které pocházejí z jakéhokoli zdroje jsoucího částí vašeho užívání (nebo užívání takovéto třetí strany) Služby. Budete splňovat všechny zákony na ochranu dat a soukromí ve spojitosti s vašim používáním Služby a shromažďováním informací od návštěvníků na vašich stránkách website. Na své stránce na viditelném místě zpřístupníte (a budete i dodržovat) vhodnou směrnici o ochraně soukromí.
+7.1 Nebudete slučovat (nebo nedovolíte jakékoliv třetí osobě slučování) jakákoli data shromážděná z vaší Website (vašich stránek Website) (nebo website ta\-ko\-vé\-to třetí strany) s jakýmikoliv informacemi identifikujícími osoby, které pocházejí z jakéhokoli zdroje jsoucího částí vašeho užívání (nebo užívání takovéto třetí strany) Služby. Budete splňovat všechny zákony na ochranu dat a soukromí ve spojitosti s vašim používáním Služby a shromažďováním informací od návštěvníků na vašich stránkách website. Na své stránce na viditelném místě zpřístupníte (a budete i dodržovat) vhodnou směrnici o ochraně soukromí.
 \ldots
 \end{quote}
 
@@ -715,7 +695,7 @@ Aby měl zákazník důvod k pořízení karty, která umožňuje jeho sledován
 
 \begin{quote}
 {\bf Informace, které nám sdělíte, u nás také zůstanou}\\
-Kdybyste nemohli IKEA věřit, nemohli byste v ní ani nakupovat. Z toho důvodu je pro nás ochrana vašich osobních důvodů navýsost důležitá. IKEA nesděluje vaše osobní údaje jiným firmám mimo IKEA. Informace, které nám poskytnete, využívá jen a jen IKEA. Někdy sice nastanou případy, kdy Vaše osobní údaje poskytneme některé z našich divizí v jiné zemi, ale v takových případech používáme všechny dostupné administrativní, technické i fyzické způsoby ochrany dat, abychom zabránili jejich možnému prozrazení, použití, změně či zničení. Stručně řečeno se všemi dostupnými prostředky snažíme chránit vaše osobní údaje před předvídatelným nebezpečím. V některých případech však opravdu musíme některé vaše údaje sdělit jiným společnostem, které pověříme jejich zpracováním, protože od nich chceme, aby vám poskytly určité služby. Zpracování osobních údajů probíhá v těchto případech podle našich pokynů. 
+Kdybyste nemohli IKEA věřit, nemohli byste v ní ani nakupovat. Z toho dů\-vo\-du je pro nás ochrana vašich osobních důvodů navýsost důležitá. IKEA nesděluje vaše osobní údaje jiným firmám mimo IKEA. Informace, které nám poskytnete, využívá jen a jen IKEA. Někdy sice nastanou případy, kdy Vaše osobní údaje poskytneme některé z našich divizí v jiné zemi, ale v takových případech používáme všechny dostupné administrativní, technické i fyzické způsoby ochrany dat, abychom zabránili jejich možnému prozrazení, použití, změně či zničení. Stručně řečeno se všemi dostupnými prostředky snažíme chránit vaše osobní údaje před předvídatelným nebezpečím. V některých pří\-pa\-dech však opravdu musíme některé vaše údaje sdělit jiným společnostem, které pověříme jejich zpracováním, protože od nich chceme, aby vám poskytly určité služby. Zpracování osobních údajů probíhá v těchto případech podle našich pokynů. 
 \end{quote}
 
 Velké společnosti tedy respektují naše soukromí, ale v rámci vlasntí optimalizace se nás snaží získat do svých klubů, které jim umožňují sbírat libovolná data a vyhodnocovat je.
@@ -726,7 +706,7 @@ To, co má lahůdkář v hlavě se ve větším měřítků nazývá Customer Re
 
 \bigskip
 
-Nástroj, kterým se tato diplomová zabývá představuje řešení pro webové aplikace, které mají stovky až tisíce zákazníků, které fungují typicky na základě měsíčního předplatného. V tomto případě je potřeba kombinovat způsoby analýzy dat velkých objemů a pohledu na konkrétní zákazníky. 
+Nástroj, kterým se tato diplomová zabývá představuje řešení pro webové aplikace, které mají stovky až tisíce zákazníků, které fungují typicky na základě měsíčního před\-plat\-ného. V tomto případě je potřeba kombinovat způsoby analýzy dat velkých objemů a pohledu na konkrétní zákazníky. 
 
 Nástroj si klade za cíl podporovat webovou aplikaci od jejích začátků až k dospělosti. Zabývá se celým životním cyklem zákazníků od jejich prvního vstupu na web, přes registraci trial verze, změnu plánu na placený a používání aplikace.
 
@@ -742,7 +722,31 @@ V metafoře výše se je produkt na půl cesty mezi lahůdkářem, který osobn�
 
 \section{Analýza webových aplikací}
 
-Tato kapitola popisuje problém, který známé analytické nástroje zatím neřeší, a konkrétní způsob jeho řešení. Jak již bylo zmíněno v předchozím textu, nástroje pro webovou analytiku nepracují s konkrétními zákazníky a některé dokonce zakazují jakkoli identifikovat uživatele webů.
+Tato kapitola popisuje problém, který známé analytické nástroje zatím neřeší, a konkrétní způsob jeho řešení. Nástroje pro webovou analytiku nepracují s konkrétními zákazníky a některé dokonce zakazují jakkoli identifikovat uživatele webů.
+
+
+
+\subsection{Webové aplikace}
+
+S nástupem webových aplikací se mění i požadavky na analytické nástroje. Do webových aplikací vstupují uživatelská data ať už ve tradiční formě hodnot z formuláře, nebo data, které vznikají samotnou interakcí (například  malování). 
+
+Když tedy uživatel vkládá, nebo vytváří v aplikaci data, je třeba je nějak uložit k tomu, aby mohly být později vyvolána a dalo se s nimi pracovat. Pro tento účel webové aplikace vyžadují způsob, jak unikátně identifikovat uživatele. V praxi to znamená, že se uživatel musí zaregistrovat a potvrdit svou identitu e-mailem\footnote{Stále častější alternativou se stávají identifikační autority jako Facebook, Twitter, nebo OpenId. To umožňuje, že uživatel nemusí vyplňovat email, ani heslo a je přihlášen pomocí jediného kliknutí.}.
+
+Právě to, že je uživatel přihlášen dává nové možnosti vývoje nástrojů pro webobou analytiku. Narozdíl od webových stránek, kde nemůžeme s jistotou určit, zda se jedná o stejného uživatele můžeme podle přihlášení s jistotou tvrdit, že se o jedná o stejného uživatele a víme kterého.
+
+V prostředí, kde je uživatel přihlášen můžeme na data pohlížet zcela jiným způsobem. Vezměme si statistiku počtu návštěv, kterou zpracovává Google Analytics a podává ji hned na hlavní stránce statistik pro daný web. Denní počet návštěv je vypočítán tak, že pokud přijdu na stránku ráno, v poledne a večer, započítá se to jako tři návštěvy. Pro webovou stránku to dává smysl ze dvou důvodů. Zaprvé ze stejného počítače může přijít ráno v poledne a večer úplně jiný člověk a to nelze nijak rozeznat. Zadruhé webové stránky nemají uživatele, ale návštěvníky tudíž dává smysl sledovat návštěvy. 
+
+Na druhé straně jsou aplikace, které mají uživatele a tak dává smysl sledovat používání. Jestli uživatel přijde třikrát denně, nebo jednou a stráví v aplikaci 3x tolik času je hezké vědět, ale není to tak podstatné. Co je podstatné je kolik uživatelů reálně dnes navštívilo aplikaci a kolik v ní strávili času.
+
+Tento rozdíl se nezdá na první pohled až tak markantní. Je třeba si uvědomit, že se jedná o odlišný úhel pohledu a z toho vycházejí odlišné závěry. Například z Google Analytics se dá zjistit, kolik procent návštěv je z mobilních zařízení. 
+
+Řekněme, že mobilní zařízení tvoří 3\% všech návštěv. To není jako mnoho, pra\-vdě\-po\-do\-bně neznamená, že budeme urpavovat naši aplikaci speciálně pro mobilní zařázení. Na druhou stranu, pokud máme 85\% uživatelů, kteří používají free účet a 15\% platících\footnote{Freemium model, spočívá v účtech zdarma a placených, které poskytují něco navíc.}, mohou tři procenta znamenat až 20\% platících uživatelů. Pokud máme více, než jeden placený tarif, například basic (\$19), gold (\$49) a platinum (\$199). V takovém případě bude velmi důležité vědět, kolik z našich 3\% je ve kterém tarifu.
+
+Některé věci, které jsem popsal Google Analytics umožňuje. Je pouze na uživateli, aby si svoje Analytics co nejlépe nastavil a svou aplikaci opatřil příslušným nastavením, které umožní sledovat zajímavé údaje o uživateli.
+
+Tento univerzální přístup ovšem znamená, že co si užiavtel sám neudělá, to nemá. Další omezení spočívá v tom, že Analytics zakazuje identifikovat uživatele.
+
+Tato situace mě motivovala k vývoji nástroje, který je výhradně zaměřen na analytiku webových aplikací s důrazem na práci s uživateli. Nejedná se pouze o přesnění výsledků, jde o to zaměřit se na zákazníky a nikoliv na průměrná čísla.
 
 
 
@@ -762,7 +766,7 @@ V okamžiku, kdy se produkt dostává k většímu počtu uživatelů, není mo�
 V tomto okžamžiku nastupuje nový nástroj, který si klade za cíl poskytovat podporu pro práci se zákazníkem a životním cyklem zákazníků.
 
 
-\subsection{Popis řešení} % co to bude umět
+\subsection{Životní cyklus návštěvíka} % co to bude umět
 
 Životní cyklus zákazníka je možné rozdělit chronologicky do čtyř částí. Akvizice, Uživatel, Zákazník a konec využívání aplikace. Každá fáze má své specifika a vyžaduje si trochu odlišný přístup, protože nás v ní zajímá něco jiného.
 
@@ -777,7 +781,7 @@ V tomto okžamžiku nastupuje nový nástroj, který si klade za cíl poskytovat
 
 Ještě než se z návštěvníka stane uživatel musí přijít na webovous stránku aplikace, kde se informuje o aplikaci. Většina nástrojů v této fázi dokáže identifikovat odkud uživatel přišel a dokáže říct, kolik návštěvníků z jakého zdroje se registruje.
 
-Jelikož se konvenční nástroje omezují a unikátně neidentifikují uživatele, je tato funkce pouze jednorázová. To znamená dá se zjistit, že přes reklamní kampaň X přišlo sto návštěvníků a dva se zaregistrovali. Pokud se návštěvník na stránku vrátí a zaregistruje se až další den, nástroje to nezaznamenají kvůli anonymizaci dat.
+Jelikož se konvenční nástroje omezují a unikátně neidentifikují uživatele, je tato funkce pouze jednorázová. To znamená dá se zjistit, že přes reklamní kampaň X přišlo sto ná\-vště\-vní\-ků a dva se zaregistrovali. Pokud se návštěvník na stránku vrátí a zaregistruje se až další den, nástroje to nezaznamenají kvůli anonymizaci dat.
 
 Nový nástroj naopak pracuje s uživateli jako s lidmi, ne daty a tak každý uživatel nese informaci o tom, odkud poprvé přšel a kdy se zaregistroval. To znamená, že je možno zpětně zjistit ze kterých kampaní vzniklo nejvíce placených zákazníků globálně a ne jednorázově.
 
@@ -793,7 +797,7 @@ U trial modelu mohou uživatelé používat všechny možnosti aplikace v rámci
 
 Cílem freemium modelu je nabídnout něco, co uživatelé začnou používat zdarma a časem přejdou na placenou verzi. Tento model se liší hlavně v tom, že uživatelé používají nějakým způsobem omezenou verzi. Zde se opakuje to, že není jisté, že uživatelé začnou platit, podobně jako u trial verze.
 
-Motivace platících a neplatících uživatelů se liší. Někteří uživatelé pouze hledají možnost, jak zdarma vyřešit svůj problém a nemají zájem o prémiové funkce aplikace, jiní aplikaci jenom zkoušejí a časem si najdou jinou, nebo aplikaci sice používají, ale není pro ně tak podstatná, aby za ni platili.
+Motivace platících a neplatících uživatelů se liší. Někteří uživatelé pouze hledají mo\-žnost, jak zdarma vyřešit svůj problém a nemají zájem o prémiové funkce aplikace, jiní aplikaci jenom zkoušejí a časem si najdou jinou, nebo aplikaci sice používají, ale není pro ně tak podstatná, aby za ni platili.
 
 Neplatící uživatelé jsou ti, kteří projevili zájem o produkt, ale ještě se nestali platícími zákazníky. U freemium modelu tato skupina početně převažuje platící uživatele zhruba 10:1 a je nutno na ní pohlížet zvlášť.
 
@@ -813,7 +817,7 @@ Další podskupinou, o kterou je třeba se zajímat jsou noví zákazníci. Ti b
 
 Je také třeba sledovat, zda uživatelé, kteří začali platit produkt používají a v případě že ne, oslovit je a zjistit proč. Je možné, že produkt nepochopili, nebo třeba nevyhovuje jejich účelům. Někteří dokonce mohli zapomenout, že prosukt začli používat (pokud se to ještě nestalo jejich zvykem). Takto je možné získat nedocenitelnou zpětnou vazbu, podle které je možno upravit prezentaci produktu, doplnit sekci "Často kladené otázky", nebo upravit produkt tak, aby sám naučil uživatele, jak ho mají používat. 
 
-Takto lze dlouhodobě snížit počet zákazníků, kteří produkt opouští. Nejen, že si udržíme víc zákazníků, ale získáme přidanou hodnotu pro náš produkt, podle toho jak ho upravíme, aby se dobře a jednoduše používal.
+Takto lze dlouhodobě snížit počet zákazníků, kteří produkt opouští. Nejen, že si u\-dr\-ží\-me víc zákazníků, ale získáme přidanou hodnotu pro náš produkt, podle toho jak ho upravíme, aby se dobře a jednoduše používal.
 
 
 
@@ -839,23 +843,10 @@ Tímto končí životní cyklus zákazníka a popis motivace k vývoji nového n
 
 
 
-\subsection{Nástroj}
-
-\begin{comment}
-Demonstrovat na příkladu.
-Popis řešení.
-Co se bude měřit a proč.
-Co nástroj dělá a proč.
-Co nástroj nedělá a proč ne.
-Pro koho je nástroj určen.
-Existuje nějaký podobný nástroj?
-Proč takový nástroj ještě neexistuje?
-(implementujou si in house řešení tohoto problému)
-\end{comment}
+\subsection{Vlastnosti nástroje}
 
 
-
-Tato podkapitola se věnuje tomu, co nový nástroj dělá, proč a jak. Jak bylo řečeno v minulé části, nástroj se zaměřuje v první řadě na uživatele a podporuje čtyři fáze jejich životního cyklu: návštěvník, uživatel, zákazník a bývalý zákazník, nebo uživatel.
+Tato podkapitola se věnuje tomu, co nový nástroj dělá, proč a jak. Zaměřuje se v první řadě na uživatele a podporuje čtyři fáze jejich životního cyklu: návštěvník, uživatel, zá\-kaz\-ník a bývalý zákazník, nebo uživatel.
 
 Tedy přidanou hodnotou produktu je to, že kopíruje životní cyklus uživatele a je úzce zaměřený ná práci s uživateli. Narozdíl od ostatních analytických nástrojů, které jsou neposkytují žádné základní přizpůbosebí pro daný typ aplikace a už vůbec nepracují s konkrétními uživately.
 
@@ -865,7 +856,7 @@ Každá fáze životního cyklu je v nástroji reprezentována jako pohled, kter
 
 \subsubsection{Návštěvníci}
 
-Tento pohled zobrazuje pouze segment návštěvníků. Návštěvníkem myslíme toho, kdo se ještě nezaregistroval do aplikace. V rámci životního cyklu zákazníků je návštěvník chápán jako potenciální uživatel, nebo zákazník. Návštěvník se stane uživatelem v okamžiku, kdy se zaregistruje a zvolí "free" plán u freemium produktu, nebo placený plán s časově omezenou verzí.
+Tento pohled zobrazuje pouze segment návštěvníků. Návštěvníkem myslíme toho, kdo se ještě nezaregistroval do aplikace. V rámci životního cyklu zákazníků je návštěvník chápán jako potenciální uživatel, nebo zákazník. Návštěvník se stane uživatelem v o\-ka\-mži\-ku, kdy se zaregistruje a zvolí "free" plán u freemium produktu, nebo placený plán s časově omezenou verzí.
 
 Návštěvníky můžeme rozdělit na nové a vracející se. Počet nových a vracejících se zákazníků umožňuje určit, zda se o naší stránce dovídá dostatešné množství nových návštěvníků a kolik z nich se po první návštěvě vrací. 
 
@@ -905,7 +896,7 @@ ROI = \frac{(Zisk - Investice)}{Investice} = \frac{(4500 - 1000)}{1000} = 3.5
 
 Google Analytics v tomto ohledu funguje tak, že pokud uživatel přijde přes kampaň, ale zaregistruje se až další den, nepočítají ho vůbec koverze k této kampani\footnote{TODO zdroj}. I s maximální vyvinutou snahou se tyto údaje nedají přesně spočítat, pokud analytický nástroj nepracuje přímo s uživateli.
 
-Pokud nástroj spolupracuje s webovou aplikací, lze vypočítat ROI jednotlivých kampaní pomocí reálných hodnot. Jeho působnost se ale neomezuje pouze na reklamní kamapně, ale na libobolnou formu u které je možno identifikovat zdroj návštěvnosti jako PR články, výměnné odkazy, vyhledávání a sociální sítě.
+Pokud nástroj spolupracuje s webovou aplikací, lze vypočítat ROI jednotlivých kampaní pomocí reálných hodnot. Jeho působnost se ale neomezuje pouze na reklamní kampaně, ale na libobolnou formu u které je možno identifikovat zdroj návštěvnosti jako PR články, výměnné odkazy, vyhledávání a sociální sítě.
 
 \bigskip
 
@@ -924,7 +915,7 @@ Proto je dobré sledovat, zda noví uživatelé produkt používají a případn
 
 Účelem této fáze je, aby si zákazník na produk trochu zvykl a mohl se pak rozhodnout, zda si produkt předplatí, nebo ne. Toto je krásný příklad win-win, kdy benefituje jak zákazník, tak poskytovatel.
 
-Tento pohled se zaměřuje na segment uživatelů a přehled o tom, kolik nových uživatelů se zaregistrovalo, kolik jich přešlo na placený plán v porovnání s dlouhodobým průměrem. Po stránce používání produktu pak poskytuje přehled o tom, jaké funkce produktu uživatelé používají a porovnání s ostatními skupinami.
+Tento pohled se zaměřuje na segment uživatelů a přehled o tom, kolik nových u\-ži\-va\-te\-lů se zaregistrovalo, kolik jich přešlo na placený plán v porovnání s dlouhodobým průměrem. Po stránce používání produktu pak poskytuje přehled o tom, jaké funkce produktu u\-ži\-va\-te\-lé používají a porovnání s ostatními skupinami.
 
 Pohled poskytuje také pokročilou segmentaci uživatelů, podle toho jak dlouho a jak často aplikaci používají na nové zákazníky, pokročilé a ty, kteří aplikaci přestali používat.
 
@@ -937,7 +928,7 @@ V tomho pohledu se navíc zobrazuje u jednotlivých uživatelských skupin měs�
 
 Pokud zákazník poskytuje data o tom, jaké plány zákazníci využívají otevírají se možnosti reálného výpočtu ROI u jednotlivých kampaní a hlubší analýzu zákaznícké báze.
 
-Otevírají se také možnosti, které se blíží systémům pro management vztahů se zákazníkem a vyhodnocování ziskovosti zákazníků v poměru s náklady na zákaznickou podoporu a tak dále. Tyto možnosti jsou potenciálním rošířením nástroje do budoucna, jsou však nad rámec této práce.
+Otevírají se také možnosti, které se blíží systémům pro management vztahů se zá\-kaz\-ní\-kem a vyhodnocování ziskovosti zákazníků v poměru s náklady na zákaznickou podoporu a tak dále. Tyto možnosti jsou potenciálním rošířením nástroje do budoucna, jsou však nad rámec této práce.
 
 
 \subsubsection{Bývalí zákazníci}
@@ -947,13 +938,44 @@ Tento pohled končí životní cyklus zákazníka. Karta s bývalímy zákazník
 Údaje tohoto pohledu poskytují dlouhodobou retrospektivu.
 
 
+
+
+
+
+
+\begin{comment}
+
+Podle sekce motivace.
+
+Jaké možnosti interpretace dat jsou?
+
+Jaké možnosti se hodí?
+
+Jaké možnosti intepretace dat jsme zvolili a proč?
+
+Jaké jsou možnosi segmentace. 
+Jaké jsou možnosti do budoucna.
+
+Možnosti aproximace?
+
+\end{comment}
+
+
+
+
+
+
+\section{Technické řešení}
+
+Tato kapitola popisuje technické řešení aplikace a použité technologie. 
+
+
+
 \subsection{Sběr dat}
 
 Nástoj sbírá data dvojího charakteru. V první řadě jde o interakci s webovou aplikací, podle které se určuje jak často uživatel aplikaci používá a jaké funkce používá. V druhé řadě jde o informace o uživateli, což umožňuje v analytickém nástroji s uživateli dále pracovat.
 
 Zaznamenávání uživatelské interakce s aplikací probíhá ve webovém prohlížeči, který zaznamenává, jak uživatel aplikaci používá pomocí sledování událostí. Pomocí skriptu na straně klienta jsou sledovány jsou kliky myší v jednotlivých částech aplikace. U těch se zaznamenává jejich pozice ve struktuře stránky, která jednoznačně určuje jestli uživatel kliknul na odkaz, tlačítko, nebo jiný element. Tyto data jsou následně odeslána do analytické aplikace, kde jsou zaznamenána do databáze.
-
-\bigskip
 
 \begin{figure}[h]
 	\centering
@@ -964,14 +986,14 @@ Zaznamenávání uživatelské interakce s aplikací probíhá ve webovém prohl
 
 Spolu se zaznamenáváním uživatelovy interakce s aplikací jsou sbírána data, která umožňují segmentoval uživatele podle toho, jeslti jsou přihlášení, registrovaní, nebo jestli se jedná o zákazníky. Identifikace uživatelů spolu s jejich interakcí umožňuje segmentovat jednotlivé uživatele podle toho, jak často s aplikací pracují a dále vyhodnocovat nejpoužívanější funkce aplikace podle jednotlivých skupin uživatelů.
 
-Na obrázku \ref{img:measuring} je obecně zachyceno, jak probíhá komunikace mezi uživatelovým prohlížečem, webovou aplikací a analytickou aplikací.
+Na obrázku \ref{img:measuring} je obecně zachyceno, jak probíhá komunikace mezi uživatelovým pro\-hlí\-že\-čem, webovou aplikací a analytickou aplikací.
 
 
 Měření je založeno na měřícím skriptu, který je vložen do webové aplikace a měření interakce, a zárově poskytuje informace o uživateli. Jelikož se jedná o data uživatele, jsou zašifrována pomocí tajného klíče kryptograficky bezpečným způsobem.
 
 Jelikož je nutné na straně webového serveru bezpečně zašifrovat informace o uživateli, je nutné pro každý jazyk na serveru poskytnout měřící kód v takovém jazyce, který se na serveru používá. Například kód pro jazyk PHP vypadá následovně:
 
-\begin{lstlisting}[label=src:neco,language=PHP, caption=Měřící kód na straně serveru]
+\begin{lstlisting}[label=src:neco,language=PHP, caption=Měřící kód na straně serveru (PHP)]
 $measuring = new UseDrivenMeasuring("chYmaXapl6Gl1VfRbGWfNA==");
 echo $measuring->code(array(
     "id" => 0,
@@ -1002,11 +1024,14 @@ Zašifrované informace o uživateli jsou nečitelné třetí stranou a není je
 
 Po načtení stránky do prohlížeče je pomocí měřícího kódu dodatečně nahrán skript, který umožňuje samotné měření. Tento postup kopíruje běžně používaný způsob měření. Výhodou tohoto způsobu je především možnost měnit měřící skript bez nutnosti zásahů zeč strany provozovatele webového serveru.
 
-Během toho, kdy uživatel pracuje s webovou aplikací měřící skript zaznamenává interakci a ukládá ji do cookie. Jak již bylo řečeno, jedná se primárně o to, které prvky aplikace uživatel používá. Zaznamenávají se jednotlivé kliky na prvky na stránce, spolu s jejich pozicí v hierarchii dokumentu.
+Během toho, kdy uživatel pracuje s webovou aplikací měřící skript zaznamenává interakci a ukládá ji do cookie. Jedná se primárně o to, které prvky aplikace uživatel používá. Zaznamenávají se jednotlivé kliky na prvky na stránce, spolu s jejich pozicí v hierarchii dokumentu.
 
 V okamžiku, kdy je v cookie několik událostí, posílá měřící skript nasbíraná data analytické aplikaci spolu se zašifrovanými informacemi o uživateli. Agregace událostí umožňuje snížit počet interakcí s analytickým serverem několikanásobně a tak snížit náklady na provoz.
 
 Po přijetí dat na serveru je ověřena jejich autenticita pomocí zašifrovaného kódu. Pokud kód souhlasí jsou data jsou zaznamenána a později analyzována.
+
+
+
 
 
 
@@ -1017,41 +1042,71 @@ Nasbíraná data je nutno nějak zpracovat a interpretovat. Způsob zpracování
 
 Pro zvolenou metodu musí být také dostatečně jednoduché definovat nová pravidla, která data vyhodnocují. Z těchto důvodu byla vytvořena obecná forma zpracování dat jedoduchým průchodem, který umožňuje zpracovávat data po částech. Každé pravidlo, které generuje statistiku pracuje s proudem nasbíraných dat tak že navštěvuje každou událost a systém se dále nestará co s daty dělá.
 
-
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=9.5cm]{img/zpracovani_2.pdf}
+	\includegraphics[width=8cm]{img/zpracovani_2.pdf}
 	\caption{Schéma proudového zpracování dat}
 	\label{img:measuring}
 \end{figure}
 
 Výstupem pravidel jsou dvou, nebo třírozměrné data, které jsou jednotně uložena do databáze. To umožňuje po nějaké stanovené době se zcela zbavit původních dat a ponechat si pouze z nich vyrobené statistiky, které zabírají méně místa v databázi. Po přidání nových pravidel je také možno získat jejich výsledky zpracováním dat, která již byla zpracována.
 
-Jelikož je výstup zpracovaných dat v normovaném tvaru, je mžono z nich jednoduše vytvřit různé grafy a do budoucna nechat uživatele systému vytvářet vlastní grafy a přehledy.
+Obrázek \ref{img:metric_counter} znázorňuje třídní diagram pro třídy, které produkují veškeré statistiky. Využívám v tomto případě návrhový vzor visitor spolu s metodami, které zajišťují přetrvání stavu počítání tak, aby ho bylo ukončit a pokračovat později.
+
+
+\begin{figure}[h]
+	\includegraphics[width=15.25cm]{img/code/MetricCounter.pdf}
+	\caption{Třídní diagram metrik}
+	\label{img:metric_counter}
+\end{figure}
+
+
+
+
 
 
 \begin{comment}
 
-Podle sekce motivace.
+\subsection{Struktura aplikace}
 
-Jaké možnosti interpretace dat jsou?
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img/code/MyController.pdf}
+	\caption{Diagram dědičnosti controllerů}
+	\label{graph:my_controller}
+\end{figure}
 
-Jaké možnosti se hodí?
+\e{comment}
 
-Jaké možnosti intepretace dat jsme zvolili a proč?
 
-Jaké jsou možnosi segmentace. 
-Jaké jsou možnosti do budoucna.
 
-Možnosti aproximace?
 
+
+
+
+
+
+
+
+
+\begin{comment}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=15cm]{img/code/TestCase.pdf}
+		\caption{Testy aplikace}
+		\label{graph:test_case}
+	\end{figure}
 \end{comment}
 
 
 
-\subsection{Technické zázemí}
 
-Jako platformu pro implementaci nástroje byl zvolen Google AppEngine. Jedná se službu, která je provozována společností Google od roku 2008 a vznikla jako platforma pro vývoj webových aplikací. Jedná se o službu typu Sofwtare as a Service, která poskytuje škálovatelné výpočetní zdroje a zároveň sofwtarovou platformu pro vývoj aplikací.
+
+\clearpage
+
+\subsection{Použité technologie}
+
+Jako platformu pro implementaci nástroje byl zvolen Google AppEngine. Jedná se službu, která je provozována společností Google od roku 2008 a vznikla jako platforma pro vývoj webových aplikací. Jedná se o službu typu Sofwtare as a Service, která poskytuje šká\-lo\-va\-tel\-né výpočetní zdroje a zároveň sofwtarovou platformu pro vývoj aplikací.
 
 Díky tomu, že AppEngine poskytuje vlastní platformu pro vývoj software, umožňuje maximálně využít potenciál cloud computingu. Díky tomu, že sleduje vytížení aplikace, je schopný v okamžiku zvýšení zátěže nastartovat nové instance apliakce, které pak postupně vypíná, když zátěž klesně. Většina operací v aplikaci jsou ve skutečnosti voláním API a ty zase může zpracovávat jiný stroj, s menší zátěží. 
 
@@ -1074,32 +1129,64 @@ Vždy zapnuto					& N/A (denně)			& \$0.30 \\
 
 Na Google AppEngine je možno programovat v Pythonu, nebo v Javě. Prostřednictvím Javy je pak možno na AppEngine provozovat aplikace napsané v libovolném jazyce, který se do Javy kompiluje, nebo je v javě napsanán. Mezi ty populární patří například JRuby (Ruby pro Javu), Groovy (dynamická java), Scala, JavaScript, Closure. 
 
-Já jsem si zvolil jazyk Mirah, který je poměrně nový a kompiluje se do Java bytekódu. Oproti ostatním jazykům má velkou výhodu v tom, že nevyžaduje žádnou runtime library. Filosofie Mirah je posktnout krásnější syntaxi pro psaní Javy spolu s jednodušším a kratším zápisem. Mirah má "pod kapotou" čistou Javu a nic víc a jde o jazyk s identikým výkonem jako má Java.
+Já jsem si zvolil jazyk Mirah, který je poměrně nový a kompiluje se do Java bytekódu. Oproti ostatním jazykům má velkou výhodu v tom, že nevyžaduje žádnou runtime library. Filosofie Mirah je použít syntaxi inspirovanou jazykem Ruby pro psaní Javy. Mirah má "pod kapotou" čistou Javu a nic víc a jde o jazyk s identikým výkonem jako má Java. Na výpisech \ref{src:fib_java} a \ref{src:fib_mirah} je možno porovnat jak se oba jazyky liší.
 
 
 
-\begin{lstlisting}[label=src:fib_java,caption=Fibonacciho posloupnost v Javě]
-public class Fibonacci {
-  public static int fib(int n) {
-    if (n < 2) {
-      return n;
-    } else {
-      return fib(n-1) + fib(n-2);
-    }
-  }
-}
+\begin{lstlisting}[label=src:fib_java,caption=Hello World servlet v Javě]
+public class Controller extends HttpServlet {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name = "stranger";
+		if (request.getParameter("name")) {
+			String name = request.getParameter("name");
+		}
+		String welcomeMessage = "Welcome "+name+"!";
+		response.setContentType("text/html");
+ 
+		PrintWriter out = response.getWriter();
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>A very simple servlet example</title>");
+		out.println("</head>");
+		out.println("<body>");
+		out.println("<h1>"+welcomeMessage+"</h1>");
+		out.println("<form>Input your name and hit OK:");
+		out.println("<input type=\"text\" name=\"\"/>");
+		out.println("<input type=\"submit\" value=\"OK\"/></form>");
+		out.println("</body>");
+		out.println("</html>");
+		out.close();
+	}
+} 
 \end{lstlisting}
 
-Na výpisech \ref{src:fib_java} a \ref{src:fib_mirah} je možno porovnat jak se oba jazyky liší. Jazyk Mirah považuje kontrolní strukturu IF za výraz a implicitně vrací jeho hodnotu. Má také podstatně kratší zápis a další drobné vylepšení, které vychází z jazyka Ruby.
 
-\begin{lstlisting}[label=src:fib_mirah,caption=Fibonacciho posloupnost v Mirah,language=Ruby]
-def fib(a:int) 
-  if a < 2 
-    a 
-  else 
-    fib(a-1) + fib(a-2) 
-  end 
-end 
+
+\begin{lstlisting}[label=src:fib_mirah,caption=Hello World servlet v Mirah,language=Ruby]
+class Controller < HttpServlet
+	def doGet(request, response):void
+		name = request.getParameter(:name) || "stranger"
+		welcome_message = "Welcome #{name}!"
+		response.setContentType("text/html")
+ 
+		out = response.getWriter
+		out.println <<-HTML
+<html>
+	<head>
+		<title>A very simple servlet example</title>
+	</head>
+	<body>
+		<h1>#{welcome_message}</h1>
+		<form>Input your name and hit OK:
+			<input type="text" name=""/>
+			<input type="submit" value="OK"/>
+		</form>
+	</body>
+</html>
+		HTML
+		out.close
+	end
+end
 \end{lstlisting}
 
 Použitá databáze je Google Datastore, distribuovaný úložný systém, který si Google vyvinul pro vlastní potřeby. Datastore používá technologii BigTable, která je původně navržena pro potřeby Googlu. Podmínkou bylo zvládat obrovské objemy dat, které jsou distrubuovaně uloženy na tísících serverů s replikovanými daty. Na technologii BigTable běží na například Google Finance, nebo Google Earth.
@@ -1108,7 +1195,7 @@ Z hlediska rozdílů návrhu oproti klasické relační databázi neobsahuje dat
 
 Dalším významným rozdílem je absence cizích klíčů a dotazů, které skládají tabulky. Dotazy do databáze jsou také značně zjednodušeny. Například pokud chci vyselektovat uživatele, kteří se zaregistrovali v určitém období mohu v dotazu omezit výsledky pouze z jedné strany a seřadit je podle omezujícího atributu. Během posílání záznamů z databáze pak přestanu požadovat další záznamy, když detekuji překročení maximální hodnotu omezujího atributu.
 
-Datastore tedy tlačí na programátora, aby zjednodušil logiku aplikace a omezil složitost databázového schéma. Veškeré dotazování a třídění záznamů se pak děje pomocí předdefinovaných indexů. Dokud uživatel nedefinuje index, nemůže podle atributu dotazovat, nebo seřazovat záznamy.
+Datastore tedy tlačí na programátora, aby zjednodušil logiku aplikace a omezil slo\-ži\-tost databázového schéma. Veškeré dotazování a třídění záznamů se pak děje pomocí před\-de\-fi\-no\-va\-ných indexů. Dokud uživatel nedefinuje index, nemůže podle atributu dotazovat, nebo seřazovat záznamy.
 
 Na obrázku \ref{img:datastore_indexes} je výpis všech indexů mojí aplikace. AppEngine je sám obhospodařuje a v případě vytvoření nového indexu chvíli trvá, než je dostupný. Informace o zpracování indexu je vidět na obrázku ve žlutém rámečku.
 
@@ -1120,16 +1207,49 @@ Na obrázku \ref{img:datastore_indexes} je výpis všech indexů mojí aplikace.
 \end{figure}
 
 
+\begin{comment}
 Mimo databáze umožňuje AppEngine sdílení správy aplikace, uživatelské role, přehled vytížení, logování, časové spouštění úloh, profiler, statistiky používání databáze a díky tomu, že jazyk Mirah běží se kompiluje do Javy je možno také využít velké množství knihoven pro speciální účely.
-
-
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img/appspot.pdf}
 	\caption{Administrační rozhraní platformy Google Appengine}
-	\label{analog_daily}
+	\label{img:appengine_admin}
 \end{figure}
+
+
+
+\end{comment}
+
+\clearpage
+\subsection{Uživatelské rozhraní}
+
+Při tvorbě uživatelského rozhraní jsem vycházel z toho, na co jsou zvyklí uživatelé Google Analytics. Navigace kopíruje segmentaci statistik na návštěvníky, uživatele a zákazníky. Celkově je rozhraní navrženo tak, aby bylo jednoduché a neuabíralo místo na monitoru grafům a tabulkám.
+
+Pro tvorbu grafů byly použity grafy Google Chart Tools\footnote{Google Chart Tools \url{http://code.google.com/apis/visualization/documentation/using_overview.html}}, které jsou poskytovány zdarma. Vybral jsem je hlavně kvůli dobré dokumentace a množství příkladů na webu.
+
+
+\begin{comment}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img/ud_dashboard_2.pdf}
+	\caption{Hlavní panel aplikace}
+	\label{img:ud_dashboard}
+\end{figure}
+\end{comment}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img/ud_visitors_2.pdf}
+	\caption{Přehled návštěvníků}
+	\label{img:ud_dashboard}
+\end{figure}
+
+
+
+
+
 
 
 
@@ -1163,23 +1283,6 @@ detaily funkce měřícího skriptu (AES)
 \end{comment}
 
 
-
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=15cm]{img/ud_dashboard_2.pdf}
-	\caption{Hlavní panel aplikace}
-	\label{img:ud_dashboard}
-\end{figure}
-
-
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=15cm]{img/ud_visitors_2.pdf}
-	\caption{Přehled návštěvníků}
-	\label{img:ud_dashboard}
-\end{figure}
 
 
 
@@ -1219,11 +1322,11 @@ Byznys model a cílový trh semnohokrát změnily a věříme, že jsme konečn�
 V Chum.ly jsem se zabýval uživatelským rozhraním a mou hlavní prioritou bylo zjednodušit ovládaní aplikace a nejlépe poukázat na vše nadbytečné, co by mohlo být eliminováno. Tento úkol mě inspiroval k tomu abych se začal zabývat tím, jaké funkce aplikace jsou používany, kým a jak často. Z této myšlenky vznikl původní nápad vytvořit aplikaci, která monitoruje použivání jiné webové aplikace na základě znalosti uživatelů.
 
 
-\subsubsection{Spuštění na ostrém serveru}
+\subsection{Spuštění na ostrém serveru}
 
 Aplikace je vyvinuta pro spuštění na platformě Google AppEngine. Jedná ze o takzvaný "PAAS", Platform as a Service. Životní cyklus vývoje aplikace vypadá tak, že je aplikace vyvíjena na lokálním stroji a je pak vypuštěna na server. Samotné spustění na serveru bylo bezproblémové. Prostředí serveru však nekopíruje domácí a proto bylo třeba upravit několik částí aplikace.
 
-Největším rozdílem je množství paměti na serveru, které je omezeno tak, že neumožňuje pracovat s padesáti tisíci záznamy najednou v paměti. Toto bylo nutno upravit, stejně jako omezení na maximální velikost odpovědi serveru na jeden megabajt. Obě tyto omezení jsem překročil, když jsem importovat a exportoval data mezi lokálním počítačem a serverem. Pro export a import jsem tedy vyvinul nástroj, který tato omezení obchází a pracuje s libovolným množstvím dat po částech.
+Největším rozdílem je množství paměti na serveru, které je omezeno tak, že ne\-u\-mo\-žňu\-je pracovat s padesáti tisíci záznamy najednou v paměti. Toto bylo nutno upravit, stejně jako omezení na maximální velikost odpovědi serveru na jeden megabajt. Obě tyto omezení jsem překročil, když jsem importovat a exportoval data mezi lokálním počítačem a serverem. Pro export a import jsem tedy vyvinul nástroj, který tato omezení obchází a pracuje s libovolným množstvím dat po částech.
 
 Omezení paměti a nároky na dlouhodobé zpracování dat po částech dalo vzniknout abstrakci nad sekcenčním zpracováním měřených dat. Umožňuje zpracovávat nové data po libovolně velkých částech, kdykoli přestat a zase začít ve stejném stavu a místě, kde bylo zpracovávání ukončeno. Zavedení abstrakce také podstatně zjednodušilo vytváření nových metrik a logiku aplikace.
 
@@ -1231,23 +1334,27 @@ Nové data tedy aplikace zpracovává po částech pomocí časovaného úkolu, 
 
 Z praktických důvodů také došlo k optimalizaci měřícího skriptu tak, aby odesílal data v dávkách několika událostí najednou. Snížily se tak řádově nároky na procesorový čas na serveru (za který se platí) a tak i cena jeho provozu\footnote{AppEngine poskytuje 6.5 hodin procesorového času denně zdarma, ten jsem ani jednou nepřekročil.}.
 
-Měřící skript byl upraven aby fungoval ve všech běžných prohlížečích, jeho kód byl komprimován\footnote{Komprimace JavaScriptu proběhla pomocí Google Closure Compiler \url{http://code.google.com/closure/compiler/docs/gettingstarted_ui.html}} pro minimální velikost pro co nejrychlejší přenos na stranu klienta. Výhodou platformy AppEngine je v tomto případě i to, že statická data na serveru jsou poskutována pomocí CDN, která zajišťuje co nejlepší dostupnost souborů a tímpádem i měřícího skriptu.
+Měřící skript byl upraven aby fungoval ve všech běžných prohlížečích, jeho kód byl komprimován\footnote{Komprimace JavaScriptu proběhla pomocí Google Closure Compiler \url{http://code.google.com/closure/compiler/docs/gettingstarted_ui.html}} pro minimální velikost pro co nejrychlejší přenos na stranu klienta. Výhodou platformy AppEngine je v tomto případě i to, že statická data na serveru jsou poskutována pomocí CDN\footnote{Content Delivery network \url{http://blog.sallarp.com/google-app-engine-cdn/}}, která zajišťuje co nejlepší dostupnost souborů a tímpádem i měřícího skriptu.
 
-Optimalizace měřícího skriptu je završena kešováním, které ponechává skript v prohlížeči dva dny a nemusí ho po tuto dobu znova nahrávat. Tyto technky jsou běžně využívány měřícími nástroji, které používají měřící skript. Oproti zavedeným nástrojům jako je Google AppEngine je měřící skript velmi malý, lehce přes tisíc znaků. Zatímco sofistikovanjší AppEngine používá skript o délce přes dvacet tisíc znaků.
+Optimalizace měřícího skriptu je završena kešováním, které ponechává skript v pro\-hlí\-že\-či dva dny a nemusí ho po tuto dobu znova nahrávat. Tyto technky jsou běžně využívány měřícími nástroji, které používají měřící skript. Oproti zavedeným nástrojům jako je Google AppEngine je měřící skript velmi malý, lehce přes tisíc znaků. Zatímco sofistikovanjší AppEngine používá skript o délce přes dvacet tisíc znaků.
 
 V průběhu 55 dní, kdy aplikace běžela a sbírala data jsem ji dále vyvíjel a vznikaly tak nové verze. Při nahrávání nových verzí na server se může snadno stát, že se něco pokazí, a aplikace přestane měřit, nebo fungovat. Díky použití platformy AppEngine bych v  takovém okamžiku mohl přepnout aplikaci na předchozí a předejít tak ztrátě dat. Za dobu vývoje jsem takovýto problém naštěstí neměl.
 
 Během běhu aplikace nedošlo k žádným větším problémům. Pouze k krobnostem a jednalo se spíše o poznatky z ostrého provozu, které měly za výsledek zdokonaletí vnitřností aplikace. Získal jsem tím i lepší znalost platofrmy AppEngine, se kterou jsem začal experimentovat zhruba před necelým rokem.
 
 
-\subsubsection{Získaná data}
+\subsection{Získaná data}
 
 Zaznamenávaná data se skládají výhradně z událostí kliknutí na stránce. Každé kliknutí je reprezentováno časem, ve kterém nastalo a umístěním v HTML dokumentu. Po každých pěti až patnácti kliknutích jsou měřícím skriptem data odeslána na server a ten je vyhodnocuje.
 
-Za sledované období padesáti pěti dní bylo zaznamenáno šedesát tisíc kliknutí. Záznamy těhto kliků a a výsledky jejich zpracování v databázi na AppEngine zabraly 24 megabajtů. Na platformě AppEngine je zvlášť platí za místo, čas procesoru a další služby. Spotřeba těhto služeb je uvedena v tabulce \ref{tab:consumption}.
+Za sledované období padesáti pěti dní bylo zaznamenáno šedesát tisíc kliknutí. Zá\-zna\-my těhto kliků a a výsledky jejich zpracování v databázi na AppEngine zabraly 24 megabajtů. Na platformě AppEngine je zvlášť platí za místo, čas procesoru a další služby. Spotřeba těhto služeb je uvedena v tabulce \ref{tab:consumption}.
 
 \bigskip
 
+
+\begin{table}
+	\centering
+	
 \begin{tabular}{p{3.25cm} p{2.5cm} p{2cm} p{2.5cm} p{2cm}}
 zdroj					& jednotka & cena		& čerpání denně	& měsíčně \\
 \hline
@@ -1257,10 +1364,14 @@ Odchozí data			& gigabajt				& \$0.10	& 0.01			& \$0.03	\\
 Uložená data			& gigabajt				& \$0.15	& 0.03			& \$0.135	\\
 \hline
 						& 		 				& 			& 				& \$0.441 \\
-\label{tab:consumption}
 \end{tabular}
+	
+	\caption{Spotřeba zdrojů při měření aplikace Chum.ly na Google AppEngine}	
+	\label{tab:consumption}
+\end{table}
 
-Dlouhodobě bylo v měřené aplikaci denně třicet uživatelů a každý den vzniklo průměrně kolem tisíce kliků. Tato návštěvnost podle tabulky \ref{tab:consumption} generuje měsíčně náklady za 45 centů. Pokud by se jednalo o zákazníka s desetinásobným počtem aktivních uživatelů, bude se jednat o náklady zhruba ve výši čtyř dolarů měsíčně. Z toho vyplývá rámcově jakým způsobem by zákazník za tuto aplikaci měl platit - podle počtu aktivních uživatelů.
+
+Dlouhodobě bylo v měřené aplikaci denně třicet uživatelů a každý den vzniklo prů\-měr\-ně kolem tisíce kliků. Tato návštěvnost podle tabulky \ref{tab:consumption} generuje měsíčně náklady za 45 centů. Pokud by se jednalo o zákazníka s desetinásobným počtem aktivních uživatelů, bude se jednat o náklady zhruba ve výši čtyř dolarů měsíčně. Z toho vyplývá rámcově jakým způsobem by zákazník za tuto aplikaci měl platit - podle počtu aktivních uživatelů.
 
 \begin{figure}[h]
 	\centering
@@ -1335,7 +1446,7 @@ Předpokládám, že u aplikace s řádově vyšším počtem uživatelů by log
 	\label{img:chumly_features_nolog}
 \end{figure}
 
-Známé funkce sledované aplikace také umožňují identifikovat akce provedené uživatelem. Jednotlivé akce, které uživatel dělá se pak shlukují do jednotlivých návštěv. Jelikož výpisy návštěv obsahují informace o tom, co uživatel zhruba dělal, říkám jim příběhy.
+Známé funkce sledované aplikace také umožňují identifikovat akce provedené u\-ži\-va\-te\-lem. Jednotlivé akce, které uživatel dělá se pak shlukují do jednotlivých návštěv. Jelikož výpisy návštěv obsahují informace o tom, co uživatel zhruba dělal, říkám jim příběhy.
 
 \begin{figure}[h]
 	\centering
@@ -1478,11 +1589,11 @@ Cílem práce bylo vytvořit nástroj pro podporu webových aplikací a navržen
 
 % čo som spravil, čo som nespravil
 
-Vytvořil jsem metodu i nástroj, který umožňuje snadno měřit webové aplikace pomocí měřícího vložení skiptu do zákaznické aplikace. Nástroj byl vyvinut pro platformu Google AppEngine v jazyce Mirah a tam byl také nasazen.  Potenciální zákazník, se kterým jsem měl v minulosti dobrý vztah mi umožnil nástroj nasadit na jeho webové aplikaci a měřit ji. Vytvořil jsem abstrakci pro zpracování měřených dat, které mi umožňuje doplňovat nové interpretace a prezentoval jsem výsledky měření.
+Vytvořil jsem metodu i nástroj, který umožňuje snadno měřit webové aplikace pomocí měřícího vložení skiptu do zákaznické aplikace. Nástroj byl vyvinut pro platformu Google AppEngine v jazyce Mirah a tam byl také nasazen.  Potenciální zákazník, se kterým jsem měl v minulosti dobrý vztah mi umožnil nástroj nasadit na jeho webové aplikaci a měřit ji. Vytvořil jsem abstrakci pro zpracování měřených dat, které mi umožňuje do\-pl\-ňo\-vat nové interpretace a prezentoval jsem výsledky měření.
 
 % výhľady do budůcna
 
-Tuto aplikaci jsem vyvinul se záměrem prorazit na americký trh s vlastním produktem pro podporu webových aplikací. Budu pokračovat v jejím vývoji s klíčovými zákazníky a v horizontu několika měsíců chci začít s monetizací.
+Tuto aplikaci jsem vyvinul se záměrem prorazit na americký trh s vlastním produktem pro podporu webových aplikací. Budu pokračovat v jejím vývoji s klíčovými zá\-ka\-zní\-ky a v horizontu několika měsíců chci začít s monetizací.
 
 
 
@@ -1493,13 +1604,20 @@ Tuto aplikaci jsem vyvinul se záměrem prorazit na americký trh s vlastním pr
 
 
 
-
+\begin{comment}
 \bigskip
 \begin{flushright}
 Michal Hantl
 \end{flushright}
+\end{comment}
 
 
+\section{Přílohy}
+
+\begin{enumerate}
+\item \textbf{Kompaktní disk} obsahující elektronickou verze dokumentu, zdrojové kódy a návod k instalaci.
+%TODO doplnit strukturu CD
+\end{enumerate}
 
 
 
@@ -1510,17 +1628,22 @@ Michal Hantl
 \begin{thebibliography}{99}
 
 
-\bibitem{peci2005} Pecinovský, Rudolf,
-\textit{Jak efektivně učit OOP. Tvorba softwaru 2005 – sborník přednášek}, ISBN 80-86840-14-X.
+\bibitem{sterne} Sterne, Jim
+\textit{Social Media Metrics}, Wiley, 2010. ISBN 9780470583784.
 
-\bibitem{peci_trendy} Pecinovský, Rudolf,
-\textit{Současné trendy v metodice výuky programování}, dostupné z url \url{http://gynome.nmnm.cz/konference/files/2006/sbornik/pecinovsky.pdf}.
+\bibitem{kaushik} Kaushik, Avinash
+\textit{Web Analytics 2.0}, Sybex, 2009. ISBN 9780470529393.
 
+\begin{comment}
+Jim Sterne: Social Media Metrics, Wiley (2010), ISBN 9780470583784, 272 stran
+Avinash Kaushik: Web Analytics 2.0, Sybex (2009), ISBN: 9780470529393, 504 stran
 \bibitem{plaminek} Plamínek, Jiří,
 \textit{Tajemství motivace – Jak zařídit, aby pro vás lidé rádi pracovali}, ISBN 80-247-1991-6.
 
 \bibitem{kamarati} Gašparovičová Ľuba, Hvorecký, Josef,
 \textit{Kamaráti Robota Karla}, ISBN 80-06-00421-8.
+\end{comment}
+
 
 \end{thebibliography}
 
