@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  4 MAY 2011 20:33
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  4 MAY 2011 20:35
 entering extended mode
  %&-line parsing enabled.
 **diplomka.tex
@@ -1237,6 +1237,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1680--1682
 ore-[]ad-[]$
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1692--1694
+[]\OT1/ppl/m/n/10.95 Justin Cutroni, \OT1/ppl/m/it/10.95 How Does Google An-a-l
+yt-ics Track Con-ver-sion Re-fer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1692--1694
+\OT1/ppl/m/it/10.95 rals?\OT1/ppl/m/n/10.95 , dos-tupn[]e z url $\OT1/pcr/m/n/1
+0.95 http : / / cutroni . com / blog / 2006 / 11 / 10 /
+ []
+
 [48
 
 ] (./diplomka.aux)
@@ -1262,7 +1274,7 @@ xmf-texlive/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-texlive/fonts
 ic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a.pfb></u
 sr/share/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-te
 xlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (53 pages, 1321308 bytes).
+Output written on diplomka.pdf (53 pages, 1321833 bytes).
 PDF statistics:
  362 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
