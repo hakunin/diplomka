@@ -44,7 +44,6 @@
 \contentsline {subsection}{\numberline {5.1}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } na ostr\IeC {\'e}m serveru}{39}
 \contentsline {subsection}{\numberline {5.2}Z\IeC {\'\i }skan\IeC {\'a} data}{40}
 \contentsline {subsection}{\numberline {5.3}Zhodnocen\IeC {\'\i }}{45}
-\contentsline {subsubsection}{Budouc\IeC {\'\i } v\IeC {\'y}voj a uplatn\IeC {\v e}n\IeC {\'\i }}{45}
-\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{46}
-\contentsline {section}{\numberline {7}P\IeC {\v r}\IeC {\'\i }lohy}{47}
-\contentsline {section}{\numberline {8}Reference}{48}
+\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{47}
+\contentsline {section}{\numberline {7}P\IeC {\v r}\IeC {\'\i }lohy}{48}
+\contentsline {section}{\numberline {8}Reference}{49}

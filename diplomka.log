@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  4 MAY 2011 13:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  4 MAY 2011 14:05
 entering extended mode
  %&-line parsing enabled.
 **diplomka.tex
@@ -1198,22 +1198,34 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [44 <./img/ud_chumly_define_features_blurry_bw.pdf>] [45 <./img/developer_funct
 ions.pdf>]
-Overfull \hbox (3.23221pt too wide) in paragraph at lines 1592--1593
+Overfull \hbox (16.73332pt too wide) in paragraph at lines 1543--1544
+[]\OT1/ppl/m/n/10.95 UseDriven n[]am poskytl n[]ekter[]e velmi u[]zite[]cn[]e s
+tatis-tiky o na[]s[]^^P slu[]zb[]e. Umo[]z[]nuje
+ []
+
+
+Overfull \hbox (13.53615pt too wide) in paragraph at lines 1543--1544
+\OT1/ppl/m/n/10.95 M[]u[]zeme tak[]e vid[]et, kte[]r[]^^P u[]zivatel[]e jsou ne
+-jak-tivn[]ej[]s[]^^P, a kte[]r[]^^P se dlouho neuk[]azali.
+ []
+
+[46]
+Overfull \hbox (3.23221pt too wide) in paragraph at lines 1617--1618
 \OT1/ppl/m/n/10.95 Google Ap-pEngine v jazyce Mi-rah a tam byl tak[]e nasazen. 
 Po-tenci[]aln[]^^P z[]akazn[]^^Pk, se kter[]ym
  []
 
-[46
+[47
 
 ]
-Overfull \hbox (3.0467pt too wide) in paragraph at lines 1618--1620
+Overfull \hbox (3.0467pt too wide) in paragraph at lines 1643--1645
 []\OT1/ppl/b/n/10.95 Kompaktn^^S^^P disk \OT1/ppl/m/n/10.95 ob-sahuj[]^^Pc[]^^P
  elek-tron-ickou verze doku-mentu, zdro-jov[]e k[]ody a n[]avod
  []
 
-[47
+[48
 
-] [48
+] [49
 
 ] (./diplomka.aux)
 
@@ -1238,9 +1250,9 @@ xmf-texlive/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-texlive/fonts
 ic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a.pfb></u
 sr/share/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-te
 xlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (53 pages, 1315236 bytes).
+Output written on diplomka.pdf (54 pages, 1317849 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
+ 365 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
