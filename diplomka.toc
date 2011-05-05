@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {2}Webov\IeC {\'a} analytika}{7}
 \contentsline {subsection}{\numberline {2.1}Historie}{7}
 \contentsline {subsection}{\numberline {2.2}Sb\IeC {\v e}r dat}{8}
-\contentsline {subsubsection}{Anal\IeC {\'y}za dat z logovac\IeC {\'\i }ch soubor\IeC {\r u}}{9}
+\contentsline {subsubsection}{Anal\IeC {\'y}za dat z logovac\IeC {\'\i }ch soubor\IeC {\r u}}{8}
 \contentsline {subsection}{\numberline {2.3}Informace z\IeC {\'\i }skan\IeC {\'e} pomoc\IeC {\'\i } HTTP protokolu}{9}
 \contentsline {subsubsection}{Po\IeC {\v z}adovan\IeC {\'a} str\IeC {\'a}nka}{11}
 \contentsline {subsubsection}{Referrer}{12}
@@ -12,38 +12,38 @@
 \contentsline {subsubsection}{Akceptovan\IeC {\'y} jazyk}{13}
 \contentsline {subsubsection}{Prohl\IeC {\'\i }\IeC {\v z}e\IeC {\v c}e a jejich verze}{13}
 \contentsline {subsubsection}{IP adresa}{13}
-\contentsline {subsection}{\numberline {2.4}Sb\IeC {\v e}r dat pomoc\IeC {\'\i } JavaScriptu}{14}
+\contentsline {subsection}{\numberline {2.4}Sb\IeC {\v e}r dat pomoc\IeC {\'\i } JavaScriptu}{13}
 \contentsline {subsubsection}{Kl\IeC {\'a}n\IeC {\'\i } my\IeC {\v s}\IeC {\'\i }}{14}
-\contentsline {subsubsection}{Pohyb my\IeC {\v s}i}{15}
+\contentsline {subsubsection}{Pohyb my\IeC {\v s}i}{14}
 \contentsline {subsubsection}{Stisky kl\IeC {\'a}ves}{15}
-\contentsline {subsubsection}{Opu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } str\IeC {\'a}nky}{16}
-\contentsline {subsubsection}{Rozli\IeC {\v s}en\IeC {\'\i } obrazovky}{16}
-\contentsline {subsubsection}{Cookies}{16}
-\contentsline {subsubsection}{Tepeln\IeC {\'e} mapy}{17}
-\contentsline {subsubsection}{Aplikace v praxi}{17}
+\contentsline {subsubsection}{Opu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } str\IeC {\'a}nky}{15}
+\contentsline {subsubsection}{Rozli\IeC {\v s}en\IeC {\'\i } obrazovky}{15}
+\contentsline {subsubsection}{Cookies}{15}
+\contentsline {subsubsection}{Tepeln\IeC {\'e} mapy}{16}
+\contentsline {subsubsection}{Aplikace v praxi}{16}
 \contentsline {subsection}{\numberline {2.5}Etick\IeC {\'a} str\IeC {\'a}nka sb\IeC {\v e}ru dat}{19}
-\contentsline {section}{\numberline {3}Anal\IeC {\'y}za webov\IeC {\'y}ch aplikac\IeC {\'\i }}{22}
-\contentsline {subsection}{\numberline {3.1}Webov\IeC {\'e} aplikace}{22}
-\contentsline {subsubsection}{Motivace}{23}
-\contentsline {subsection}{\numberline {3.2}\IeC {\v Z}ivotn\IeC {\'\i } cyklus n\IeC {\'a}v\IeC {\v s}t\IeC {\v e}v\IeC {\'\i }ka}{23}
-\contentsline {subsubsection}{Akvizice u\IeC {\v z}ivatele}{23}
-\contentsline {subsubsection}{U\IeC {\v z}ivatel}{24}
-\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }k}{25}
-\contentsline {subsubsection}{Konec pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}n\IeC {\'\i } aplikace}{26}
-\contentsline {subsection}{\numberline {3.3}Vlastnosti n\IeC {\'a}stroje}{26}
-\contentsline {subsubsection}{N\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }ci}{26}
-\contentsline {subsubsection}{U\IeC {\v z}ivatel\IeC {\'e}}{28}
-\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }ci}{28}
-\contentsline {subsubsection}{B\IeC {\'y}val\IeC {\'\i } z\IeC {\'a}kazn\IeC {\'\i }ci}{28}
-\contentsline {section}{\numberline {4}Technick\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{29}
-\contentsline {subsection}{\numberline {4.1}Sb\IeC {\v e}r dat}{29}
-\contentsline {subsection}{\numberline {4.2}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{31}
-\contentsline {subsection}{\numberline {4.3}Pou\IeC {\v z}it\IeC {\'e} technologie}{33}
-\contentsline {subsection}{\numberline {4.4}U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i }}{36}
-\contentsline {section}{\numberline {5}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{37}
-\contentsline {subsection}{\numberline {5.1}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } na ostr\IeC {\'e}m serveru}{38}
-\contentsline {subsection}{\numberline {5.2}Z\IeC {\'\i }skan\IeC {\'a} data}{39}
-\contentsline {subsection}{\numberline {5.3}Zhodnocen\IeC {\'\i }}{44}
-\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{46}
-\contentsline {section}{\numberline {7}P\IeC {\v r}\IeC {\'\i }lohy}{47}
-\contentsline {section}{\numberline {8}Reference}{48}
+\contentsline {section}{\numberline {3}Anal\IeC {\'y}za webov\IeC {\'y}ch aplikac\IeC {\'\i }}{21}
+\contentsline {subsection}{\numberline {3.1}Webov\IeC {\'e} aplikace}{21}
+\contentsline {subsubsection}{Motivace}{22}
+\contentsline {subsection}{\numberline {3.2}\IeC {\v Z}ivotn\IeC {\'\i } cyklus n\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }ka}{22}
+\contentsline {subsubsection}{Akvizice u\IeC {\v z}ivatele}{22}
+\contentsline {subsubsection}{U\IeC {\v z}ivatel}{23}
+\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }k}{24}
+\contentsline {subsubsection}{Konec pou\IeC {\v z}\IeC {\'\i }v\IeC {\'a}n\IeC {\'\i } aplikace}{25}
+\contentsline {subsection}{\numberline {3.3}Vlastnosti n\IeC {\'a}stroje}{25}
+\contentsline {subsubsection}{N\IeC {\'a}v\IeC {\v s}t\IeC {\v e}vn\IeC {\'\i }ci}{25}
+\contentsline {subsubsection}{U\IeC {\v z}ivatel\IeC {\'e}}{27}
+\contentsline {subsubsection}{Z\IeC {\'a}kazn\IeC {\'\i }ci}{27}
+\contentsline {subsubsection}{B\IeC {\'y}val\IeC {\'\i } z\IeC {\'a}kazn\IeC {\'\i }ci}{27}
+\contentsline {section}{\numberline {4}Technick\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{28}
+\contentsline {subsection}{\numberline {4.1}Sb\IeC {\v e}r dat}{28}
+\contentsline {subsection}{\numberline {4.2}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{30}
+\contentsline {subsection}{\numberline {4.3}Pou\IeC {\v z}it\IeC {\'e} technologie}{32}
+\contentsline {subsection}{\numberline {4.4}U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i }}{35}
+\contentsline {section}{\numberline {5}P\IeC {\v r}\IeC {\'\i }padov\IeC {\'a} studie}{36}
+\contentsline {subsection}{\numberline {5.1}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } na ostr\IeC {\'e}m serveru}{37}
+\contentsline {subsection}{\numberline {5.2}Z\IeC {\'\i }skan\IeC {\'a} data}{38}
+\contentsline {subsection}{\numberline {5.3}Zhodnocen\IeC {\'\i }}{43}
+\contentsline {section}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{45}
+\contentsline {section}{\numberline {7}P\IeC {\v r}\IeC {\'\i }lohy}{46}
+\contentsline {section}{\numberline {8}Reference}{47}

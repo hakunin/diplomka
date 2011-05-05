@@ -101,6 +101,7 @@ The goal of this thesis is to create a tool to aid web application development a
 \AddAcronym{HTML}{Jazyk pro vytváření webových stránek (HyperText Markup Language)}
 \AddAcronym{HTTP}{Hypertextový protokol (Hypertext Transfer Protocol)}
 \AddAcronym{PPC}{Platba za proklik (Pay per click)}
+\AddAcronym{ROI}{Zisk z investice (Return on Investment)}
 
 
 
@@ -146,7 +147,7 @@ The goal of this thesis is to create a tool to aid web application development a
 
 Tato diplomová práce se zabývá webovou analytikou a novým nástrojem pro analytiku webových aplikací. 
 
-Od vzniku webových stránek se web rozvíjel až do dnešní podoby a webová analytika ho provázela. Čím sofistikovanějšími se webové stránky stávaly, tím důmyslnější způsoby byly nacházeny k analýze uživatelského chování.
+Od vzniku webových stránek se web rozvíjel až do dnešní podoby a webová analytika\cite{kaushik} ho provázela. Čím sofistikovanějšími se webové stránky stávaly, tím důmyslnější způsoby byly nacházeny k analýze uživatelského chování.
 
 Zpočátku byly používány nástroje na straně serveru, které pasivně analyzovaly data o návštěvách stránek. V polovině devadesátých let masivní vývoj webových prohlížečů přesunul sběr dat na stranu klienta, kde umožnil aktivní sběr dat o uživatelském chování.
 
@@ -156,7 +157,7 @@ Současné metody měření a interpretace dat dobře vyhovují jednorázovým �
 
 Kromě webových stránek jsou na internetu také webové aplikace. Díky moderních technologiích jako HTML5 se začíná smazávat rozdíl mezi možnostmi desktopových aplikací a webových. Tento trend potvrzuje i to, že Google připravuje svůj vlastní operační systém Chrome OS\footnote{\url{http://www.google.com/chromeos/}}, který je výhradně založen na webovém prohlížeči.
 
-Možnosti webových aplikací jsou již nyní rozšířeny o podporu audia, videa (včetně manipulace) a zobrazení trojrozměrných objektů pomocí technologie WebGl\footnote{WebGl je OpenGL upravené speciálně pro webové prohlížeče.}. Někteří i tak budou tvrdit, že webové aplikace se nikdy nebudou moci měřit s desktopovými. Na druhou stranu dnes již existují pluginy do prohlížečů, které jakoby umožňují spouštět nativní kód jako SilverLight, nebo Flash a skutečnou podporu nativního kódu slibuje například technologie Native Client, kterou prosazuje Google ve svém prohlížeči Chrome.
+Možnosti webových aplikací jsou již nyní rozšířeny o podporu audia, videa (včetně manipulace) a zobrazení trojrozměrných objektů pomocí technologie WebGl\cite{webgl}. Někteří i tak budou tvrdit, že webové aplikace se nikdy nebudou moci měřit s desktopovými. Na druhou stranu dnes již existují pluginy do prohlížečů, které jakoby umožňují spouštět nativní kód jako SilverLight, nebo Flash a skutečnou podporu nativního kódu slibuje například technologie Native Client, kterou prosazuje Google ve svém prohlížeči Chrome.
 
 Můžeme tedy očekávat nárůst počtu webových aplikací, které nezaostávají za desktopovými. 
 
@@ -246,13 +247,13 @@ The data collection became unusable with the advent of search engines and their 
 	\label{table:analog_output}
 \end{table}
 
-V roce 1996 byl v obou nejpoužívanějších prohlížečích\footnote{V roce 1996 měl Netscape Navigator zhruba 80\% podíl a Internet Explorer 14\%} k dispozici JavaScript. Tvůrce webových stránek na každou stránku umístil kód, který mu vygeneroval poskytovatel měřícího nástroje. 
+V roce 1996 byl v obou nejpoužívanějších prohlížečích\cite{browser_market_share} k dispozici JavaScript. Tvůrce webových stránek na každou stránku umístil kód, který mu vygeneroval poskytovatel měřícího nástroje. 
 
 Tento postup se zásadně liší od analýzy logových souborů. Místo statické analýzy zaznamenaných dat na straně serveru tento přístup data dynamicky sbírá na straně klienta.
 
 Průlom v prohlížečích umožnil použití třetích stran pro sběr i vyhodnocení dat a tak dal vzniknout prvním online nástrojům pro webovou analytiku. V různých obměnách se tato technika používá dodnes.
 
-V roce 2005 koupila\footnote{Článek o akvizici v New York Times \url{http://www.nytimes.com/2005/03/29/technology/29urchin.html}} společnost Google analytický systém Urchin on Demand a ještě v témž roce ho poskytla zdarma široké veřejnosti jako webovou aplikaci pod názvem Google Aanlytics. Pro obrovský zájem byl tento produkt zpřístupněn pouze omezenému počtu uživatelů. Od října roku 2006 byly znovu otevřeny volné registrace a dodnes se jedná o nejpoužívanější systém pro webovou analytiku.
+V roce 2005 koupila\cite{urchin} společnost Google analytický systém Urchin on Demand a ještě v témž roce ho poskytla zdarma široké veřejnosti jako webovou aplikaci pod názvem Google Aanlytics. Pro obrovský zájem byl tento produkt zpřístupněn pouze omezenému počtu uživatelů. Od října roku 2006 byly znovu otevřeny volné registrace a dodnes se jedná o nejpoužívanější systém pro webovou analytiku.
 
 S nástupem sociálních médií a chytrých mobilních zařízení dochází k nárůstu času, který uživatelé tráví na internetu. Poměrně k tomuto nárůstu se zvyšují investice do internetových stránek a webových aplikací. 
 
@@ -291,7 +292,7 @@ Když na začátku devadesátých let vznikl web, provozovatelé serverů si uv�
 
 \bigskip
 
-Výpis \ref{src:logfile_record} je ukázkou záznamu v logovacím souboru. Později docházelo k rozšíření tohoto formátu, aby obsahoval další zajímavé informace, které mohl analytický sofwtare zpracovávat. Význam jednotlivých částí typického řádku logovacího souboru jsou po\-psá\-ny v tabulce \ref{tab:http_log_info}.
+Výpis \ref{src:logfile_record} je ukázkou záznamu v logovacím souboru. Později docházelo k rozšíření tohoto formátu\cite{clf}, aby obsahoval další zajímavé informace, které mohl analytický sofwtare zpracovávat. Význam jednotlivých částí typického řádku logovacího souboru jsou po\-psá\-ny v tabulce \ref{tab:http_log_info}.
 
 \begin{table}
 	\centering      
@@ -412,7 +413,7 @@ V query string části adresy se nacházejí údaje, které modifikují obsah st
 www.google.com/search?sourceid=chrome&ie=UTF-8&q=web+analytics
 \end{lstlisting}
 
-Formát jednotlivých částí adresy je dán specifikací RFC1738\footnote{Uniform Resource Locators (URL) \url{http://www.ietf.org/rfc/rfc1738.txt}}, pro názornost uvádím v tabulce \ref{table:web_address_meaning} zjednodušený pohled na část adresy "za otazníkem" konkrétně v našem případě.
+Formát jednotlivých částí adresy je dán specifikací RFC1738\cite{url}, pro názornost uvádím v tabulce \ref{table:web_address_meaning} zjednodušený pohled na část adresy "za otazníkem" konkrétně v našem případě.
 
 \begin{table}
 	\centering
@@ -521,7 +522,7 @@ Nejvyšší rozlišení mají nejmodernější dvaceti sedmi a třiceti-palcové
 
 \subsubsection{Cookies}
 
-Díky cookies\footnote{\url{http://www.jakpsatweb.cz/enc/cookies.html}} je možné rozpoznat návštěvníka stránky. Při první návštěvě se ná\-vště\-vní\-ko\-vi uloží do cookies jeho unikátní identifikátor a lze tak při příští návštěvě říct, že se jedná o stejného návštěvníka. Označování návštěvníků umožňuje zjistit například počet uni\-kát\-ních návštěvníků. Přesto, že někteří uživatelé si cookies ručně mažou, většina to nedělá a počet unikátních návštěvníků získaný pomocí cookies lze pokládat za relativně přesný.
+Díky cookies\cite{cookies} je možné rozpoznat návštěvníka stránky. Při první návštěvě se ná\-vště\-vní\-ko\-vi uloží do cookies jeho unikátní identifikátor a lze tak při příští návštěvě říct, že se jedná o stejného návštěvníka. Označování návštěvníků umožňuje zjistit například počet uni\-kát\-ních návštěvníků. Přesto, že někteří uživatelé si cookies ručně mažou, většina to nedělá a počet unikátních návštěvníků získaný pomocí cookies lze pokládat za relativně přesný.
 
 Označování uživatelů umožňuje také sledovat počet návštěv. Pokud uživatel stráví pět minut prohlížením stránek, zavře stránku a pak se za dvě hodiny vrátí, říkáme, že šlo o dvě návštěvy.
 
@@ -538,7 +539,7 @@ Dlouhodobé opakování návštěv označujeme jako loajalitu návštěvníků. 
 
 Na obrázku \ref{img:heatmap-bing-google} je ukázka heatmapy pro stránky výsledků vyhledávačů Google a Bing. Vstupními daty pro vytvoření takových interpretací jsou v ideálním případě data získaná pomocí sledování očních pohybů návštěvníků pomocí speciální kamery. Takovéto tes\-to\-vá\-ní je možno provádět pouze v laboratoři a s potřebným vybavením.
 
-Mimo laboratoř je možno takové obrázky vygenerovat z pohybů myší a klikání ná\-vště\-vní\-ků stránky. Cílem heatmap je odhalit, kterým částem stránky se dostává více pozornosti. Na obrázku \ref{img:heatmap-bing-google} jsou vidět heatmapy ze studie\footnote{Business Insider: Bing Is Better For Ads Than Google \url{http://www.businessinsider.com/microsoft-bing-has-a-more-ad-friendly-design-than-google-according-to-heatmaps-2009-6}}, která porovnává, kam se uživatelé na obou stránkách nejčastěji dívají.
+Mimo laboratoř je možno takové obrázky vygenerovat z pohybů myší a klikání ná\-vště\-vní\-ků stránky. Cílem heatmap je odhalit, kterým částem stránky se dostává více pozornosti. Na obrázku \ref{img:heatmap-bing-google} jsou vidět heatmapy ze studie\cite{heatmap}, která porovnává, kam se uživatelé na obou stránkách nejčastěji dívají.
 
 \begin{figure}[hp]
 	\centering
@@ -565,7 +566,7 @@ Na počátku, kdy se měřil pouze počet zobrazení stránky, byly tyto nástro
 
 Když potenciální zákazník klikne na reklamu a dostane se naši stránku, stojí nás to peníze. Ne každý zákazník objedná, nebo jinak vygeneruje zisk. Takže kolik zákazníků, kteří se na naši stránku dostali přes reklamu u nás vlastně nakoupí? A ještě lépe - kolik nás ve výsledku stojí nová objednávka? Na tyto otázky standardně odpovídá například Google Analytics, který je přímo napojen na AdWords\footnote{Google Adwords \url{http://adwords.google.com}}.
 
-V okamžiku, kdy se na naši stránku dostane uživatel, vstupuje do hry měření konverze. Ta měří poměr návštěv a uskutečněných cílů - například počet objednávek, nebo počet nových emailů v seznamu odběratelů novinek. Konverzní poměr se zvlášť měří u uživatelů, kteří přišli z vyhledávače, přes reklamu anebo sami napsali adresu webové stránky do prohlížeče.
+V okamžiku, kdy se na naši stránku dostane uživatel, vstupuje do hry měření kon\-ver\-ze\cite{conversions}. Ta měří poměr návštěv a uskutečněných cílů - například počet objednávek, nebo počet nových emailů v seznamu odběratelů novinek. Konverzní poměr se zvlášť měří u uživatelů, kteří přišli z vyhledávače, přes reklamu anebo sami napsali adresu webové stránky do prohlížeče.
 
 Znalost jednotlivých konverzí a napojení na reklamní systém umožňuje určit cenu za konverzi a tím i efektivitu jednotlivých kampaní.
 
@@ -910,7 +911,7 @@ echo $measuring->code(array(
   ));
 \end{lstlisting}
 
-Zbytek kódu na serveru bezpečně zašifruje dané informace a jeho výstupem je měřící skript, který se vloží do HTML stránky. Tento měřící skript obsahuje číslo, které identifikuje webovovou apliakci, zašifrované informace o uživateli a skript, který vloží kód, který zaznamenává uživatelovu interakci se stránkou a odesílá data.
+Zbytek kódu na serveru bezpečně zašifruje dané informace a jeho výstupem je měřící skript, který se vloží do HTML stránky. Tento měřící skript obsahuje číslo, které identifikuje webovou aplikaci, zašifrované informace o uživateli a skript, který vloží kód, který zaznamenává uživatelovu interakci se stránkou a odesílá data.
 
 Zašifrované informace o uživateli jsou nečitelné třetí stranou a není je možno podvrhnout třetí stranou. To také umožňuje použít tuto informaci k ověření identity uživatele.
 
@@ -948,7 +949,7 @@ Po přijetí dat na serveru je ověřena jejich autenticita pomocí zašifrovan�
 
 Nasbíraná data je nutno nějak zpracovat a interpretovat. Způsob zpracování musí být takový, aby umožňoval data zpracovat jednou a dále pak využívat pouze výsledky tohoto zpracování. To znamená, že je třeba pracovat s nasbíranými daty jako s proudem a postupně zpracovávat nová data jak přicházejí. Výstup zpracování bude pak uložen do databáze a nebude nutno data znova procházet.
 
-Pro zvolenou metodu musí být také dostatečně jednoduché definovat nová pravidla, která data vyhodnocují. Z těchto důvodu byla vytvořena obecná forma zpracování dat jedoduchým průchodem, který umožňuje zpracovávat data po částech. Každé pravidlo, které generuje statistiku pracuje s proudem nasbíraných dat tak že navštěvuje každou událost a systém se dále nestará co s daty dělá.
+Pro zvolenou metodu musí být také dostatečně jednoduché definovat nová pravidla, která data vyhodnocují. Z těchto důvodu byla vytvořena obecná forma zpracování dat jednoduchým průchodem, který umožňuje zpracovávat data po částech. Každé pravidlo, které generuje statistiku pracuje s proudem nasbíraných dat tak že navštěvuje každou událost a systém se dále nestará co s daty dělá.
 
 \begin{figure}[h]
 	\centering
@@ -959,7 +960,7 @@ Pro zvolenou metodu musí být také dostatečně jednoduché definovat nová pr
 
 Výstupem pravidel jsou dvou, nebo třírozměrné data, které jsou jednotně uložena do databáze. To umožňuje po nějaké stanovené době se zcela zbavit původních dat a ponechat si pouze z nich vyrobené statistiky, které zabírají méně místa v databázi. Po přidání nových pravidel je také možno získat jejich výsledky zpracováním dat, která již byla zpracována.
 
-Obrázek \ref{img:metric_counter} znázorňuje třídní diagram pro třídy, které produkují veškeré statistiky. Využívám v tomto případě návrhový vzor visitor spolu s metodami, které zajišťují přetrvání stavu počítání tak, aby ho bylo ukončit a pokračovat později.
+Obrázek \ref{img:metric_counter} znázorňuje třídní diagram pro třídy, které produkují veškeré statistiky. Využívám v tomto případě návrhový vzor návštěvník\cite{visitor} spolu s metodami, které zajišťují přetrvání stavu počítání tak, aby ho bylo ukončit a pokračovat později.
 
 
 \begin{figure}[h]
@@ -1097,7 +1098,7 @@ class Controller < HttpServlet
 end
 \end{lstlisting}
 
-Použitá databáze je Google Datastore, distribuovaný úložný systém, který si Google vyvinul pro vlastní potřeby. Datastore používá technologii BigTable, která je původně navržena pro potřeby Googlu. Podmínkou bylo zvládat obrovské objemy dat, které jsou distrubuovaně uloženy na tísících serverů s replikovanými daty. Na technologii BigTable běží na například Google Finance, nebo Google Earth.
+Použitá databáze je Google Datastore, distribuovaný úložný systém, který si Google vyvinul pro vlastní potřeby. Datastore používá technologii BigTable\cite{bigtable}, která je původně navržena pro potřeby Googlu. Podmínkou bylo zvládat obrovské objemy dat, které jsou distrubuovaně uloženy na tísících serverů s replikovanými daty. Na technologii BigTable běží na například Google Finance, nebo Google Earth.
 
 Z hlediska rozdílů návrhu oproti klasické relační databázi neobsahuje datastore tabulky a sloupce, nýbrž entity a atributy. Když například v MySQL přejmenuji sloupec, změní se název sloupce u všech záznamů. Datastore pojem sloupec nezná a pokud chci nutně přejmenovat atribut u entity, je nutné projít každou entitu a změnit ji.
 
@@ -1134,7 +1135,7 @@ Mimo databáze umožňuje AppEngine sdílení správy aplikace, uživatelské ro
 
 Při tvorbě uživatelského rozhraní jsem vycházel z toho, na co jsou zvyklí uživatelé Google Analytics. Navigace kopíruje segmentaci statistik na návštěvníky, uživatele a zákazníky. Celkově je rozhraní navrženo tak, aby bylo jednoduché a neuabíralo místo na monitoru grafům a tabulkám.
 
-Pro tvorbu grafů byly použity grafy Google Chart Tools\footnote{Google Chart Tools \url{http://code.google.com/apis/visualization/documentation/using_overview.html}}, které jsou poskytovány zdarma. Vybral jsem je hlavně kvůli dobré dokumentace a množství příkladů na webu.
+Pro tvorbu grafů byly použity grafy Google Chart Tools\cite{chart_tools}, které jsou poskytovány zdarma. Vybral jsem je hlavně kvůli dobré dokumentace a množství příkladů na webu.
 
 
 \begin{comment}
@@ -1236,13 +1237,13 @@ Aplikace je vyvinuta pro spuštění na platformě Google AppEngine. Jedná ze o
 
 Největším rozdílem je množství paměti na serveru, které je omezeno tak, že ne\-u\-mo\-žňu\-je pracovat s padesáti tisíci záznamy najednou v paměti. Toto bylo nutno upravit, stejně jako omezení na maximální velikost odpovědi serveru na jeden megabajt. Obě tyto omezení jsem překročil, když jsem importovat a exportoval data mezi lokálním počítačem a serverem. Pro export a import jsem tedy vyvinul nástroj, který tato omezení obchází a pracuje s libovolným množstvím dat po částech.
 
-Omezení paměti a nároky na dlouhodobé zpracování dat po částech dalo vzniknout abstrakci nad sekcenčním zpracováním měřených dat. Umožňuje zpracovávat nové data po libovolně velkých částech, kdykoli přestat a zase začít ve stejném stavu a místě, kde bylo zpracovávání ukončeno. Zavedení abstrakce také podstatně zjednodušilo vytváření nových metrik a logiku aplikace.
+Omezení paměti a nároky na dlouhodobé zpracování dat po částech dalo vzniknout abstrakci nad sekvenčním zpracováním měřených dat. Umožňuje zpracovávat nové data po libovolně velkých částech, kdykoli přestat a zase začít ve stejném stavu a místě, kde bylo zpracovávání ukončeno. Zavedení abstrakce také podstatně zjednodušilo vytváření nových metrik a logiku aplikace.
 
 Nové data tedy aplikace zpracovává po částech pomocí časovaného úkolu, který předává zpracování dat jednotlivým metrikám a v univerzálním formátu je zaznamenává do databáze.
 
 Z praktických důvodů také došlo k optimalizaci měřícího skriptu tak, aby odesílal data v dávkách několika událostí najednou. Snížily se tak řádově nároky na procesorový čas na serveru (za který se platí) a tak i cena jeho provozu\footnote{AppEngine poskytuje 6.5 hodin procesorového času denně zdarma, ten jsem ani jednou nepřekročil.}.
 
-Měřící skript byl upraven aby fungoval ve všech běžných prohlížečích, jeho kód byl komprimován\footnote{Komprimace JavaScriptu proběhla pomocí Google Closure Compiler \url{http://code.google.com/closure/compiler/docs/gettingstarted_ui.html}} pro minimální velikost pro co nejrychlejší přenos na stranu klienta. Výhodou platformy AppEngine je v tomto případě i to, že statická data na serveru jsou poskutována pomocí CDN\footnote{Content Delivery network \url{http://blog.sallarp.com/google-app-engine-cdn/}}, která zajišťuje co nejlepší dostupnost souborů a tímpádem i měřícího skriptu.
+Měřící skript byl upraven aby fungoval ve všech běžných prohlížečích, jeho kód byl komprimován\footnote{Komprimace JavaScriptu proběhla pomocí Google Closure Compiler \url{http://code.google.com/closure/compiler/docs/gettingstarted_ui.html}} pro minimální velikost pro co nejrychlejší přenos na stranu klienta. Výhodou platformy AppEngine je v tomto případě i to, že statická data na serveru jsou poskutována pomocí CDN\cite{cdn}, která zajišťuje co nejlepší dostupnost souborů a tímpádem i měřícího skriptu.
 
 Optimalizace měřícího skriptu je završena kešováním, které ponechává skript v pro\-hlí\-že\-či dva dny a nemusí ho po tuto dobu znova nahrávat. Tyto technky jsou běžně využívány měřícími nástroji, které používají měřící skript. Oproti zavedeným nástrojům jako je Google AppEngine je měřící skript velmi malý, lehce přes tisíc znaků. Zatímco sofistikovanjší AppEngine používá skript o délce přes dvacet tisíc znaků.
 
@@ -1255,7 +1256,7 @@ Během běhu aplikace nedošlo k žádným větším problémům. Pouze k krobno
 
 Zaznamenávaná data se skládají výhradně z událostí kliknutí na stránce. Každé kliknutí je reprezentováno časem, ve kterém nastalo a umístěním v HTML dokumentu. Po každých pěti až patnácti kliknutích jsou měřícím skriptem data odeslána na server a ten je vyhodnocuje.
 
-Za sledované období padesáti pěti dní bylo zaznamenáno šedesát tisíc kliknutí. Zá\-zna\-my těhto kliků a a výsledky jejich zpracování v databázi na AppEngine zabraly 24 megabajtů. Na platformě AppEngine je zvlášť platí za místo, čas procesoru a další služby. Spotřeba těhto služeb je uvedena v tabulce \ref{tab:consumption}.
+Za sledované období padesáti pěti dní bylo zaznamenáno šedesát tisíc kliknutí. Zá\-zna\-my těchto kliků a výsledky jejich zpracování v databázi na AppEngine zabraly 24 megabajtů. Na platformě AppEngine se zvlášť platí\cite{billing} za místo, čas procesoru a další služby. Spotřeba těchto služeb je uvedena v tabulce \ref{tab:consumption}.
 
 \bigskip
 
@@ -1561,56 +1562,66 @@ Michal Hantl
 \begin{thebibliography}{99}
 
 
-\bibitem{sterne} Sterne, Jim
-\textit{Social Media Metrics}, Wiley, 2010. ISBN 9780470583784.
-
 \bibitem{kaushik} Kaushik, Avinash
 \textit{Web Analytics 2.0}, Sybex, 2009. ISBN 9780470529393.
 
-\bibitem{kaushik} Kawasaki, Guy
-\textit{The Art of the Start}, Portfolio Hardcover, 2004. ISBN 9781591840565.
+%\bibitem{kaushik} Kawasaki, Guy
+%\textit{The Art of the Start}, Portfolio Hardcover, 2004. ISBN 9781591840565.
 
-\bibitem{gae} Sanderson, Dan
-\textit{Programming Google App Engine}, O'Reilly Media, 2009. ISBN 059652272X.
+\bibitem{webgl} Chris Marrin,
+\textit{WebGL Specification}, dostupné z url \url{https://www.khronos.org/registry/webgl/specs/1.0/}.
+
+\bibitem{browser_market_share} w3schools,
+\textit{Browser Statistics}, dostupné z url \url{http://www.w3schools.com/browsers/browsers_stats.asp}.
 
 
-%Článek o akvizici v New York Times \url{http://www.nytimes.com/2005/03/29/technology/29urchin.html}
-
-\bibitem{peci_trendy} New York Times,
+\bibitem{urchin} New York Times,
 \textit{Google Acquires Urchin Software}, dostupné z url \url{www.nytimes.com/2005/03/29/technology/29urchin.html}.
-
-\bibitem{cdn} Björn Sållarp,
-\textit{Google App Engine as your CDN?}, dostupné z url \url{http://blog.sallarp.com/google-app-engine-cdn/}.
-
-\bibitem{url} Network Working Group,
-\textit{Uniform Resource Locators}, dostupné z url \url{www.ietf.org/rfc/rfc1738.txt}.
-
-\bibitem{clf} Business Insider,
-\textit{Bing Is Better For Ads Than Google}, dostupné z url \url{www.businessinsider.com/microsoft-bing-has-a-more-ad-} \url{friendly-design-than-google-according-to-heatmaps-2009-6}.
-
-\bibitem{cookies} Jak Psát Web,
-\textit{Cookies}, dostupné z url \url{www.jakpsatweb.cz/enc/cookies.html}.
-
-\bibitem{billing} Google AppEngine,
-\textit{Billing and Budgeting Resources}, dostupné z url \url{http://code.google.com/appengine/docs/billing.html}.
 
 \bibitem{clf} W3C,
 \textit{Common logfile format}, dostupné z url \url{www.w3.org/Daemon/User/Config/Logging.html#common-logfile-format}.
 
-\bibitem{clf} Justin Cutroni,
+
+\bibitem{url} Network Working Group,
+\textit{Uniform Resource Locators}, dostupné z url \url{www.ietf.org/rfc/rfc1738.txt}.
+
+\bibitem{heatmap} Business Insider,
+\textit{Bing Is Better For Ads Than Google}, dostupné z url \url{www.businessinsider.com/microsoft-bing-has-a-more-ad-} \url{friendly-design-than-google-according-to-heatmaps-2009-6}.
+
+
+\bibitem{conversions} Justin Cutroni,
 \textit{How Does Google Analytics Track Conversion Referrals?}, dostupné z url \url{http://cutroni.com/blog/2006/11/10/how-does-google-analytics-track-conversion-referals/}.
 
+%\bibitem{gae} Sanderson, Dan
+%\textit{Programming Google App Engine}, O'Reilly Media, 2009. ISBN 059652272X.
 
 
-\begin{comment}
-Jim Sterne: Social Media Metrics, Wiley (2010), ISBN 9780470583784, 272 stran
-Avinash Kaushik: Web Analytics 2.0, Sybex (2009), ISBN: 9780470529393, 504 stran
-\bibitem{plaminek} Plamínek, Jiří,
-\textit{Tajemství motivace – Jak zařídit, aby pro vás lidé rádi pracovali}, ISBN 80-247-1991-6.
+%Článek o akvizici v New York Times \url{http://www.nytimes.com/2005/03/29/technology/29urchin.html}
 
-\bibitem{kamarati} Gašparovičová Ľuba, Hvorecký, Josef,
-\textit{Kamaráti Robota Karla}, ISBN 80-06-00421-8.
-\end{comment}
+
+\bibitem{cdn} Björn Sållarp,
+\textit{Google App Engine as your CDN?}, dostupné z url \url{http://blog.sallarp.com/google-app-engine-cdn/}.
+
+
+\bibitem{visitor} Dvořák, Miloš,
+\textit{Visitor Pattern}, dostupné z url \url{http://objekty.vse.cz/Objekty/Vzory-Visitor}
+
+
+\bibitem{cookies} Jak Psát Web,
+\textit{Cookies}, dostupné z url \url{www.jakpsatweb.cz/enc/cookies.html}.
+
+\bibitem{bigtable} Google Research Publications,
+\textit{Bigtable: A Distributed Storage System for Structured Data}, dostupné z url \url{http://labs.google.com/papers/bigtable.html}.
+
+
+\bibitem{chart_tools} Google,
+\textit{Google Chart Tools}, dostupné z url \url{http://code.google.com/apis/visualization/documentation/using_overview.html}.
+
+\bibitem{billing} Google AppEngine,
+\textit{Billing and Budgeting Resources}, dostupné z url \url{http://code.google.com/appengine/docs/billing.html}.
+
+
+
 
 
 \end{thebibliography}
