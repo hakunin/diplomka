@@ -15,8 +15,6 @@
 
 \begin{comment}
 TODO
- - projít celou diplomku
- - zkontrolovat TODO
  - znovu projít chyby
  - znovu zkontrolovat přesahy
 
@@ -82,7 +80,7 @@ Pokusil, ještě projdu.
 
 
 
-\CzechAbstract{Tato diplomová práce se zabývá problematikou webové analytiky, novou metodou měření uživatelské interakce s webem a nástrojem pro analýzu webových aplikací. Úvodem nastiňuje nové výzvy we webové analytice. V kapitole Webová analytika popisuje historii sběru a vyhodnocování dat na webu a současné způsoby sběru a interpretace dat. Kapitola Analýza webových aplikací se zaměřuje na webové aplikace z pohledu nové metody sběru a interpretace dat. Kapitola Technické řešení se popisuje detaily zpracování dat a využívané technologie. Případová studie se věnuje nasazení nástroje do provozu na platformě Google AppEngine a zhodnocuje výsledky.
+\CzechAbstract{Tato diplomová práce se zabývá problematikou webové analytiky, novou metodou mě\-ře\-ní uživatelské interakce s webem a nástrojem pro analýzu webových aplikací. Úvodem nastiňuje nové výzvy ve webové analytice. V kapitole Webová analytika popisuje historii sběru a vyhodnocování dat na webu a současné způsoby sběru a interpretace dat. Kapitola Analýza webových aplikací se zaměřuje na webové aplikace z pohledu nové metody sběru a interpretace dat. Kapitola Technické řešení se popisuje detaily zpracování dat a využívané technologie. Případová studie se věnuje nasazení nástroje do provozu na platformě Google AppEngine a zhodnocuje výsledky.
 }
 
 \CzechKeywords{webová analytika, chování uživatelů, webová aplikace, diplomová práce}
@@ -101,8 +99,11 @@ Pokusil, ještě projdu.
 \AddAcronym{GUI}{Grafické uživatelské rozhraní (Graphical User Interface)}
 \AddAcronym{HTML}{Jazyk pro vytváření webových stránek (HyperText Markup Language)}
 \AddAcronym{HTTP}{Hypertextový protokol (Hypertext Transfer Protocol)}
+\AddAcronym{PAAS}{Platforma jako služba (Platform as a Service)}
 \AddAcronym{PPC}{Platba za proklik (Pay per click)}
+\AddAcronym{PR}{Vztahy s veřejností (Public Relations)}
 \AddAcronym{ROI}{Zisk z investice (Return on Investment)}
+\AddAcronym{SAAS}{Software jako služba (Software as a Service)}
 
 
 
@@ -148,7 +149,7 @@ Pokusil, ještě projdu.
 
 Tato diplomová práce se zabývá webovou analytikou a novým nástrojem pro analytiku webových aplikací. 
 
-Od vzniku webových stránek se web rozvíjel až do dnešní podoby a webová analytika\cite{kaushik} ho provázela. Čím sofistikovanějšími se webové stránky stávaly, tím důmyslnější způsoby byly nacházeny k analýze uživatelského chování.
+Od vzniku webových stránek se web rozvíjel až do dnešní podoby a webová a\-na\-ly\-ti\-ka\cite{kaushik} ho provázela. Čím sofistikovanějšími se webové stránky stávaly, tím důmyslnější způsoby byly nacházeny k analýze uživatelského chování.
 
 Zpočátku byly používány nástroje na straně serveru, které pasivně analyzovaly data o návštěvách stránek. V polovině devadesátých let masivní vývoj webových prohlížečů přesunul sběr dat na stranu klienta, kde umožnil aktivní sběr dat o uživatelském chování.
 
@@ -244,7 +245,7 @@ The data collection became unusable with the advent of search engines and their 
 	\label{table:analog_output}
 \end{table}
 
-V roce 1996 byl v obou nejpoužívanějších prohlížečích\cite{browser_market_share} k dispozici JavaScript. Tvůrce webových stránek na každou stránku umístil kód, který mu vygeneroval poskytovatel měřícího nástroje. 
+V roce 1996 byl v obou nejpoužívanějších prohlížečích\cite{browser_market_share} k dispozici JavaScript. Tvůr\-ce webových stránek na každou stránku umístil kód, který mu vygeneroval poskytovatel měřícího nástroje. 
 
 Tento postup se zásadně liší od analýzy logových souborů. Místo statické analýzy zaznamenaných dat na straně serveru tento přístup data dynamicky sbírá na straně klienta.
 
@@ -325,11 +326,11 @@ Jak web rostl, zvětšovala se i jeho složitost. Z jednoduchých stránek bez o
   
 \subsection{Informace získané pomocí HTTP protokolu}
 
-Prohlížení webových stránek na internetu je zajišťěno pomocí HTTP protokolu. HTTP je zkratka pro Hyper Text Tranfer Protokol, neboli protokol pro výměnu hypertextů (hypertextových stránek). Je to způsob jak webový prohlížeč komunikuje s webovým serverem.
+Prohlížení webových stránek na internetu je zajištěno pomocí HTTP protokolu. HTTP je zkratka pro Hyper Text Transfer Protokol, neboli protokol pro výměnu hypertextů (hypertextových stránek). Je to způsob jak webový prohlížeč komunikuje s webovým serverem.
 
 Pomocí HTTP protokolu poskytuje prohlížeč informace o uživateli tak, aby webový server mohl co nejlépe vyhovět požadavku.
 
-Formátem HTTP protokolu se na tomto nebudeme hlboce zabývat. Stačí vědět, že obsahuje podstatné jsou informace, které se používají ve webové analytice. Pro zajímavost je uveden příklad HTTP požadavku a některých základních informací, které obsahuje.
+Formátem HTTP protokolu se na tomto nebudeme hluboce zabývat. Stačí vědět, že obsahuje podstatné jsou informace, které se používají ve webové analytice. Pro zajímavost je uveden příklad HTTP požadavku a některých základních informací, které obsahuje.
 
 \bigskip
 
@@ -398,7 +399,7 @@ V každém případu počet zobrazených stránek představuje trochu jinou info
 
 \subsubsection{Referrer}
 
-Údaj refferer je stránka, ze které uživatel přišel. Dá se tedy zjistit, odkud uživatelé na stránku přicházejí a spočítat nejčastější zdroje návštěv.
+Údaj referrer je stránka, ze které uživatel přišel. Dá se tedy zjistit, odkud uživatelé na stránku přicházejí a spočítat nejčastější zdroje návštěv.
 
 Ještě zajímavější využití této informace je v případě, že uživatel přišel z vyhledávače. Pak se dá z referreru zjistit, jakou frázi uživatel vyhledával a jaké vyhledávače dominují v počtu přivedených zákazníků.
 
@@ -410,7 +411,7 @@ V query string části adresy se nacházejí údaje, které modifikují obsah st
 www.google.com/search?sourceid=chrome&ie=UTF-8&q=web+analytics
 \end{lstlisting}
 
-Formát jednotlivých částí adresy je dán specifikací RFC1738\cite{url}, pro názornost uvádím v tabulce \ref{table:web_address_meaning} zjednodušený pohled na část adresy "za otazníkem" konkrétně v našem případě.
+Formát jednotlivých částí adresy je dán specifikací RFC1738\cite{url}, pro názornost uvádím v tabulce \ref{table:web_address_meaning} zjednodušený pohled na část adresy "za otazníkem" konkrétně v našem pří\-pa\-dě.
 
 \begin{table}
 	\centering
@@ -446,7 +447,7 @@ Na druhou stranu na stránkách s vysokým podílem starých prohlížečů se d
 
 \subsubsection{IP adresa}
 
-Podle IP adresy návštěvníků se zjišťuje jejich poloha a zobrazuje se pomocí jednoduché mapy. Na obrázku \ref{img:analytics-map} je ukázka takové mapy, která znázorňuje počet návštěv pro Ameriku. Jedná se o statistiku pro rozšíření do prohlížeče Google Chrome. Jelikož se jedná o rozšíření pro technické typy, lze usuzovat, že takoví se vyskytují v Kalifornii (tmavě zelená vlevo) a New Yorku.
+Podle IP adresy návštěvníků se zjišťuje jejich poloha a zobrazuje se pomocí jednoduché mapy. Na obrázku \ref{img:analytics-map} je ukázka takové mapy, která znázorňuje počet návštěv pro Ameriku. Jedná se o statistiku pro roz\-ší\-ře\-ní do prohlížeče Google Chrome. Jelikož se jedná o roz\-ší\-ře\-ní pro technické typy, lze usuzovat, že takoví se vyskytují v Kalifornii (tmavě zelená vlevo) a New Yorku.
 
 \begin{figure}[hp]
 	\centering
@@ -559,7 +560,7 @@ Teď, když byly nastíněny základy toho, jak webová analytika sbírá a inte
 
 %Optimalizace konverze reklamních kampaní
 
-Na počátku, kdy se měřil pouze počet zobrazení stránky, byly tyto nástroje měřítkem popularity stránek. Podle denní návštěvnosti se dalo odvodit, kolik by si měla stránka účtovat za reklamu\footnote{Dnes jsou více rozšířené systémy, které požadují platbu za počet prokliků a jejich cena se určuje formou aukce. Například AdWords, u nás Sklik.}, většinou formou bannerů. Návštěvnost stránek i dnes určuje cenu reklamy na stránce, PR článků a obecně hodnotu celé stránky.
+Na počátku, kdy se měřil pouze počet zobrazení stránky, byly tyto nástroje měřítkem popularity stránek. Podle denní návštěvnosti se dalo odvodit, kolik by si měla stránka účtovat za reklamu\footnote{Dnes jsou více rozšířené systémy, které požadují platbu za počet prokliků a jejich cena se určuje formou aukce. Například AdWords, u nás Sklik.}, většinou formou bannerů. Návštěvnost stránek i dnes určuje cenu reklamy na stránce, PR\cite{pr} článků a obecně hodnotu celé stránky.
 
 Když potenciální zákazník klikne na reklamu a dostane se naši stránku, stojí nás to peníze. Ne každý zákazník objedná, nebo jinak vygeneruje zisk. Takže kolik zákazníků, kteří se na naši stránku dostali přes reklamu u nás vlastně nakoupí? A ještě lépe - kolik nás ve výsledku stojí nová objednávka? Na tyto otázky standardně odpovídá například Google Analytics, který je přímo napojen na AdWords\footnote{Google Adwords \url{http://adwords.google.com}}.
 
@@ -669,11 +670,11 @@ Právě to, že je uživatel přihlášen dává nové možnosti vývoje nástro
 
 V prostředí, kde je uživatel přihlášen můžeme na data pohlížet zcela jiným způsobem. Vezměme si statistiku počtu návštěv, kterou zpracovává Google Analytics a podává ji hned na hlavní stránce statistik pro daný web. Denní počet návštěv je vypočítán tak, že pokud přijdu na stránku ráno, v poledne a večer, započítá se to jako tři návštěvy. Pro webovou stránku to dává smysl ze dvou důvodů. Zaprvé ze stejného počítače může přijít ráno v poledne a večer úplně jiný člověk a to nelze nijak rozeznat. Zadruhé webové stránky nemají uživatele, ale návštěvníky tudíž dává smysl sledovat návštěvy. 
 
-Na druhé straně jsou aplikace, které mají uživatele a tak dává smysl sledovat po\-u\-ží\-vá\-ní. Jestli uživatel přijde třikrát denně, nebo jednou a stráví v aplikaci 3x tolik času je hezké vědět, ale není to tak podstatné. Co je podstatné je kolik uživatelů reálně dnes navštívilo aplikaci a kolik v ní strávili času.
+Na druhé straně jsou aplikace, které mají uživatele a tak dává smysl sledovat po\-u\-ží\-vá\-ní. Jestli uživatel přijde třikrát denně, nebo jednou a stráví v aplikaci třikrát tolik času je hezké vědět, ale není to tak podstatné. Co je podstatné je kolik uživatelů reálně dnes navštívilo aplikaci a kolik v ní strávili času.
 
 Tento rozdíl se nezdá na první pohled až tak markantní. Je třeba si uvědomit, že se jedná o odlišný úhel pohledu a z toho vycházejí odlišné závěry. Například z Google Analytics se dá zjistit, kolik procent návštěv je z mobilních zařízení. 
 
-Řekněme, že mobilní zařízení tvoří 3\% všech návštěv. To není jako mnoho, pra\-vdě\-po\-do\-bně neznamená, že budeme upravovat naši aplikaci speciálně pro mobilní zařízení. Na druhou stranu, pokud máme 85\% uživatelů, kteří používají free účet a 15\% platících\footnote{Freemium model, spočívá v účtech zdarma a placených, které poskytují něco navíc.}, mohou tři procenta znamenat až 20\% platících uživatelů. Pokud máme více, než jeden placený tarif, například basic (\$19), gold (\$49) a platinum (\$199). V takovém případě bude velmi důležité vědět, kolik z našich 3\% je ve kterém tarifu.
+Řekněme, že mobilní zařízení tvoří 3\% všech návštěv. To není jako mnoho, pra\-vdě\-po\-do\-bně neznamená, že budeme upravovat naši aplikaci speciálně pro mobilní zařízení. Na druhou stranu, pokud máme 85\% uživatelů, kteří používají free účet a 15\% platících\footnote{Freemium model\cite{freemium}, spočívá v účtech zdarma a placených, které poskytují něco navíc.}, mohou tři procenta znamenat až 20\% platících uživatelů. Pokud máme více, než jeden placený tarif, například basic (\$19), gold (\$49) a platinum (\$199). V takovém případě bude velmi důležité vědět, kolik z našich 3\% je ve kterém tarifu.
 
 Některé věci, které jsem popsal Google Analytics umožňuje. Je pouze na uživateli, aby si svoje Analytics co nejlépe nastavil a svou aplikaci opatřil příslušným nastavením, které umožní sledovat zajímavé údaje o uživateli.
 
@@ -797,7 +798,7 @@ Z hlediska konverze návštěvníků na uživatele nás bude zajímat, kolik ča
 
 Když přijde návštěvník na stránku naší aplikace, bude nás v první řadě zajímat, odkud přišel a v okamžiku, kdy se zaregistruje se přiřadí k jeho profilu. Z dlouhodobého hlediska to umožňuje určit, který zdroj návštěvnosti přinesl největší počet uživatelů. 
 
-U reklamních kampaní tento dlouhodobý náhled umožňuje spočítat celkové ROI\footnote{Return of invest - návratnost investice}, které je určeno jako poměr zisku, na investovanou jednotku, viz rovnice \ref{eq:roi}.
+U reklamních kampaní tento dlouhodobý náhled umožňuje spočítat celkové ROI\footnote{Return on Investment - zisk z investice}, které je určeno jako poměr zisku, na investovanou jednotku, viz rovnice \ref{eq:roi}.
 
 \begin{equation}\label{eq:roi}
 ROI = \frac{(Zisk - Investice)}{Investice}
@@ -928,7 +929,7 @@ Zašifrované informace o uživateli jsou nečitelné třetí stranou a není je
 \end{lstlisting}
 
 
-Po načtení stránky do prohlížeče je pomocí měřícího kódu dodatečně nahrán skript, který umožňuje samotné měření. Tento postup kopíruje běžně používaný způsob měření. Výhodou tohoto způsobu je především možnost měnit měřící skript bez nutnosti zásahů zeč strany provozovatele webového serveru.
+Po načtení stránky do prohlížeče je pomocí měřícího kódu dodatečně nahrán skript, který umožňuje samotné měření. Tento postup kopíruje běžně používaný způsob měření. Výhodou tohoto způsobu je především možnost měnit měřící skript bez nutnosti zásahů ze strany provozovatele webového serveru.
 
 Během toho, kdy uživatel pracuje s webovou aplikací měřící skript zaznamenává interakci a ukládá ji do cookie. Jedná se primárně o to, které prvky aplikace uživatel používá. Zaznamenávají se jednotlivé kliky na prvky na stránce, spolu s jejich pozicí v hierarchii dokumentu.
 
@@ -957,7 +958,7 @@ Pro zvolenou metodu musí být také dostatečně jednoduché definovat nová pr
 
 Výstupem pravidel jsou dvou, nebo třírozměrné data, které jsou jednotně uložena do databáze. To umožňuje po nějaké stanovené době se zcela zbavit původních dat a ponechat si pouze z nich vyrobené statistiky, které zabírají méně místa v databázi. Po přidání nových pravidel je také možno získat jejich výsledky zpracováním dat, která již byla zpracována.
 
-Obrázek \ref{img:metric_counter} znázorňuje třídní diagram pro třídy, které produkují veškeré statistiky. Využívám v tomto případě návrhový vzor návštěvník\cite{visitor} spolu s metodami, které zajišťují přetrvání stavu počítání tak, aby ho bylo ukončit a pokračovat později.
+Obrázek \ref{img:metric_counter} znázorňuje třídní diagram pro třídy, které produkují veškeré statistiky. Využívám v tomto případě návrhový vzor návštěvník\cite{visitor} spolu s metodami, které za\-ji\-šťu\-jí přetrvání stavu počítání tak, aby ho bylo ukončit a pokračovat později.
 
 
 \begin{figure}[h]
@@ -1544,6 +1545,14 @@ Michal Hantl
 
 \bibitem{cookies} Jak Psát Web,
 \textit{Cookies}, dostupné z url \url{www.jakpsatweb.cz/enc/cookies.html}.
+
+\bibitem{pr} Entrepreneur,
+\textit{Public Relations}, dostupné z url \url{http://www.entrepreneur.com/encyclopedia/term/82434.html}.
+
+\bibitem{freemium} Spencer Fry,
+\textit{Freemium Model}, dostupné z url \url{http://spencerfry.com/freemium-model}.
+
+
 
 \bibitem{bigtable} Google Research Publications,
 \textit{Bigtable: A Distributed Storage System for Structured Data}, dostupné z url \url{http://labs.google.com/papers/bigtable.html}.
