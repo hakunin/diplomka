@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  4 MAY 2011 20:35
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.29)  5 MAY 2011 09:16
 entering extended mode
  %&-line parsing enabled.
 **diplomka.tex
@@ -493,15 +493,6 @@ LaTeX Warning: Label `src:Plain' multiply defined.
 
 LaTeX Warning: Label `src:Plain' multiply defined.
 
-
-LaTeX Warning: Label `img:measuring' multiply defined.
-
-
-LaTeX Warning: Label `kaushik' multiply defined.
-
-
-LaTeX Warning: Label `clf' multiply defined.
-
 )
 \openout1 = `diplomka.aux'.
 
@@ -617,10 +608,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 117.
- (./diplomka.toc
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
-)
+ (./diplomka.toc)
 \tf@toc=\write4
 \openout4 = `diplomka.toc'.
 
@@ -687,6 +675,8 @@ Overfull \hbox (0.899pt too wide) in paragraph at lines 190--191
 oby sb[]eru a in-tepre-tace dat v obecn[]e
  []
 
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 204.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 204.
 
@@ -849,7 +839,17 @@ Overfull \hbox (5.00568pt too wide) in paragraph at lines 526--527
 a nav-i-gace na je-jich webu co ne-j-jednodu[]s[]s[]^^P. 
  []
 
-[15] [16]
+[15]
+
+LaTeX Warning: Reference `img:heatmap-bing-google' on page 16 undefined on inpu
+t line 606.
+
+[16]
+
+LaTeX Warning: Reference `img:heatmap-bing-google' on page 17 undefined on inpu
+t line 608.
+
+
 Underfull \hbox (badness 1565) in paragraph at lines 608--608
 [][]\OT1/ppl/m/n/9 Business In-sider: Bing Is Bet-ter For Ads Than Google $\OT1
 /pcr/m/n/9 http : / / www . businessinsider . com /
@@ -961,7 +961,11 @@ Overfull \hbox (2.99135pt too wide) in paragraph at lines 865--866
 , p[]r[]^^Ppadn[]e ko-lik n[]av[]st[]ev, nebo zo-brazen[]^^P str[]anek.
  []
 
-[26] [27]
+[26]
+
+LaTeX Warning: Reference `eq:roi' on page 27 undefined on input line 869.
+
+[27]
 Overfull \hbox (3.34065pt too wide) in paragraph at lines 925--926
 \OT1/ppl/m/n/10.95 Z[]akazn[]^^Pci jsou ti u[]zivatel[]e, kte[]r[]^^P ji[]z pla
 t[]^^P. Tento pohled se p[]r[]^^Pli[]s neli[]s[]^^P od pohledu u[]zivatel[]e,
@@ -982,6 +986,10 @@ File: img/measuring.pdf Graphic file (type pdf)
  <use img/measuring.pdf>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `img:measuring' on page 29 undefined on input line 989
+.
 
 
 Overfull \hbox (2.45988pt too wide) in paragraph at lines 994--995
@@ -1027,6 +1035,11 @@ F version <1.5>, but at most version <1.4> allowed
 File: img/zpracovani_2.pdf Graphic file (type pdf)
 
 <use img/zpracovani_2.pdf>
+
+LaTeX Warning: Reference `img:metric_counter' on page 31 undefined on input lin
+e 1054.
+
+
 Overfull \hbox (11.82735pt too wide) in paragraph at lines 1054--1055
 \OT1/ppl/m/n/10.95 Vyu[]z[]^^Pv[]am v tomto p[]r[]^^Ppad[]e n[]avrhov[]y vzor v
 is-i-tor spolu s meto-dami, kter[]e zaji[]st[]uj[]^^P p[]retrv[]an[]^^P
@@ -1060,6 +1073,14 @@ ebo v Jav[]e. Prost[]rednictv[]^^Pm
  []
 
 
+LaTeX Warning: Reference `src:fib_java' on page 33 undefined on input line 1132
+.
+
+
+LaTeX Warning: Reference `src:fib_mirah' on page 33 undefined on input line 113
+2.
+
+
 Overfull \hbox (6.0pt too wide) in paragraph at lines 1136--1136
 [][][][][][][] 
  []
@@ -1081,6 +1102,10 @@ Overfull \hbox (2.16948pt too wide) in paragraph at lines 1198--1199
 \OT1/ppl/m/n/10.95 p[]red-de-fi-no-va-n[]ych in-dex[]u. Dokud u[]zivatel nedefi
 n-uje in-dex, nem[]u[]ze po-dle atributu dota-
  []
+
+
+LaTeX Warning: Reference `img:datastore_indexes' on page 34 undefined on input 
+line 1200.
 
 <img/datastore_indexes.pdf, id=208, 779.80537pt x 903.24953pt>
 File: img/datastore_indexes.pdf Graphic file (type pdf)
@@ -1121,6 +1146,14 @@ t[]en[]^^Pm v HTML doku-mentu. Po ka[]zd[]ych
  []
 
 
+LaTeX Warning: Reference `tab:consumption' on page 39 undefined on input line 1
+350.
+
+
+LaTeX Warning: Reference `tab:consumption' on page 39 undefined on input line 1
+374.
+
+
 Overfull \hbox (0.94283pt too wide) in paragraph at lines 1374--1375
 \OT1/ppl/m/n/10.95 jak[]ym zp[]usobem by z[]akazn[]^^Pk za tuto ap-likaci m[]el
  platit - po-dle po[]ctu ak-tivn[]^^Pch u[]zivatel[]u. 
@@ -1132,6 +1165,10 @@ File: img/ud_active_users.pdf Graphic file (type pdf)
 <use img/ud_active_users.pdf>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `img:chumly_active_users' on page 39 undefined on inpu
+t line 1384.
 
 
 Overfull \hbox (3.91032pt too wide) in paragraph at lines 1384--1385
@@ -1146,16 +1183,37 @@ File: img/ud_new_users.pdf Graphic file (type pdf)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `img:chumly_new_users' on page 39 undefined on input l
+ine 1397.
+
 [39] [40 <./img/ud_active_users.pdf> <./img/ud_new_users.pdf>]
+
+LaTeX Warning: Reference `img:users_table' on page 41 undefined on input line 1
+406.
+
 <img/users_table.pdf, id=252, 810.91759pt x 292.05109pt>
 File: img/users_table.pdf Graphic file (type pdf)
 
 <use img/users_table.pdf>
+
+LaTeX Warning: Reference `img:user_profile' on page 41 undefined on input line 
+1420.
+
 <img/user_profile.pdf, id=253, 779.80537pt x 222.80138pt>
 File: img/user_profile.pdf Graphic file (type pdf)
 
-<use img/user_profile.pdf> [41 <./img/users_table.pdf> <./img/user_profile.pdf>
-] <img/chumly_features_small_nolegend.pdf, id=269, 618.22368pt x 152.54892pt>
+<use img/user_profile.pdf>
+
+LaTeX Warning: Reference `img:chumly_features' on page 41 undefined on input li
+ne 1429.
+
+
+LaTeX Warning: Reference `img:chumly_features_nolog' on page 41 undefined on in
+put line 1429.
+
+[41 <./img/users_table.pdf> <./img/user_profile.pdf>]
+<img/chumly_features_small_nolegend.pdf, id=269, 618.22368pt x 152.54892pt>
 File: img/chumly_features_small_nolegend.pdf Graphic file (type pdf)
 
 <use img/chumly_features_small_nolegend.pdf>
@@ -1167,13 +1225,17 @@ File: img/chumly_features_small_nolog_nolegend.pdf Graphic file (type pdf)
 File: img/user_story.pdf Graphic file (type pdf)
 
 <use img/user_story.pdf>
-Overfull \hbox (3.66945pt too wide) in paragraph at lines 1459--1460
-\OT1/ppl/m/n/10.95 otev[]re for-mul[]a[]r s vytvo[]ren[]^^Pm nov[]e zpr[]avy. P
-ot[]e nas-tavil, do kter[]e soci[]aln[]^^P s[]^^Pt[]e chce zpr[]avu
- []
+
+LaTeX Warning: Reference `img:user_story' on page 42 undefined on input line 14
+59.
 
 [42 <./img/chumly_features_small_nolegend.pdf> <./img/chumly_features_small_nol
 og_nolegend.pdf> <./img/user_story.pdf>]
+
+LaTeX Warning: Reference `img:define_features' on page 43 undefined on input li
+ne 1461.
+
+
 Overfull \hbox (0.74115pt too wide) in paragraph at lines 1461--1462
 []\OT1/ppl/m/n/10.95 Jednotliv[]e funkce ap-likace jsou defi-nov[]any po-moc[]^
 ^P jednoduch[]eho rozhran[]^^P, ve kter[]em
@@ -1183,6 +1245,10 @@ Overfull \hbox (0.74115pt too wide) in paragraph at lines 1461--1462
 File: img/ud_chumly_define_features_blurry_bw.pdf Graphic file (type pdf)
 
 <use img/ud_chumly_define_features_blurry_bw.pdf>
+
+LaTeX Warning: Reference `img:developer_features' on page 43 undefined on input
+ line 1470.
+
 <img/developer_functions.pdf, id=294, 793.85585pt x 439.58127pt>
 File: img/developer_functions.pdf Graphic file (type pdf)
 
@@ -1253,13 +1319,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1692--1694
 
 ] (./diplomka.aux)
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  7969 strings out of 495061
- 117114 string characters out of 1182622
- 467681 words of memory out of 3000000
+ 117114 string characters out of 1182621
+ 467440 words of memory out of 3000000
  11002 multiletter control sequences out of 15000+50000
  27014 words of font info for 61 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -1274,7 +1343,7 @@ xmf-texlive/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texmf-texlive/fonts
 ic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a.pfb></u
 sr/share/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-te
 xlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diplomka.pdf (53 pages, 1321833 bytes).
+Output written on diplomka.pdf (53 pages, 1318243 bytes).
 PDF statistics:
  362 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
