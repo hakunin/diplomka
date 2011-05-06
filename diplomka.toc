@@ -13,7 +13,7 @@
 \contentsline {subsubsection}{Prohl\IeC {\'\i }\IeC {\v z}e\IeC {\v c}e a jejich verze}{13}
 \contentsline {subsubsection}{IP adresa}{13}
 \contentsline {subsection}{\numberline {2.4}Sb\IeC {\v e}r dat pomoc\IeC {\'\i } JavaScriptu}{13}
-\contentsline {subsubsection}{Kl\IeC {\'a}n\IeC {\'\i } my\IeC {\v s}\IeC {\'\i }}{14}
+\contentsline {subsubsection}{Klik\IeC {\'a}n\IeC {\'\i } my\IeC {\v s}\IeC {\'\i }}{14}
 \contentsline {subsubsection}{Pohyb my\IeC {\v s}i}{14}
 \contentsline {subsubsection}{Stisky kl\IeC {\'a}ves}{15}
 \contentsline {subsubsection}{Opu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } str\IeC {\'a}nky}{15}
